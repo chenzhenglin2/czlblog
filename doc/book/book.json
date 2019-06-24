@@ -1,0 +1,23 @@
+{
+  "title": "陈正林的博客",
+  "description": "陈正林工作总结知识",
+  "author": "陈正林",
+  "plugins": [
+    "-lunr",
+    "-search",
+    "search-pro",
+    "ancre-navigation",
+    "popup",
+    "expandable-chapters",
+    "code",
+    "splitter",
+    "prism"
+  ],
+  "pluginsConfig": {
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-tomorrow.css"
+      ]
+    }
+  }
+}
