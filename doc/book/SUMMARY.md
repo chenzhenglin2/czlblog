@@ -1,5 +1,5 @@
 # Summary
-* [关于博主](README.md)
+* [关于博客说明](README.md)
 * linux
   * 暂缺
 * docker
