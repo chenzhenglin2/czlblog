@@ -7,6 +7,7 @@
 * rancher和kubernetes
   *  暂缺
 * Jenkins
+  - [Jenkins调用docker编译程序](jenkins/jenkins-slave-for-docker.md)
 * shell
 * jmeter
 * （自签名、证书）证书申请与制作
