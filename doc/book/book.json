@@ -1,6 +1,6 @@
 {
-  "title": "陈正林的博客",
-  "description": "陈正林工作总结知识",
+  "title": "志云的博客",
+  "description": "日常工作总结知识",
   "author": "陈正林",
   "plugins": [
     "-lunr",
