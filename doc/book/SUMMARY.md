@@ -5,7 +5,7 @@
 * docker
   * [docker 安装与优化](docker/docker-install.md)
 * rancher和kubernetes
-  *  暂缺
+  *  [kubectl常用命令汇总（以及curl注入）](k8s/kubectl-user-instruction.md)
 * Jenkins
   - [Jenkins调用docker编译程序](jenkins/jenkins-slave-for-docker.md)
 * shell
