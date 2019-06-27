@@ -1,7 +1,7 @@
 # Summary
 * [关于博客说明](README.md)
 * linux
-  * 暂缺
+  * ["-"在tar命令中的巧用](linux/tar-deal.md)
 * docker
   * [docker 安装与优化](docker/docker-install.md)
 * rancher和kubernetes
@@ -9,6 +9,6 @@
 * Jenkins
 * shell
 * jmeter
-* 证书
+* （自签名、证书）证书申请与制作
 * NGINX
 * git
