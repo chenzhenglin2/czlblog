@@ -77,6 +77,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="docker-run-and-k8s-command.html" />
+    
     
 
     </head>
@@ -202,6 +204,19 @@
             
                     
                     kubectl常用命令汇总（以及curl注入）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="docker-run-and-k8s-command.html">
+            
+                <a href="docker-run-and-k8s-command.html">
+            
+                    
+                    docker run 与 kubernetes command对应关系
             
                 </a>
             
@@ -477,15 +492,6 @@ etcd-2               Healthy     {&quot;health&quot;: &quot;true&quot;}
 etcd-0               Healthy     {&quot;health&quot;: &quot;true&quot;}
 </code></pre><p>&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x6392;&#x9519;&#x65B9;&#x6848;&#x89C1;&#xFF1A;
 <a href="https://kubernetes.feisky.xyz/pai-cuo-zhi-nan/pod" target="_blank">https://kubernetes.feisky.xyz/pai-cuo-zhi-nan/pod</a></p>
-<h2 id="kubectl-&#x4E0E;-docker-&#x547D;&#x4EE4;&#x5173;&#x7CFB;-&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;"><a name="kubectl-&#x4E0E;-docker-&#x547D;&#x4EE4;&#x5173;&#x7CFB;-&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x4E0E;-docker-&#x547D;&#x4EE4;&#x5173;&#x7CFB;-&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x4E0E; Docker &#x547D;&#x4EE4;&#x5173;&#x7CFB; &#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;</h2>
-<p><a href="http://docs.kubernetes.org.cn/70.html" target="_blank">http://docs.kubernetes.org.cn/70.html</a></p>
-<p>&#x7279;&#x522B;&#x8BF4;&#x660E; <code>docker  run  redis  --requirepass,RedisP@ssw0rd</code>
-&#x50CF;&#x8FD9;&#x79CD; run  &#x955C;&#x50CF;&#x540E;&#x9762;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5728;docker-compose&#x6216;&#x8005;k8s&#x7684;cmd&#x6216;&#x8005;&#x5165;&#x53E3;&#x5904;&#x5B9A;&#x4E49;&#xFF0C;&#x65E0;&#x9700;&#x4E8C;&#x6B21;&#x5236;&#x4F5C;&#x955C;&#x50CF;</p>
-<p>&#x4E5F;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#x955C;&#x50CF;&#x7684;dockerfile&#xFF0C;&#x5982;dockerfile&#x6700;&#x540E;&#x7684;&#x4E00;&#x53E5;&#x8BDD;&#x662F;CMD [&quot;redis-server&quot;]&#xFF0C;&#x6211;&#x4EEC;
-&#x90E8;&#x7F72;&#x65F6;&#xFF0C;&#x5728;rancher UI&#x547D;&#x4EE4;(CMD)
-redis-server --requirepass &#x81EA;&#x5DF1;&#x7684;&#x5BC6;&#x7801;
-&#x586B;&#x5199;&#x5B8C;&#x6210;&#x540E;&#x542F;&#x52A8;redis&#xFF0C;&#x5E76;&#x6D4B;&#x8BD5;&#x5BC6;&#x7801;&#x662F;&#x5426;&#x751F;&#x6548;&#xFF1B;
-&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x955C;&#x50CF;&#x7684;dockerfile&#xFF0C;&#x5F53;run&#x955C;&#x50CF;&#x540E;&#xFF0C;&#x6307;&#x5B9A;&#x4E86;&#x5DE5;&#x4F5C;&#x8DEF;&#x5F84;&#xFF0C;&#x8DEF;&#x5F84;&#x91CC;&#x9762;&#x4E00;&#x822C;&#x4F1A;&#x6709;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x822C;&#x53EF;&#x4EE5;&#x5728;&#x5165;&#x53E3;&#x547D;&#x4EE4;&#x4E2D;&#xFF0C;&#x8BBE;&#x7F6E;&#x6267;&#x884C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x540E;&#x9762;&#x8DDF;&#x53C2;&#x6570; &#xFF1B;./xx -args args_value &#x4F46;&#x8FD9;&#x4E2A;&#x9700;&#x8981;&#x7075;&#x6D3B;&#x5E94;&#x53D8;&#xFF1B;</p>
 <h2 id="kubectl-&#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;"><a name="kubectl-&#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;</h2>
 <p>&#x5148;&#x770B;&#x4E00;&#x7EC4;&#x547D;&#x4EE4;</p>
 <pre class="language-"><code>kubectl  delete  sa  metricbeat  -n  efk
@@ -495,15 +501,15 @@ kubectl  delete  daemon-set  metricbeat  -n  efk
 <li>1.&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;kubectl  &#x4E0D;&#x7BA1;get &#x3001;delete describe&#x7B49;&#x64CD;&#x4F5C; &#x540E;&#x9762;&#x8DDF;&#x8D44;&#x6E90;&#x7C7B;&#x578B; &#x5982;&#x679C;sa(serviceaccout) deployment pod,&#x7136;&#x540E;&#x662F;&#x8D44;&#x6E90;&#x540D;&#x79F0;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8D44;&#x6E90;&#x540D;&#x79F0;&#xFF0C;&#x5219;&#x5220;&#x9664;&#x3001;&#x83B7;&#x53D6;&#x6B64;&#x7C7B;&#x578B;&#x6240;&#x6709;&#x7684;&#x8D44;&#x6E90;&#xFF1B;&#x6700;&#x540E;&#x9650;&#x5B9A;&#x67D0;&#x4E2A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x6216;&#x8005;&#x5168;&#x90E8;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF1B;&#x8FD9;&#x4E2A;&#x9650;&#x5B9A;&#x547D;&#x540D;&#x7A7A;&#x95F4; &#x53EF;&#x4EE5;&#x653E;&#x5728;kubectl &#x540E;&#x9762;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x6240;&#x6709;&#x53C2;&#x6570;&#x540E;&#x9762;</li>
 <li><ol>
 <li>-o &#x662F;&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x683C;&#x5F0F;
-&#x8F93;&#x51FA;&#x683C;&#x5F0F;    &#x8BF4;&#x660E;
--o=custom-columns=<spec>    &#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;
--o=custom-colimns-file=<filename>    &#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x83B7;&#x53D6;&#x81EA;&#x5B9A;&#x4E49;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x8F93;&#x51FA;
--o=json    &#x4EE5;JSON&#x683C;&#x5F0F;&#x663E;&#x793A;&#x7ED3;&#x679C;
--o=jsonpath=<template>    &#x8F93;&#x51FA;jsonpath&#x8868;&#x8FBE;&#x5F0F;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;&#x4FE1;&#x606F;
--o=jsonpath-file=<filename>    &#x8F93;&#x51FA;jsonpath&#x8868;&#x8FBE;&#x5F0F;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;&#x4FE1;&#x606F;&#xFF0C;&#x6765;&#x6E90;&#x4E8E;&#x6587;&#x4EF6;
--o=name    &#x4EC5;&#x8F93;&#x51FA;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x7684;&#x540D;&#x79F0;
--o=wide    &#x8F93;&#x51FA;&#x989D;&#x5916;&#x4FE1;&#x606F;&#x3002;&#x5BF9;&#x4E8E;Pod&#xFF0C;&#x5C06;&#x8F93;&#x51FA;Pod&#x6240;&#x5728;&#x7684;Node&#x540D;
--o=yaml    &#x4EE5;yaml&#x683C;&#x5F0F;&#x663E;&#x793A;&#x7ED3;&#x679C;</filename></template></filename></spec></li>
+ &#x8F93;&#x51FA;&#x683C;&#x5F0F;    &#x8BF4;&#x660E;
+ -o=custom-columns=<spec>    &#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;
+ -o=custom-colimns-file=<filename>    &#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x83B7;&#x53D6;&#x81EA;&#x5B9A;&#x4E49;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x8F93;&#x51FA;
+ -o=json    &#x4EE5;JSON&#x683C;&#x5F0F;&#x663E;&#x793A;&#x7ED3;&#x679C;
+ -o=jsonpath=<template>    &#x8F93;&#x51FA;jsonpath&#x8868;&#x8FBE;&#x5F0F;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;&#x4FE1;&#x606F;
+ -o=jsonpath-file=<filename>    &#x8F93;&#x51FA;jsonpath&#x8868;&#x8FBE;&#x5F0F;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;&#x4FE1;&#x606F;&#xFF0C;&#x6765;&#x6E90;&#x4E8E;&#x6587;&#x4EF6;
+ -o=name    &#x4EC5;&#x8F93;&#x51FA;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x7684;&#x540D;&#x79F0;
+ -o=wide    &#x8F93;&#x51FA;&#x989D;&#x5916;&#x4FE1;&#x606F;&#x3002;&#x5BF9;&#x4E8E;Pod&#xFF0C;&#x5C06;&#x8F93;&#x51FA;Pod&#x6240;&#x5728;&#x7684;Node&#x540D;
+ -o=yaml    &#x4EE5;yaml&#x683C;&#x5F0F;&#x663E;&#x793A;&#x7ED3;&#x679C;</filename></template></filename></spec></li>
 </ol>
 </li>
 </ul>
@@ -551,6 +557,10 @@ curl -u &quot;${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}&quot; \
             
                 
                 
+                <a href="docker-run-and-k8s-command.html" class="navigation navigation-next navigation-unique" aria-label="Next page: docker run 与 kubernetes command对应关系">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
             
         
     </div>
@@ -558,7 +568,7 @@ curl -u &quot;${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}&quot; \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"next":{"title":"Jenkins","level":"1.5","depth":1,"ref":"","articles":[{"title":"Jenkins调用docker编译程序","level":"1.5.1","depth":2,"path":"jenkins/jenkins-slave-for-docker.md","ref":"jenkins/jenkins-slave-for-docker.md","articles":[]}]},"previous":{"title":"rancher和kubernetes","level":"1.4","depth":1,"ref":"","articles":[{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"path":"k8s/kubectl-user-instruction.md","ref":"k8s/kubectl-user-instruction.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"k8s/kubectl-user-instruction.md","mtime":"2019-06-27T13:30:17.402Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-27T13:32:25.610Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"next":{"title":"docker run 与 kubernetes command对应关系","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]},"previous":{"title":"rancher和kubernetes","level":"1.4","depth":1,"ref":"","articles":[{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"path":"k8s/kubectl-user-instruction.md","ref":"k8s/kubectl-user-instruction.md","articles":[]},{"title":"docker run 与 kubernetes command对应关系","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"k8s/kubectl-user-instruction.md","mtime":"2019-06-28T09:18:18.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-28T09:59:11.211Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

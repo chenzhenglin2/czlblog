@@ -158,18 +158,6 @@ etcd-0               Healthy     {"health": "true"}
 更详细的排错方案见：
 https://kubernetes.feisky.xyz/pai-cuo-zhi-nan/pod
 
-## kubectl 与 Docker 命令关系 可以参考：
-http://docs.kubernetes.org.cn/70.html
-
-特别说明 ```docker  run  redis  --requirepass,RedisP@ssw0rd```
-像这种 run  镜像后面的参数，则可以在docker-compose或者k8s的cmd或者入口处定义，无需二次制作镜像
-
-也参考官网镜像的dockerfile，如dockerfile最后的一句话是CMD ["redis-server"]，我们
-部署时，在rancher UI命令(CMD)
-redis-server --requirepass 自己的密码
-填写完成后启动redis，并测试密码是否生效；
-如果没有找到镜像的dockerfile，当run镜像后，指定了工作路径，路径里面一般会有个可执行的二进制文件，一般可以在入口命令中，设置执行二进制文件，后面跟参数 ；./xx -args args_value 但这个需要灵活应变；
-
 ## kubectl 命令规律总结
 先看一组命令
 ```
@@ -179,15 +167,15 @@ kubectl  delete  daemon-set  metricbeat  -n  efk
 ```
 - 1.会发现，kubectl  不管get 、delete describe等操作 后面跟资源类型 如果sa(serviceaccout) deployment pod,然后是资源名称，如果没有资源名称，则删除、获取此类型所有的资源；最后限定某个命名空间，或者全部命名空间；这个限定命名空间 可以放在kubectl 后面，也可以放在所有参数后面
 - 2. -o 是指定输出格式
-    输出格式	说明
-    -o=custom-columns=<spec>	根据自定义列名进行输出，以逗号分隔
-    -o=custom-colimns-file=<filename>	从文件中获取自定义列名进行输出
-    -o=json	以JSON格式显示结果
-    -o=jsonpath=<template>	输出jsonpath表达式定义的字段信息
-    -o=jsonpath-file=<filename>	输出jsonpath表达式定义的字段信息，来源于文件
-    -o=name	仅输出资源对象的名称
-    -o=wide	输出额外信息。对于Pod，将输出Pod所在的Node名
-    -o=yaml	以yaml格式显示结果
+      输出格式	说明
+      -o=custom-columns=<spec>	根据自定义列名进行输出，以逗号分隔
+      -o=custom-colimns-file=<filename>	从文件中获取自定义列名进行输出
+      -o=json	以JSON格式显示结果
+      -o=jsonpath=<template>	输出jsonpath表达式定义的字段信息
+      -o=jsonpath-file=<filename>	输出jsonpath表达式定义的字段信息，来源于文件
+      -o=name	仅输出资源对象的名称
+      -o=wide	输出额外信息。对于Pod，将输出Pod所在的Node名
+      -o=yaml	以yaml格式显示结果
 
 如下：
 ```
