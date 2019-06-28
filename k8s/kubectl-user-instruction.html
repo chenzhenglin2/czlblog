@@ -41,6 +41,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -371,7 +383,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;"><a name="kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;</h2>
+                                <html><head></head><body><h2 id="kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;"><a name="kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;</h2>
 <p><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands" target="_blank">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands</a></p>
 <h2 id="kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;"><a name="kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;</h2>
 <h3 id="&#x53EA;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;pods"><a name="&#x53EA;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;pods" class="anchor-navigation-ex-anchor" href="#&#x53EA;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;pods"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EA;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;pods</h3>
@@ -529,7 +541,7 @@ curl -u &quot;${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}&quot; \
 -d &apos;{&quot;annotations&quot;:{&quot;cattle.io/timestamp&quot;:&quot;&quot;, &quot;cni.projectcalico.org/podIP&quot;:&quot;10.42.1.44/32&quot;}, &quot;containers&quot;:[{&quot;allowPrivilegeEscalation&quot;:false, &quot;exitCode&quot;:null, &quot;image&quot;:&quot;172.16.35.31:1180/apm-images/gettoken:1.0&quot;, &quot;imagePullPolicy&quot;:&quot;IfNotPresent&quot;, &quot;initContainer&quot;:false, &quot;name&quot;:&quot;genttoken&quot;, &quot;ports&quot;:[{&quot;containerPort&quot;:8001, &quot;dnsName&quot;:&quot;genttoken-nodeport&quot;, &quot;kind&quot;:&quot;NodePort&quot;, &quot;name&quot;:&quot;8001tcp301001&quot;, &quot;protocol&quot;:&quot;TCP&quot;, &quot;sourcePort&quot;:30100, &quot;type&quot;:&quot;/v3/project/schemas/containerPort&quot;}], &quot;privileged&quot;:false, &quot;procMount&quot;:&quot;Default&quot;, &quot;readOnly&quot;:false, &quot;resources&quot;:{&quot;type&quot;:&quot;/v3/project/schemas/resourceRequirements&quot;}, &quot;restartCount&quot;:0, &quot;runAsNonRoot&quot;:false, &quot;state&quot;:&quot;running&quot;, &quot;stdin&quot;:true, &quot;stdinOnce&quot;:false, &quot;terminationMessagePath&quot;:&quot;/dev/termination-log&quot;, &quot;terminationMessagePolicy&quot;:&quot;  &#x7B49;&#x7B49;
 </code></pre><p>&#x4FEE;&#x6539;&#x5B8C;&#x6210;&#x540E; &#x53EF;&#x4EE5;&#x70B9;&#x51FB;send  request&#x6765;&#x63D0;&#x4EA4;</p>
 
-<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
                                 
                                 </section>
                             
@@ -568,7 +580,7 @@ curl -u &quot;${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}&quot; \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"next":{"title":"docker run 与 kubernetes command对应关系","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]},"previous":{"title":"rancher和kubernetes","level":"1.4","depth":1,"ref":"","articles":[{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"path":"k8s/kubectl-user-instruction.md","ref":"k8s/kubectl-user-instruction.md","articles":[]},{"title":"docker run 与 kubernetes command对应关系","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"k8s/kubectl-user-instruction.md","mtime":"2019-06-28T09:18:18.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-28T09:59:11.211Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"next":{"title":"docker run 与 kubernetes command对应关系","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]},"previous":{"title":"rancher和kubernetes","level":"1.4","depth":1,"ref":"","articles":[{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"path":"k8s/kubectl-user-instruction.md","ref":"k8s/kubectl-user-instruction.md","articles":[]},{"title":"docker run 与 kubernetes command对应关系","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"k8s/kubectl-user-instruction.md","mtime":"2019-06-28T09:59:57.946Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-28T13:06:04.689Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -595,6 +607,22 @@ curl -u &quot;${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}&quot; \
     
         
         <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
         
     
         
