@@ -11,7 +11,10 @@
     "expandable-chapters",
     "code",
     "splitter",
-    "prism"
+    "prism",
+    "pageview-count",
+    "back-to-top-button",
+    "lightbox"    
   ],
   "pluginsConfig": {
     "prism": {
