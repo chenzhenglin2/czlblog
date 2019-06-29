@@ -228,7 +228,7 @@
                 <a href="docker-run-and-k8s-command.html">
             
                     
-                    docker run 与 kubernetes command对应关系
+                    docker run image -args对应yaml语法/rancher UI操作方式
             
                 </a>
             
@@ -383,51 +383,76 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><h2 id="kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;"><a name="kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;</h2>
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;"><b></b>kubectl &#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;</a></li><ul><li><span class="title-icon "></span><a href="#kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;"><b></b>kubectl &#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;"><b></b>&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;</a></li><ul><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;"><b></b>&#x67E5;&#x770B;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;"><b></b>&#x5220;&#x9664;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5DE7;&#x7528;kubectl-&#x5E2E;&#x52A9;&#x6587;&#x4EF6;"><b></b>&#x5DE7;&#x7528;kubectl &#x5E2E;&#x52A9;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#kubectl-&#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;"><b></b>kubectl &#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x7167;&#x5B98;&#x7F51;&#x6216;&#x8005;&#x56FD;&#x5185;&#x7FFB;&#x8BD1;&#x7684;&#x535A;&#x5BA2;"><b></b>&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x7167;&#x5B98;&#x7F51;&#x6216;&#x8005;&#x56FD;&#x5185;&#x7FFB;&#x8BD1;&#x7684;&#x535A;&#x5BA2;</a></li></ul></ul></div><a href="#kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;"><a name="kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;</h1>
+<h2 id="kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;"><a name="kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;</h2>
 <p><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands" target="_blank">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands</a></p>
-<h2 id="kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;"><a name="kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;</h2>
-<h3 id="&#x53EA;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;pods"><a name="&#x53EA;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;pods" class="anchor-navigation-ex-anchor" href="#&#x53EA;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;pods"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EA;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;pods</h3>
+<h2 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;"><a name="&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;</h2>
+<h3 id="&#x67E5;&#x770B;"><a name="&#x67E5;&#x770B;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;</h3>
+<ul>
+<li>&#x53EA;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;pods</li>
+</ul>
 <p><code>kubectl get pods</code></p>
-<h3 id="&#x663E;&#x793A;&#x6240;&#x6709;&#x7A7A;&#x95F4;&#x7684;pod"><a name="&#x663E;&#x793A;&#x6240;&#x6709;&#x7A7A;&#x95F4;&#x7684;pod" class="anchor-navigation-ex-anchor" href="#&#x663E;&#x793A;&#x6240;&#x6709;&#x7A7A;&#x95F4;&#x7684;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x663E;&#x793A;&#x6240;&#x6709;&#x7A7A;&#x95F4;&#x7684;pod</h3>
+<ul>
+<li>&#x663E;&#x793A;&#x6240;&#x6709;&#x7A7A;&#x95F4;&#x7684;pod</li>
+</ul>
 <p><code>kubectl get pods  --all-namespaces</code></p>
-<h3 id="&#x663E;&#x793A;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;pod"><a name="&#x663E;&#x793A;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;pod" class="anchor-navigation-ex-anchor" href="#&#x663E;&#x793A;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x663E;&#x793A;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;pod</h3>
+<ul>
+<li>&#x663E;&#x793A;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;pod</li>
+</ul>
 <p><code>kubectl get pods  -o wide  --namespace apm</code></p>
 <p>&#x5176;&#x4E2D;--namespace  &#x4E0E;-n &#x4F5C;&#x7528;&#x7B49;&#x540C;&#xFF0C;&#x540E;&#x9762;&#x63A5;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x53C2;&#x6570;
 kubectl get deployment  -n  apm
 kubectl get pods,svc,rc  -n  apm  svc&#x548C;services&#x662F;&#x4E00;&#x6837;&#x7684;
 &#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;  kubectl get    --help &#x6765;&#x67E5;&#x770B;&#x5E2E;&#x52A9;</p>
-<h2 id="&#x5220;&#x9664;"><a name="&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;</h2>
-<h3 id="&#x53EA;&#x80FD;&#x5220;&#x9664;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;deployment"><a name="&#x53EA;&#x80FD;&#x5220;&#x9664;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;deployment" class="anchor-navigation-ex-anchor" href="#&#x53EA;&#x80FD;&#x5220;&#x9664;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;deployment"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EA;&#x80FD;&#x5220;&#x9664;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;deployment</h3>
+<h3 id="&#x5220;&#x9664;"><a name="&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;</h3>
+<ul>
+<li>&#x53EA;&#x80FD;&#x5220;&#x9664;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;deployment </li>
+</ul>
 <p><code>kubectl  delete deployment  nginx</code></p>
-<h3 id="&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;deployment&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x7B49;"><a name="&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;deployment&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x7B49;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;deployment&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x7B49;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;deployment/&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x7B49;</h3>
+<ul>
+<li>&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7A7A;&#x95F4;&#x7684;deployment/&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x7B49;</li>
+</ul>
 <pre class="language-"><code>kubectl  delete TYPE RESOURCE -n NAMESPACE
 &#x5177;&#x4F53;&#x5982;&#x4E0B;&#xFF1A;
 kubectl  delete deployment shop-app -n test-shop  
 kubectl  delete TYPE --all -n NAMESPACE
 kubectl  delete all -n NAMESPACE
 kubectl  delete all --all
-</code></pre><h3 id="&#x4F7F;&#x7528;yaml&#x6587;&#x4EF6;&#x521B;&#x5EFA;pod"><a name="&#x4F7F;&#x7528;yaml&#x6587;&#x4EF6;&#x521B;&#x5EFA;pod" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;yaml&#x6587;&#x4EF6;&#x521B;&#x5EFA;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;yaml&#x6587;&#x4EF6;&#x521B;&#x5EFA;pod</h3>
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;yaml&#x6587;&#x4EF6;&#x521B;&#x5EFA;pod</li>
+</ul>
 <p><code>kubectl apply -f apptrace-receiver-deployment.yaml</code>
 apply  &#x548C; create &#x547D;&#x4EE4;&#x90FD;&#x53EF;&#x4EE5;&#x540E;&#x8DDF;yaml&#xFF0C;&#x521B;&#x5EFA;&#x6240;&#x9700;&#x8D44;&#x6E90;,&#x521D;&#x6B21;&#x521B;&#x5EFA;pod&#x65F6;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x66FF;&#x6362;&#x4F7F;&#x7528;&#xFF1B;&#x5982;&#x679C;&#x5DF2;&#x6709;pod&#x53EA;&#x662F;&#x7528;&#x4E8E;&#x66F4;&#x65B0;&#x7684;&#x8BDD;&#xFF0C;&#x53C8;&#x53EF;&#x4EE5;&#x548C;replace&#x76F8;&#x4E92;&#x66FF;&#x6362;&#x4F7F;&#x7528;&#xFF1B;&#x672C;&#x7740;&#x5316;&#x7E41;&#x5C31;&#x7B80;&#x7684;&#x539F;&#x5219;&#xFF0C;create&#x548C;replace&#x90FD;&#x4F7F;&#x7528;apply; &#x800C;&#x4E14;apply&#x5C5E;&#x4E8E;&#x7533;&#x660E;&#x5F0F;&#x8BED;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#xFF0C;&#x591A;&#x6B21;&#x6267;&#x884C;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x53EA;&#x4F1A;&#x66F4;&#x65B0;&#x6539;&#x53D8;&#x7684;&#x90E8;&#x5206;&#xFF1B;&#x50CF;Jenkinsfile&#x4E5F;&#x5DF2;&#x7ECF;&#x4ECE;&#x811A;&#x672C;&#x8BED;&#x6CD5;&#x5411;&#x7533;&#x660E;&#x5F0F;&#x8F6C;&#x53D8;&#x3002;</p>
-<h3 id="&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x628A;pod&#x3001;&#x5377;&#x3001;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#x5BFC;&#x51FA;&#x4E3A;yaml&#x683C;&#x5F0F;&#xFF1A;"><a name="&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x628A;pod&#x3001;&#x5377;&#x3001;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#x5BFC;&#x51FA;&#x4E3A;yaml&#x683C;&#x5F0F;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x628A;pod&#x3001;&#x5377;&#x3001;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#x5BFC;&#x51FA;&#x4E3A;yaml&#x683C;&#x5F0F;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x628A;pod&#x3001;&#x5377;&#x3001;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#x5BFC;&#x51FA;&#x4E3A;yaml&#x683C;&#x5F0F;&#xFF1A;</h3>
+<ul>
+<li>&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x628A;pod&#x3001;&#x5377;&#x3001;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#x5BFC;&#x51FA;&#x4E3A;yaml&#x683C;&#x5F0F;&#xFF1A;</li>
+</ul>
 <pre class="language-"><code>kubectl  get pods podA -n NAMEAPSCE-A -o yaml --export&gt; padA.yaml
 pod &#x53EF;&#x4EE5;&#x6362;&#x6210;&#x5176;&#x4ED6;&#x7533;&#x660E;&#x5F0F;&#x8D44;&#x6E90;&#x5982;&#x5377;&#x3001;services&#x7B49;&#xFF1B;&#x5982;&#x679C;&#x4E0D;&#x5E26;&#x4E0A;--export  &#x751F;&#x6210;&#x6587;&#x4EF6;&#x4F1A;&#x6709;&#x5F88;&#x591A;&#x65E0;&#x7528;&#x7684;&#x5185;&#x5BB9;
 </code></pre><p>&#x73B0;&#x5728;&#x5F88;&#x591A;&#x4EA7;&#x54C1;&#x5982;rancher openshift&#xFF0C;&#x7B49;&#xFF1B;UI&#x754C;&#x9762; &#x76F4;&#x63A5;&#x53EF;&#x89C6;&#x5316;&#x64CD;&#x4F5C;&#x5BFC;&#x51FA;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#xFF0C;&#x638C;&#x63E1;&#x547D;&#x4EE4;&#x5F88;&#x591A;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x4E8B;&#x534A;&#x529F;&#x500D;&#x3002;-o&#x66F4;&#x8BE6;&#x7EC6;&#x7528;&#x6CD5; &#x4E0B;&#x9762;&#x6709;&#x5355;&#x72EC;&#x8BF4;&#x660E;&#x3002;</p>
-<h3 id="&#x67E5;&#x770B;&#x547D;&#x540D;&#x7A7A;&#x95F4;apm&#x7684;collector&#x670D;&#x52A1;&#x8BE6;&#x60C5;"><a name="&#x67E5;&#x770B;&#x547D;&#x540D;&#x7A7A;&#x95F4;apm&#x7684;collector&#x670D;&#x52A1;&#x8BE6;&#x60C5;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x547D;&#x540D;&#x7A7A;&#x95F4;apm&#x7684;collector&#x670D;&#x52A1;&#x8BE6;&#x60C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x547D;&#x540D;&#x7A7A;&#x95F4;apm&#x7684;collector&#x670D;&#x52A1;&#x8BE6;&#x60C5;</h3>
+<ul>
+<li>&#x67E5;&#x770B;&#x547D;&#x540D;&#x7A7A;&#x95F4;apm&#x7684;collector&#x670D;&#x52A1;&#x8BE6;&#x60C5;</li>
+</ul>
 <p>```kubectl  describe  service/apptrace-collector  --namespace apm 
 --namespace &#x548C;-n  &#x4F5C;&#x7528;&#x76F8;&#x540C;</p>
-<pre class="language-"><code>### &#x67E5;&#x770B;pod&#x65E5;&#x5FD7;
+<pre class="language-"><code>- &#x67E5;&#x770B;pod&#x65E5;&#x5FD7;
+
 ```kubectl  logs   podname  --namespace apm  (&#x53EF;&#x4EE5;&#x5E26;&#x4E0A; -f &#x53C2;&#x6570;)
-</code></pre><h3 id="&#x4E3A;&#x8282;&#x70B9;&#x673A;apm-docker001&#x6253;&#x6807;&#x7B7E;-zookeeper-nodeapm-docker001&#x67E5;&#x770B;&#x6807;&#x7B7E;&#x7B49;&#xFF1B;"><a name="&#x4E3A;&#x8282;&#x70B9;&#x673A;apm-docker001&#x6253;&#x6807;&#x7B7E;-zookeeper-nodeapm-docker001&#x67E5;&#x770B;&#x6807;&#x7B7E;&#x7B49;&#xFF1B;" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x8282;&#x70B9;&#x673A;apm-docker001&#x6253;&#x6807;&#x7B7E;-zookeeper-nodeapm-docker001&#x67E5;&#x770B;&#x6807;&#x7B7E;&#x7B49;&#xFF1B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x8282;&#x70B9;&#x673A;apm-docker001&#x6253;&#x6807;&#x7B7E; zookeeper-node=apm-docker001,&#x67E5;&#x770B;&#x6807;&#x7B7E;&#x7B49;&#xFF1B;</h3>
+</code></pre><ul>
+<li>&#x4E3A;&#x8282;&#x70B9;&#x673A;apm-docker001&#x6253;&#x6807;&#x7B7E; zookeeper-node=apm-docker001,&#x67E5;&#x770B;&#x6807;&#x7B7E;&#x7B49;&#xFF1B;</li>
+</ul>
 <pre class="language-"><code>&#x4E3A;&#x8282;&#x70B9;&#x673A;&#x6253;&#x6807;&#x7B7E;&#x548C;&#x67E5;&#x770B;
 kubectl label nodes apm-docker001 zookeeper-node=apm-docker001
 kubectl get nodes --show-labels
 &#x4E3A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x6253;&#x6807;&#x7B7E;&#x548C;&#x67E5;&#x770B;
 kubectl label namespace $your-namesapce istio-injection=enabled
 kubectl  get namespaces  --show-labels
-</code></pre><h3 id="&#x7ED9;&#x540D;&#x4E3A;foo&#x7684;pod&#x6DFB;&#x52A0;label-unhealthytrue"><a name="&#x7ED9;&#x540D;&#x4E3A;foo&#x7684;pod&#x6DFB;&#x52A0;label-unhealthytrue" class="anchor-navigation-ex-anchor" href="#&#x7ED9;&#x540D;&#x4E3A;foo&#x7684;pod&#x6DFB;&#x52A0;label-unhealthytrue"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ED9;&#x540D;&#x4E3A;foo&#x7684;Pod&#x6DFB;&#x52A0;label unhealthy=true</h3>
+</code></pre><ul>
+<li>&#x7ED9;&#x540D;&#x4E3A;foo&#x7684;Pod&#x6DFB;&#x52A0;label unhealthy=true</li>
+</ul>
 <p><code>kubectl label pods foo unhealthy=true</code></p>
-<h3 id="&#x67E5;&#x770B;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x4E0B;&#x6709;&#x54EA;&#x4E9B;&#x53C2;&#x6570;&#xFF1B;"><a name="&#x67E5;&#x770B;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x4E0B;&#x6709;&#x54EA;&#x4E9B;&#x53C2;&#x6570;&#xFF1B;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x4E0B;&#x6709;&#x54EA;&#x4E9B;&#x53C2;&#x6570;&#xFF1B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x4E0B;&#x6709;&#x54EA;&#x4E9B;&#x53C2;&#x6570;&#xFF1B;</h3>
+<ul>
+<li>&#x67E5;&#x770B;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x4E0B;&#x6709;&#x54EA;&#x4E9B;&#x53C2;&#x6570;&#xFF1B;</li>
+</ul>
 <pre class="language-"><code>kubectl explain pods
 kubectl explain Deployment
 kubectl explain Deployment.spec
@@ -455,7 +480,9 @@ FIELDS:
    spec <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Object</span><span class="token punctuation">&gt;</span></span>
      Specification of the desired behavior of the pod. More info:
      https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
-</code></pre><h2 id="&#x5728;pod&#x5185;&#x90E8;&#xFF0C;&#x6267;&#x884C;shell&#x547D;&#x4EE4;"><a name="&#x5728;pod&#x5185;&#x90E8;&#xFF0C;&#x6267;&#x884C;shell&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5728;pod&#x5185;&#x90E8;&#xFF0C;&#x6267;&#x884C;shell&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;pod&#x5185;&#x90E8;&#xFF0C;&#x6267;&#x884C;shell&#x547D;&#x4EE4;</h2>
+</code></pre><ul>
+<li>&#x5728;pod&#x5185;&#x90E8;&#xFF0C;&#x6267;&#x884C;shell&#x547D;&#x4EE4;</li>
+</ul>
 <pre class="language-"><code>kubectl exec podname printenv | ps aux | cat&#x3001;ls &#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#xFF08;&#x5982;&#x679C;pod&#x4E0D;&#x5728;&#x9ED8;&#x8BA4;&#x7A7A;&#x95F4;&#xFF0C;&#x7528;-n &#x6307;&#x5B9A;&#x76F8;&#x5E94;&#x7A7A;&#x95F4;&#xFF09;
 &#x5982;&#xFF1A;kubectl  exec   app-demo-68b4bd9759-sfpcf -n test-shop printenv
 
@@ -476,34 +503,6 @@ kubectl  exec  &#x540E;&#x9762;&#x53EA;&#x80FD;&#x662F;pod,&#x76EE;&#x524D;&#x8F
 &#x540C;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;  kubectl  --help 
 &#x8FD9;&#x6837;kubectl  &#x6709;&#x54EA;&#x4E9B;&#x7528;&#x6CD5;&#x5C31;&#x663E;&#x793A;&#x51FA;&#x6765;&#xFF0C;
 &#x6211;&#x4EEC;&#x8981;&#x4E00;&#x7EA7;&#x7EA7;&#x7684;&#x5229;&#x7528;&#x5E2E;&#x52A9;  &#x53EF;&#x80FD;&#x521A;&#x5F00;&#x59CB;&#x8BB0;&#x4F4F;&#x524D;&#x9762;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5199;&#x5B8C;&#x5173;&#x952E;&#x5B57; help&#x4E00;&#x4E0B;  &#x53C8;&#x6709;&#x5F88;&#x591A;&#x8BE6;&#x7EC6;&#x7684;&#x7528;&#x6CD5; </p>
-<h2 id="kubernetes-&#x90E8;&#x7F72;&#x5931;&#x8D25;&#x7684;-10-&#x4E2A;&#x6700;&#x666E;&#x904D;&#x539F;&#x56E0;"><a name="kubernetes-&#x90E8;&#x7F72;&#x5931;&#x8D25;&#x7684;-10-&#x4E2A;&#x6700;&#x666E;&#x904D;&#x539F;&#x56E0;" class="anchor-navigation-ex-anchor" href="#kubernetes-&#x90E8;&#x7F72;&#x5931;&#x8D25;&#x7684;-10-&#x4E2A;&#x6700;&#x666E;&#x904D;&#x539F;&#x56E0;"><i class="fa fa-link" aria-hidden="true"></i></a>Kubernetes &#x90E8;&#x7F72;&#x5931;&#x8D25;&#x7684; 10 &#x4E2A;&#x6700;&#x666E;&#x904D;&#x539F;&#x56E0;</h2>
-<p>&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x94FE;&#x63A5;&#xFF1A;<a href="http://dockone.io/article/2247&#xFF1B;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x52E4;&#x770B;&#x65E5;&#x5FD7;" target="_blank">http://dockone.io/article/2247&#xFF1B;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x52E4;&#x770B;&#x65E5;&#x5FD7;</a></p>
-<pre class="language-"><code>** kubectl  describe  pod  kube-state-metrics-xntdx-978bb474d-8x7pg  -n efk-jpvgs**
-** &#x67E5;&#x770B;event&#x90E8;&#x5206;&#xFF1A;**
-
-Events:
-  Type     Reason     Age               From                   Message
-  ----     ------     ----              ----                   -------
-  Normal   Scheduled  3m                default-scheduler      Successfully assigned efk-jpvgs/kube-state-metrics-xntdx-978bb474d-8x7pg to szly-manager
-  Normal   Pulling    1m (x4 over 3m)   kubelet, szly-manager  pulling image &quot;k8s.gcr.io/kube-state-metrics:v1.5.0&quot;
-  Warning  Failed     1m (x4 over 3m)   kubelet, szly-manager  Failed to pull image &quot;k8s.gcr.io/kube-state-metrics:v1.5.0&quot;: rpc error: code = Unknown desc = Error response from daemon: Get https://k8s.gcr.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
-  Warning  Failed     1m (x4 over 3m)   kubelet, szly-manager  Error: ErrImagePull
-  Warning  Failed     1m (x6 over 3m)   kubelet, szly-manager  Error: ImagePullBackOff
-  Normal   BackOff    52s (x7 over 3m)  kubelet, szly-manager  Back-off pulling image &quot;k8s.gcr.io/kube-state-metrics:v1.5.0&quot;
-</code></pre><p>&#x8FD9;&#x4E2A;&#x5C31;&#x8BF4;&#x660E;&#x4E86;&#x95EE;&#x9898; &#x955C;&#x50CF;&#x62C9;&#x53D6;&#x5931;&#x8D25; &#xFF0C;&#x8BB0;&#x4F4F;&#x9047;&#x5230;&#x95EE;&#x9898; &#x4E00;&#x5B9A;&#x8981;&#x5148;&#x770B;&#x65E5;&#x5FD7;&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x50CF;&#x65E0;&#x5934;&#x82CD;&#x8747;&#xFF0C;&#x778E;&#x4FEE;&#x6539;</p>
-<p>&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x6210;&#x4E86;&#x7684; &#x5BB9;&#x5668;&#xFF08;pod&#xFF09; &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#xFF1A;</p>
-<pre class="language-"><code>kubectl  logs   efk-jpvgs-elasticsearch-0  -n efk-jpvgs
-</code></pre><p>&#x6765;&#x67E5;&#x770B;&#xFF0C;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x5728;rancher&#x91CC;&#x9762;&#x9009;&#x62E9;pod&#x540E;view  logs ,&#x67E5;&#x770B; events  &#x533A;&#x57DF;&#x7684;&#x63D0;&#x793A;&#x5185;&#x5BB9;
-&#x67E5;&#x770B;etcd  &#x5065;&#x5EB7;&#x72B6;&#x6001;</p>
-<pre class="language-"><code>kubectl get componentstatuses &#x6216;&#x8005;kubectl get cs
-NAME                 STATUS      MESSAGE                                                                                         ERROR
-controller-manager   Healthy     ok                                                                                              
-etcd-1               Unhealthy   Get https://172.16.31.16:2379/health: dial tcp 172.16.31.16:2379: connect: connection refused   
-scheduler            Healthy     ok                                                                                              
-etcd-2               Healthy     {&quot;health&quot;: &quot;true&quot;}                                                                              
-etcd-0               Healthy     {&quot;health&quot;: &quot;true&quot;}
-</code></pre><p>&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x6392;&#x9519;&#x65B9;&#x6848;&#x89C1;&#xFF1A;
-<a href="https://kubernetes.feisky.xyz/pai-cuo-zhi-nan/pod" target="_blank">https://kubernetes.feisky.xyz/pai-cuo-zhi-nan/pod</a></p>
 <h2 id="kubectl-&#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;"><a name="kubectl-&#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>kubectl &#x547D;&#x4EE4;&#x89C4;&#x5F8B;&#x603B;&#x7ED3;</h2>
 <p>&#x5148;&#x770B;&#x4E00;&#x7EC4;&#x547D;&#x4EE4;</p>
 <pre class="language-"><code>kubectl  delete  sa  metricbeat  -n  efk
@@ -531,7 +530,9 @@ kubectl  get  sa  efk-elaticsearch -n  efk  -o  yaml  &gt;xxx.yaml
 kubectl  get pod efk-elaticsearch-0 -n  efk  -o  wide
 </code></pre><h2 id="&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x7167;&#x5B98;&#x7F51;&#x6216;&#x8005;&#x56FD;&#x5185;&#x7FFB;&#x8BD1;&#x7684;&#x535A;&#x5BA2;"><a name="&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x7167;&#x5B98;&#x7F51;&#x6216;&#x8005;&#x56FD;&#x5185;&#x7FFB;&#x8BD1;&#x7684;&#x535A;&#x5BA2;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x7167;&#x5B98;&#x7F51;&#x6216;&#x8005;&#x56FD;&#x5185;&#x7FFB;&#x8BD1;&#x7684;&#x535A;&#x5BA2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x7167;&#x5B98;&#x7F51;&#x6216;&#x8005;&#x56FD;&#x5185;&#x7FFB;&#x8BD1;&#x7684;&#x535A;&#x5BA2;</h2>
 <p><a href="https://blog.csdn.net/xingwangc2014/article/details/51204224" target="_blank">https://blog.csdn.net/xingwangc2014/article/details/51204224</a></p>
-<h4 id="&#x56E0;&#x4E3A;k8s-&#x91C7;&#x7528;&#x7684;&#x662F;rest-api&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x90FD;&#x6700;&#x7EC8;&#x4F1A;&#x8F6C;&#x6362;&#x6210;curl---x--put-pos&#x7B49;&#x5F62;&#x5F0F;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;curl&#x547D;&#x4EE4;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x4E00;&#x5806;&#x76F8;&#x5173;&#x6388;&#x6743;&#xFF0C;rancher-ui&#x91CC;&#x9762;-&#x5728;deploy&#x6216;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;api&#x67E5;&#x770B;-&#x5C31;&#x53EF;&#x4EE5;&#x67E5;&#x5230;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x53F3;&#x4FA7;&#x7684;edit&#x7F16;&#x8F91;&#x540E;-&#x901A;&#x8FC7;curl&#x547D;&#x4EE4;&#x63D0;&#x4EA4;"><a name="&#x56E0;&#x4E3A;k8s-&#x91C7;&#x7528;&#x7684;&#x662F;rest-api&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x90FD;&#x6700;&#x7EC8;&#x4F1A;&#x8F6C;&#x6362;&#x6210;curl---x--put-pos&#x7B49;&#x5F62;&#x5F0F;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;curl&#x547D;&#x4EE4;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x4E00;&#x5806;&#x76F8;&#x5173;&#x6388;&#x6743;&#xFF0C;rancher-ui&#x91CC;&#x9762;-&#x5728;deploy&#x6216;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;api&#x67E5;&#x770B;-&#x5C31;&#x53EF;&#x4EE5;&#x67E5;&#x5230;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x53F3;&#x4FA7;&#x7684;edit&#x7F16;&#x8F91;&#x540E;-&#x901A;&#x8FC7;curl&#x547D;&#x4EE4;&#x63D0;&#x4EA4;" class="anchor-navigation-ex-anchor" href="#&#x56E0;&#x4E3A;k8s-&#x91C7;&#x7528;&#x7684;&#x662F;rest-api&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x90FD;&#x6700;&#x7EC8;&#x4F1A;&#x8F6C;&#x6362;&#x6210;curl---x--put-pos&#x7B49;&#x5F62;&#x5F0F;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;curl&#x547D;&#x4EE4;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x4E00;&#x5806;&#x76F8;&#x5173;&#x6388;&#x6743;&#xFF0C;rancher-ui&#x91CC;&#x9762;-&#x5728;deploy&#x6216;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;api&#x67E5;&#x770B;-&#x5C31;&#x53EF;&#x4EE5;&#x67E5;&#x5230;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x53F3;&#x4FA7;&#x7684;edit&#x7F16;&#x8F91;&#x540E;-&#x901A;&#x8FC7;curl&#x547D;&#x4EE4;&#x63D0;&#x4EA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56E0;&#x4E3A;k8s &#x91C7;&#x7528;&#x7684;&#x662F;REST API&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x90FD;&#x6700;&#x7EC8;&#x4F1A;&#x8F6C;&#x6362;&#x6210;curl  -X  PUT POS&#x7B49;&#x5F62;&#x5F0F;,&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;curl&#x547D;&#x4EE4;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x4E00;&#x5806;&#x76F8;&#x5173;&#x6388;&#x6743;&#xFF0C;rancher UI&#x91CC;&#x9762; &#x5728;deploy&#x6216;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;api&#x67E5;&#x770B; &#x5C31;&#x53EF;&#x4EE5;&#x67E5;&#x5230;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x53F3;&#x4FA7;&#x7684;edit&#x7F16;&#x8F91;&#x540E; &#x901A;&#x8FC7;curl&#x547D;&#x4EE4;&#x63D0;&#x4EA4;</h4>
+<ul>
+<li>&#x56E0;&#x4E3A;k8s &#x91C7;&#x7528;&#x7684;&#x662F;REST API&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x90FD;&#x6700;&#x7EC8;&#x4F1A;&#x8F6C;&#x6362;&#x6210;curl  -X  PUT POS&#x7B49;&#x5F62;&#x5F0F;,&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;curl&#x547D;&#x4EE4;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x4E00;&#x5806;&#x76F8;&#x5173;&#x6388;&#x6743;&#xFF0C;rancher UI&#x91CC;&#x9762; &#x5728;deploy&#x6216;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;api&#x67E5;&#x770B; &#x5C31;&#x53EF;&#x4EE5;&#x67E5;&#x5230;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x53F3;&#x4FA7;&#x7684;edit&#x7F16;&#x8F91;&#x540E; &#x901A;&#x8FC7;curl&#x547D;&#x4EE4;&#x63D0;&#x4EA4;</li>
+</ul>
 <pre class="language-"><code>API Request
 cURL command line: 
 curl -u &quot;${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}&quot; \
@@ -569,7 +570,7 @@ curl -u &quot;${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}&quot; \
             
                 
                 
-                <a href="docker-run-and-k8s-command.html" class="navigation navigation-next navigation-unique" aria-label="Next page: docker run 与 kubernetes command对应关系">
+                <a href="docker-run-and-k8s-command.html" class="navigation navigation-next navigation-unique" aria-label="Next page: docker run image -args对应yaml语法/rancher UI操作方式">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -580,7 +581,7 @@ curl -u &quot;${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}&quot; \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"next":{"title":"docker run 与 kubernetes command对应关系","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]},"previous":{"title":"rancher和kubernetes","level":"1.4","depth":1,"ref":"","articles":[{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"path":"k8s/kubectl-user-instruction.md","ref":"k8s/kubectl-user-instruction.md","articles":[]},{"title":"docker run 与 kubernetes command对应关系","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"k8s/kubectl-user-instruction.md","mtime":"2019-06-28T09:59:57.946Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-28T13:06:04.689Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"next":{"title":"docker run image -args对应yaml语法/rancher UI操作方式","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]},"previous":{"title":"rancher和kubernetes","level":"1.4","depth":1,"ref":"","articles":[{"title":"kubectl常用命令汇总（以及curl注入）","level":"1.4.1","depth":2,"path":"k8s/kubectl-user-instruction.md","ref":"k8s/kubectl-user-instruction.md","articles":[]},{"title":"docker run image -args对应yaml语法/rancher UI操作方式","level":"1.4.2","depth":2,"path":"k8s/docker-run-and-k8s-command.md","ref":"k8s/docker-run-and-k8s-command.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"k8s/kubectl-user-instruction.md","mtime":"2019-06-29T09:34:30.020Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-29T09:40:30.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

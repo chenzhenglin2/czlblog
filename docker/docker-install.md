@@ -82,6 +82,7 @@ E: Version '' for 'docker-ce' was not found
 ```
 这个可能Ubuntu版本太高，需要手动来安装docker了
 可以把下面命令执行完成后，再来执行rancher提供的docker安装脚本
+
 ```
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common bash-completion
 # step 2: 安装GPG证书
@@ -99,7 +100,7 @@ sudo apt install docker.io
 ```
 
 ### ubuntu离线安装
-离线安装包 还在找
+暂缺
 
 
 

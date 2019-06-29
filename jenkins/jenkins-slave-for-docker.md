@@ -1,6 +1,6 @@
-**如果用docker 容器编译程序 有两种方案可供选择**
+# **如果用docker 容器编译程序 有两种方案可供选择**
 
-- **1，激活镜像作为slave编译**
+- ## **1，激活镜像作为slave编译**
 
 - 采用Jenkins提供的jnlp-slave 或ssh-slave  标准镜像二次封装，或者初始镜像，然后通过label 选择镜像后进行编译；
 
@@ -25,11 +25,11 @@
 
 具体怎么调用这里不作为重点，这里重点说明的方案的选择，可以参考
 
-<https://blog.csdn.net/qq_31977125/article/details/82999872>   这位博主有详细的操作步骤
+## <https://blog.csdn.net/qq_31977125/article/details/82999872>   这位博主有详细的操作步骤
 
 下面是重点说明编译方式
 
-- **2，直接docker run编译**
+## **2，直接docker run编译**
 
 把源码下载到宿主机，通过-v 挂载到容器中，然后指定入口命令编译此目录，编译完成后 销毁容器
 
@@ -49,7 +49,7 @@ docker run --rm -v `pwd`:/mypro -w /mypro nodeshift/centos7-s2i-nodejs:10.16.0 /
 
 ​        建议把操作步骤整理起来 编写到dockerfile中   
 
-**实战案例**
+## **实战案例**
 
 基于centos7.6 镜像制作出可以编译go/rust程序的镜像（生产中最好一个镜像只编译一种语言程序，并且是基于此语言的镜像）
 
