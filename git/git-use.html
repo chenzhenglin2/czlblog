@@ -629,32 +629,31 @@
 <p>&#x5269;&#x4E0B;&#x7684;&#x63D0;&#x4EA4;&#x548C;&#x63A8;&#x9001;&#x64CD;&#x4F5C;&#x53C2;&#x7167;&#x4E0A;&#x9762;&#x6B65;&#x9AA4;</p>
 <h2 id="&#x628A;a-&#x5206;&#x652F;&#x67D0;&#xFF08;&#x51E0;&#xFF09;&#x6B21;&#x63D0;&#x4EA4;&#x4E5F;&#x63D0;&#x4EA4;&#x5230;-b&#x5206;&#x652F;"><a name="&#x628A;a-&#x5206;&#x652F;&#x67D0;&#xFF08;&#x51E0;&#xFF09;&#x6B21;&#x63D0;&#x4EA4;&#x4E5F;&#x63D0;&#x4EA4;&#x5230;-b&#x5206;&#x652F;" class="anchor-navigation-ex-anchor" href="#&#x628A;a-&#x5206;&#x652F;&#x67D0;&#xFF08;&#x51E0;&#xFF09;&#x6B21;&#x63D0;&#x4EA4;&#x4E5F;&#x63D0;&#x4EA4;&#x5230;-b&#x5206;&#x652F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x628A;A &#x5206;&#x652F;&#x67D0;&#xFF08;&#x51E0;&#xFF09;&#x6B21;&#x63D0;&#x4EA4;&#x4E5F;&#x63D0;&#x4EA4;&#x5230; B&#x5206;&#x652F;</h2>
 <p>&#x5728; A&#x5206;&#x652F;&#x4E0B;&#x6267;&#x884C;
-git log  &#x67E5;&#x627E;&#x5230;&#x76F8;&#x5173;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;
-&#x5207;&#x6362;&#x5230;B&#x5206;&#x652F;&#xFF0C;<code>git checkout B</code>
-&#x628A;A&#x7684;&#x67D0;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;&#x4E5F;&#x63D0;&#x4EA4;&#x5230;B&#xFF1A;
-<code>git cherry-pick 7f00fe9ebb&#xFF08;&#x63D0;&#x4EA4;&#x53F7;&#xFF09;</code></p>
+git log  &#x67E5;&#x627E;&#x5230;&#x76F8;&#x5173;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;</p>
+<p>&#x5207;&#x6362;&#x5230;B&#x5206;&#x652F;&#xFF0C;<code>git checkout B</code></p>
+<p>&#x628A;A&#x7684;&#x67D0;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;&#x4E5F;&#x63D0;&#x4EA4;&#x5230;B&#xFF1A;</p>
+<p><code>git cherry-pick 7f00fe9ebb&#xFF08;&#x63D0;&#x4EA4;&#x53F7;&#xFF09;</code></p>
 <p>&#x628A;A&#x7684;&#x67D0;&#x51E0;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;&#x4E5F;&#x63D0;&#x4EA4;&#x5230;B&#xFF1A;</p>
 <p><code>git cherry-pick 7f00fe9ebb..7f00fe9ebb&#xFF08;&#x63D0;&#x4EA4;&#x8303;&#x56F4;&#xFF09;</code></p>
 <p>&#x5982;&#x679C;&#x6709;&#x51B2;&#x7A81;&#xFF0C;&#x901A;&#x8FC7; git status &#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x51B2;&#x7A81;&#x6587;&#x4EF6;&#xFF0C;&#x89E3;&#x51B3;&#x51B2;&#x7A81;&#xFF0C;git add &#x51B2;&#x7A81;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x63D0;&#x4EA4;&#x548C;&#x63A8;&#x9001;&#x64CD;&#x4F5C;&#x53C2;&#x7167;&#x4E0A;&#x9762;&#x6B65;&#x9AA4;</p>
 <p>&#x6CA1;&#x6709;&#x51B2;&#x7A81;&#x76F4;&#x63A5;&#x6267;&#x884C; <code>git push  [-u origin your_branch]</code></p>
 <h2 id="&#x9488;&#x5BF9;&#x67D0;&#x6B21;&#x63D0;&#x4EA4;-&#x6253;tag"><a name="&#x9488;&#x5BF9;&#x67D0;&#x6B21;&#x63D0;&#x4EA4;-&#x6253;tag" class="anchor-navigation-ex-anchor" href="#&#x9488;&#x5BF9;&#x67D0;&#x6B21;&#x63D0;&#x4EA4;-&#x6253;tag"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9488;&#x5BF9;&#x67D0;&#x6B21;&#x63D0;&#x4EA4; &#x6253;tag</h2>
 <p>  1&#xFF0C;&#x4F7F;&#x7528;git log&#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x65E5;&#x5FD7;&#xFF0C;&#x627E;&#x51FA;&#x4F60;&#x9700;&#x8981;&#x7684;&#x90A3;&#x4E2A;commit&#x3002;&#x5047;&#x8BBE;&#x63D0;&#x4EA4;&#x7684;commit id</p>
-<pre class="language-"><code>  2&#xFF0C;&#x4F7F;&#x7528;`git checkout <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>commit</span> <span class="token attr-name">id</span><span class="token punctuation">&gt;</span></span>`
+<pre class="language-"><code>git checkout <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>commit</span> <span class="token attr-name">id</span><span class="token punctuation">&gt;</span></span>
+&#x4F7F;&#x7528;git tag&#x8FDB;&#x884C;&#x6253;&#x6807;&#x7B7E;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;git tag -a v1.4 -m &#x2018;xxxx&#x2019; 
 
-  3&#xFF0C;&#x4F7F;&#x7528;git tag&#x8FDB;&#x884C;&#x6253;&#x6807;&#x7B7E;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;`git tag -a v1.4 -m &#x2018;xxxx&#x2019; `
+git push origin --tags&#x6216;&#x8005;git push origin [tagname] 
 
-  4&#xFF0C;`git push origin --tags&#x6216;&#x8005;git push origin [tagname] `
+git checkout -b  newbranch
 
-  5&#xFF0C;`git checkout -b  newbranch`
-
-  6&#xFF0C;`git push origin newbranch`
+git push origin newbranch
 </code></pre><h2 id="git-fetch--&#x4E0E;-git-pull"><a name="git-fetch--&#x4E0E;-git-pull" class="anchor-navigation-ex-anchor" href="#git-fetch--&#x4E0E;-git-pull"><i class="fa fa-link" aria-hidden="true"></i></a>git fetch  &#x4E0E; git pull</h2>
-<p><code>git fetch origin master:tmp</code>
- &#x5728;&#x672C;&#x5730;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;temp&#x5206;&#x652F;&#xFF0C;&#x5E76;&#x5C06;&#x8FDC;&#x7A0B;origin&#x4ED3;&#x5E93;&#x7684;master&#x5206;&#x652F;&#x4EE3;&#x7801;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;temp&#x5206;&#x652F;<br> <code>git push origin tmp</code>
- &#x628A;tmp&#x5206;&#x652F;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93; </p>
-<p>git pull  &#x76F8;&#x5F53;&#x4E8E; git fetch  + git merge
-&#x5982;    git  pull   tmp
-&#x76F8;&#x5F53;&#x4E8E; git  fetch origin/tmp + git merge origin/tmp </p>
+<p><code>git fetch origin master:tmp</code></p>
+<p> &#x5728;&#x672C;&#x5730;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;temp&#x5206;&#x652F;&#xFF0C;&#x5E76;&#x5C06;&#x8FDC;&#x7A0B;origin&#x4ED3;&#x5E93;&#x7684;master&#x5206;&#x652F;&#x4EE3;&#x7801;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;temp&#x5206;&#x652F;  </p>
+<p> <code>git push origin tmp</code></p>
+<p> &#x628A;tmp&#x5206;&#x652F;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93; </p>
+<p>git pull  &#x76F8;&#x5F53;&#x4E8E; git fetch  + git merge</p>
+<p>&#x5982;    git  pull   tmp&#x76F8;&#x5F53;&#x4E8E; git  fetch origin/tmp + git merge origin/tmp </p>
 <p>&#x628A;&#x8FDC;&#x7A0B;tmp merge&#x5230;&#x672C;&#x5730;tmp&#x5206;&#x652F;&#x4E2D;</p>
 <h2 id="&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x56DE;&#x9000;&#x5230;&#x67D0;&#x4E2A;&#x7248;&#x672C;&#x3000;&#x3000;"><a name="&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x56DE;&#x9000;&#x5230;&#x67D0;&#x4E2A;&#x7248;&#x672C;&#x3000;&#x3000;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x56DE;&#x9000;&#x5230;&#x67D0;&#x4E2A;&#x7248;&#x672C;&#x3000;&#x3000;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x56DE;&#x9000;&#x5230;&#x67D0;&#x4E2A;&#x7248;&#x672C;&#x3000;&#x3000;</h2>
 <p><code>git&#x3000;&#x3000;reset&#x3000;&#x3000;&#x2013;hard&#x3000;&#x3000;bae168</code></p>
@@ -672,9 +671,9 @@ git push origin <span class="token tag"><span class="token tag"><span class="tok
 <pre class="language-"><code>git stash 
 git stash pop(&#x8FD9;&#x4E2A;&#x4F1A;&#x628A;&#x7F13;&#x5B58;&#x62FF;&#x51FA;&#x6765;&#xFF0C;&#x5220;&#x9664;&#x7F13;&#x5B58;&#xFF09;
  &#x6216;
- git  stash 
- git stash list(&#x67E5;&#x770B;stash&#x5217;&#x8868;&#xFF09;
- git  stash apply [&#x5217;&#x8868;&#x540D;&#x79F0;]
+git  stash 
+git stash list(&#x67E5;&#x770B;stash&#x5217;&#x8868;&#xFF09;
+git  stash apply [&#x5217;&#x8868;&#x540D;&#x79F0;]
 </code></pre><h2 id="gitignore-&#x7684;&#x8BBE;&#x7F6E;&#xFF1A;"><a name="gitignore-&#x7684;&#x8BBE;&#x7F6E;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#gitignore-&#x7684;&#x8BBE;&#x7F6E;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>.gitignore &#x7684;&#x8BBE;&#x7F6E;&#xFF1A;</h2>
 <p>&#x5F88;&#x591A;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x4E9B;&#x6587;&#x4EF6;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#xFF0C;&#x5982;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x672C;&#x5730;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF0C;&#x5C31;&#x7528;&#x5230;&#x4E86;.gitignore   </p>
 <p>&#x53EA;&#x5FFD;&#x7565;dbg&#x76EE;&#x5F55;&#xFF0C;&#x4E0D;&#x5FFD;&#x7565;dbg&#x6587;&#x4EF6;</p>
@@ -725,7 +724,7 @@ git commit -m &apos;message&apos;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"git日常使用命令","level":"1.10.1","depth":2,"next":{"title":"自动化测试技术","level":"1.11","depth":1,"ref":"","articles":[{"title":"手机自动化","level":"1.11.1","depth":2,"ref":"","articles":[{"title":"monkey测试","level":"1.11.1.1","depth":3,"ref":"","articles":[]},{"title":"uiautomator 自动化测试","level":"1.11.1.2","depth":3,"ref":"","articles":[]}]}]},"previous":{"title":"git","level":"1.10","depth":1,"ref":"","articles":[{"title":"git日常使用命令","level":"1.10.1","depth":2,"path":"git/git-use.md","ref":"git/git-use.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"git/git-use.md","mtime":"2019-06-30T03:10:59.615Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-30T03:13:31.291Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"git日常使用命令","level":"1.10.1","depth":2,"next":{"title":"自动化测试技术","level":"1.11","depth":1,"ref":"","articles":[{"title":"手机自动化","level":"1.11.1","depth":2,"ref":"","articles":[{"title":"monkey测试","level":"1.11.1.1","depth":3,"ref":"","articles":[]},{"title":"uiautomator 自动化测试","level":"1.11.1.2","depth":3,"ref":"","articles":[]}]}]},"previous":{"title":"git","level":"1.10","depth":1,"ref":"","articles":[{"title":"git日常使用命令","level":"1.10.1","depth":2,"path":"git/git-use.md","ref":"git/git-use.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"git/git-use.md","mtime":"2019-06-30T03:18:13.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-30T03:20:11.458Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
