@@ -15,6 +15,7 @@
 * 证书申请与制作
 * NGINX
 * git
+  - [git日常使用命令](git/git-use.md)
 * 自动化测试技术
   - 手机自动化
     - monkey测试
