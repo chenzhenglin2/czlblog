@@ -82,11 +82,18 @@ git log  查找到相关提交记录
 ## 针对某次提交 打tag  
 
   1，使用git log查看提交日志，找出你需要的那个commit。假设提交的commit id
+
+```
   2，使用`git checkout <commit id>`
+
   3，使用git tag进行打标签，例如：`git tag -a v1.4 -m ‘xxxx’ `
+
   4，`git push origin --tags或者git push origin [tagname] `
+
   5，`git checkout -b  newbranch`
+
   6，`git push origin newbranch`
+```
 
 
 
@@ -103,9 +110,8 @@ git pull  相当于 git fetch  + git merge
 
 把远程tmp merge到本地tmp分支中
 
-## 还原
+## 本地仓库回退到某个版本　　
 
-#本地仓库回退到某个版本　　
 `git　　reset　　–hard　　bae168　`
 
    
@@ -128,12 +134,14 @@ git push origin <new_branch>
 
 ##  把修改存到缓存中
 
+```
 git stash 
 git stash pop(这个会把缓存拿出来，删除缓存）
  或
  git  stash 
  git stash list(查看stash列表）
  git  stash apply [列表名称]
+```
 
 
 
