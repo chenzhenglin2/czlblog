@@ -27,6 +27,8 @@ if [ "${1#-}" != "$1" ] || [ "${1%.conf}" != "$1" ]; then
 像redis加密，可以直接在rancher UI界面的command填写:--requirepass "自己的密码" 或redis-server --requirepass "自己的密码" ，甚至可以再entrypoint里面填写：redis-server --requirepass "自己的密码"  都可以，但不能在entrypoint中填写：--requirepass "自己的密码"。完成后可以验证，密码是否生效；
     有一种情况：如果没有找到镜像的dockerfile，当run镜像后，到容器中的默认的目录，查看是否有个可执行的二进制文件，然后在command 里面设置   “二进制文件  -args   ”但这个需要验证；
 
+- 注意如果在args里面应用环境变量，要写成$(VALUE),不能写成$VALUE,如引用hostname，要写成$(HOSTNAME)，这相当于填写的是此变量的value ，而不是value name；
+
 ## 实战：
 
 packetbeat 官网镜像 使用参考
