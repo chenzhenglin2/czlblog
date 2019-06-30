@@ -15,6 +15,10 @@
 * 证书申请与制作
 * NGINX
 * git
+* 自动化测试技术
+  - 手机自动化
+    - monkey测试
+    - uiautomator 自动化测试
 * 虚拟化技术
   - vmmare 
   - vcenter
