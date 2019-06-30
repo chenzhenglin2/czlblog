@@ -63,8 +63,11 @@
 
 在 A分支下执行
 git log  查找到相关提交记录
+
 切换到B分支，`git checkout B`
+
 把A的某次提交，也提交到B：
+
 `git cherry-pick 7f00fe9ebb（提交号）`
 
 把A的某几次提交，也提交到B：
@@ -84,15 +87,14 @@ git log  查找到相关提交记录
   1，使用git log查看提交日志，找出你需要的那个commit。假设提交的commit id
 
 ```
-  2，使用`git checkout <commit id>`
+git checkout <commit id>
+使用git tag进行打标签，例如：git tag -a v1.4 -m ‘xxxx’ 
 
-  3，使用git tag进行打标签，例如：`git tag -a v1.4 -m ‘xxxx’ `
+git push origin --tags或者git push origin [tagname] 
 
-  4，`git push origin --tags或者git push origin [tagname] `
+git checkout -b  newbranch
 
-  5，`git checkout -b  newbranch`
-
-  6，`git push origin newbranch`
+git push origin newbranch
 ```
 
 
@@ -100,13 +102,22 @@ git log  查找到相关提交记录
 ## git fetch  与 git pull
 
 `   git fetch origin master:tmp `
+
  在本地新建一个temp分支，并将远程origin仓库的master分支代码下载到本地temp分支  
+
  `git push origin tmp`
+
  把tmp分支推送到远程仓库 
 
+
+
 git pull  相当于 git fetch  + git merge
-如    git  pull   tmp
-相当于 git  fetch origin/tmp + git merge origin/tmp 
+
+
+
+如    git  pull   tmp相当于 git  fetch origin/tmp + git merge origin/tmp 
+
+
 
 把远程tmp merge到本地tmp分支中
 
@@ -138,9 +149,9 @@ git push origin <new_branch>
 git stash 
 git stash pop(这个会把缓存拿出来，删除缓存）
  或
- git  stash 
- git stash list(查看stash列表）
- git  stash apply [列表名称]
+git  stash 
+git stash list(查看stash列表）
+git  stash apply [列表名称]
 ```
 
 
