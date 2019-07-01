@@ -9,6 +9,7 @@
   *  [docker run image -args对应yaml语法/rancher UI操作方式](k8s/docker-run-and-k8s-command.md)
 * Jenkins
   - [Jenkins调用docker编译程序](jenkins/jenkins-slave-for-docker.md)
+  - [利用docker 镜像，快速搭建Jenkins环境](jenkins/install-jenkins.md)
 * shell
   - [shell 脚本中获取脚本所在路径](shell/get_dir_in_shell.md)
 * jmeter
