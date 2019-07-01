@@ -7,7 +7,7 @@
 ```
 docker run \
 
-  --name szlyjenkins \
+  --name myjenkins \
 
   --cpus=4 \
 
@@ -27,11 +27,11 @@ docker run \
 
   -v /var/run/docker.sock:/var/run/docker.sock \
 
-  -v /etc/localtime:/etc/localtime \
+  -v /etc/localtime:/etc/localtime:ro \
 
-  -v /etc/timezone:/etc/timezone \
+  -v /etc/timezone:/etc/timezone:ro \
 
-   -v $HOME/.ssh:/root/.ssh \
+   -v $HOME/.ssh:/root/.ssh:ro \
 
   jenkinsci/blueocean
 ```
