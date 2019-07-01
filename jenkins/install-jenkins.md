@@ -1,4 +1,4 @@
-# 快速搭建Jenkins环境  
+# 利用docker image快速搭建Jenkins环境  
 
 关于安装部署Jenkins，网上一大堆资料，这里不做详细说明了；可以下载Jenkins的war包直接放到tomcat（其他Java容器也行）通过ip:8080/jenkins即可访问，也可能通过 java –jar Jenkins.war来安装或者带上--ajp13Port=-1 --httpPort=8081参数指定端口就行；
 
