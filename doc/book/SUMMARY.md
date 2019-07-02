@@ -14,6 +14,7 @@
 * shell
   - [shell 脚本中获取脚本所在路径](shell/get_dir_in_shell.md)
 * jmeter
+  - [利用jmeter模拟手机接口测试](jmeter/use_jmeter_test_app.md)
 * 证书申请与制作
 * NGINX
 * git
