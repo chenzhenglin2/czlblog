@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>shell 脚本中获取脚本所在路径 · 志云的博客</title>
+        <title>利用iptables或防火墙指定ip访问服务器某个端口 · 志云的博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -90,6 +90,8 @@
 
     
     
+    <link rel="prev" href="tar-deal.html" />
+    
 
     </head>
     <body>
@@ -144,9 +146,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../linux/tar-deal.html">
+        <li class="chapter " data-level="1.2.1" data-path="tar-deal.html">
             
-                <a href="../linux/tar-deal.html">
+                <a href="tar-deal.html">
             
                     
                     "-"在tar命令中的巧用
@@ -157,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../linux/limit_ip.html">
+        <li class="chapter active" data-level="1.2.2" data-path="limit_ip.html">
             
-                <a href="../linux/limit_ip.html">
+                <a href="limit_ip.html">
             
                     
                     利用iptables或防火墙指定ip访问服务器某个端口
@@ -324,9 +326,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="get_dir_in_shell.html">
+        <li class="chapter " data-level="1.6.1" data-path="../shell/get_dir_in_shell.html">
             
-                <a href="get_dir_in_shell.html">
+                <a href="../shell/get_dir_in_shell.html">
             
                     
                     shell 脚本中获取脚本所在路径
@@ -642,7 +644,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >shell 脚本中获取脚本所在路径</a>
+        <a href=".." >利用iptables或防火墙指定ip访问服务器某个端口</a>
     </h1>
 </div>
 
@@ -657,19 +659,45 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#shell&#x811A;&#x672C;&#x4E2D;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;"><b></b>shell&#x811A;&#x672C;&#x4E2D;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E00;&#x79CD;"><b></b>&#x7B2C;&#x4E00;&#x79CD;</a></li><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E8C;&#x79CD;"><b></b>&#x7B2C;&#x4E8C;&#x79CD;</a></li></ul></ul></div><a href="#shell&#x811A;&#x672C;&#x4E2D;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="shell&#x811A;&#x672C;&#x4E2D;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;"><a name="shell&#x811A;&#x672C;&#x4E2D;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#shell&#x811A;&#x672C;&#x4E2D;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>shell&#x811A;&#x672C;&#x4E2D;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;</h1>
-<h2 id="&#x7B2C;&#x4E00;&#x79CD;"><a name="&#x7B2C;&#x4E00;&#x79CD;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E00;&#x79CD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E00;&#x79CD;</h2>
-<pre class="language-"><code>DIR=$(cd $(dirname $0) &amp;&amp; pwd )
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;"><b></b>&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><b></b>&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</a></li><ul><li><span class="title-icon "></span><a href="#1"><b></b>1</a></li><li><span class="title-icon "></span><a href="#2"><b></b>2</a></li></ul></ul></ul></div><a href="#&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;"><a name="&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;</h1>
+<h2 id="&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><a name="&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</h2>
+<h3 id="1"><a name="1" class="anchor-navigation-ex-anchor" href="#1"><i class="fa fa-link" aria-hidden="true"></i></a>1</h3>
+<pre class="language-"><code class="lang-bash">firewall-cmd --permanent --add-rich-rule <span class="token string">&apos;rule family=ipv4 source address=10.219.82.83 port port=12181 protocol=tcp accept&apos;</span>
 
-echo  $DIR
-</code></pre><h2 id="&#x7B2C;&#x4E8C;&#x79CD;"><a name="&#x7B2C;&#x4E8C;&#x79CD;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E8C;&#x79CD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E8C;&#x79CD;</h2>
-<pre class="language-"><code>DIR2=$(cd $(dirname &quot;${BASH_SOURCE[0]}&quot;) &amp;&amp; pwd )
+systemctl  restart  firewalld
+</code></pre>
+<p>&#x79FB;&#x9664;--add-rich-rule&#x89C4;&#x5219;  &#x7528;--remove-rich-rule=</p>
+<p>&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x663E;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code>  --list-rich-rules    List rich language rules added for a zone [P] [Z]
 
-echo  $DIR2
-</code></pre><ul>
-<li>&#x4E0A;&#x9762;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#xFF0C;&#x4F46;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x542B;&#x6709;bash&#x547D;&#x4EE4;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x82E5;&#x7CFB;&#x7EDF;&#x53EA;&#x6709;sh&#x547D;&#x4EE4;&#xFF0C;&#x5EFA;&#x8BAE;&#x91C7;&#x7528;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;</li>
-</ul>
+  --add-rich-rule=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rule</span><span class="token punctuation">&gt;</span></span>
 
+&#x200B;                       Add rich language rule &apos;rule&apos; for a zone [P] [Z] [T]
+
+  --remove-rich-rule=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rule</span><span class="token punctuation">&gt;</span></span>
+
+&#x200B;                       Remove rich language rule &apos;rule&apos; from a zone [P] [Z]
+</code></pre><h3 id="2"><a name="2" class="anchor-navigation-ex-anchor" href="#2"><i class="fa fa-link" aria-hidden="true"></i></a>2</h3>
+<pre class="language-"><code>iptables-save &gt; iptables.rules
+
+/sbin/iptables -A INPUT -s 172.16.35.31 -p tcp --dport 12181 -j ACCEPT          # &#x4E2D;&#x63A7;&#x767D;&#x540D;&#x5355;
+
+/sbin/iptables -A OUTPUT -d 172.16.35.31 -p tcp --sport 12181 -j ACCEPT
+
+/sbin/iptables -A INPUT -p tcp --dport 12181 -j DROP   #&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;12181&#x7AEF;&#x53E3;
+
+/sbin/iptables -A OUTPUT -p tcp --sport 12181 -j DROP
+
+\#iptables --list-rules  #&#x67E5;&#x770B;&#x89C4;&#x5219; &#xFF0C;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x5220;&#x9664;&#x4E0B;&#x9762;&#x89C4;&#x5219;
+
+\#iptables -D INPUT -j REJECT --reject-with icmp-host-prohibited   #
+
+\#iptables -D FORWARD -j REJECT --reject-with icmp-host-prohibited  #
+
+service  iptables  save
+
+systemctl  restart   iptables
+</code></pre>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
                                 
                                 </section>
@@ -697,6 +725,10 @@ echo  $DIR2
 
             
                 
+                <a href="tar-deal.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: "-"在tar命令中的巧用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
                 
             
         
@@ -705,7 +737,7 @@ echo  $DIR2
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"shell 脚本中获取脚本所在路径","level":"1.6.1","depth":2,"next":{"title":"jmeter","level":"1.7","depth":1,"ref":"","articles":[{"title":"利用jmeter模拟手机接口测试","level":"1.7.1","depth":2,"path":"jmeter/use_jmeter_test_app.md","ref":"jmeter/use_jmeter_test_app.md","articles":[]}]},"previous":{"title":"shell","level":"1.6","depth":1,"ref":"","articles":[{"title":"shell 脚本中获取脚本所在路径","level":"1.6.1","depth":2,"path":"shell/get_dir_in_shell.md","ref":"shell/get_dir_in_shell.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"shell/get_dir_in_shell.md","mtime":"2019-07-02T07:08:26.639Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-03T07:47:25.734Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"利用iptables或防火墙指定ip访问服务器某个端口","level":"1.2.2","depth":2,"next":{"title":"docker","level":"1.3","depth":1,"ref":"","articles":[{"title":"docker 安装与优化","level":"1.3.1","depth":2,"path":"docker/docker-install.md","ref":"docker/docker-install.md","articles":[]},{"title":"harbor的安装和注意事项","level":"1.3.2","depth":2,"path":"docker/harbor-install.md","ref":"docker/harbor-install.md","articles":[]}]},"previous":{"title":"\"-\"在tar命令中的巧用","level":"1.2.1","depth":2,"path":"linux/tar-deal.md","ref":"linux/tar-deal.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"linux/limit_ip.md","mtime":"2019-07-03T07:30:33.444Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-03T07:47:25.734Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
