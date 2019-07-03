@@ -69,10 +69,8 @@ RUN apk update \
 * 在docker  hub 里面找到所需镜像后，在description的tab页，选择需要的版本，点击，一般会自动跳转到其githup源码界面；
   如：https://hub.docker.com/_/tomcat?tab=description
   如下Dockerfile文件
-```
-
+```bash
 FROM openjdk:8-jre
-
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
@@ -89,17 +87,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	\
 ……此处也省略不必要代码
 CMD ["catalina.sh", "run"]
-
 ```
+
 从这个Dockerfile文件可以看出，已经安装了wget等工具，并把默认的sh换成了bash；
 
 如何判断tomcat里面采用哪一版本的alpine呢,激活镜像后，查看其系统版本信息
-```cat /etc/os-release ```
+`cat /etc/os-release `
 同样其他linux也可以采用此方法查看版本号：
-```cat /etc/redhat|centos-release ```
+`cat /etc/redhat|centos-release `
 
 alpine系统添加软件的常用方法，参见链接：
 https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management
 
 ### 其他精简镜像的方法
    https://mp.weixin.qq.com/s/LOXNMYtZbnYeDR2lBI56fw
+
