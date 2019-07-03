@@ -3,6 +3,7 @@
 * linux
   * ["-"在tar命令中的巧用](linux/tar-deal.md)
   * [利用iptables或防火墙指定ip访问服务器某个端口](linux/limit_ip.md)
+  * [如何设置centos7.6和Ubuntu19.4的ip4](linux/set_ip.md)
 * docker
   * [docker 安装与优化](docker/docker-install.md)
   * [harbor的安装和注意事项](docker/harbor-install.md)
