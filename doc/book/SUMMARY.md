@@ -6,6 +6,7 @@
 * docker
   * [docker 安装与优化](docker/docker-install.md)
   * [harbor的安装和注意事项](docker/harbor-install.md)
+  * [如何制作出合适的镜像](docker/dockerfile-rule.md)
 * rancher和kubernetes
   *  [kubectl常用命令汇总（以及curl注入）](k8s/kubectl-user-instruction.md)
   *  [docker run image -args对应yaml语法/rancher UI操作方式](k8s/docker-run-and-k8s-command.md)
