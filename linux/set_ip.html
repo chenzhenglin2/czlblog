@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>利用iptables或防火墙指定ip访问服务器某个端口 · 志云的博客</title>
+        <title>如何设置centos7.6和Ubuntu19.4的ip4 · 志云的博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -89,10 +89,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="set_ip.html" />
     
-    
-    <link rel="prev" href="tar-deal.html" />
+    <link rel="prev" href="limit_ip.html" />
     
 
     </head>
@@ -161,7 +159,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="limit_ip.html">
+        <li class="chapter " data-level="1.2.2" data-path="limit_ip.html">
             
                 <a href="limit_ip.html">
             
@@ -174,7 +172,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="set_ip.html">
+        <li class="chapter active" data-level="1.2.3" data-path="set_ip.html">
             
                 <a href="set_ip.html">
             
@@ -672,7 +670,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >利用iptables或防火墙指定ip访问服务器某个端口</a>
+        <a href=".." >如何设置centos7.6和Ubuntu19.4的ip4</a>
     </h1>
 </div>
 
@@ -687,45 +685,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;"><b></b>&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><b></b>&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</a></li><ul><li><span class="title-icon "></span><a href="#1"><b></b>1</a></li><li><span class="title-icon "></span><a href="#2"><b></b>2</a></li></ul></ul></ul></div><a href="#&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;"><a name="&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;</h1>
-<h2 id="&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><a name="&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</h2>
-<h3 id="1"><a name="1" class="anchor-navigation-ex-anchor" href="#1"><i class="fa fa-link" aria-hidden="true"></i></a>1</h3>
-<pre class="language-"><code class="lang-bash">firewall-cmd --permanent --add-rich-rule <span class="token string">&apos;rule family=ipv4 source address=10.219.82.83 port port=12181 protocol=tcp accept&apos;</span>
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#centos76&#x548C;ubuntu1904&#x8BBE;&#x7F6E;ip"><b></b>centos7.6&#x548C;Ubuntu19.04&#x8BBE;&#x7F6E;ip</a></li><ul><li><span class="title-icon "></span><a href="#centos7&#x4EFB;&#x4F55;&#x7248;&#x672C;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;nmtui&#x547D;&#x4EE4;&#x6765;&#x8BBE;&#x7F6E;ip&#xFF0C;"><b></b>centos7&#x4EFB;&#x4F55;&#x7248;&#x672C;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;nmtui&#x547D;&#x4EE4;&#x6765;&#x8BBE;&#x7F6E;ip&#xFF0C;</a></li><li><span class="title-icon "></span><a href="#ubuntu194-&#x914D;&#x7F6E;&#x9759;&#x6001;ip"><b></b>Ubuntu19.4 &#x914D;&#x7F6E;&#x9759;&#x6001;IP</a></li></ul></ul></div><a href="#centos76&#x548C;ubuntu1904&#x8BBE;&#x7F6E;ip" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="centos76&#x548C;ubuntu1904&#x8BBE;&#x7F6E;ip"><a name="centos76&#x548C;ubuntu1904&#x8BBE;&#x7F6E;ip" class="anchor-navigation-ex-anchor" href="#centos76&#x548C;ubuntu1904&#x8BBE;&#x7F6E;ip"><i class="fa fa-link" aria-hidden="true"></i></a>centos7.6&#x548C;Ubuntu19.04&#x8BBE;&#x7F6E;ip</h1>
+<h2 id="centos7&#x4EFB;&#x4F55;&#x7248;&#x672C;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;nmtui&#x547D;&#x4EE4;&#x6765;&#x8BBE;&#x7F6E;ip&#xFF0C;"><a name="centos7&#x4EFB;&#x4F55;&#x7248;&#x672C;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;nmtui&#x547D;&#x4EE4;&#x6765;&#x8BBE;&#x7F6E;ip&#xFF0C;" class="anchor-navigation-ex-anchor" href="#centos7&#x4EFB;&#x4F55;&#x7248;&#x672C;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;nmtui&#x547D;&#x4EE4;&#x6765;&#x8BBE;&#x7F6E;ip&#xFF0C;"><i class="fa fa-link" aria-hidden="true"></i></a>centos7&#x4EFB;&#x4F55;&#x7248;&#x672C;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;nmtui&#x547D;&#x4EE4;&#x6765;&#x8BBE;&#x7F6E;ip&#xFF0C;</h2>
+<p>&#x4F46;centos7.6ip&#x7684;&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x7F51;&#x5361;&#x914D;&#x7F6E;&#x6587;&#x4EF6;/etc/sysconfig/network-scripts/ifcfg-eth0 ,&#x9700;&#x8981;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#x4E24;&#x9879; #&#x7F51;&#x5361;eth0&#x540D;&#x79F0;&#x56E0;&#x73AF;&#x5883;&#x800C;&#x5DF2;</p>
+<pre class="language-"><code>ONBOOT=yes
 
-systemctl  restart  firewalld
+IPV6_PRIVACY=no
+</code></pre><p>&#x4E00;&#x5B9A;&#x8981;&#x589E;&#x52A0; IPV6_PRIVACY=no  &#xFF0C;centos7.6  &#x9ED8;&#x8BA4;&#x91C7;&#x7528;IP6&#x6280;&#x672F;&#x4E86;</p>
+<h2 id="ubuntu194-&#x914D;&#x7F6E;&#x9759;&#x6001;ip"><a name="ubuntu194-&#x914D;&#x7F6E;&#x9759;&#x6001;ip" class="anchor-navigation-ex-anchor" href="#ubuntu194-&#x914D;&#x7F6E;&#x9759;&#x6001;ip"><i class="fa fa-link" aria-hidden="true"></i></a>Ubuntu19.4 &#x914D;&#x7F6E;&#x9759;&#x6001;IP</h2>
+<p>sudo vim  /etc/netplan/50-cloud-init.yaml   #&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x56E0;&#x73AF;&#x5883;&#x800C;&#x5F02;&#xFF0C;&#x4F46;&#x4E00;&#x5B9A;&#x662F;*.yaml</p>
+<pre class="language-"><code class="lang-bash">network:
+
+&#x200B;    ethernets:
+
+&#x200B;        ens33:
+
+&#x200B;            dhcp4: no
+
+&#x200B;            addresses: <span class="token punctuation">[</span>192.16.1.101/24, <span class="token punctuation">]</span>
+
+&#x200B;            gateway4: 192.16.1.2
+
+&#x200B;            nameservers:
+
+&#x200B;                    addresses: <span class="token punctuation">[</span>192.16.1.2,8.8.8.8<span class="token punctuation">]</span>
+
+&#x200B;    version: 2
 </code></pre>
-<p>&#x79FB;&#x9664;--add-rich-rule&#x89C4;&#x5219;  &#x7528;--remove-rich-rule=</p>
-<p>&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x663E;&#x793A;&#xFF1A;</p>
-<pre class="language-"><code>  --list-rich-rules    List rich language rules added for a zone [P] [Z]
+<p>&#x5B8C;&#x6210;&#x540E;&#x6267;&#x884C;  sudo netplan apply</p>
+<p>&#x5373;&#x53EF;&#x751F;&#x6548;,&#x535A;&#x4E3B;&#x53C2;&#x8003;&#x4E86;&#xFF1A;<a href="https://www.tecmint.com/configure-network-static-ip-address-in-ubuntu/" target="_blank">https://www.tecmint.com/configure-network-static-ip-address-in-ubuntu/</a></p>
 
-  --add-rich-rule=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rule</span><span class="token punctuation">&gt;</span></span>
-
-&#x200B;                       Add rich language rule &apos;rule&apos; for a zone [P] [Z] [T]
-
-  --remove-rich-rule=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rule</span><span class="token punctuation">&gt;</span></span>
-
-&#x200B;                       Remove rich language rule &apos;rule&apos; from a zone [P] [Z]
-</code></pre><h3 id="2"><a name="2" class="anchor-navigation-ex-anchor" href="#2"><i class="fa fa-link" aria-hidden="true"></i></a>2</h3>
-<pre class="language-"><code>iptables-save &gt; iptables.rules
-
-/sbin/iptables -A INPUT -s 172.16.35.31 -p tcp --dport 12181 -j ACCEPT          # &#x4E2D;&#x63A7;&#x767D;&#x540D;&#x5355;
-
-/sbin/iptables -A OUTPUT -d 172.16.35.31 -p tcp --sport 12181 -j ACCEPT
-
-/sbin/iptables -A INPUT -p tcp --dport 12181 -j DROP   #&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;12181&#x7AEF;&#x53E3;
-
-/sbin/iptables -A OUTPUT -p tcp --sport 12181 -j DROP
-
-\#iptables --list-rules  #&#x67E5;&#x770B;&#x89C4;&#x5219; &#xFF0C;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x5220;&#x9664;&#x4E0B;&#x9762;&#x89C4;&#x5219;
-
-\#iptables -D INPUT -j REJECT --reject-with icmp-host-prohibited   #
-
-\#iptables -D FORWARD -j REJECT --reject-with icmp-host-prohibited  #
-
-service  iptables  save
-
-systemctl  restart   iptables
-</code></pre>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
                                 
                                 </section>
@@ -753,14 +742,10 @@ systemctl  restart   iptables
 
             
                 
-                <a href="tar-deal.html" class="navigation navigation-prev " aria-label="Previous page: "-"在tar命令中的巧用">
+                <a href="limit_ip.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 利用iptables或防火墙指定ip访问服务器某个端口">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="set_ip.html" class="navigation navigation-next " aria-label="Next page: 如何设置centos7.6和Ubuntu19.4的ip4">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -769,7 +754,7 @@ systemctl  restart   iptables
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"利用iptables或防火墙指定ip访问服务器某个端口","level":"1.2.2","depth":2,"next":{"title":"如何设置centos7.6和Ubuntu19.4的ip4","level":"1.2.3","depth":2,"path":"linux/set_ip.md","ref":"linux/set_ip.md","articles":[]},"previous":{"title":"\"-\"在tar命令中的巧用","level":"1.2.1","depth":2,"path":"linux/tar-deal.md","ref":"linux/tar-deal.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"linux/limit_ip.md","mtime":"2019-07-03T10:12:49.353Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-03T10:30:50.418Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"如何设置centos7.6和Ubuntu19.4的ip4","level":"1.2.3","depth":2,"next":{"title":"docker","level":"1.3","depth":1,"ref":"","articles":[{"title":"docker 安装与优化","level":"1.3.1","depth":2,"path":"docker/docker-install.md","ref":"docker/docker-install.md","articles":[]},{"title":"harbor的安装和注意事项","level":"1.3.2","depth":2,"path":"docker/harbor-install.md","ref":"docker/harbor-install.md","articles":[]},{"title":"如何制作出合适的镜像","level":"1.3.3","depth":2,"path":"docker/dockerfile-rule.md","ref":"docker/dockerfile-rule.md","articles":[]}]},"previous":{"title":"利用iptables或防火墙指定ip访问服务器某个端口","level":"1.2.2","depth":2,"path":"linux/limit_ip.md","ref":"linux/limit_ip.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"linux/set_ip.md","mtime":"2019-07-03T10:26:11.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-03T10:30:50.418Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
