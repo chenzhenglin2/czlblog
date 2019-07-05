@@ -39,10 +39,17 @@
   - [nginx其他知识]()
 * git
   - [git日常使用命令](git/git-use.md)
+  - [gitlab搭建和备份](git/install_gitlab.md)
 * 自动化测试技术
   - 手机自动化
     - monkey测试
     - uiautomator 自动化测试
+* 数据库
+  - mongo
+  - MySQL
+  - 不常见数据库的搭建
+    - [db2搭建]()
+    - [人大金仓搭建]()
 * 虚拟化技术
   - vmmare 
   - vcenter
@@ -54,7 +61,6 @@
   - elasticsearch
   - druid
   - kafka+zookeeper
-  - mongo
 - 持续集成项目实战
   - [利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本技术网站]()
   - [采用jenkins+harbor+kubernetes实时部署最新程序]()
