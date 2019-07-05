@@ -39,8 +39,10 @@ emailAddress=ca@dclingcloud.cc  // 管理邮箱名
 脚本使用示例
 
 ```
-./create_self-signed-cert.sh --ssl-domain=www.test.com --ssl-trusted-domain=www.test2.com \
---ssl-trusted-ip=1.1.1.1,2.2.2.2,3.3.3.3 --ssl-size=2048 --ssl-date=3650
+cat /etc/hosts
+192.16.1.100 Centos76 reg.czl.com  具体名称和设置的自签名域名一致
+
+./create_self-signed-cert.sh --ssl-domain=reg.czl.com --ssl-trusted-ip=192.16.1.100 
 ```
 
-具体用法可以参考脚本下载链接 
+详细的用法可以参考脚本下载链接 
