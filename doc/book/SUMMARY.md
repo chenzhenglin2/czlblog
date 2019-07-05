@@ -27,11 +27,11 @@
   - [jenkins多种pipeline构建job]()
 * shell
   - [shell 脚本中获取脚本所在路径](shell/get_dir_in_shell.md)
-  - [sed不常见用法]()
+  - [sed不常见用法](shell/sed_use_hard.md)
 * jmeter
   - [利用jmeter模拟手机接口测试](jmeter/use_jmeter_test_app.md)
 * 证书申请与制作
-  - [私有证书制作]()
+  - [私有证书制作](ca/make_key.md)
 * NGINX
   - [如何利用nginx指向本地静态网页]()
   - [如何利用nginx实现负载均衡]()
