@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>利用iptables或防火墙指定ip访问服务器某个端口 · 志云的博客</title>
+        <title>sed不常见用法 · 志云的博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -93,10 +93,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="set_ip.html" />
     
-    
-    <link rel="prev" href="tar-deal.html" />
+    <link rel="prev" href="get_dir_in_shell.html" />
     
 
     </head>
@@ -152,9 +150,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="tar-deal.html">
+        <li class="chapter " data-level="1.2.1" data-path="../linux/tar-deal.html">
             
-                <a href="tar-deal.html">
+                <a href="../linux/tar-deal.html">
             
                     
                     "-"在tar命令中的巧用
@@ -165,9 +163,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="limit_ip.html">
+        <li class="chapter " data-level="1.2.2" data-path="../linux/limit_ip.html">
             
-                <a href="limit_ip.html">
+                <a href="../linux/limit_ip.html">
             
                     
                     利用iptables或防火墙指定ip访问服务器某个端口
@@ -178,9 +176,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="set_ip.html">
+        <li class="chapter " data-level="1.2.3" data-path="../linux/set_ip.html">
             
-                <a href="set_ip.html">
+                <a href="../linux/set_ip.html">
             
                     
                     如何设置centos7.6和Ubuntu19.4的ip4
@@ -191,9 +189,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="extend_disk.html">
+        <li class="chapter " data-level="1.2.4" data-path="../linux/extend_disk.html">
             
-                <a href="extend_disk.html">
+                <a href="../linux/extend_disk.html">
             
                     
                     Linux中磁盘扩展与缩减
@@ -217,9 +215,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="use_heredoc.html">
+        <li class="chapter " data-level="1.2.6" data-path="../linux/use_heredoc.html">
             
-                <a href="use_heredoc.html">
+                <a href="../linux/use_heredoc.html">
             
                     
                     heredocument的巧用
@@ -501,9 +499,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../shell/get_dir_in_shell.html">
+        <li class="chapter " data-level="1.6.1" data-path="get_dir_in_shell.html">
             
-                <a href="../shell/get_dir_in_shell.html">
+                <a href="get_dir_in_shell.html">
             
                     
                     shell 脚本中获取脚本所在路径
@@ -514,9 +512,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../shell/sed_use_hard.html">
+        <li class="chapter active" data-level="1.6.2" data-path="sed_use_hard.html">
             
-                <a href="../shell/sed_use_hard.html">
+                <a href="sed_use_hard.html">
             
                     
                     sed不常见用法
@@ -1160,7 +1158,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >利用iptables或防火墙指定ip访问服务器某个端口</a>
+        <a href=".." >sed不常见用法</a>
     </h1>
 </div>
 
@@ -1175,45 +1173,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;"><b></b>&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><b></b>&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</a></li><ul><li><span class="title-icon "></span><a href="#1"><b></b>1</a></li><li><span class="title-icon "></span><a href="#2"><b></b>2</a></li></ul></ul></ul></div><a href="#&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;"><a name="&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x5229;&#x7528;iptables&#x6216;&#x9632;&#x706B;&#x5899;&#x6307;&#x5B9A;ip&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;</h1>
-<h2 id="&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><a name="&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</h2>
-<h3 id="1"><a name="1" class="anchor-navigation-ex-anchor" href="#1"><i class="fa fa-link" aria-hidden="true"></i></a>1</h3>
-<pre class="language-"><code class="lang-bash">firewall-cmd --permanent --add-rich-rule <span class="token string">&apos;rule family=ipv4 source address=10.219.82.83 port port=12181 protocol=tcp accept&apos;</span>
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;4&#x884C;&#x884C;&#x9996;&#x8FFD;&#x52A0;&#x4E00;&#x884C;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;test"><b></b>&#x7B2C;4&#x884C;&#x884C;&#x9996;&#x8FFD;&#x52A0;&#x4E00;&#x884C;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;test</a></li></ul></div><a href="#&#x7B2C;4&#x884C;&#x884C;&#x9996;&#x8FFD;&#x52A0;&#x4E00;&#x884C;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;test" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="1"><a name="1" class="anchor-navigation-ex-anchor" href="#1"><i class="fa fa-link" aria-hidden="true"></i></a>1</h2>
+<pre class="language-"><code>sed -i &apos;/ADMIN URL/s/localhost/172.17.0.1/;
+        /DATA URL/s/localhost/172.17.0.1/;
+        s/localhost:8082/172.17.0.1:8082/;      
+         N;/16379/s/localhost/172.17.0.1/;P;D;&apos; $CONFIG_DIR/fusion_config/production.js     
+</code></pre><p>sed &#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6027;&#x6267;&#x884C;&#x591A;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x6BCF;&#x884C;&#x4EE3;&#x7801;&#x7528;&#x5206;&#x53F7;&#x9694;&#x5F00;&#xFF1B;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x5757;&#xFF0C;&#x524D;&#x4E24;&#x884C;&#x8868;&#x793A;&#x5B9A;&#x4F4D;&#x540E;&#x8FDB;&#x884C;&#x66FF;&#x6362;&#x64CD;&#x4F5C;&#xFF0C;&#x7B2C;&#x4E09;&#x884C;&#x4EE3;&#x7801;&#x5339;&#x914D;&#x540E;&#x5C31;&#x66FF;&#x6362;&#xFF1B;&#x7B2C;&#x56DB;&#x884C;&#x4EE3;&#x7801;&#x662F;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x6307;&#x9488;&#x5230;16379&#x540E;&#xFF08;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x6709;&#x4E24;&#x884C;&#xFF09;&#xFF0C;&#x628A;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x91CC;&#x9762;&#x7684;localhost&#x66FF;&#x6362;&#x6389;&#x3002;&#x5927;&#x5199;PD &#x8868;&#x793A;&#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7B2C;&#x4E00;&#x884C;&#x548C;&#x5220;&#x9664;&#x7B2C;&#x4E00;&#x884C;&#xFF1B;</p>
+<h2 id="2"><a name="2" class="anchor-navigation-ex-anchor" href="#2"><i class="fa fa-link" aria-hidden="true"></i></a>2</h2>
+<p>sed -i  &apos;/^\s<em>$/d&apos;  test.txt  &#x5220;&#x9664;&#x7A7A;&#x767D;&#x884C;
+sed -i &apos;s/\s</em>//&apos; test.txt  &#x8868;&#x793A;&#x5220;&#x9664;&#x6BCF;&#x884C;&#x5F00;&#x5934;&#x7684;&#x7A7A;&#x683C; 
+sed -i &apos;s/\s<em>//g&apos; test.txt  &#x8868;&#x793A;&#x5220;&#x9664;&#x6BCF;&#x884C;&#x6240;&#x6709;&#x7684;&#x7A7A;&#x683C; 
+sed -i &apos;s/\s</em>//;s/\s<em>$//g&apos; test.txt  &#x5220;&#x9664;&#x884C;&#x9996;&#x548C;&#x884C;&#x5C3E;&#x7684;&#x7A7A;&#x683C; &#x4E5F;&#x53EF;&#x4EE5;&#x62C6;&#x5F00;&#x5199;
+&#x628A;&#x5220;&#x9664;&#x884C;&#x5C3E;&#x7684;&#x7A7A;&#x683C;&#x5355;&#x72EC;&#x4E3A;&#xFF1A;sed  -i &apos;s/\s</em>$//g&apos;
+&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;\s&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7A7A;&#x767D;&#x5B57;&#x7B26; &#x4E0D;&#x7BA1;&#x662F;tab &#x8FD8;&#x662F;&#x7A7A;&#x683C;
+sed &#x6A21;&#x5F0F;&#x5339;&#x914D;&#x7684;g&#x53C2;&#x6570;&#xFF1A;
+g&#x662F;&#x8D77;&#x5230;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x662F;&#x6BCF;&#x4E00;&#x884C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x662F;&#x4E00;&#x884C;&#x4E3A;&#x5355;&#x4F4D;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x3002;+g :&#x5339;&#x914D;&#x6BCF;&#x4E00;&#x884C;&#x6709;&#x884C;&#x9996;&#x5230;&#x884C;&#x5C3E;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;
+&#x6240;&#x4EE5;&#x614E;&#x7528;&#x53C2;&#x6570;g</p>
+<h2 id="3"><a name="3" class="anchor-navigation-ex-anchor" href="#3"><i class="fa fa-link" aria-hidden="true"></i></a>3</h2>
+<p>&#x6307;&#x5B9A;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5982;&#x7B2C;4&#x884C;&#x672B;&#x5C3E;&#x8FFD;&#x52A0;&#x4E00;&#x884C;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;test
+sed -i &apos;N;4atest&apos; test.txt   </p>
+<h1 id="&#x7B2C;4&#x884C;&#x884C;&#x9996;&#x8FFD;&#x52A0;&#x4E00;&#x884C;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;test"><a name="&#x7B2C;4&#x884C;&#x884C;&#x9996;&#x8FFD;&#x52A0;&#x4E00;&#x884C;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;test" class="anchor-navigation-ex-anchor" href="#&#x7B2C;4&#x884C;&#x884C;&#x9996;&#x8FFD;&#x52A0;&#x4E00;&#x884C;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;test"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;4&#x884C;&#x884C;&#x9996;&#x8FFD;&#x52A0;&#x4E00;&#x884C;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;test</h1>
+<p>sed -i &apos;N;4itest&apos; test.txt </p>
 
-systemctl  restart  firewalld
-</code></pre>
-<p>&#x79FB;&#x9664;--add-rich-rule&#x89C4;&#x5219;  &#x7528;--remove-rich-rule=</p>
-<p>&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x663E;&#x793A;&#xFF1A;</p>
-<pre class="language-"><code>  --list-rich-rules    List rich language rules added for a zone [P] [Z]
-
-  --add-rich-rule=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rule</span><span class="token punctuation">&gt;</span></span>
-
-&#x200B;                       Add rich language rule &apos;rule&apos; for a zone [P] [Z] [T]
-
-  --remove-rich-rule=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rule</span><span class="token punctuation">&gt;</span></span>
-
-&#x200B;                       Remove rich language rule &apos;rule&apos; from a zone [P] [Z]
-</code></pre><h3 id="2"><a name="2" class="anchor-navigation-ex-anchor" href="#2"><i class="fa fa-link" aria-hidden="true"></i></a>2</h3>
-<pre class="language-"><code>iptables-save &gt; iptables.rules
-
-/sbin/iptables -A INPUT -s 172.16.35.31 -p tcp --dport 12181 -j ACCEPT          # &#x4E2D;&#x63A7;&#x767D;&#x540D;&#x5355;
-
-/sbin/iptables -A OUTPUT -d 172.16.35.31 -p tcp --sport 12181 -j ACCEPT
-
-/sbin/iptables -A INPUT -p tcp --dport 12181 -j DROP   #&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;12181&#x7AEF;&#x53E3;
-
-/sbin/iptables -A OUTPUT -p tcp --sport 12181 -j DROP
-
-\#iptables --list-rules  #&#x67E5;&#x770B;&#x89C4;&#x5219; &#xFF0C;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x5220;&#x9664;&#x4E0B;&#x9762;&#x89C4;&#x5219;
-
-\#iptables -D INPUT -j REJECT --reject-with icmp-host-prohibited   #
-
-\#iptables -D FORWARD -j REJECT --reject-with icmp-host-prohibited  #
-
-service  iptables  save
-
-systemctl  restart   iptables
-</code></pre>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
                                 
                                 </section>
@@ -1241,14 +1222,10 @@ systemctl  restart   iptables
 
             
                 
-                <a href="tar-deal.html" class="navigation navigation-prev " aria-label="Previous page: "-"在tar命令中的巧用">
+                <a href="get_dir_in_shell.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: shell 脚本中获取脚本所在路径">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="set_ip.html" class="navigation navigation-next " aria-label="Next page: 如何设置centos7.6和Ubuntu19.4的ip4">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1257,7 +1234,7 @@ systemctl  restart   iptables
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"利用iptables或防火墙指定ip访问服务器某个端口","level":"1.2.2","depth":2,"next":{"title":"如何设置centos7.6和Ubuntu19.4的ip4","level":"1.2.3","depth":2,"path":"linux/set_ip.md","ref":"linux/set_ip.md","articles":[]},"previous":{"title":"\"-\"在tar命令中的巧用","level":"1.2.1","depth":2,"path":"linux/tar-deal.md","ref":"linux/tar-deal.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"linux/limit_ip.md","mtime":"2019-07-04T13:44:47.577Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T08:22:01.198Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"sed不常见用法","level":"1.6.2","depth":2,"next":{"title":"jmeter","level":"1.7","depth":1,"ref":"","articles":[{"title":"利用jmeter模拟手机接口测试","level":"1.7.1","depth":2,"path":"jmeter/use_jmeter_test_app.md","ref":"jmeter/use_jmeter_test_app.md","articles":[]}]},"previous":{"title":"shell 脚本中获取脚本所在路径","level":"1.6.1","depth":2,"path":"shell/get_dir_in_shell.md","ref":"shell/get_dir_in_shell.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"shell/sed_use_hard.md","mtime":"2019-07-05T07:48:22.302Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T08:22:01.198Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

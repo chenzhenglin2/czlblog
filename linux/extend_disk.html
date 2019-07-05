@@ -1,0 +1,1818 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linux中磁盘扩展与缩减 · 志云的博客</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="陈正林">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="set_ip.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于博客说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="tar-deal.html">
+            
+                <a href="tar-deal.html">
+            
+                    
+                    "-"在tar命令中的巧用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="limit_ip.html">
+            
+                <a href="limit_ip.html">
+            
+                    
+                    利用iptables或防火墙指定ip访问服务器某个端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="set_ip.html">
+            
+                <a href="set_ip.html">
+            
+                    
+                    如何设置centos7.6和Ubuntu19.4的ip4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="extend_disk.html">
+            
+                <a href="extend_disk.html">
+            
+                    
+                    Linux中磁盘扩展与缩减
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    二进制安装包的制作
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="use_heredoc.html">
+            
+                <a href="use_heredoc.html">
+            
+                    
+                    heredocument的巧用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../docker/docker-install.html">
+            
+                <a href="../docker/docker-install.html">
+            
+                    
+                    docker 安装与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../docker/harbor-install.html">
+            
+                <a href="../docker/harbor-install.html">
+            
+                    
+                    harbor的安装和注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../docker/dockerfile-rule.html">
+            
+                <a href="../docker/dockerfile-rule.html">
+            
+                    
+                    如何制作出合适的镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../docker/save_load_images.html">
+            
+                <a href="../docker/save_load_images.html">
+            
+                    
+                    逐个和批量导出导入docker镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    rancher和kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../k8s/kubectl-user-instruction.html">
+            
+                <a href="../k8s/kubectl-user-instruction.html">
+            
+                    
+                    kubectl常用命令汇总（以及curl注入）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../k8s/docker-run-and-k8s-command.html">
+            
+                <a href="../k8s/docker-run-and-k8s-command.html">
+            
+                    
+                    docker run image -args对应yaml语法/rancher UI操作方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    离线helm安装高可用rancher
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    rancher中快速部署应用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    rancher应用商店的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    rancher快速搭建起elasticsearch+kibana+metricbeat+packetbeat
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    rancher服务不可用情况下，如何使用kubectl命令
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Jenkins
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../jenkins/jenkins-slave-for-docker.html">
+            
+                <a href="../jenkins/jenkins-slave-for-docker.html">
+            
+                    
+                    Jenkins调用docker编译程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../jenkins/install-jenkins.html">
+            
+                <a href="../jenkins/install-jenkins.html">
+            
+                    
+                    利用docker 镜像，快速搭建Jenkins环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    jenkins自由风格构建job
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    jenkins多种pipeline构建job
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../shell/get_dir_in_shell.html">
+            
+                <a href="../shell/get_dir_in_shell.html">
+            
+                    
+                    shell 脚本中获取脚本所在路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../shell/sed_use_hard.html">
+            
+                <a href="../shell/sed_use_hard.html">
+            
+                    
+                    sed不常见用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    jmeter
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../jmeter/use_jmeter_test_app.html">
+            
+                <a href="../jmeter/use_jmeter_test_app.html">
+            
+                    
+                    利用jmeter模拟手机接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    证书申请与制作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../ca/make_key.html">
+            
+                <a href="../ca/make_key.html">
+            
+                    
+                    私有证书制作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    NGINX
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" >
+            
+                <span>
+            
+                    
+                    如何利用nginx指向本地静态网页
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" >
+            
+                <span>
+            
+                    
+                    如何利用nginx实现负载均衡
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" >
+            
+                <span>
+            
+                    
+                    如何利用nginx实现反向代理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" >
+            
+                <span>
+            
+                    
+                    nginx其他知识
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../git/git-use.html">
+            
+                <a href="../git/git-use.html">
+            
+                    
+                    git日常使用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../git/install_gitlab.md">
+            
+                <span>
+            
+                    
+                    gitlab搭建和备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    自动化测试技术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" >
+            
+                <span>
+            
+                    
+                    手机自动化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" >
+            
+                <span>
+            
+                    
+                    monkey测试
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" >
+            
+                <span>
+            
+                    
+                    uiautomator 自动化测试
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" >
+            
+                <span>
+            
+                    
+                    mongo
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" >
+            
+                <span>
+            
+                    
+                    MySQL
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" >
+            
+                <span>
+            
+                    
+                    不常见数据库的搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1" >
+            
+                <span>
+            
+                    
+                    db2搭建
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.2" >
+            
+                <span>
+            
+                    
+                    人大金仓搭建
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    虚拟化技术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" >
+            
+                <span>
+            
+                    
+                    vmmare
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" >
+            
+                <span>
+            
+                    
+                    vcenter
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    Java中间件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" >
+            
+                <span>
+            
+                    
+                    websphere各个版本的部署和使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" >
+            
+                <span>
+            
+                    
+                    tomcat、weblogic、was等组件jvm调整
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    大数据处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" >
+            
+                <span>
+            
+                    
+                    elasticsearch
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" >
+            
+                <span>
+            
+                    
+                    druid
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" >
+            
+                <span>
+            
+                    
+                    kafka+zookeeper
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    持续集成项目实战
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" >
+            
+                <span>
+            
+                    
+                    利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本技术网站
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" >
+            
+                <span>
+            
+                    
+                    采用jenkins+harbor+kubernetes实时部署最新程序
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    正确使用工具事半功倍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" >
+            
+                <span>
+            
+                    
+                    搜索引擎的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" >
+            
+                <span>
+            
+                    
+                    gitbook 的巧用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" >
+            
+                <span>
+            
+                    
+                    有道云笔记
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" >
+            
+                <span>
+            
+                    
+                    GitHub搭建个人网站
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Linux中磁盘扩展与缩减</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h2 id="&#x78C1;&#x76D8;&#x6269;&#x5C55;&#x548C;&#x7F29;&#x51CF;&#x77E5;&#x8BC6;&#x6C47;&#x603B;"><a name="&#x78C1;&#x76D8;&#x6269;&#x5C55;&#x548C;&#x7F29;&#x51CF;&#x77E5;&#x8BC6;&#x6C47;&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x78C1;&#x76D8;&#x6269;&#x5C55;&#x548C;&#x7F29;&#x51CF;&#x77E5;&#x8BC6;&#x6C47;&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x78C1;&#x76D8;&#x6269;&#x5C55;&#x548C;&#x7F29;&#x51CF;&#x77E5;&#x8BC6;&#x6C47;&#x603B;</h2>
+<h2 id="&#x65B0;&#x589E;&#x5206;&#x533A;&#xFF0C;&#x6302;&#x9760;&#x5230;&#x65B0;&#x7684;&#x76EE;&#x5F55;&#x65B9;&#x6CD5;"><a name="&#x65B0;&#x589E;&#x5206;&#x533A;&#xFF0C;&#x6302;&#x9760;&#x5230;&#x65B0;&#x7684;&#x76EE;&#x5F55;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x589E;&#x5206;&#x533A;&#xFF0C;&#x6302;&#x9760;&#x5230;&#x65B0;&#x7684;&#x76EE;&#x5F55;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x589E;&#x5206;&#x533A;&#xFF0C;&#x6302;&#x9760;&#x5230;&#x65B0;&#x7684;&#x76EE;&#x5F55;&#x65B9;&#x6CD5;</h2>
+<ul>
+<li><p>1,&#x9996;&#x5148;&#x901A;&#x8FC7;&#x547D;&#x4EE4;lsblk  &#x67E5;&#x770B;&#x589E;&#x52A0;&#x5206;&#x533A;&#x7684;&#x60C5;&#x51B5;&#xFF1B;</p>
+<pre class="language-"><code>[root@apptrace0011 ~]# lsblk
+NAME            MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda               8:0    0   501G  0 disk 
+&#x251C;&#x2500;sda1            8:1    0     1G  0 part /boot
+&#x251C;&#x2500;sda2            8:2    0   199G  0 part 
+&#x2502; &#x251C;&#x2500;centos-root 253:0    0    50G  0 lvm  /
+&#x2502; &#x251C;&#x2500;centos-swap 253:1    0   3.9G  0 lvm  [SWAP]
+&#x2502; &#x2514;&#x2500;centos-home 253:2    0 445.1G  0 lvm  /home
+&#x2514;&#x2500;sda3            8:3    0   301G  0 part 
+  &#x2514;&#x2500;centos-home 253:2    0 445.1G  0 lvm  /home
+sdb               8:16   0    10G  0 disk 
+sr0              11:0    1  1024M  0 rom
+</code></pre><p>&#x5173;&#x4E8E;sda/sdb&#x8BF4;&#x660E;&#xFF0C;&#x5982;&#x679C;&#x901A;&#x8FC7;vmmare &#x865A;&#x62DF;&#x673A;&#x63A7;&#x5236;&#x53F0;&#x7B49;&#x5DE5;&#x5177;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x539F;&#x6709;&#x7684;1&#x4E2A;&#x786C;&#x76D8;&#x6269;&#x5145;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF1B;&#x5982;&#x539F;&#x6709;&#x786C;&#x76D8;&#x662F;200G&#xFF0C;
+&#x6269;&#x5145;&#x5230;500G&#x6269;&#x5145;&#x540E;&#xFF0C;&#x6269;&#x5145;&#x7684;&#x5B58;&#x50A8;&#x8FD8;&#x662F;&#x5728;sda&#x5206;&#x533A;&#x4E0B;&#xFF1B;&#x5982;&#x679C;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x786C;&#x76D8;&#xFF0C;&#x662F;&#x5728;sdb&#x5206;&#x533A;&#xFF0C;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;sdc&#x2026;&#x2026;</p>
+<p>&#x5173;&#x4E8E;sda/sdb&#x8BF4;&#x660E;&#xFF0C;&#x5982;&#x679C;&#x901A;&#x8FC7;vmmare &#x865A;&#x62DF;&#x673A;&#x63A7;&#x5236;&#x53F0;&#x7B49;&#x5DE5;&#x5177;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x539F;&#x6709;&#x7684;1&#x4E2A;&#x786C;&#x76D8;&#x6269;&#x5145;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF1B;&#x5982;&#x539F;&#x6709;&#x786C;&#x76D8;&#x662F;200G&#xFF0C;
+&#x6269;&#x5145;&#x5230;500G&#x6269;&#x5145;&#x540E;&#xFF0C;&#x6269;&#x5145;&#x7684;&#x5B58;&#x50A8;&#x8FD8;&#x662F;&#x5728;sda&#x5206;&#x533A;&#x4E0B;&#xFF1B;&#x5982;&#x679C;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x786C;&#x76D8;&#xFF0C;&#x662F;&#x5728;sdb&#x5206;&#x533A;&#xFF0C;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;sdc&#x2026;&#x2026;</p>
+</li>
+<li><p>2&#xFF0C;&#x901A;&#x8FC7;&#x547D;&#x4EE4;fdisk   -l  </p>
+<pre class="language-"><code> [root@apptrace0011 ~]# fdisk   -l  
+
+Disk /dev/sda: 537.9 GB, 537944653824 bytes, 1050673152 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000e999c
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     2099199     1048576    1  FAT12
+/dev/sda2         2099200   419430399   208665600   8e  Linux LVM
+/dev/sda3       419430400  1050673151   315621376   8e  Linux LVM
+
+Disk /dev/sdb: 10.7 GB, 10737418240 bytes, 20971520 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+Disk /dev/mapper/centos-root: 53.7 GB, 53687091200 bytes, 104857600 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+Disk /dev/mapper/centos-swap: 4160 MB, 4160749568 bytes, 8126464 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+Disk /dev/mapper/centos-home: 477.9 GB, 477940940800 bytes, 933478400 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+</code></pre><p>&#x67E5;&#x770B;&#x5230;sda &#x786C;&#x76D8;&#x548C;sdb&#x786C;&#x76D8;&#x7684;&#x60C5;&#x51B5;&#xFF0C;sda&#x90FD;&#x5DF2;&#x7ECF;&#x505A;&#x5206;&#x533A;&#xFF08;&#x4F46;&#x8FD8;&#x6709;&#x7A7A;&#x95F4;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5206;&#x533A;&#xFF0C;&#x4E0B;&#x79CD;&#x7C7B;&#x578B;&#x8BB2;&#xFF09;
+sdb&#x8FD8;&#x672A;&#x6709;&#x5206;&#x533A;&#xFF1B;&#x5982;&#x679C;&#x65B0;&#x589E;&#x4E86;&#x786C;&#x76D8;&#xFF0C;&#x6CA1;&#x6709;&#x770B;&#x5230;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;
+partprobe    /dev/sdb  ,&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x81EA;&#x884C;&#x5B89;&#x88C5; yum  -y install   parted  </p>
+<p>&#x67E5;&#x770B;&#x5230;sda &#x786C;&#x76D8;&#x548C;sdb&#x786C;&#x76D8;&#x7684;&#x60C5;&#x51B5;&#xFF0C;sda&#x90FD;&#x5DF2;&#x7ECF;&#x505A;&#x5206;&#x533A;&#xFF08;&#x4F46;&#x8FD8;&#x6709;&#x7A7A;&#x95F4;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5206;&#x533A;&#xFF0C;&#x4E0B;&#x79CD;&#x7C7B;&#x578B;&#x8BB2;&#xFF09;
+sdb&#x8FD8;&#x672A;&#x6709;&#x5206;&#x533A;&#xFF1B;&#x5982;&#x679C;&#x65B0;&#x589E;&#x4E86;&#x786C;&#x76D8;&#xFF0C;&#x6CA1;&#x6709;&#x770B;&#x5230;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;
+partprobe    /dev/sdb  ,&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x81EA;&#x884C;&#x5B89;&#x88C5; yum  -y install   parted  </p>
+</li>
+</ul>
+<ul>
+<li><p>3&#xFF0C;&#x5982;&#x679C;&#x65B0;&#x589E;&#x786C;&#x76D8;&#x5728;sdb&#x4E0B; &#x53EF;&#x4EE5;&#x6309;&#x7167;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x76F4;&#x63A5;&#x6302;&#x8F7D;
+<code>fdisk /dev/sdb</code>
+&#x8F93;&#x5165;m &#x67E5;&#x770B;&#x7528;&#x6CD5; &#x6700;&#x5E38;&#x7528;&#x51E0;&#x4E2A;&#x7528;&#x6CD5; p &#x6253;&#x5370;&#x5206;&#x533A;&#x60C5;&#x51B5; n &#x65B0;&#x589E;&#x5206;&#x533A;&#xFF1B; d&#x5220;&#x9664;&#x5206;&#x533A;&#xFF1B;w&#x4FDD;&#x5B58; t&#x6539;&#x53D8;&#x683C;&#x5F0F;
+&#x8F93;&#x5165;p &#x6253;&#x5370;&#x5206;&#x533A;&#x60C5;&#x51B5;
+&#x8F93;&#x5165; n&#x65B0;&#x589E;&#x5206;&#x533A;
+Partition number (1-4, default 1): &#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x9ED8;&#x8BA4;&#x9009;&#x4E2D;1&#xFF1B;&#xFF0C;&#x5982;&#x679C;&#x4E0A;&#x6B65;p&#x6253;&#x5370;&#x65F6;&#x5DF2;&#x7ECF;&#x6709;sdb1&#xFF0C;&#x8F93;&#x5165;2
+&#x7136;&#x540E;&#x8F93;&#x5165;t &#x6539;&#x53D8;&#x5206;&#x533A;&#x683C;&#x5F0F;</p>
+<pre class="language-"><code>Command (m for help): t
+Selected partition 1
+Partition type (type L to list all types): L
+0  Empty           24  NEC DOS         81  Minix / old Lin bf  Solaris        
+ 1  FAT12           27  Hidden NTFS Win 82  Linux swap / So c1  DRDOS/sec (FAT-
+ 2  XENIX root      39  Plan 9          83  Linux           c4  DRDOS/sec (FAT-
+ 3  XENIX usr       3c  PartitionMagic  84  OS/2 hidden or  c6  DRDOS/sec (FAT-
+ 4  FAT16 &lt;32M      40  Venix 80286     85  Linux extended  c7  Syrinx         
+ 5  Extended        41  PPC PReP Boot   86  NTFS volume set da  Non-FS data    
+ 6  FAT16           42  SFS             87  NTFS volume set db  CP/M / CTOS / .
+ 7  HPFS/NTFS/exFAT 4d  QNX4.x          88  Linux plaintext de  Dell Utility   
+ 8  AIX             4e  QNX4.x 2nd part 8e  Linux LVM       df  BootIt         
+ 9  AIX bootable    4f  QNX4.x 3rd part 93  Amoeba          e1  DOS access     
+ a  OS/2 Boot Manag 50  OnTrack DM      94  Amoeba BBT      e3  DOS R/O        
+ b  W95 FAT32       51  OnTrack DM6 Aux 9f  BSD/OS          e4  SpeedStor      
+ c  W95 FAT32 (LBA) 52  CP/M            a0  IBM Thinkpad hi ea  Rufus alignment
+ e  W95 FAT16 (LBA) 53  OnTrack DM6 Aux a5  FreeBSD         eb  BeOS fs        
+ f  W95 Ext&apos;d (LBA) 54  OnTrackDM6      a6  OpenBSD         ee  GPT            
+10  OPUS            55  EZ-Drive        a7  NeXTSTEP        ef  EFI (FAT-12/16/
+11  Hidden FAT12    56  Golden Bow      a8  Darwin UFS      f0  Linux/PA-RISC b
+12  Compaq diagnost 5c  Priam Edisk     a9  NetBSD          f1  SpeedStor      
+14  Hidden FAT16 &lt;3 61  SpeedStor       ab  Darwin boot     f4  SpeedStor      
+16  Hidden FAT16    63  GNU HURD or Sys af  HFS / HFS+      f2  DOS secondary  
+17  Hidden HPFS/NTF 64  Novell Netware  b7  BSDI fs         fb  VMware VMFS    
+18  AST SmartSleep  65  Novell Netware  b8  BSDI swap       fc  VMware VMKCORE 
+1b  Hidden W95 FAT3 70  DiskSecure Mult bb  Boot Wizard hid fd  Linux raid auto
+1c  Hidden W95 FAT3 75  PC/IX           bc  Acronis FAT32 L fe  LANstep        
+1e  Hidden W95 FAT1 80  Old Minix       be  Solaris boot    ff  BBT
+</code></pre></li>
+</ul>
+<p>&#x9009;&#x62E9;8e  Linux LVM &#x8FD9;&#x4E2A;&#x683C;&#x5F0F;&#xFF0C;(&#x6709;&#x7684;&#x662F;83&#x3001;linux&#x683C;&#x5F0F;&#x7684;)
+&#x6700;&#x540E;&#x8F93;&#x5165;w &#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF08;&#x4E0D;&#x80FD;&#x6F0F;&#x6389;&#xFF09;</p>
+<pre class="language-"><code>Partition type (type L to list all types): 8e      
+Changed type of partition &apos;Linux&apos; to &apos;Linux LVM&apos;.
+</code></pre><p>&#x5982;&#x679C;&#x4FDD;&#x5B58;&#x51FA;&#x73B0;&#x9519;&#x8BEF;,&#x53EF;&#x4EE5; partprobe  /dev/sdb  (&#x6CA1;&#x6709;&#x6570;&#x5B57;&#xFF09;
+&#x7136;&#x540E;&#x518D;&#x8FDB;&#x5165; fdisk   /dev/sdb &#x7EE7;&#x7EED;&#x4E0A;&#x9762;&#x7684;&#x64CD;&#x4F5C;  &#x751A;&#x81F3;&#x91CD;&#x542F;</p>
+<p>&#x5982;&#x679C;&#x4FDD;&#x5B58;&#x51FA;&#x73B0;&#x9519;&#x8BEF;,&#x53EF;&#x4EE5; partprobe  /dev/sdb  (&#x6CA1;&#x6709;&#x6570;&#x5B57;&#xFF09;
+&#x7136;&#x540E;&#x518D;&#x8FDB;&#x5165; fdisk   /dev/sdb &#x7EE7;&#x7EED;&#x4E0A;&#x9762;&#x7684;&#x64CD;&#x4F5C;  &#x751A;&#x81F3;&#x91CD;&#x542F;</p>
+<ul>
+<li><p>4&#xFF0C;&#x63A5;&#x7740;&#x683C;&#x5F0F;&#x5316;&#xFF1A;
+centos7 &#x53EF;&#x4EE5;&#x7528;<code>mkfs.xfs /dev/sdb1</code> &#xFF0C;Ubuntu&#x6216;&#x8005;centos6 &#x7528;<code>mkfs.ext4 /dev/sdb1</code> &#x6765;&#x683C;&#x5F0F;
+&#x8F93;&#x5165;mkfs.  &#x6309;tab&#x952E;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6709;&#x54EA;&#x4E9B;&#x683C;&#x5F0F;</p>
+<pre class="language-"><code>[root@apptrace0011 ~]# mkfs.
+mkfs.btrfs   mkfs.cramfs  mkfs.ext2    mkfs.ext3    mkfs.ext4    mkfs.minix   mkfs.xfs
+</code></pre></li>
+</ul>
+<ul>
+<li><p>5&#xFF0C;&#x8FDB;&#x884C;&#x6302;&#x8F7D;&#xFF1A;
+<code>mount /dev/sdb1  /data/&#xFF08;&#x65B0;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x8001;&#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x9700;&#x6C42;&#x63D0;&#x524D;&#x521B;&#x5EFA;&#xFF09;</code></p>
+</li>
+<li><p>6&#xFF0C;&#x5F00;&#x673A;&#x751F;&#x6548;&#xFF0C;&#x7F16;&#x8F91; /etc/fstab </p>
+<pre class="language-"><code>/dev/mapper/centos-root /                       xfs     defaults        0 0
+UUID=3c94bedd-2b80-47d3-a3a4-05785847aa10 /boot                   xfs     defaults        0 0
+/dev/mapper/centos-home /home                   xfs     defaults        0 0
+/dev/mapper/centos-swap swap                    swap    defaults        0 0
+</code></pre><p>&#x628A;&#x521A;&#x624D;&#x7684;/data &#x6DFB;&#x52A0;&#x8FDB;&#x53BB;</p>
+<pre class="language-"><code>/dev/sdb1 /data                   xfs     defaults        0 0
+&#x6216;&#x8005; UUID=3c94bedd-2b80-47d3-a3a4-05785847aa10 /data                xfs     defaults        0 0
+</code></pre><p>&#x5982;&#x679C;&#x662F;&#x5728;&#x7269;&#x7406;&#x673A;&#x4E0A;&#xFF0C;&#x589E;&#x52A0;&#x786C;&#x76D8;&#x540E;&#xFF0C;&#x6700;&#x597D;&#x586B;&#x5199;uuid&#xFF0C;&#x5206;&#x533A;&#x662F;&#x53EF;&#x4EE5;&#x53D8;&#x5316;&#xFF0C;uuid&#x4E0D;&#x4F1A;&#x53D8;&#xFF1B;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x5728;&#x7269;&#x7406;&#x673A;&#x4E0A;&#xFF0C;&#x589E;&#x52A0;&#x786C;&#x76D8;&#x540E;&#xFF0C;&#x6700;&#x597D;&#x586B;&#x5199;uuid&#xFF0C;&#x5206;&#x533A;&#x662F;&#x53EF;&#x4EE5;&#x53D8;&#x5316;&#xFF0C;uuid&#x4E0D;&#x4F1A;&#x53D8;&#xFF1B;</p>
+<ul>
+<li>9.&#x5176;&#x4ED6;&#x547D;&#x4EE4; blkid&#x67E5;&#x770B;&#x6302;&#x8F7D;&#x786C;&#x76D8;&#x7684;UUID&#xFF0C;&#x5982;blkid | grep  &quot;sdb*&quot; &#xFF0C;&#x67E5;&#x770B;&#x73B0;&#x6709;&#x5206;&#x533A;cat  /proc/partitions </li>
+</ul>
+<p>&#x628A;&#x521A;&#x624D;&#x7684;/data &#x6DFB;&#x52A0;&#x8FDB;&#x53BB;</p>
+<pre class="language-"><code>/dev/sdb1 /data                   xfs     defaults        0 0
+&#x6216;&#x8005; UUID=3c94bedd-2b80-47d3-a3a4-05785847aa10 /data                xfs     defaults        0 0
+</code></pre><p>&#x5982;&#x679C;&#x662F;&#x5728;&#x7269;&#x7406;&#x673A;&#x4E0A;&#xFF0C;&#x589E;&#x52A0;&#x786C;&#x76D8;&#x540E;&#xFF0C;&#x6700;&#x597D;&#x586B;&#x5199;uuid&#xFF0C;&#x5206;&#x533A;&#x662F;&#x53EF;&#x4EE5;&#x53D8;&#x5316;&#xFF0C;uuid&#x4E0D;&#x4F1A;&#x53D8;&#xFF1B;</p>
+<ul>
+<li>8.&#x5176;&#x4ED6;&#x547D;&#x4EE4; blkid&#x67E5;&#x770B;&#x6302;&#x8F7D;&#x786C;&#x76D8;&#x7684;UUID&#xFF0C;&#x5982;<code>blkid | grep  &quot;sdb*&quot;</code>&#xFF0C;&#x67E5;&#x770B;&#x73B0;&#x6709;&#x5206;&#x533A;<code>cat  /proc/partitions</code></li>
+</ul>
+<p>&#x5982;&#x679C;&#x662F;&#x5728;&#x7269;&#x7406;&#x673A;&#x4E0A;&#xFF0C;&#x589E;&#x52A0;&#x786C;&#x76D8;&#x540E;&#xFF0C;&#x6700;&#x597D;&#x586B;&#x5199;uuid&#xFF0C;&#x5206;&#x533A;&#x662F;&#x53EF;&#x4EE5;&#x53D8;&#x5316;&#xFF0C;uuid&#x4E0D;&#x4F1A;&#x53D8;&#xFF1B;</p>
+<ul>
+<li>7.&#x5176;&#x4ED6;&#x547D;&#x4EE4; blkid&#x67E5;&#x770B;&#x6302;&#x8F7D;&#x786C;&#x76D8;&#x7684;UUID&#xFF0C;&#x5982;<code>blkid | grep  &quot;sdb*&quot;</code>&#xFF0C;&#x67E5;&#x770B;&#x73B0;&#x6709;&#x5206;&#x533A;<code>cat  /proc/partitions</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x600E;&#x4E48;&#x628A;&#x539F;&#x6709;&#x786C;&#x76D8;&#x6269;&#x5145;&#x7684;&#x5B58;&#x50A8;&#x90FD;&#x6302;&#x9760;&#x5230;home&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x5DF2;&#x6709;&#x76EE;&#x5F55;&#xFF09;"><a name="&#x600E;&#x4E48;&#x628A;&#x539F;&#x6709;&#x786C;&#x76D8;&#x6269;&#x5145;&#x7684;&#x5B58;&#x50A8;&#x90FD;&#x6302;&#x9760;&#x5230;home&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x5DF2;&#x6709;&#x76EE;&#x5F55;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x600E;&#x4E48;&#x628A;&#x539F;&#x6709;&#x786C;&#x76D8;&#x6269;&#x5145;&#x7684;&#x5B58;&#x50A8;&#x90FD;&#x6302;&#x9760;&#x5230;home&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x5DF2;&#x6709;&#x76EE;&#x5F55;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x600E;&#x4E48;&#x628A;&#x539F;&#x6709;&#x786C;&#x76D8;&#x6269;&#x5145;&#x7684;&#x5B58;&#x50A8;&#x90FD;&#x6302;&#x9760;&#x5230;/home&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x5DF2;&#x6709;&#x76EE;&#x5F55;&#xFF09;</h2>
+<ul>
+<li><p>1&#xFF0C;&#x67E5;&#x770B;&#x65B0;&#x589E;&#x786C;&#x76D8;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x4E0B;&#xFF0C;&#x539F;&#x6709;&#x786C;&#x76D8;&#x4ECE;200G&#x589E;&#x52A0;&#x5230;300G</p>
+<pre class="language-"><code>[root@part-add ~]# lsblk 
+NAME            MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda               8:0    0   300G  0 disk 
+&#x251C;&#x2500;sda1            8:1    0     1G  0 part /boot
+&#x2514;&#x2500;sda2            8:2    0   199G  0 part 
+  &#x251C;&#x2500;centos-root 253:0    0    50G  0 lvm  /
+  &#x251C;&#x2500;centos-swap 253:1    0   3.9G  0 lvm  [SWAP]
+  &#x2514;&#x2500;centos-home 253:2    0 145.1G  0 lvm  /home
+sr0              11:0    1  1024M  0 rom
+</code></pre></li>
+</ul>
+<p>&#x518D;&#x67E5;&#x770B;fdisk&#x60C5;&#x51B5;</p>
+<pre class="language-"><code>[root@part-add ~]# fdisk -l
+
+Disk /dev/sda: 322.1 GB, 322122547200 bytes, 629145600 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000e999c
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     2099199     1048576   83  Linux
+/dev/sda2         2099200   419430399   208665600   8e  Linux LVM
+
+Disk /dev/mapper/centos-root: 53.7 GB, 53687091200 bytes, 104857600 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+Disk /dev/mapper/centos-swap: 4160 MB, 4160749568 bytes, 8126464 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+Disk /dev/mapper/centos-home: 155.8 GB, 155818393600 bytes, 304332800 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+</code></pre><ul>
+<li><p>2&#xFF0C;&#x628A;&#x589E;&#x52A0;&#x7684;&#x786C;&#x76D8;&#x5BB9;&#x91CF;&#x5168;&#x90E8;&#x5206;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x5206;&#x533A;sda3&#x4E0A;</p>
+<pre class="language-"><code> fdisk  /dev/sda  
+  Welcome to fdisk (util-linux 2.23.2).
+
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Command (m for help): p
+
+Disk /dev/sda: 322.1 GB, 322122547200 bytes, 629145600 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000e999c
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     2099199     1048576   83  Linux
+/dev/sda2         2099200   419430399   208665600   8e  Linux LVM
+
+Command (m for help): n
+Partition type:
+   p   primary (2 primary, 0 extended, 2 free)
+   e   extended
+Select (default p): p
+Partition number (3,4, default 3): 
+First sector (419430400-629145599, default 419430400): 
+Using default value 419430400
+Last sector, +sectors or +size{K,M,G} (419430400-629145599, default 629145599): 
+Using default value 629145599
+Partition 3 of type Linux and of size 100 GiB is set
+
+Command (m for help): p
+
+Disk /dev/sda: 322.1 GB, 322122547200 bytes, 629145600 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000e999c
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     2099199     1048576   83  Linux
+/dev/sda2         2099200   419430399   208665600   8e  Linux LVM
+/dev/sda3       419430400   629145599   104857600   83  Linux
+
+Command (m for help): t
+Partition number (1-3, default 3): 
+Hex code (type L to list all codes): 8e  &#xFF08;&#x6CE8;&#x610F;lvm&#x683C;&#x5F0F;&#xFF09;
+Changed type of partition &apos;Linux&apos; to &apos;Linux LVM&apos;
+
+Command (m for help): p
+
+Disk /dev/sda: 322.1 GB, 322122547200 bytes, 629145600 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000e999c
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     2099199     1048576   83  Linux
+/dev/sda2         2099200   419430399   208665600   8e  Linux LVM
+/dev/sda3       419430400   629145599   104857600   8e  Linux LVM
+
+Command (m for help): w   
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+
+WARNING: Re-reading the partition table failed with error 16: Device or resource busy.
+The kernel still uses the old table. The new table will be used at
+the next reboot or after you run partprobe(8) or kpartx(8)
+Syncing disks.
+[root@part-add ~]# partprobe  /dev/sda
+[root@part-add ~]# partprobe  /dev/sda3
+[root@part-add ~]# fdisk -l
+
+Disk /dev/sda: 322.1 GB, 322122547200 bytes, 629145600 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000e999c
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     2099199     1048576   83  Linux
+/dev/sda2         2099200   419430399   208665600   8e  Linux LVM
+/dev/sda3       419430400   629145599   104857600   8e  Linux LVM
+
+Disk /dev/mapper/centos-root: 53.7 GB, 53687091200 bytes, 104857600 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+Disk /dev/mapper/centos-swap: 4160 MB, 4160749568 bytes, 8126464 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+Disk /dev/mapper/centos-home: 155.8 GB, 155818393600 bytes, 304332800 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+</code></pre></li>
+</ul>
+<ul>
+<li><p>3&#xFF0C;&#x65B0;&#x589E;&#x5206;&#x533A;&#x683C;&#x5F0F;&#x5316;&#xFF08;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x53EF;&#x4EE5;&#x548C;&#x4E0B;&#x9762;&#x7B2C;4&#x90E8;&#x4E92;&#x6362;&#xFF09;</p>
+<pre class="language-"><code>mkfs.xfs   /dev/sda3 
+meta-data=/dev/sda3              isize=512    agcount=4, agsize=6553600 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=0, sparse=0
+data     =                       bsize=4096   blocks=26214400, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+log      =internal log           bsize=4096   blocks=12800, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+</code></pre></li>
+</ul>
+<ul>
+<li><p>4&#xFF0C;&#x589E;&#x52A0;&#x7269;&#x7406;&#x5377;&#xFF1A;  pvcreate &#x521A;&#x624D;&#x521B;&#x5EFA;&#x7684;&#x5206;&#x533A;</p>
+<pre class="language-"><code>[root@part-add ~]# pvcreate  /dev/sda3  
+WARNING: xfs signature detected on /dev/sda3 at offset 0. Wipe it? [y/n]: y
+  Wiping xfs signature on /dev/sda3.
+  Physical volume &quot;/dev/sda3&quot; successfully created.
+</code></pre><p>&#x67E5;&#x770B;&#x7269;&#x7406;&#x5377;&#x589E;&#x52A0;&#x540E;&#x7684;&#x60C5;&#x51B5;</p>
+<pre class="language-"><code> [root@part-add ~]# pvdisplay &#x6216;&#x8005;pvs
+    --- Physical volume ---
+    PV Name               /dev/sda2
+    VG Name               centos
+    PV Size               &lt;199.00 GiB / not usable 3.00 MiB
+    Allocatable           yes 
+    PE Size               4.00 MiB
+    Total PE              50943
+    Free PE               1
+    Allocated PE          50942
+    PV UUID               sa1cah-eS6t-c5sr-RnYs-PMhE-4CCx-Of0Fnl
+
+  &quot;/dev/sda3&quot; is a new physical volume of &quot;100.00 GiB&quot;
+  --- NEW Physical volume ---
+  PV Name               /dev/sda3
+  VG Name               
+  PV Size               100.00 GiB
+  Allocatable           NO
+  PE Size               0   
+  Total PE              0
+  Free PE               0
+  Allocated PE          0
+  PV UUID               sYiCZM-0zBg-6yF0-tiN3-k8PL-2y9w-rTODx0
+</code></pre></li>
+</ul>
+<ul>
+<li><p>5&#xFF0C;&#x5C06;&#x7269;&#x7406;&#x5377;&#x52A0;&#x5165;&#x5230;&#x5377;&#x7EC4;</p>
+<ul>
+<li><p>1&#xFF09;&#x5148;&#x770B;&#x5377;&#x7EC4;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code>[root@part-add ~]# vgdisplay &#x6216;&#x8005;vgs
+  --- Volume group ---
+  VG Name               centos
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  4
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                3
+  Open LV               2
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               &lt;199.00 GiB
+  PE Size               4.00 MiB
+  Total PE              50943
+  Alloc PE / Size       50942 / 198.99 GiB
+  Free  PE / Size       1 / 4.00 MiB
+  VG UUID               iza5sY-YoTh-ihTR-dLzZ-2CBx-M0dR-33bzW5
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>2&#xFF09;&#x628A;&#x65B0;&#x7684;&#x5206;&#x533A;&#x52A0;&#x5165;&#x5230;&#x5377;&#x7EC4; vgextend centos&#xFF08;VG Name&#xFF09; /dev/sda3  &#xFF08;&#x65B0;&#x5206;&#x533A;&#xFF09;</p>
+<ul>
+<li><pre class="language-"><code>[root@part-add ~]# vgextend centos /dev/sda3
+  Volume group &quot;centos&quot; successfully extended
+
+- 3&#xFF09;&#x518D;&#x6B21;&#x67E5;&#x770B; &#x9A8C;&#x8BC1;
+  [root@part-add ~]# vgdisplay
+    --- Volume group ---
+    VG Name               centos
+    System ID             
+    Format                lvm2
+    Metadata Areas        2
+    Metadata Sequence No  5
+    VG Access             read/write
+    VG Status             resizable
+    MAX LV                0
+    Cur LV                3
+    Open LV               2
+    Max PV                0
+    Cur PV                2
+    Act PV                2
+    VG Size               298.99 GiB
+    PE Size               4.00 MiB
+    Total PE              76542
+    Alloc PE / Size       50942 / 198.99 GiB
+    Free  PE / Size       25600 / 100.00 GiB
+    VG UUID               iza5sY-YoTh-ihTR-dLzZ-2CBx-M0dR-33bzW5
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<pre class="language-"><code>    &#x6B64;&#x65F6;VG Size &#x5927;&#x5C0F;&#x5DF2;&#x6709; 298.99 GiB  
+</code></pre><ul>
+<li><p>6&#xFF0C;&#x6269;&#x5145;&#x903B;&#x8F91;&#x5377;  </p>
+<ul>
+<li><p>1&#xFF09;&#x5148;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x91CC;&#x6709;&#x54EA;&#x4E9B;&#x903B;&#x8F91;&#x5377;&#x3002;</p>
+<p>```
+ [root@part-add ~]# lvdisplay  &#x6216;&#x8005;lvs</p>
+<pre class="language-"><code>  --- Logical volume ---
+  LV Path                /dev/centos/swap
+  LV Name                swap
+  VG Name                centos
+  LV UUID                m8Dc95-LYbI-cxuG-hNc7-COoH-4Axh-7mamwX
+  LV Write Access        read/write
+  LV Creation host, time localhost, 2018-08-31 18:38:32 +0800
+  LV Status              available
+</code></pre><p>  LV Size                &lt;3.88 GiB
+  Current LE             992
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto</p>
+<ul>
+<li><p>currently set to     8192
+Block device           253:1</p>
+<p>--- Logical volume ---
+LV Path                /dev/centos/home
+LV Name                home
+VG Name                centos
+LV UUID                1HItab-O0cU-CEkB-cplf-6axH-utqI-Fgxi5n
+LV Write Access        read/write
+LV Creation host, time localhost, 2018-08-31 18:38:33 +0800
+LV Status              available</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="language-"><code>  LV Size                &lt;145.12 GiB
+  Current LE             37150
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+
+- currently set to     8192
+  Block device           253:2
+
+  --- Logical volume ---
+  LV Path                /dev/centos/root
+  LV Name                root
+  VG Name                centos
+  LV UUID                2AdRQf-qOJb-h32O-SbVq-74yx-yic2-b8TyAR
+  LV Write Access        read/write
+  LV Creation host, time localhost, 2018-08-31 18:38:34 +0800
+  LV Status              available
+
+  LV Size                50.00 GiB
+  Current LE             12800
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+
+- currently set to     8192
+  Block device           253:0  
+```
+</code></pre><p>&#x6709;/dev/centos/swap /dev/centos/home /dev/centos/root&#x8FD9;&#x4E09;&#x4E2A;&#x903B;&#x8F91;&#x5377;,  &#x5176;&#x4E2D;&#x903B;&#x8F91;&#x5377;/dev/centos/home &#xFF08;&#x6302;&#x8F7D;&#x70B9;&#x662F;home&#x76EE;&#x5F55;&#x4E0B;&#xFF09;&#x5C31;&#x662F;&#x672C;&#x6B21;&#x8981;&#x6269;&#x5145;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x540C;&#x7406;&#x6839;&#x76EE;&#x5F55;/ &#x5BF9;&#x5E94;&#x7684;  /dev/centos/root&#x4E5F;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x6B64;&#x65B9;&#x6CD5;)  </p>
+<ul>
+<li><p>2)&#x6269;&#x5145;&#x903B;&#x8F91;&#x5377;/dev/centos/home
+lvextend -L  +100G  /dev/mapper/centos-home
+&#x6216;&#x8005;&#xFF1A;lvextend -l  &#x63D0;&#x793A;&#x6570;&#x91CF;&#xFF08;&#x53EF;&#x4EE5;&#x67E5;&#x770B;Current LE&#xFF0C;&#x5982;&#x679C;&#x63D0;&#x793A;&#x592A;&#x591A;&#xFF0C;&#x51CF;&#x5C11;&#x5230;&#x63D0;&#x793A;&#x7684;&#x6700;&#x591A;&#x6570;&#x91CF;&#xFF09;   /dev/mapper/centos-home
+lvextend -l  +100%FREE  /dev/mapper/centos-home</p>
+<pre class="language-"><code>[root@part-add ~]# lvextend -L  +100G  /dev/mapper/centos-home
+  Size of logical volume centos/home changed from &lt;145.12 GiB (37150 extents) to &lt;245.12 GiB (62750 extents).
+  Logical volume centos/home successfully resized.
+</code></pre></li>
+</ul>
+<ul>
+<li><p>3&#xFF09;&#x6269;&#x5145;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF08;&#x76EE;&#x5F55;&#xFF09;&#x4E2D;&#xFF0C;xfs_growfs   /dev/centos/home<br> &#x5982;&#x679C;&#x662F;ext&#x683C;&#x5F0F;  &#x5219;&#x7528;resize2fs /dev/centos/home</p>
+<pre class="language-"><code>[root@part-add ~]# xfs_growfs   /dev/centos/home 
+meta-data=/dev/mapper/centos-home isize=512    agcount=4, agsize=9510400 blks
+        =                       sectsz=512   attr=2, projid32bit=1
+        =                       crc=1        finobt=0 spinodes=0
+data     =                       bsize=4096   blocks=38041600, imaxpct=25
+        =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+log      =internal               bsize=4096   blocks=18575, version=2
+        =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 38041600 to 64256000
+[root@part-add ~]# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/centos-root   50G  1.5G   49G   3% /
+devtmpfs                 1.9G     0  1.9G   0% /dev
+tmpfs                    1.9G     0  1.9G   0% /dev/shm
+tmpfs                    1.9G  8.9M  1.9G   1% /run
+tmpfs                    1.9G     0  1.9G   0% /sys/fs/cgroup
+/dev/sda1               1014M  184M  831M  19% /boot
+tmpfs                    380M     0  380M   0% /run/user/0
+/dev/mapper/centos-home  246G   33M  246G   1% /home
+</code></pre></li>
+</ul>
+<ul>
+<li>&#x91CD;&#x542F;&#x540E;&#x518D;&#x67E5;&#x770B; df -h &#xFF0C;&#x662F;&#x6269;&#x5145;&#x6210;&#x529F;&#x540E;&#x7684;&#xFF1B;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x91CD;&#x542F;&#x3002;&#x4F46;&#x6700;&#x597D;mount -a &#x751F;&#x6548;&#x4E00;&#x4E0B;</li>
+</ul>
+<h2 id="&#x65B0;&#x589E;&#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;"><a name="&#x65B0;&#x589E;&#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x589E;&#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x589E;&#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;</h2>
+<p>&#x5982;&#x4F55;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x589E;&#x52A0;&#x4E09;&#x5757;&#x786C;&#x76D8; &#xFF1A;</p>
+<h3 id="1&#xFF0C;&#x5C06;&#x4E09;&#x5757;&#x786C;&#x76D8;&#x589E;&#x52A0;&#x5230;pv&#xFF08;&#x7269;&#x7406;&#x5377;&#xFF09;"><a name="1&#xFF0C;&#x5C06;&#x4E09;&#x5757;&#x786C;&#x76D8;&#x589E;&#x52A0;&#x5230;pv&#xFF08;&#x7269;&#x7406;&#x5377;&#xFF09;" class="anchor-navigation-ex-anchor" href="#1&#xFF0C;&#x5C06;&#x4E09;&#x5757;&#x786C;&#x76D8;&#x589E;&#x52A0;&#x5230;pv&#xFF08;&#x7269;&#x7406;&#x5377;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#xFF0C;&#x5C06;&#x4E09;&#x5757;&#x786C;&#x76D8;&#x589E;&#x52A0;&#x5230;pv&#xFF08;&#x7269;&#x7406;&#x5377;&#xFF09;</h3>
+<p>   <code>pvcreate /dev/sdb /dev/sdc /dev/sdd</code></p>
+<h3 id="2&#x5C06;pv&#x52A0;&#x5165;&#x5230;vg&#xFF08;&#x5377;&#xFF09;&#x7EC4;"><a name="2&#x5C06;pv&#x52A0;&#x5165;&#x5230;vg&#xFF08;&#x5377;&#xFF09;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#2&#x5C06;pv&#x52A0;&#x5165;&#x5230;vg&#xFF08;&#x5377;&#xFF09;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>2,&#x5C06;pv&#x52A0;&#x5165;&#x5230;vg&#xFF08;&#x5377;&#xFF09;&#x7EC4;</h3>
+<p>  <code>vgcreate  datavg  /dev/sdb /dev/sdc /dev/sdd</code></p>
+<h3 id="3&#x5206;&#x914D;&#x903B;&#x8F91;&#x5377;"><a name="3&#x5206;&#x914D;&#x903B;&#x8F91;&#x5377;" class="anchor-navigation-ex-anchor" href="#3&#x5206;&#x914D;&#x903B;&#x8F91;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>3,&#x5206;&#x914D;&#x903B;&#x8F91;&#x5377;</h3>
+<pre class="language-"><code>   lvcreate  -l 50%FREE -n lv1 datavg
+   lvcreate  -L +200M -n lv2 datavg
+</code></pre><h3 id="4&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;"><a name="4&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;" class="anchor-navigation-ex-anchor" href="#4&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>4,&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;</h3>
+<pre class="language-"><code>  mkfs.xfs /dev/datavg/lv1
+  mkfs.ext4  /dev/datavg/lv2
+</code></pre><h3 id="5&#x6302;&#x8F7D;"><a name="5&#x6302;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#5&#x6302;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>5,&#x6302;&#x8F7D;</h3>
+<pre class="language-"><code>   mkdir  /lv1  /lv2
+   mount /dev/datavg/lv1   /lv1
+   mount /dev/datavg/lv2  /lv2
+</code></pre><h2 id="&#x6269;&#x5C55;&#x78C1;&#x76D8;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;"><a name="&#x6269;&#x5C55;&#x78C1;&#x76D8;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x6269;&#x5C55;&#x78C1;&#x76D8;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6269;&#x5C55;&#x78C1;&#x76D8;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;</h2>
+<h3 id="1&#xFF0C;&#x6DFB;&#x52A0;&#x7269;&#x7406;&#x78C1;&#x76D8;"><a name="1&#xFF0C;&#x6DFB;&#x52A0;&#x7269;&#x7406;&#x78C1;&#x76D8;" class="anchor-navigation-ex-anchor" href="#1&#xFF0C;&#x6DFB;&#x52A0;&#x7269;&#x7406;&#x78C1;&#x76D8;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#xFF0C;&#x6DFB;&#x52A0;&#x7269;&#x7406;&#x78C1;&#x76D8;</h3>
+<p>&#x200B;    <code>pvcreate /dev/sdd</code></p>
+<h3 id="2&#xFF0C;&#x6269;&#x5C55;&#x5230;&#x73B0;&#x6709;vg&#x7EC4;"><a name="2&#xFF0C;&#x6269;&#x5C55;&#x5230;&#x73B0;&#x6709;vg&#x7EC4;" class="anchor-navigation-ex-anchor" href="#2&#xFF0C;&#x6269;&#x5C55;&#x5230;&#x73B0;&#x6709;vg&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#xFF0C;&#x6269;&#x5C55;&#x5230;&#x73B0;&#x6709;vg&#x7EC4;</h3>
+<p>&#x200B;    <code>vgextend &#x73B0;&#x6709;&#x5377;&#x7EC4;&#x540D;&#x79F0; /dev/sdd</code></p>
+<h3 id="3&#xFF0C;&#x6269;&#x5145;&#x5230;&#x73B0;&#x6709;&#x903B;&#x8F91;&#x5377;&#x4E2D;"><a name="3&#xFF0C;&#x6269;&#x5145;&#x5230;&#x73B0;&#x6709;&#x903B;&#x8F91;&#x5377;&#x4E2D;" class="anchor-navigation-ex-anchor" href="#3&#xFF0C;&#x6269;&#x5145;&#x5230;&#x73B0;&#x6709;&#x903B;&#x8F91;&#x5377;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#xFF0C;&#x6269;&#x5145;&#x5230;&#x73B0;&#x6709;&#x903B;&#x8F91;&#x5377;&#x4E2D;</h3>
+<p>&#x200B;     </p>
+<pre class="language-"><code>lvextend -L  +100G  /dev/mapper/centos-home
+lvextend -l  +100%FREE(&#x6216;&#x8005;&#x6269;&#x5C55;&#x6570;&#x91CF;)  /dev/mapper/centos-home
+</code></pre><h3 id="4&#xFF0C;&#x6269;&#x5145;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;"><a name="4&#xFF0C;&#x6269;&#x5145;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;" class="anchor-navigation-ex-anchor" href="#4&#xFF0C;&#x6269;&#x5145;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#xFF0C;&#x6269;&#x5145;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;</h3>
+<p>&#x200B;     </p>
+<pre class="language-"><code>xfs_growfs   /dev/centos/home
+resize2fs /dev/centos/home
+</code></pre><p>&#x200B;     </p>
+<h2 id="vg&#x7EC4;&#x51CF;&#x5C0F;&#x548C;&#x8FC1;&#x79FB;&#x7B49;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;"><a name="vg&#x7EC4;&#x51CF;&#x5C0F;&#x548C;&#x8FC1;&#x79FB;&#x7B49;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#vg&#x7EC4;&#x51CF;&#x5C0F;&#x548C;&#x8FC1;&#x79FB;&#x7B49;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>vg&#x7EC4;&#x51CF;&#x5C0F;&#x548C;&#x8FC1;&#x79FB;&#x7B49;&#x6B65;&#x9AA4;&#x6982;&#x8FF0;</h2>
+<h3 id="1&#xFF0C;&#x51CF;&#x5C0F;vg"><a name="1&#xFF0C;&#x51CF;&#x5C0F;vg" class="anchor-navigation-ex-anchor" href="#1&#xFF0C;&#x51CF;&#x5C0F;vg"><i class="fa fa-link" aria-hidden="true"></i></a>1&#xFF0C;&#x51CF;&#x5C0F;vg</h3>
+<p>&#x200B;    <code>vgremove  vg&#x7EC4;&#x540D;  /dev/sdd (&#x6216;&#x8005;&#x5176;&#x4ED6;&#x8981;&#x79FB;&#x52A8;&#x7269;&#x7406;&#x5377;)</code></p>
+<h3 id="2&#xFF0C;&#x8FC1;&#x79FB;vg"><a name="2&#xFF0C;&#x8FC1;&#x79FB;vg" class="anchor-navigation-ex-anchor" href="#2&#xFF0C;&#x8FC1;&#x79FB;vg"><i class="fa fa-link" aria-hidden="true"></i></a>2&#xFF0C;&#x8FC1;&#x79FB;vg</h3>
+<p>&#x200B;    &#x8FC1;&#x79FB;vg&#x91CC;&#x9762;&#x7684;&#x7269;&#x7406;&#x5377;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x5728;&#x540C;&#x4E00;&#x4E2A;vg&#x7EC4;&#x4E2D;
+&#x200B;    <code>vgmove /dev/sdb   /dev/sdc (&#x5728;&#x7EBF;&#x8FC1;&#x79FB;)</code></p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="set_ip.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 如何设置centos7.6和Ubuntu19.4的ip4">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linux中磁盘扩展与缩减","level":"1.2.4","depth":2,"next":{"title":"二进制安装包的制作","level":"1.2.5","depth":2,"ref":"","articles":[]},"previous":{"title":"如何设置centos7.6和Ubuntu19.4的ip4","level":"1.2.3","depth":2,"path":"linux/set_ip.md","ref":"linux/set_ip.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"linux/extend_disk.md","mtime":"2019-07-05T02:58:51.972Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T08:22:01.198Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
