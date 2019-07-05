@@ -4,7 +4,7 @@
   * ["-"在tar命令中的巧用](linux/tar-deal.md)
   * [利用iptables或防火墙指定ip访问服务器某个端口](linux/limit_ip.md)
   * [如何设置centos7.6和Ubuntu19.4的ip4](linux/set_ip.md)
-  * [磁盘扩展](linux/extend_disk.md)
+  * [Linux中磁盘扩展与缩减](linux/extend_disk.md)
   * [二进制安装包的制作]()
   * [heredocument的巧用]()
 * docker
