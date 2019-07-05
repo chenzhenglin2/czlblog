@@ -6,7 +6,7 @@
   * [如何设置centos7.6和Ubuntu19.4的ip4](linux/set_ip.md)
   * [Linux中磁盘扩展与缩减](linux/extend_disk.md)
   * [二进制安装包的制作]()
-  * [heredocument的巧用]()
+  * [heredocument的巧用](linux/use_heredoc.md)
 * docker
   * [docker 安装与优化](docker/docker-install.md)
   * [harbor的安装和注意事项](docker/harbor-install.md)
