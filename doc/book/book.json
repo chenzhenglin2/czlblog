@@ -14,7 +14,8 @@
     "prism",
     "pageview-count",
     "back-to-top-button",
-    "lightbox"    
+    "lightbox",
+    "theme-comscore" 
   ],
   "pluginsConfig": {
     "prism": {

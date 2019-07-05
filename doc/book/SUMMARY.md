@@ -25,7 +25,6 @@
   - [利用docker 镜像，快速搭建Jenkins环境](jenkins/install-jenkins.md)
   - [jenkins自由风格构建job]()
   - [jenkins多种pipeline构建job]()
-  - [利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本技术网站]()
 * shell
   - [shell 脚本中获取脚本所在路径](shell/get_dir_in_shell.md)
   - [sed不常见用法]()
@@ -51,6 +50,14 @@
   - [websphere各个版本的部署和使用]()
   - [tomcat、weblogic、was等组件jvm调整]()
 
+- 大数据处理
+  - elasticsearch
+  - druid
+  - kafka+zookeeper
+  - mongo
+- 持续集成项目实战
+  - [利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本技术网站]()
+  - [采用jenkins+harbor+kubernetes实时部署最新程序]()
 - 正确使用工具事半功倍
   - 搜索引擎的使用
   - gitbook 的巧用
