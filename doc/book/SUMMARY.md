@@ -5,7 +5,7 @@
   * [利用iptables或防火墙指定ip访问服务器某个端口](linux/limit_ip.md)
   * [如何设置centos7.6和Ubuntu19.4的ip4](linux/set_ip.md)
   * [Linux中磁盘扩展与缩减](linux/extend_disk.md)
-  * [二进制安装包的制作]()
+  * [二进制安装包的制作](linux/how_to_made_bin.md)
   * [heredocument的巧用](linux/use_heredoc.md)
 * docker
   * [docker 安装与优化](docker/docker-install.md)
@@ -15,11 +15,12 @@
 * rancher和kubernetes
   *  [kubectl常用命令汇总（以及curl注入）](k8s/kubectl-user-instruction.md)
   *  [docker run image -args对应yaml语法/rancher UI操作方式](k8s/docker-run-and-k8s-command.md)
-  *  [离线helm安装高可用rancher]()
+  *  [七层负载在线安装rancher](k8s/rancher_online_installation.md)
+  *  [离线helm安装高可用rancher](k8s/rancher_offline_installation.md)
   *  [rancher中快速部署应用]()
   *  [rancher应用商店的使用]()
   *  [rancher快速搭建起elasticsearch+kibana+metricbeat+packetbeat]()
-  *  [rancher服务不可用情况下，如何使用kubectl命令]()
+  *  [rancher服务不可用情况下，如何使用kubectl命令](k8s/how_to_use_kubectl_noserver.md)
 * Jenkins
   - [Jenkins调用docker编译程序](jenkins/jenkins-slave-for-docker.md)
   - [利用docker 镜像，快速搭建Jenkins环境](jenkins/install-jenkins.md)
