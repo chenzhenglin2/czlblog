@@ -85,17 +85,20 @@ kubectl   -n  cattle-system    edit  deploy  rancher
 image: reg.czl.com/library/rancher/rancher:v2.2.2:v2.2.2
 ```
 可以看出 镜像的tag 被追加了
-*  如果执行错了，可以用helm delete --purge rancher 删除后 重新执行
+*  如果执行错了，可以用`helm delete --purge rancher` 删除后 重新执行
 *  然后再到证书生成的目录 执行
-```
+```bash
 kubectl -n cattle-system create \
-    secret tls tls-rancher-ingress \
-    --cert=./tls.crt \
-    --key=./tls.key
+secret tls tls-rancher-ingress \
+ --cert=./tls.crt \
+ --key=./tls.key
 
 kubectl -n cattle-system \
-    create secret generic tls-ca \
-    --from-file=cacerts.pem
+create secret generic tls-ca \
+--from-file=cacerts.pem
 ```
+
+
+
 如下操作和在线安装文档一样
 

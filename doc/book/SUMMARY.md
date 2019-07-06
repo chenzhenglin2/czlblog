@@ -10,12 +10,13 @@
 * docker
   * [docker 安装与优化](docker/docker-install.md)
   * [harbor的安装和注意事项](docker/harbor-install.md)
+  * [harbor仓库镜像同步](docker/harbor-sync.md)
   * [如何制作出合适的镜像](docker/dockerfile-rule.md)
   * [逐个和批量导出导入docker镜像](docker/save_load_images.md)
 * rancher和kubernetes
   *  [kubectl常用命令汇总（以及curl注入）](k8s/kubectl-user-instruction.md)
   *  [docker run image -args对应yaml语法/rancher UI操作方式](k8s/docker-run-and-k8s-command.md)
-  *  [七层负载在线安装rancher](k8s/rancher_online_installation.md)
+  *  [在线安装高可用的rancher](k8s/rancher_online_installation.md)
   *  [离线helm安装高可用rancher](k8s/rancher_offline_installation.md)
   *  [rancher中快速部署应用]()
   *  [rancher应用商店的使用]()
