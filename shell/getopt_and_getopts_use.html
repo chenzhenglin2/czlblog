@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>heredocument的巧用 · 志云的博客</title>
+        <title>getopt与getopts用法 · 志云的博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -93,8 +93,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="ps3_use.html" />
     
-    <link rel="prev" href="how_to_made_bin.html" />
+    
+    <link rel="prev" href="sed_use_hard.html" />
     
 
     </head>
@@ -150,9 +152,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="tar-deal.html">
+        <li class="chapter " data-level="1.2.1" data-path="../linux/tar-deal.html">
             
-                <a href="tar-deal.html">
+                <a href="../linux/tar-deal.html">
             
                     
                     "-"在tar命令中的巧用
@@ -163,9 +165,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="limit_ip.html">
+        <li class="chapter " data-level="1.2.2" data-path="../linux/limit_ip.html">
             
-                <a href="limit_ip.html">
+                <a href="../linux/limit_ip.html">
             
                     
                     利用iptables或防火墙指定ip访问服务器某个端口
@@ -176,9 +178,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="set_ip.html">
+        <li class="chapter " data-level="1.2.3" data-path="../linux/set_ip.html">
             
-                <a href="set_ip.html">
+                <a href="../linux/set_ip.html">
             
                     
                     如何设置centos7.6和Ubuntu19.4的ip4
@@ -189,9 +191,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="extend_disk.html">
+        <li class="chapter " data-level="1.2.4" data-path="../linux/extend_disk.html">
             
-                <a href="extend_disk.html">
+                <a href="../linux/extend_disk.html">
             
                     
                     Linux中磁盘扩展与缩减
@@ -202,9 +204,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="how_to_made_bin.html">
+        <li class="chapter " data-level="1.2.5" data-path="../linux/how_to_made_bin.html">
             
-                <a href="how_to_made_bin.html">
+                <a href="../linux/how_to_made_bin.html">
             
                     
                     二进制安装包的制作
@@ -215,9 +217,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="use_heredoc.html">
+        <li class="chapter " data-level="1.2.6" data-path="../linux/use_heredoc.html">
             
-                <a href="use_heredoc.html">
+                <a href="../linux/use_heredoc.html">
             
                     
                     heredocument的巧用
@@ -525,9 +527,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../shell/get_dir_in_shell.html">
+        <li class="chapter " data-level="1.6.1" data-path="get_dir_in_shell.html">
             
-                <a href="../shell/get_dir_in_shell.html">
+                <a href="get_dir_in_shell.html">
             
                     
                     shell 脚本中获取脚本所在路径
@@ -538,9 +540,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../shell/sed_use_hard.html">
+        <li class="chapter " data-level="1.6.2" data-path="sed_use_hard.html">
             
-                <a href="../shell/sed_use_hard.html">
+                <a href="sed_use_hard.html">
             
                     
                     sed不常见用法
@@ -551,9 +553,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../shell/getopt_and_getopts_use.html">
+        <li class="chapter active" data-level="1.6.3" data-path="getopt_and_getopts_use.html">
             
-                <a href="../shell/getopt_and_getopts_use.html">
+                <a href="getopt_and_getopts_use.html">
             
                     
                     getopt与getopts用法
@@ -564,9 +566,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="../shell/ps3_use.html">
+        <li class="chapter " data-level="1.6.4" data-path="ps3_use.html">
             
-                <a href="../shell/ps3_use.html">
+                <a href="ps3_use.html">
             
                     
                     选择项用法
@@ -1210,7 +1212,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >heredocument的巧用</a>
+        <a href=".." >getopt与getopts用法</a>
     </h1>
 </div>
 
@@ -1225,48 +1227,152 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#heredocument-&#x7684;&#x5DE7;&#x7528;"><b></b>heredocument &#x7684;&#x5DE7;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#&#x60C5;&#x666F;1&#xFF1A;"><b></b>&#x60C5;&#x666F;1&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x60C5;&#x666F;2&#xFF1A;"><b></b>&#x60C5;&#x666F;2&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x6CE8;&#x610F;&#xFF1A;"><b></b>&#x6CE8;&#x610F;&#xFF1A;</a></li></ul></ul></div><a href="#heredocument-&#x7684;&#x5DE7;&#x7528;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="heredocument-&#x7684;&#x5DE7;&#x7528;"><a name="heredocument-&#x7684;&#x5DE7;&#x7528;" class="anchor-navigation-ex-anchor" href="#heredocument-&#x7684;&#x5DE7;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>heredocument &#x7684;&#x5DE7;&#x7528;</h1>
-<p>&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;</p>
-<pre class="language-"><code>cat  &gt;(&#x6216;&gt;&gt;) xxx&lt;&lt;EOF
-
-context &#x2026;&#x2026;
-
-EOF
-</code></pre><p>&#x6765;&#x628A;&#x5185;&#x5BB9;&#x6DFB;&#x52A0;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;heredocument &#x7684;&#x4E00;&#x79CD;&#x7528;&#x6CD5;&#xFF0C;&#x4F46;heredocument &#x7528;&#x6CD5;&#x4E0D;&#x4EC5;&#x4EC5;&#x9650;&#x5236;&#x4E8E;&#x6B64;</p>
-<h2 id="&#x60C5;&#x666F;1&#xFF1A;"><a name="&#x60C5;&#x666F;1&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x60C5;&#x666F;1&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x60C5;&#x666F;1&#xFF1A;</h2>
-<p> &#x6211;&#x4EEC;&#x9700;&#x8981;&#x5148;&#x767B;&#x5F55;mysql&#x540E; &#x624D;&#x80FD;&#x6267;&#x884C;sql&#x811A;&#x672C; &#x8FD9;&#x4E2A;&#x65F6;&#x5019; &#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528;heredocument </p>
-<pre class="language-"><code>mysql -uroot -pxxxx &lt;  xxx.sql
-</code></pre><h2 id="&#x60C5;&#x666F;2&#xFF1A;"><a name="&#x60C5;&#x666F;2&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x60C5;&#x666F;2&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x60C5;&#x666F;2&#xFF1A;</h2>
-<p>:&#x6267;&#x884C;&#x67D0;&#x4E2A;&#x811A;&#x672C;&#x5B9E;&#x73B0;&#x767B;&#x5F55;&#x540E;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x76F8;&#x5173;&#x64CD;&#x4F5C;</p>
-<p>&#x53EF;&#x4EE5;&#x501F;&#x9274;here document &#xFF0C;&#x5199;&#x6210;&#x811A;&#x672C;   </p>
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#getopt-&#x4E0E;-getopts&#x7528;&#x6CD5;&#x8BE6;&#x89E3;"><b></b>getopt &#x4E0E; getopts&#x7528;&#x6CD5;&#x8BE6;&#x89E3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5148;&#x770B;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;"><b></b>&#x5148;&#x770B;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x8BE6;&#x89E3;&#xFF1A;"><b></b>&#x4EE3;&#x7801;&#x8BE6;&#x89E3;&#xFF1A;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5927;&#x610F;"><b></b>&#x4EE3;&#x7801;&#x5927;&#x610F;</a></li></ul></ul></ul></div><a href="#getopt-&#x4E0E;-getopts&#x7528;&#x6CD5;&#x8BE6;&#x89E3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="getopt-&#x4E0E;-getopts&#x7528;&#x6CD5;&#x8BE6;&#x89E3;"><a name="getopt-&#x4E0E;-getopts&#x7528;&#x6CD5;&#x8BE6;&#x89E3;" class="anchor-navigation-ex-anchor" href="#getopt-&#x4E0E;-getopts&#x7528;&#x6CD5;&#x8BE6;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>getopt &#x4E0E; getopts&#x7528;&#x6CD5;&#x8BE6;&#x89E3;</h1>
+<p>&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x811A;&#x672C; &#x540E;&#x9762;&#x8DDF;&#x53C2;&#x6570;&#x8FD9;&#x79CD;&#x7528;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x4F7F;&#x7528;getopt/getopts&#x518D;&#x5408;&#x9002;&#x4E0D;&#x8FC7;&#x4E86;&#xFF1B;&#x4E0B;&#x9762;&#x5C31;&#x6765;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E; getopt &#xFF08;&#x7CFB;&#x7EDF;&#x5916;&#x90E8;&#x7528;&#x6CD5;&#xFF0C;&#x540E;&#x6765;&#x589E;&#x52A0;&#x7684;&#xFF09;&#x4E0E; getopts&#xFF08;&#x5185;&#x90E8;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x957F;&#x9009;&#x9879; &#x53EA;&#x80FD;&#x662F;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x77ED;&#x9009;&#x9879;&#xFF09;&#x7684;&#x7528;&#x6CD5;</p>
+<h2 id="&#x5148;&#x770B;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;"><a name="&#x5148;&#x770B;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x5148;&#x770B;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5148;&#x770B;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;</h2>
 <pre class="language-"><code>#!/bin/bash
+set -e
+set -o pipefail
 
-  ./xxx.sh  &lt;&lt;eof
+cmd=$(basename $0)
+defaultHost=&quot;127.0.0.1&quot;
+defaultPort=&quot;2222&quot;
+defaultFusion=&quot;http://$defaultHost:3333&quot;
+defaultUser=&quot;myuser&quot;
+defaultPassword=&quot;123456&quot;
 
-&#x8981;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;
+host=$defaultHost
+port=$defaultPort
+fusion=$defaultHost
+user=$defaultUser
+password=$defaultPassword
+if which getopt &amp;&gt;/dev/null; then
+    optExist=&quot;true&quot;
+fi
 
-&#x9000;&#x51FA;&#x64CD;&#x4F5C;&#x5982;quit&#x6216;exit  
+Usage() {
+   echo &quot;&#x5E2E;&#x52A9;&#x8BF4;&#x660E;&quot;
+   echo &quot;&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x53C2;&#x6570; a f  h &#x540E;&#x9762;&#x8DDF;&#x4EC0;&#x4E48;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x957F;&#x53C2;&#x6570;appid fusion help &#x540E;&#x9762;&#x8DDF;&#x4EC0;&#x4E48;&#x503C;&quot;
+}
 
-#&#x8FD9;&#x4E2A;&#x6839;&#x636E;&#x5177;&#x4F53;&#x767B;&#x5F55;&#x8F6F;&#x4EF6;&#xFF0C;&#x9000;&#x51FA;&#x547D;&#x4EE4;&#x6709;&#x5173;&#x5982;&#x679C;&#x6570;&#x636E;&#x5E93; &#x5927;&#x90E8;&#x5206;&#x53EF;&#x4EE5;&#x5199;quit&#x4E5F;&#x6709;exit(&#xFF09;&#xFF0C;&#x6216;&#x5176;&#x4ED6;&#x5199;&#x6CD5;
+if [[ &quot;${optExist}&quot;x = &quot;true&quot;x ]]; then
+    ARGS=$(getopt -o &quot;a:f:h&quot; -l &quot;appid:,fusion:,help&quot; -n &quot;${cmd}&quot; -- &quot;$@&quot;)
 
-eof
-</code></pre><ul>
-<li>xxx.sh &#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x53EF;&#x6267;&#x884C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</li>
+eval set -- &quot;${ARGS}&quot;
+
+while true; do
+    case &quot;${1}&quot; in
+        -a|--appid)
+        shift ;
+        if [[ -n &quot;${1}&quot; ]]; then
+            appid=&quot;${1}&quot;
+            shift ;
+        fi
+        ;;
+        -f|--fusion)
+        shift ;
+        if [[ -n &quot;${1}&quot; ]]; then
+            fusion=${1}
+            shift ;
+        fi
+        ;;
+        -h|--help)
+        Usage
+        exit 0
+        ;;
+        --)
+        shift ;
+        break ;
+        ;;
+        *)
+        Usage
+        exit 0
+        ;;
+    esac
+done
+
+else
+    while getopts a:f:h opt; do
+        case $opt in
+            a)
+            appid=$OPTARG
+            ;;
+            f)
+            fusion=$OPTARG
+            ;;
+            h)
+            Usage
+            exit 0
+            ;;
+            ?)
+            Usage
+            exit 1
+            ;;
+        esac
+    done
+fi
+
+if ! [[ $appid =~ [0-9a-fA-F]{24} ]]; then
+    echo -e &quot;\033[1;41;37mInvalid appid!\033[0m\n&quot;
+    Usage
+    exit 1
+fi
+
+if ! [[ $fusion =~ ^http:// ]]; then
+    fusion=&quot;http://${fusion}:3000&quot;
+fi
+
+echo -e &quot;\033[32mSending request...\033[0m&quot;
+curl -H &quot;Content-Type:application/json&quot; -X PUT --data &quot;{\&quot;app_id\&quot;: \&quot;$appid\&quot;}&quot;  &quot;$fusion/api/v1/app/indexes&quot;
+echo -e &quot;\033[32mFinished!\033[0m&quot;
+exit 0
+</code></pre><h2 id="&#x4EE3;&#x7801;&#x8BE6;&#x89E3;&#xFF1A;"><a name="&#x4EE3;&#x7801;&#x8BE6;&#x89E3;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x8BE6;&#x89E3;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x8BE6;&#x89E3;&#xFF1A;</h2>
+<p>&#x5148;&#x770B;getopt &#x4E0E;getopts &#x5E2E;&#x52A9;&#x6587;&#x6863;</p>
+<pre class="language-"><code>#[root@gitbook ~]# getopt  --help
+#Usage:
+# getopt optstring parameters
+# getopt [options] [--] optstring parameters
+# getopt [options] -o|--options optstring [options] [--] parameters
+
+#Options:
+# -a, --alternative            Allow long options starting with single -
+# -h, --help                   This small usage guide
+# -l, --longoptions <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>longopts</span><span class="token punctuation">&gt;</span></span> Long options to be recognized
+# -n, --name <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>progname</span><span class="token punctuation">&gt;</span></span>        The name under which errors are reported
+# -o, --options <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optstring</span><span class="token punctuation">&gt;</span></span>    Short options to be recognized
+# -q, --quiet                  Disable error reporting by getopt(3)
+# -Q, --quiet-output           No normal output
+# -s, --shell <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>shell</span><span class="token punctuation">&gt;</span></span>          Set shell quoting conventions
+# -T, --test                   Test for getopt(1) version
+# -u, --unquoted               Do not quote the output
+# -V, --version                Output version information
+&#x2026;&#x2026;
+#[root@gitbook ~]# getopts
+# getopts: usage: getopts optstring name [arg]
+</code></pre><p> getopts a:f:h opt  &#x8868;&#x793A;a f  h &#x5FC5;&#x987B;&#x53D6;&#x503C;&#xFF0C;&#x4F7F;&#x7528;&#x9009;&#x9879;&#x53D6;&#x503C;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x53D8;&#x91CF;OPTARG&#x4FDD;&#x5B58;&#x8BE5;&#x503C;</p>
+<ul>
+<li><code>basename $0</code>&#x503C;&#x663E;&#x793A;&#x5F53;&#x524D;&#x811A;&#x672C;&#x6216;&#x547D;&#x4EE4;&#x7684;&#x540D;&#x5B57;</li>
+<li>shift &#x547D;&#x4EE4;&#x6BCF;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x53D8;&#x91CF;&#x7684;&#x4E2A;&#x6570;($#)&#x51CF;&#x4E00;&#xFF0C;&#x800C;&#x53D8;&#x91CF;&#x503C;&#x63D0;&#x524D;&#x4E00;&#x4F4D;
+&#x6BD4;&#x5982;shift 3&#x8868;&#x793A;&#x539F;&#x6765;&#x7684;$4&#x73B0;&#x5728;&#x53D8;&#x6210;$1&#xFF0C;&#x539F;&#x6765;&#x7684;$5&#x73B0;&#x5728;&#x53D8;&#x6210;$2&#x7B49;&#x7B49;&#xFF0C;&#x539F;&#x6765;&#x7684;$1&#x3001;$2&#x3001;$3&#x4E22;&#x5F03;&#xFF0C;$0&#x4E0D;&#x79FB;&#x52A8;&#x3002;&#x4E0D;&#x5E26;&#x53C2;&#x6570;&#x7684;shift&#x547D;&#x4EE4;&#x76F8;&#x5F53;&#x4E8E;shift 1</li>
+<li><p>$#: &#x53C2;&#x6570;&#x7684;&#x4E2A;&#x6570;</p>
+</li>
+<li><p><code>$*</code>: &#x53C2;&#x6570;&#x5217;&#x8868;  &#x6240;&#x6709;&#x7684;&#x53C2;&#x6570; &#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6574;&#x4F53; &#x5982; ./xx.sh 1 2 3, <code>$*</code>&#x503C;&#x4E3A;&#x201C;1 2 3&#x201D;</p>
+</li>
+<li><p><code>$@</code>: &#x53C2;&#x6570;&#x5217;&#x8868; &#x6240;&#x6709;&#x53C2;&#x6570; &#x9010;&#x4E2A;&#x8F93;&#x51FA; &#x5982; ./xx.sh 1 2 3  <code>$@</code> &#x503C;&#x4E3A;&quot;1&quot; &quot;2&quot; &quot;3&quot;</p>
+</li>
+<li><p><code>set -- &quot;${ARGS}&quot;</code>  &#x76F8;&#x5F53;&#x4E8E;&#x91CD;&#x7F6E;&#x4E86; &#x6267;&#x884C;&#x811A;&#x672C; &#x540E;&#x8DDF;&#x53C2;&#x6570;&#xFF0C;&#x628A;&#x6267;&#x884C;&#x811A;&#x672C;&#x540E;&#x8DDF;&#x53C2;&#x6570;&#x2018;$@&#x2019;  &#x53D8;&#x6210;&#x4E86; ${ARGS}</p>
+</li>
 </ul>
-<h2 id="&#x6CE8;&#x610F;&#xFF1A;"><a name="&#x6CE8;&#x610F;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x610F;&#xFF1A;</h2>
-<p>&#x53E6;&#x5916;eof&#x5305;&#x542B;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x542B;&#x6709;&#x53D8;&#x91CF;&#x7684;&#x8BDD; &#xFF0C;&#x4E0D;&#x88AB;&#x66FF;&#x6362; &#x53EF;&#x4EE5;&#x5199;&#x4F5C;</p>
-<pre class="language-"><code>./xxxx.sh  &lt;&lt;&apos;eof&apos;
-
-echo  $!
-
-xxx
-
-echo  $?
-
-ttt
-
-eof
-</code></pre><p>eof&#x5757;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x539F;&#x5C01;&#x4E0D;&#x52A8;&#x7684;&#x4FDD;&#x5B58;</p>
+<h3 id="&#x4EE3;&#x7801;&#x5927;&#x610F;"><a name="&#x4EE3;&#x7801;&#x5927;&#x610F;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5927;&#x610F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x5927;&#x610F;</h3>
+<ul>
+<li><p>&#x5148;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;getopt&#x547D;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5C31;&#x7528;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;  &#x6CA1;&#x6709;&#x7684;&#x8BDD; &#x91C7;&#x7528;getopts&#x547D;&#x4EE4;&#xFF0C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x7B80;&#x5355;&#xFF0C;&#x4E0D;&#x518D;&#x505A;&#x7279;&#x6B8A;&#x8BF4;&#x660E;&#xFF1B;</p>
+</li>
+<li><p>getopt &#x5224;&#x65AD;&#x4F53;&#x4E2D;  &#x9996;&#x5148;&#x5224;&#x65AD; &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5982;&#x679C;&#x662F; -a|--appid&#xFF0C;&#x5219;shift &#x540E;&#x79FB;&#x4E00;&#x4F4D; &#x4E5F;&#x662F;&#x5C31;&#x662F;-a &#x53C2;&#x6570;&#x540E;&#x9762;&#x7684;&#x503C;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#xFF1B; shift &#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x7136;&#x540E;$1(${1}&#x5199;&#x6CD5;&#x4E5F;&#x53EF;&#x4EE5;)&#x5C31;&#x53D8;&#x6210;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E86;&#xFF0C;  &#x5982;&#x679C; -f|--fusion&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x64CD;&#x4F5C;&#x6548;&#x679C;&#x548C;&#x4E0A;&#x9762;&#x4E00;&#x6837;&#xFF1B;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F; -h|--help    &#x7684;&#x8BDD;&#x8C03;&#x7528;Usage&#x65B9;&#x6CD5;&#x5E76;&#x6267;&#x884C;exit 0  &#x9000;&#x51FA;&#xFF1B;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F; --  &#x5219;shift &#x4E00;&#x4E0B;&#xFF0C;break &#x8DF3;&#x51FA;&#x6574;&#x4E2A;&#x5FAA;&#x73AF;&#xFF0C;&#xFF08;continue&#x4E00;&#x822C;&#x662F; &#x8DF3;&#x51FA;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#xFF0C;&#x7136;&#x540E;&#x5F00;&#x59CB;&#x65B0;&#x7684;&#x5FAA;&#x73AF;&#xFF09;&#xFF1B; &#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E3A;&#x5176;&#x4ED6;(?&#x901A;&#x914D;&#x5176;&#x4ED6;&#x5185;&#x5BB9;)&#x8C03;&#x7528;Usage&#x65B9;&#x6CD5;&#x5E76;&#x6267;&#x884C;exit 1&#x9000;&#x51FA;</p>
+<p>&#x5176;&#x4ED6;&#x4EE3;&#x7801;&#x8F83;&#x7B80;&#x5355; &#x4E0D;&#x505A;&#x8BB2;&#x89E3;&#x8BF4;&#x660E;</p>
+</li>
+</ul>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
                                 
@@ -1295,10 +1401,14 @@ eof
 
             
                 
-                <a href="how_to_made_bin.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 二进制安装包的制作">
+                <a href="sed_use_hard.html" class="navigation navigation-prev " aria-label="Previous page: sed不常见用法">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="ps3_use.html" class="navigation navigation-next " aria-label="Next page: 选择项用法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1307,7 +1417,7 @@ eof
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"heredocument的巧用","level":"1.2.6","depth":2,"next":{"title":"docker","level":"1.3","depth":1,"ref":"","articles":[{"title":"docker 安装与优化","level":"1.3.1","depth":2,"path":"docker/docker-install.md","ref":"docker/docker-install.md","articles":[]},{"title":"harbor的安装和注意事项","level":"1.3.2","depth":2,"path":"docker/harbor-install.md","ref":"docker/harbor-install.md","articles":[]},{"title":"harbor仓库镜像同步","level":"1.3.3","depth":2,"path":"docker/harbor-sync.md","ref":"docker/harbor-sync.md","articles":[]},{"title":"如何制作出合适的镜像","level":"1.3.4","depth":2,"path":"docker/dockerfile-rule.md","ref":"docker/dockerfile-rule.md","articles":[]},{"title":"逐个和批量导出导入docker镜像","level":"1.3.5","depth":2,"path":"docker/save_load_images.md","ref":"docker/save_load_images.md","articles":[]}]},"previous":{"title":"二进制安装包的制作","level":"1.2.5","depth":2,"path":"linux/how_to_made_bin.md","ref":"linux/how_to_made_bin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"linux/use_heredoc.md","mtime":"2019-07-06T14:33:00.313Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-07T05:33:22.092Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"getopt与getopts用法","level":"1.6.3","depth":2,"next":{"title":"选择项用法","level":"1.6.4","depth":2,"path":"shell/ps3_use.md","ref":"shell/ps3_use.md","articles":[]},"previous":{"title":"sed不常见用法","level":"1.6.2","depth":2,"path":"shell/sed_use_hard.md","ref":"shell/sed_use_hard.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"shell/getopt_and_getopts_use.md","mtime":"2019-07-07T05:30:58.050Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-07T05:33:22.092Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
