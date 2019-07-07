@@ -43,7 +43,7 @@
   - [nginx其他知识]()
 * git
   - [git日常使用命令](git/git-use.md)
-  - [gitlab搭建和备份](git/install_gitlab.md)
+  - [gitlab搭建和备份](git/install_and_bak_gitlab.md)
 * 自动化测试技术
   - 手机自动化
     - monkey测试
