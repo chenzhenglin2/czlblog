@@ -38,15 +38,14 @@
   - [私有证书制作](ca/make_key.md)
 * NGINX
   - [如何利用nginx指向本地静态网页](nginx/direct_static_web.md)
-  - [如何利用nginx实现负载均衡]()
-  - [如何利用nginx实现反向代理]()
+  - [如何利用nginx实现负载均衡和反向代理](nginx/load_balance.md)
   - [nginx其他知识]()
 * git
   - [git日常使用命令](git/git-use.md)
   - [gitlab搭建和备份](git/install_and_bak_gitlab.md)
 * 自动化测试技术
   - 手机自动化
-    - monkey测试
+    - [monkey测试](autotech/monkey_android.md)
     - uiautomator 自动化测试
 * 数据库
   - mongo
