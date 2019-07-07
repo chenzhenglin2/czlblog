@@ -24,8 +24,7 @@
   关于sda/sdb说明，如果通过vmmare 虚拟机控制台等工具，直接在原有的1个硬盘扩充的存储空间；如原有硬盘是200G，
   扩充到500G扩充后，扩充的存储还是在sda分区下；如果新增一个硬盘，是在sdb分区，依次类推sdc……
 
-  关于sda/sdb说明，如果通过vmmare 虚拟机控制台等工具，直接在原有的1个硬盘扩充的存储空间；如原有硬盘是200G，
-  扩充到500G扩充后，扩充的存储还是在sda分区下；如果新增一个硬盘，是在sdb分区，依次类推sdc……
+  
 
 - 2，通过命令fdisk   -l  
 
@@ -69,9 +68,7 @@
   sdb还未有分区；如果新增了硬盘，没有看到可以执行命令：
   partprobe    /dev/sdb  ,没有这个命令，自行安装 yum  -y install   parted  
 
-  查看到sda 硬盘和sdb硬盘的情况，sda都已经做分区（但还有空间可以进行分区，下种类型讲）
-  sdb还未有分区；如果新增了硬盘，没有看到可以执行命令：
-  partprobe    /dev/sdb  ,没有这个命令，自行安装 yum  -y install   parted  
+  
 
 
 
@@ -128,11 +125,6 @@ Changed type of partition 'Linux' to 'Linux LVM'.
 如果保存出现错误,可以 partprobe  /dev/sdb  (没有数字）
 然后再进入 fdisk   /dev/sdb 继续上面的操作  甚至重启
 
-如果保存出现错误,可以 partprobe  /dev/sdb  (没有数字）
-然后再进入 fdisk   /dev/sdb 继续上面的操作  甚至重启
-
-
-
 - 4，接着格式化：
   centos7 可以用`mkfs.xfs /dev/sdb1` ，Ubuntu或者centos6 用`mkfs.ext4 /dev/sdb1` 来格式
   输入mkfs.  按tab键，可以看出有哪些格式
@@ -166,24 +158,10 @@ Changed type of partition 'Linux' to 'Linux LVM'.
 
   如果是在物理机上，增加硬盘后，最好填写uuid，分区是可以变化，uuid不会变；
 
-  如果是在物理机上，增加硬盘后，最好填写uuid，分区是可以变化，uuid不会变；
-
-  - 9.其他命令 blkid查看挂载硬盘的UUID，如blkid | grep  "sdb*" ，查看现有分区cat  /proc/partitions 
-
-  把刚才的/data 添加进去
-
-  ```
-  /dev/sdb1 /data                   xfs     defaults        0 0
-  或者 UUID=3c94bedd-2b80-47d3-a3a4-05785847aa10 /data                xfs     defaults        0 0
-  ```
-
-  如果是在物理机上，增加硬盘后，最好填写uuid，分区是可以变化，uuid不会变；
-
-  - 8.其他命令 blkid查看挂载硬盘的UUID，如`blkid | grep  "sdb*" `，查看现有分区`cat  /proc/partitions `
-
-  如果是在物理机上，增加硬盘后，最好填写uuid，分区是可以变化，uuid不会变；
-
   - 7.其他命令 blkid查看挂载硬盘的UUID，如`blkid | grep  "sdb*" `，查看现有分区`cat  /proc/partitions `
+
+  
+
 
 ##  怎么把原有硬盘扩充的存储都挂靠到/home（或其他已有目录）
 
