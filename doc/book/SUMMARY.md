@@ -30,6 +30,8 @@
 * shell
   - [shell 脚本中获取脚本所在路径](shell/get_dir_in_shell.md)
   - [sed不常见用法](shell/sed_use_hard.md)
+  - [getopt与getopts用法](shell/getopt_and_getopts_use.md)
+  - [选择项用法](shell/ps3_use.md)
 * jmeter
   - [利用jmeter模拟手机接口测试](jmeter/use_jmeter_test_app.md)
 * 证书申请与制作

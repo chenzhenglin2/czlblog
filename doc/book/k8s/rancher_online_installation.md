@@ -206,3 +206,14 @@ helm install rancher-latest/rancher \
 `kubectl get deployment -n cattle-system`
 
 安装rancher server出错，可以用helm delete --purge rancher 删除后 重新执行
+
+## 为Agent Pod添加主机别名
+
+- 采用的是自定义域名而不是全局域名的话，需要在agent 里面配置自定义域名
+
+- 如果是通过在/etc/hosts添加自定义域名方式指定的Rancher server访问URL，那么不管通过哪种方式(自定义、导入、Host驱动等)创建K8S集群，K8S集群运行起来之后，因为cattle-cluster-agent Pod和cattle-node-agent无法通过DNS记录找到Rancher server,最终导致无法通信。
+
+- 可以通过给cattle-cluster-agent Pod和cattle-node-agent添加主机别名来解决；
+
+在rancher UI界面，在system项目分别点击升级，进行编辑cattle-cluster-agent Pod和cattle-node-agent
+点击显示高级选项；然后再网络里面 添加hosts别名，填写rancher server 服务器ip和自定义域名，完成后保存即可，待pod恢复后，状态会变成Active
