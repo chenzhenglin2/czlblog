@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>如何利用nginx实现负载均衡和反向代理 · 志云的博客</title>
+        <title>rancher平台不可用下如何使用kubectl命令 · 志云的博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -94,7 +94,7 @@
 
     
     
-    <link rel="prev" href="direct_static_web.html" />
+    <link rel="prev" href="use_appstore_deploy_es_in_rancher.html" />
     
 
     </head>
@@ -331,9 +331,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../k8s/kubectl-user-instruction.html">
+        <li class="chapter " data-level="1.4.1" data-path="kubectl-user-instruction.html">
             
-                <a href="../k8s/kubectl-user-instruction.html">
+                <a href="kubectl-user-instruction.html">
             
                     
                     kubectl常用命令汇总（以及curl注入）
@@ -344,9 +344,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../k8s/docker-run-and-k8s-command.html">
+        <li class="chapter " data-level="1.4.2" data-path="docker-run-and-k8s-command.html">
             
-                <a href="../k8s/docker-run-and-k8s-command.html">
+                <a href="docker-run-and-k8s-command.html">
             
                     
                     docker run image -args对应yaml语法/rancher UI操作方式
@@ -357,9 +357,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../k8s/rancher_online_installation.html">
+        <li class="chapter " data-level="1.4.3" data-path="rancher_online_installation.html">
             
-                <a href="../k8s/rancher_online_installation.html">
+                <a href="rancher_online_installation.html">
             
                     
                     在线安装高可用的rancher
@@ -370,9 +370,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../k8s/rancher_offline_installation.html">
+        <li class="chapter " data-level="1.4.4" data-path="rancher_offline_installation.html">
             
-                <a href="../k8s/rancher_offline_installation.html">
+                <a href="rancher_offline_installation.html">
             
                     
                     离线helm安装高可用rancher
@@ -383,9 +383,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../k8s/deploy_app_in_rancher.html">
+        <li class="chapter " data-level="1.4.5" data-path="deploy_app_in_rancher.html">
             
-                <a href="../k8s/deploy_app_in_rancher.html">
+                <a href="deploy_app_in_rancher.html">
             
                     
                     rancher中快速部署应用
@@ -396,9 +396,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="../k8s/use_appstore_deploy_es_in_rancher.html">
+        <li class="chapter " data-level="1.4.6" data-path="use_appstore_deploy_es_in_rancher.html">
             
-                <a href="../k8s/use_appstore_deploy_es_in_rancher.html">
+                <a href="use_appstore_deploy_es_in_rancher.html">
             
                     
                     利用rancher商店搭建es和beat
@@ -409,9 +409,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="../k8s/how_to_use_kubectl_noserver.html">
+        <li class="chapter active" data-level="1.4.7" data-path="how_to_use_kubectl_noserver.html">
             
-                <a href="../k8s/how_to_use_kubectl_noserver.html">
+                <a href="how_to_use_kubectl_noserver.html">
             
                     
                     rancher平台不可用下如何使用kubectl命令
@@ -647,9 +647,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="direct_static_web.html">
+        <li class="chapter " data-level="1.9.1" data-path="../nginx/direct_static_web.html">
             
-                <a href="direct_static_web.html">
+                <a href="../nginx/direct_static_web.html">
             
                     
                     如何利用nginx指向本地静态网页
@@ -660,9 +660,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9.2" data-path="load_balance.html">
+        <li class="chapter " data-level="1.9.2" data-path="../nginx/load_balance.html">
             
-                <a href="load_balance.html">
+                <a href="../nginx/load_balance.html">
             
                     
                     如何利用nginx实现负载均衡和反向代理
@@ -1184,7 +1184,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >如何利用nginx实现负载均衡和反向代理</a>
+        <a href=".." >rancher平台不可用下如何使用kubectl命令</a>
     </h1>
 </div>
 
@@ -1199,39 +1199,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#nginx&#x5B9E;&#x73B0;&#x8D1F;&#x8F7D;&#x5747;&#x8861;"><b></b>nginx&#x5B9E;&#x73B0;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</a></li><li><span class="title-icon "></span><a href="#&#x53CD;&#x5411;&#x4EE3;&#x7406;"><b></b>&#x53CD;&#x5411;&#x4EE3;&#x7406;</a></li></ul></div><a href="#nginx&#x5B9E;&#x73B0;&#x8D1F;&#x8F7D;&#x5747;&#x8861;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="nginx&#x5B9E;&#x73B0;&#x8D1F;&#x8F7D;&#x5747;&#x8861;"><a name="nginx&#x5B9E;&#x73B0;&#x8D1F;&#x8F7D;&#x5747;&#x8861;" class="anchor-navigation-ex-anchor" href="#nginx&#x5B9E;&#x73B0;&#x8D1F;&#x8F7D;&#x5747;&#x8861;"><i class="fa fa-link" aria-hidden="true"></i></a>nginx&#x5B9E;&#x73B0;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</h1>
-<pre class="language-"><code class="lang-yaml">  upstream ygcr <span class="token punctuation">{</span>
-        server 192.16.35.30<span class="token punctuation">:</span>38080 weight=1;
-        server 192.16.33.20<span class="token punctuation">:</span>38080 weight=1;
-        ip_hash;  
-        <span class="token punctuation">}</span>
-</code></pre>
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x5728;rancher&#x5E73;&#x53F0;&#x5B95;&#x673A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;k8s&#x96C6;&#x7FA4;"><b></b>&#x5982;&#x4F55;&#x5728;rancher&#x5E73;&#x53F0;&#x5B95;&#x673A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;k8s&#x96C6;&#x7FA4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x524D;&#x63D0;"><b></b>&#x524D;&#x63D0;</a></li><li><span class="title-icon "></span><a href="#&#x9A8C;&#x8BC1;&#xFF1A;"><b></b>&#x9A8C;&#x8BC1;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x6765;&#x64CD;&#x4F5C;&#x96C6;&#x7FA4;"><b></b>&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x6765;&#x64CD;&#x4F5C;&#x96C6;&#x7FA4;</a></li><li><span class="title-icon "></span><a href="#&#x82E5;rancher&#x5F7B;&#x5E95;&#x4E0D;&#x53EF;&#x6062;&#x590D;"><b></b>&#x82E5;rancher&#x5F7B;&#x5E95;&#x4E0D;&#x53EF;&#x6062;&#x590D;</a></li></ul></ul></div><a href="#&#x5982;&#x4F55;&#x5728;rancher&#x5E73;&#x53F0;&#x5B95;&#x673A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;k8s&#x96C6;&#x7FA4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5982;&#x4F55;&#x5728;rancher&#x5E73;&#x53F0;&#x5B95;&#x673A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;k8s&#x96C6;&#x7FA4;"><a name="&#x5982;&#x4F55;&#x5728;rancher&#x5E73;&#x53F0;&#x5B95;&#x673A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;k8s&#x96C6;&#x7FA4;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x5728;rancher&#x5E73;&#x53F0;&#x5B95;&#x673A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;k8s&#x96C6;&#x7FA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x5728;rancher&#x5E73;&#x53F0;&#x5B95;&#x673A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;k8s&#x96C6;&#x7FA4;</h1>
+<h2 id="&#x524D;&#x63D0;"><a name="&#x524D;&#x63D0;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x63D0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x63D0;</h2>
 <ul>
-<li><p>&#x5229;&#x7528;upstream&#xFF08;&#x8F6E;&#x8BE2;&#xFF09; &#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF0C;&#x901A;&#x8FC7;weight&#x503C;&#x7684;&#x5927;&#x5C0F;&#x51B3;&#x5B9A;&#x6743;&#x91CD;&#x3002;  ip_hash &#x6765;&#x8FDB;&#x884C;&#x4F1A;&#x8BDD;&#x4FDD;&#x6301;&#xFF0C;&#x4FDD;&#x8BC1;&#x540C;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x8BBF;&#x95EE;&#x65F6; &#x88AB;&#x8C03;&#x5EA6;&#x5230;&#x540C;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
-<h1 id="&#x53CD;&#x5411;&#x4EE3;&#x7406;"><a name="&#x53CD;&#x5411;&#x4EE3;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x53CD;&#x5411;&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53CD;&#x5411;&#x4EE3;&#x7406;</h1>
-<pre class="language-"><code>server {
-    listen       80;
-    server_name  localhost;
-    location ^~ /admin {
-                proxy_pass http://ygcr;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header X-Real-IP $remote_addr;               
-    }
-
-    location ^~  /static/ {
-                proxy_pass http://ygcr;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header X-Real-IP $remote_addr;
-    }
-    location = /product {
-                proxy_pass http://ygcr;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header X-Real-IP $remote_addr;
-    }
-}
-</code></pre><p>&#x901A;&#x8FC7;url&#x8BF7;&#x6C42;&#x8BBF;&#x95EE;&#x6B64;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5F53;&#x7AEF;&#x53E3;&#x540E;&#x9762;&#x662F;/admin&#x3001;/static&#x5F00;&#x5934;&#x4EE5;&#x53CA;&#x662F;/product&#x7684;&#x90FD;&#x8F6C;&#x4EA4;&#x7ED9;<a href="http://ygcr" target="_blank">http://ygcr</a> &#x6765;&#x5904;&#x7406;&#xFF0C;ygcr&#x8FD9;&#x4E2A;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x3002;&#x5982;&#x8BBF;&#x95EE;<a href="http://ip:port/admin" target="_blank">http://ip:port/admin</a> &#xFF0C;NGINX&#x76D1;&#x542C;&#x5230;&#x8FD9;&#x4E2A;&#x7AEF;&#x53E3;&#x540E;&#xFF0C;&#x5339;&#x914D;admin&#xFF0C;&#x7136;&#x540E;&#x4EA4;&#x7ED9;<a href="http://ygcr" target="_blank">http://ygcr</a> &#x5904;&#x7406;&#xFF0C;&#x6700;&#x7EC8;&#x8BBF;&#x95EE;&#x7684;&#x662F; <a href="http://ygcr/admin" target="_blank">http://ygcr/admin</a> &#x5F62;&#x6210;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x7684;&#x6548;&#x679C;&#x3002;</p>
-</li>
+<li>&#x9996;&#x5148;&#x4FDD;&#x969C;rancher&#x7BA1;&#x7406;k8s&#x96C6;&#x7FA4;&#x7684;config&#x6587;&#x4EF6;&#x8FD8;&#x5728;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;~/.kube/config &#x8FDB;&#x884C;&#x9A8C;&#x8BC1;</li>
 </ul>
+<pre class="language-"><code>kubectl  config    view 
+
+kubectl config use&#xFF08;&#x6216;&#x8005;use-context &#xFF09; xxx &#xFF1B;&#x5207;&#x6362;&#x5230;&#x4E0D;&#x540C;&#x914D;&#x7F6E;&#x9879;&#xFF08;master&#x4E0A;&#x7684;&#x914D;&#x7F6E;&#xFF09;&#xFF0C;&#x6765;&#x4F7F;&#x7528;kubectl
+#xxx&#x662F;contexts&#x7684;name&#x503C;
+</code></pre><h2 id="&#x9A8C;&#x8BC1;&#xFF1A;"><a name="&#x9A8C;&#x8BC1;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x9A8C;&#x8BC1;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9A8C;&#x8BC1;&#xFF1A;</h2>
+<pre class="language-"><code>kubectl  get  nodes 
+kubectl  get  ns
+</code></pre><p>&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8282;&#x70B9;&#x548C;&#x547D;&#x540D;&#x7A7A;&#x95F4;</p>
+<h2 id="&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x6765;&#x64CD;&#x4F5C;&#x96C6;&#x7FA4;"><a name="&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x6765;&#x64CD;&#x4F5C;&#x96C6;&#x7FA4;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x6765;&#x64CD;&#x4F5C;&#x96C6;&#x7FA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;kubectl&#x547D;&#x4EE4;&#x6765;&#x64CD;&#x4F5C;&#x96C6;&#x7FA4;</h2>
+<pre class="language-"><code>]$ kubectl   set image   deployment/reactor   reactor=myimage:2.7.1  -n  myns --dry-run(&#x7A7A;&#x8DD1;&#x4E00;&#x904D; &#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF09;
+]$ kubectl   set image   deployment/reactor   reactor=myimage:2.7.1  -n  myns
+
+&#x9A8C;&#x8BC1;
+
+]$ kubectl  get deployment/reactor   -n  myns  -o yaml
+</code></pre><h2 id="&#x82E5;rancher&#x5F7B;&#x5E95;&#x4E0D;&#x53EF;&#x6062;&#x590D;"><a name="&#x82E5;rancher&#x5F7B;&#x5E95;&#x4E0D;&#x53EF;&#x6062;&#x590D;" class="anchor-navigation-ex-anchor" href="#&#x82E5;rancher&#x5F7B;&#x5E95;&#x4E0D;&#x53EF;&#x6062;&#x590D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x82E5;rancher&#x5F7B;&#x5E95;&#x4E0D;&#x53EF;&#x6062;&#x590D;</h2>
+<p>&#x5F85;kubectl&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x540E;&#xFF0C;&#x5728;&#x65B0;&#x642D;&#x5EFA;rancher&#x5E73;&#x53F0;&#x4E2D;&#xFF0C;&#x628A;&#x6B64;&#x96C6;&#x7FA4;&#x5BFC;&#x5165;&#x8FDB;&#x53BB;&#xFF0C;&#x5BFC;&#x5165;&#x5B8C;&#x6210;&#x540E; &#x8981;&#x91CD;&#x5EFA;&#x9879;&#x76EE;&#xFF0C;&#x628A;&#x4E4B;&#x524D;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x79FB;&#x8FC7;&#x53BB;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x5BFC;&#x5165;&#x547D;&#x4EE4;&#xFF0C;&#x53C2;&#x8003;rancher&#x5B98;&#x7F51;    </p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
                                 
@@ -1260,7 +1250,7 @@
 
             
                 
-                <a href="direct_static_web.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 如何利用nginx指向本地静态网页">
+                <a href="use_appstore_deploy_es_in_rancher.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 利用rancher商店搭建es和beat">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1272,7 +1262,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"如何利用nginx实现负载均衡和反向代理","level":"1.9.2","depth":2,"next":{"title":"nginx其他知识","level":"1.9.3","depth":2,"ref":"","articles":[]},"previous":{"title":"如何利用nginx指向本地静态网页","level":"1.9.1","depth":2,"path":"nginx/direct_static_web.md","ref":"nginx/direct_static_web.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"nginx/load_balance.md","mtime":"2019-07-09T12:27:32.437Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-09T12:57:12.003Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"rancher平台不可用下如何使用kubectl命令","level":"1.4.7","depth":2,"next":{"title":"Jenkins","level":"1.5","depth":1,"ref":"","articles":[{"title":"Jenkins调用docker编译程序","level":"1.5.1","depth":2,"path":"jenkins/jenkins-slave-for-docker.md","ref":"jenkins/jenkins-slave-for-docker.md","articles":[]},{"title":"利用docker 镜像，快速搭建Jenkins环境","level":"1.5.2","depth":2,"path":"jenkins/install-jenkins.md","ref":"jenkins/install-jenkins.md","articles":[]},{"title":"jenkins自由风格构建job","level":"1.5.3","depth":2,"ref":"","articles":[]},{"title":"jenkins多种pipeline构建job","level":"1.5.4","depth":2,"ref":"","articles":[]}]},"previous":{"title":"利用rancher商店搭建es和beat","level":"1.4.6","depth":2,"path":"k8s/use_appstore_deploy_es_in_rancher.md","ref":"k8s/use_appstore_deploy_es_in_rancher.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"k8s/how_to_use_kubectl_noserver.md","mtime":"2019-07-09T12:27:32.392Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-09T12:57:12.003Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

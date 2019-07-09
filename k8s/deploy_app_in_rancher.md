@@ -1,6 +1,6 @@
 # rancher中快速部署应用
 
-阅读前提：有docker知识储备，并对kubernetes有了解
+阅读前提：有docker知识储备，并对kubernetes有一定的了解
 
 ## 通过UI 部署应用
 
@@ -32,7 +32,7 @@ rancher在命名空间又抽象出一层，项目的概念（这个只是便于�
 
 #### 5，调度规则
 
-可以选择指定节点
+可以指定调度到（或不到）某个节点
 
 ![1562658887859](images/1562658887859.png)
 
@@ -52,7 +52,7 @@ rancher在命名空间又抽象出一层，项目的概念（这个只是便于�
 
 ![1562659287048](images/1562659287048.png)
 
-可以设置存活和就绪检查，默认是readliness 检查，设置完成后 存活检查也使用此规则；也可以点击右侧Define a separate liveness check来单独设置存活检查。设置http和htpps方式检查 更友好一下；tcp方式呢，可能应用占有端口还在，但已经不工作了；命令退出状态检查，需要在脚本存放或者挂载到容器中，执行后返回码 作为判断的依据。
+- 可以设置存活和就绪检查，默认是readliness 检查，设置完成后 存活检查也使用此规则；也可以点击右侧Define a separate liveness check增加一个存活检查。设置http和htpps方式检查 相对友好一下；tcp方式呢，可能应用占有端口还在，但已经不工作了；命令退出状态检查：需要提前把脚本放到镜像或挂载到容器中，执行此脚本后，返回码是否为0 作为判断的依据。
 
 #### 7，卷
 
@@ -110,11 +110,11 @@ rancher在命名空间又抽象出一层，项目的概念（这个只是便于�
 
 ![1562661329299](images/1562661329299.png)
 
-ingress其实也是一种service，但相对于支持7层负载 带有域名的service；新增ingress时，可以选自定义生成的域名，也可以使用自己购买的域名； 选择目标，可以是service或者工作负载（workload），证书、标签注解都能在此UI配置。
+ingress其实也是一种service，相当于增加一个支持7层负载的nginx，并带有域名；nginx（也可以是其他代理软件甚至是硬件）把接收到请求反向代理到匹配的pod上。新增ingress时，可以选自定义生成的域名，也可以使用自己购买的域名； 选择目标，可以是service或者工作负载（workload）；证书、标签注解都能在此UI配置。
 
 ### 服务发现配置
 
-service可以这么理解：通过标签的键值对，选择匹配的pod，然后访问入口是service，service调度满足匹配条件的pod上。
+service可以这么理解：通过标签的键值对，选择匹配的pod，然后用户或其他应用访问入口是service，service调度满足匹配条件的pod上。
 
 ![1562661416206](images/1562661416206.png)
 
@@ -138,7 +138,7 @@ service可以这么理解：通过标签的键值对，选择匹配的pod，然�
 
 ![1562661669382](images/1562661669382.png)
 
--   "One or more external IP addresses"和"An external hostname"  类似,把外部ip或者域名定义为内部dns，前者可以一次性定义多个ip，后者只能定义一个。如名称填写my-data;Target IP Addresses填写 172.17.1.4 ；此集群内部pod可以直接访问my-data，然后指向172.17.1.4
+-   "One or more external IP addresses"和"An external hostname"  类似,把外部ip或者域名定义为内部dns，前者可以一次性定义多个ip，后者只能定义一个。如选择"One or more external IP addresses"类型，名称填写my-data;Target IP Addresses填写 172.17.1.4 ；此集群内部pod可以直接访问my-data，dns自动解析到172.17.1.4
 
 -   "One or more workloads"和"The set of pods which match a selector"类似，前者相当于工作负载选择器，后者相当于标签选择器；前者通过标签选择工作负载（deployment、daemon-set、statefulset)，后者通过标签选择pod。
 
@@ -180,7 +180,7 @@ service可以这么理解：通过标签的键值对，选择匹配的pod，然�
 
 ![1562661919146](images/1562661919146.png)
 
-- 这个configmap  最常用的作用有两个，一个是编写环境变量，然后在工作负载部署时，环境变量是，直接引用此configmap，另一个就是存储应用配置文件，如上图；key就是配置文件名称，value就是配置文件内容；然后通过volume挂载到容器程序存放配置文件的地方。
+- 这个configmap  最常用的作用有两个，一个是编写环境变量，然后在工作负载部署时，环境变量可以直接引用此configmap，另一个就是存储应用配置文件，如上图；key就是配置文件名称，value就是配置文件内容；然后通过volume挂载到容器程序存放配置文件的地方。
 
 ![1562672543191](images/1562672543191.png)
 
