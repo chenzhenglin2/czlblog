@@ -18,9 +18,8 @@
   *  [docker run image -args对应yaml语法/rancher UI操作方式](k8s/docker-run-and-k8s-command.md)
   *  [在线安装高可用的rancher](k8s/rancher_online_installation.md)
   *  [离线helm安装高可用rancher](k8s/rancher_offline_installation.md)
-  *  [rancher中快速部署应用]()
-  *  [rancher应用商店的使用]()
-  *  [rancher快速搭建起elasticsearch+kibana+metricbeat+packetbeat]()
+  *  [rancher中快速部署应用](k8s/deploy_app_in_rancher.md)
+  *  [利用rancher商店搭建es和beat](k8s/use_appstore_deploy_es_in_rancher.md)
   *  [rancher服务不可用情况下，如何使用kubectl命令](k8s/how_to_use_kubectl_noserver.md)
 * Jenkins
   - [Jenkins调用docker编译程序](jenkins/jenkins-slave-for-docker.md)
