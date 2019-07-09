@@ -170,8 +170,6 @@ kubectl  get pod efk-elaticsearch-0 -n  efk  -o  wide
 ```
 
 
-## 更多用法可以参照官网或者国内翻译的博客
-https://blog.csdn.net/xingwangc2014/article/details/51204224
 
 - 因为k8s 采用的是REST API接口，所有命令都最终会转换成curl  -X  PUT POS等形式,为什么不直接使用curl命令，因为需要一堆相关授权，rancher UI里面 在deploy或其他资源中，选择api查看 就可以查到，也可以点击右侧的edit编辑后 通过curl命令提交
 
@@ -185,4 +183,43 @@ curl -u "${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}" \
 -d '{"annotations":{"cattle.io/timestamp":"", "cni.projectcalico.org/podIP":"10.42.1.44/32"}, "containers":[{"allowPrivilegeEscalation":false, "exitCode":null, "image":"172.16.35.31:1180/apm-images/gettoken:1.0", "imagePullPolicy":"IfNotPresent", "initContainer":false, "name":"genttoken", "ports":[{"containerPort":8001, "dnsName":"genttoken-nodeport", "kind":"NodePort", "name":"8001tcp301001", "protocol":"TCP", "sourcePort":30100, "type":"/v3/project/schemas/containerPort"}], "privileged":false, "procMount":"Default", "readOnly":false, "resources":{"type":"/v3/project/schemas/resourceRequirements"}, "restartCount":0, "runAsNonRoot":false, "state":"running", "stdin":true, "stdinOnce":false, "terminationMessagePath":"/dev/termination-log", "terminationMessagePolicy":"  等等
 ```
 修改完成后 可以点击send  request来提交
+
+### "-"在kubectl中  用法说明
+
+“-”它作为标准输入（池）非常灵活用法 ，和tar中用法非常类似
+
+- yaml
+
+  ```yaml
+  - apiVersion: v1
+    data:
+      kubernetes.yml: |-
+        - type: docker
+          containers.ids:
+          - "*"
+          processors:
+            - add_kubernetes_metadata:
+                in_cluster: true
+    kind: ConfigMap
+  ```
+
+  
+
+- 命令
+
+```bash
+kubectl get po --all-namespaces --show-all --field-selector 'status.phase==Pending' -o json | kubectl delete -f -
+```
+
+```bash
+curl --insecure -sfL https://your_domain/v3/import/f2gdpkvz42gqzm8vbrdpd99xgppjxgwct7wt86lzswwnf4p2d4vfd7.yaml | kubectl apply -f -
+```
+
+
+
+可以看出，“-”里面保存标准输入的内容。
+
+## 更多用法可以参照官网或者国内翻译的博客
+
+https://blog.csdn.net/xingwangc2014/article/details/51204224
 

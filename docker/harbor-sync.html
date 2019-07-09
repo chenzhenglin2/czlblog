@@ -1,0 +1,1323 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>harbor仓库镜像同步 · 志云的博客</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="陈正林">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dockerfile-rule.html" />
+    
+    
+    <link rel="prev" href="harbor-install.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于博客说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux/tar-deal.html">
+            
+                <a href="../linux/tar-deal.html">
+            
+                    
+                    "-"在tar命令中的巧用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux/limit_ip.html">
+            
+                <a href="../linux/limit_ip.html">
+            
+                    
+                    利用iptables或防火墙指定ip访问服务器某个端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../linux/set_ip.html">
+            
+                <a href="../linux/set_ip.html">
+            
+                    
+                    如何设置centos7.6和Ubuntu19.4的ip4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../linux/extend_disk.html">
+            
+                <a href="../linux/extend_disk.html">
+            
+                    
+                    Linux中磁盘扩展与缩减
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../linux/how_to_made_bin.html">
+            
+                <a href="../linux/how_to_made_bin.html">
+            
+                    
+                    二进制安装包的制作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../linux/use_heredoc.html">
+            
+                <a href="../linux/use_heredoc.html">
+            
+                    
+                    heredocument的巧用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="docker-install.html">
+            
+                <a href="docker-install.html">
+            
+                    
+                    docker 安装与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="harbor-install.html">
+            
+                <a href="harbor-install.html">
+            
+                    
+                    harbor的安装和注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="harbor-sync.html">
+            
+                <a href="harbor-sync.html">
+            
+                    
+                    harbor仓库镜像同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="dockerfile-rule.html">
+            
+                <a href="dockerfile-rule.html">
+            
+                    
+                    如何制作出合适的镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="save_load_images.html">
+            
+                <a href="save_load_images.html">
+            
+                    
+                    逐个和批量导出导入docker镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    rancher和kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../k8s/kubectl-user-instruction.html">
+            
+                <a href="../k8s/kubectl-user-instruction.html">
+            
+                    
+                    kubectl常用命令汇总（以及curl注入）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../k8s/docker-run-and-k8s-command.html">
+            
+                <a href="../k8s/docker-run-and-k8s-command.html">
+            
+                    
+                    docker run image -args对应yaml语法/rancher UI操作方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../k8s/rancher_online_installation.html">
+            
+                <a href="../k8s/rancher_online_installation.html">
+            
+                    
+                    在线安装高可用的rancher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../k8s/rancher_offline_installation.html">
+            
+                <a href="../k8s/rancher_offline_installation.html">
+            
+                    
+                    离线helm安装高可用rancher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../k8s/deploy_app_in_rancher.html">
+            
+                <a href="../k8s/deploy_app_in_rancher.html">
+            
+                    
+                    rancher中快速部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../k8s/use_appstore_deploy_es_in_rancher.html">
+            
+                <a href="../k8s/use_appstore_deploy_es_in_rancher.html">
+            
+                    
+                    利用rancher商店搭建es和beat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../k8s/how_to_use_kubectl_noserver.md">
+            
+                <span>
+            
+                    
+                    rancher服务不可用情况下，如何使用kubectl命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Jenkins
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../jenkins/jenkins-slave-for-docker.html">
+            
+                <a href="../jenkins/jenkins-slave-for-docker.html">
+            
+                    
+                    Jenkins调用docker编译程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../jenkins/install-jenkins.html">
+            
+                <a href="../jenkins/install-jenkins.html">
+            
+                    
+                    利用docker 镜像，快速搭建Jenkins环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    jenkins自由风格构建job
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    jenkins多种pipeline构建job
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../shell/get_dir_in_shell.html">
+            
+                <a href="../shell/get_dir_in_shell.html">
+            
+                    
+                    shell 脚本中获取脚本所在路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../shell/sed_use_hard.html">
+            
+                <a href="../shell/sed_use_hard.html">
+            
+                    
+                    sed不常见用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../shell/getopt_and_getopts_use.html">
+            
+                <a href="../shell/getopt_and_getopts_use.html">
+            
+                    
+                    getopt与getopts用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../shell/ps3_use.html">
+            
+                <a href="../shell/ps3_use.html">
+            
+                    
+                    选择项用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    jmeter
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../jmeter/use_jmeter_test_app.html">
+            
+                <a href="../jmeter/use_jmeter_test_app.html">
+            
+                    
+                    利用jmeter模拟手机接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    证书申请与制作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../ca/make_key.html">
+            
+                <a href="../ca/make_key.html">
+            
+                    
+                    私有证书制作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    NGINX
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../nginx/direct_static_web.html">
+            
+                <a href="../nginx/direct_static_web.html">
+            
+                    
+                    如何利用nginx指向本地静态网页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../nginx/load_balance.html">
+            
+                <a href="../nginx/load_balance.html">
+            
+                    
+                    如何利用nginx实现负载均衡和反向代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" >
+            
+                <span>
+            
+                    
+                    nginx其他知识
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../git/git-use.html">
+            
+                <a href="../git/git-use.html">
+            
+                    
+                    git日常使用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../git/install_and_bak_gitlab.html">
+            
+                <a href="../git/install_and_bak_gitlab.html">
+            
+                    
+                    gitlab搭建和备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    自动化测试技术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" >
+            
+                <span>
+            
+                    
+                    手机自动化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../autotech/monkey_android.html">
+            
+                <a href="../autotech/monkey_android.html">
+            
+                    
+                    monkey测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" >
+            
+                <span>
+            
+                    
+                    uiautomator 自动化测试
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" >
+            
+                <span>
+            
+                    
+                    mongo
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" >
+            
+                <span>
+            
+                    
+                    MySQL
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" >
+            
+                <span>
+            
+                    
+                    不常见数据库的搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1" >
+            
+                <span>
+            
+                    
+                    db2搭建
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.2" >
+            
+                <span>
+            
+                    
+                    人大金仓搭建
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    虚拟化技术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" >
+            
+                <span>
+            
+                    
+                    vmmare
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" >
+            
+                <span>
+            
+                    
+                    vcenter
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    Java中间件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" >
+            
+                <span>
+            
+                    
+                    websphere各个版本的部署和使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" >
+            
+                <span>
+            
+                    
+                    tomcat、weblogic、was等组件jvm调整
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    大数据处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" >
+            
+                <span>
+            
+                    
+                    elasticsearch
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" >
+            
+                <span>
+            
+                    
+                    druid
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" >
+            
+                <span>
+            
+                    
+                    kafka+zookeeper
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    持续集成项目实战
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" >
+            
+                <span>
+            
+                    
+                    利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本技术网站
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" >
+            
+                <span>
+            
+                    
+                    采用jenkins+harbor+kubernetes实时部署最新程序
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    正确使用工具事半功倍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" >
+            
+                <span>
+            
+                    
+                    搜索引擎的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" >
+            
+                <span>
+            
+                    
+                    gitbook 的巧用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" >
+            
+                <span>
+            
+                    
+                    有道云笔记
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" >
+            
+                <span>
+            
+                    
+                    GitHub搭建个人网站
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >harbor仓库镜像同步</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x4E3B;&#x5907;-harbor-&#x90E8;&#x7F72;&#xFF08;harbor&#x540C;&#x6B65;&#xFF09;"><b></b>&#x4E3B;&#x5907; Harbor &#x90E8;&#x7F72;&#xFF08;harbor&#x540C;&#x6B65;&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#1&#xFF0C;&#x4ED3;&#x7BA1;&#x7BA1;&#x7406;&#x4E2D;&#xFF0C;&#x65B0;&#x5EFA;&#x76EE;&#x6807;"><b></b>1&#xFF0C;&#x4ED3;&#x7BA1;&#x7BA1;&#x7406;&#x4E2D;&#xFF0C;&#x65B0;&#x5EFA;&#x76EE;&#x6807;</a></li><li><span class="title-icon "></span><a href="#2&#xFF0C;&#x7F16;&#x8F91;&#x76EE;&#x6807;"><b></b>2&#xFF0C;&#x7F16;&#x8F91;&#x76EE;&#x6807;</a></li><li><span class="title-icon "></span><a href="#3&#xFF0C;&#x65B0;&#x5EFA;&#x89C4;&#x5219;"><b></b>3&#xFF0C;&#x65B0;&#x5EFA;&#x89C4;&#x5219;</a></li></ul></ul></div><a href="#&#x4E3B;&#x5907;-harbor-&#x90E8;&#x7F72;&#xFF08;harbor&#x540C;&#x6B65;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4E3B;&#x5907;-harbor-&#x90E8;&#x7F72;&#xFF08;harbor&#x540C;&#x6B65;&#xFF09;"><a name="&#x4E3B;&#x5907;-harbor-&#x90E8;&#x7F72;&#xFF08;harbor&#x540C;&#x6B65;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x4E3B;&#x5907;-harbor-&#x90E8;&#x7F72;&#xFF08;harbor&#x540C;&#x6B65;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3B;&#x5907; Harbor &#x90E8;&#x7F72;&#xFF08;harbor&#x540C;&#x6B65;&#xFF09;</h1>
+<ul>
+<li>&#x524D;&#x63D0; &#x4E24;&#x53F0;&#x6216;&#x4EE5;&#x4E0A;harbor&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x53F0;&#x4E3A;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5176;&#x4ED6;&#x4E3A;&#x5907;&#x4EFD;&#x670D;&#x52A1;&#x5668;</li>
+</ul>
+<h2 id="1&#xFF0C;&#x4ED3;&#x7BA1;&#x7BA1;&#x7406;&#x4E2D;&#xFF0C;&#x65B0;&#x5EFA;&#x76EE;&#x6807;"><a name="1&#xFF0C;&#x4ED3;&#x7BA1;&#x7BA1;&#x7406;&#x4E2D;&#xFF0C;&#x65B0;&#x5EFA;&#x76EE;&#x6807;" class="anchor-navigation-ex-anchor" href="#1&#xFF0C;&#x4ED3;&#x7BA1;&#x7BA1;&#x7406;&#x4E2D;&#xFF0C;&#x65B0;&#x5EFA;&#x76EE;&#x6807;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#xFF0C;&#x4ED3;&#x7BA1;&#x7BA1;&#x7406;&#x4E2D;&#xFF0C;&#x65B0;&#x5EFA;&#x76EE;&#x6807;</h2>
+<p><a href="images/1562656559566.png" data-lightbox="a13a96ce-ca1f-477c-9e3f-391a6862e887" data-title="1562656559566"><img src="images/1562656559566.png" alt="1562656559566"></a></p>
+<h2 id="2&#xFF0C;&#x7F16;&#x8F91;&#x76EE;&#x6807;"><a name="2&#xFF0C;&#x7F16;&#x8F91;&#x76EE;&#x6807;" class="anchor-navigation-ex-anchor" href="#2&#xFF0C;&#x7F16;&#x8F91;&#x76EE;&#x6807;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#xFF0C;&#x7F16;&#x8F91;&#x76EE;&#x6807;</h2>
+<p><a href="images/1562656611290.png" data-lightbox="02a33d77-8a8f-40ed-b8c4-0ea74e5012d4" data-title="1562656611290"><img src="images/1562656611290.png" alt="1562656611290"></a></p>
+<h2 id="3&#xFF0C;&#x65B0;&#x5EFA;&#x89C4;&#x5219;"><a name="3&#xFF0C;&#x65B0;&#x5EFA;&#x89C4;&#x5219;" class="anchor-navigation-ex-anchor" href="#3&#xFF0C;&#x65B0;&#x5EFA;&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#xFF0C;&#x65B0;&#x5EFA;&#x89C4;&#x5219;</h2>
+<ul>
+<li><p>&#x9009;&#x62E9;&#x590D;&#x5236;&#x7BA1;&#x7406;&#x9009;&#x9879;&#xFF0C;&#x70B9;&#x51FB;&#x65B0;&#x5EFA;&#x89C4;&#x5219;&#xFF0C;&#x7136;&#x540E;&#x586B;&#x5199;&#x4E3B; harbor &#x9700;&#x8981;&#x540C;&#x6B65;&#x590D;&#x5236;&#x7684;&#x4ED3;&#x5E93;&#x548C;&#x540C;&#x6B65;&#x89C4;&#x5219;&#xFF0C;&#x6700;&#x540E;&#x70B9;&#x51FB;&#x4FDD;&#x5B58;&#xFF0C;&#x5373;&#x53EF;&#x3002;</p>
+<p><a href="images/1562656723947.png" data-lightbox="16bf9dde-56f4-459a-b4c6-386e11973e77" data-title="1562656723947"><img src="images/1562656723947.png" alt="1562656723947"></a></p>
+</li>
+</ul>
+<p><a href="images/1562656793959.png" data-lightbox="a4842e3a-1937-4b01-b97f-0a194c025533" data-title="1562656793959"><img src="images/1562656793959.png" alt="1562656793959"></a></p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="harbor-install.html" class="navigation navigation-prev " aria-label="Previous page: harbor的安装和注意事项">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dockerfile-rule.html" class="navigation navigation-next " aria-label="Next page: 如何制作出合适的镜像">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"harbor仓库镜像同步","level":"1.3.3","depth":2,"next":{"title":"如何制作出合适的镜像","level":"1.3.4","depth":2,"path":"docker/dockerfile-rule.md","ref":"docker/dockerfile-rule.md","articles":[]},"previous":{"title":"harbor的安装和注意事项","level":"1.3.2","depth":2,"path":"docker/harbor-install.md","ref":"docker/harbor-install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"docker/harbor-sync.md","mtime":"2019-07-09T07:36:40.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-09T12:23:10.417Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

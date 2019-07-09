@@ -78,3 +78,5 @@ tar  czf   -  anaconda-ks.cfg   initial-setup-ks.cfg   | docker cp  -  cfcc20077
 
 tar成对使用，前面一个是stdin  后面一个是stdout  ,  最终文件不会改变，-里面存的是压缩包，传输完成后还是压缩包，如果是文件传输完成后还是文件 ，只不过tar 传输比较快
 
+-  "-"不光在tar命令中，可以这么使用；在yaml中，kubectl中 都有类似用法，kubectl中用法，可以参考我的kubectl命令文档。
+
