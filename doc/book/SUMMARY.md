@@ -20,7 +20,7 @@
   *  [离线helm安装高可用rancher](k8s/rancher_offline_installation.md)
   *  [rancher中快速部署应用](k8s/deploy_app_in_rancher.md)
   *  [利用rancher商店搭建es和beat](k8s/use_appstore_deploy_es_in_rancher.md)
-  *  [rancher服务不可用情况下，如何使用kubectl命令](k8s/how_to_use_kubectl_noserver.md)
+  *  [rancher平台不可用下如何使用kubectl命令](k8s/how_to_use_kubectl_noserver.md)
 * Jenkins
   - [Jenkins调用docker编译程序](jenkins/jenkins-slave-for-docker.md)
   - [利用docker 镜像，快速搭建Jenkins环境](jenkins/install-jenkins.md)
