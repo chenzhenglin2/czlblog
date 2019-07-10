@@ -6,7 +6,11 @@
 
 rancher在命名空间又抽象出一层，项目的概念（这个只是便于管理rancher抽象出来的，kubernetes中并没有这层）；我们可以先创建一个项目，然后在里面创建命名空间；这里为方便演示直接使用默认default的项目和default命名空间。
 
-### 工作负载（deployment  daemon-set statefulset job等）部署
+### 工作负载（deployment  daemonset statefulset job等）部署
+
+工作负载主要有deployment、statefulset、daemonset、job等类型，其实它们就是pod控制器，直接部署pod，很不容易控制；用不同类型控制器来生成和控制pod，就来的很方便了。如deployment是无状态的pod控制器，statefulset是有状态的控制器，一般用来部署数据库；daemonset是每个worker节点上都部署一个，一般用来采集worker节点的数据； job一次性的，完成后状态是completed，不再工作。这些控制器都有缩写的别名，具体可以参考博主的[kubectl 常见命令使用](kubectl-user-instruction.md)。
+
+
 
 #### 1，在workloads tab中点击deploy
 
@@ -20,9 +24,13 @@ rancher在命名空间又抽象出一层，项目的概念（这个只是便于�
 
 ![1562658582885](images/1562658582885.png)
 
+只有deployment和statefulset可以设置多个副本集；
+
 #### 3，端口映射
 
 ![1562658676239](images/1562658676239.png)
+
+如图除"Layer-4 Load Balancer"外，还有三种选项；nodeport相当于四层负载一样，选择此选项后，在服务发现中会生成一个deployment同名-nodeport，这种格式的service；这个比较方便；访问集群任意节点ip+此nodeport端口 都能调度此deployment控制的pod上。hostport稍显鸡肋，pod调度到那个节点上，就可以通过节点ip+端口进行访问，如果没有调度的节点ip+端口是访问不了的。Cluster IP最好理解，就是基于它所在namespace组成的局域网，其他namespace或者外部是无法访问的；同一个namespace是可以直接访问的。
 
 #### 4，环境变量
 
@@ -72,7 +80,7 @@ rancher在命名空间又抽象出一层，项目的概念（这个只是便于�
 
 ![1562660181310](images/1562660181310.png)
 
-关于entrypoint和command用法 有单独一章博客讲解[docker run image -args对应yaml语法/rancher UI操作方式](k8s/docker-run-and-k8s-command.md)，这里不再赘述。
+关于entrypoint和command用法 有单独一章博客讲解[docker run image -args对应yaml语法/rancher UI操作方式](docker-run-and-k8s-command.md)，这里不再赘述。
 
 #### 10，网络（networking）
 
@@ -205,3 +213,21 @@ service可以这么理解：通过标签的键值对，选择匹配的pod，然�
 ![1562657976292](images/1562657976292.png)
 
 这个是最简单的，把写好的yaml文件，导入进来就可以了；导入后，如果有问题，根据日志或者event提示，修改调整一下即可。需要说明的时，如果导入时，没有配置文件里面命名空间，需要提前创建命名空间。如果导入yaml文件，有创建命名空间操作，不能和已有命名空间重名；并且导入后，需要给移动到某个项目中。
+
+## 如何验证部署应用是否运行正常
+
+验证方法有很多，能达到目的就行。一定要灵活，不能把自己限定死。
+
+- 除了常规的查看日志，通过浏览器直接访问，或进入shell ，进行验证外；我这里重点讲的是借助其他容器进行验证。
+
+  推荐如下两款镜像
+
+```
+hwchiu/netutils
+
+busybox
+```
+
+在待验证的应用同一个命名空间中，直接rancherUI中直接部署其中一款镜像，无需暴露端口；只需要在部署成功后，进入shell界面；busybox一般支持 nslookup 、telnet等命名，可以直接nslookup service-name/telnet service:ip  而netutils镜像集成工具相对更丰富一些，比如mongo-client redis-client有了这些数据库的客户端，就可以用它连接数据库，测试数据库是否能正常连接，加密是否生效；如redis-cli -h service_name 看看能连接部署redis，连接成功后可以再执行一些命令，如ping ，看看能不能执行成功；如果redis加密了，输入密码后再次执行ping，是否能成功等。
+
+以上就是提供验证的思路，具体操作，需要自己根据情况来实践。
