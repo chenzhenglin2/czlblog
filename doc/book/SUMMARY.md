@@ -38,7 +38,7 @@
 * NGINX
   - [如何利用nginx指向本地静态网页](nginx/direct_static_web.md)
   - [如何利用nginx实现负载均衡和反向代理](nginx/load_balance.md)
-  - [nginx其他知识]()
+  - [nginx其他知识](nginx/nginx_other.md)
 * git
   - [git日常使用命令](git/git-use.md)
   - [gitlab搭建和备份](git/install_and_bak_gitlab.md)
