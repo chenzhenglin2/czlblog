@@ -1,10 +1,10 @@
-## 磁盘扩展和缩减知识汇总
+# 磁盘扩展和缩减知识汇总
 
 
 
 ## 新增分区，挂靠到新的目录方法
 
-- 1,首先通过命令lsblk  查看增加分区的情况；
+- ### 1,首先通过命令lsblk  查看增加分区的情况；
 
   ```
   [root@apptrace0011 ~]# lsblk
@@ -26,7 +26,7 @@
 
   
 
-- 2，通过命令fdisk   -l  
+- ### 2，通过命令fdisk   -l  
 
   ```
    [root@apptrace0011 ~]# fdisk   -l  
@@ -72,7 +72,8 @@
 
 
 
-- 3，如果新增硬盘在sdb下 可以按照如下方式直接挂载
+- ### 3，如果新增硬盘在sdb下 可以按照如下方式直接挂载
+
   `fdisk /dev/sdb`
   输入m 查看用法 最常用几个用法 p 打印分区情况 n 新增分区； d删除分区；w保存 t改变格式
   输入p 打印分区情况
@@ -125,7 +126,8 @@ Changed type of partition 'Linux' to 'Linux LVM'.
 如果保存出现错误,可以 partprobe  /dev/sdb  (没有数字）
 然后再进入 fdisk   /dev/sdb 继续上面的操作  甚至重启
 
-- 4，接着格式化：
+- ### 4，接着格式化：
+
   centos7 可以用`mkfs.xfs /dev/sdb1` ，Ubuntu或者centos6 用`mkfs.ext4 /dev/sdb1` 来格式
   输入mkfs.  按tab键，可以看出有哪些格式
 
@@ -137,10 +139,11 @@ Changed type of partition 'Linux' to 'Linux LVM'.
   
 
 
-- 5，进行挂载：
+- ### 5，进行挂载：
+
   `mount /dev/sdb1  /data/（新目录或者老目录，如果没有需求提前创建）`
 
-- 6，开机生效，编辑 /etc/fstab 
+- ### 6，开机生效，编辑 /etc/fstab 
 
   ```
   /dev/mapper/centos-root /                       xfs     defaults        0 0
@@ -158,14 +161,14 @@ Changed type of partition 'Linux' to 'Linux LVM'.
 
   如果是在物理机上，增加硬盘后，最好填写uuid，分区是可以变化，uuid不会变；
 
-  - 7.其他命令 blkid查看挂载硬盘的UUID，如`blkid | grep  "sdb*" `，查看现有分区`cat  /proc/partitions `
+  - ### 7.其他命令 blkid查看挂载硬盘的UUID，如`blkid | grep  "sdb*" `，查看现有分区`cat  /proc/partitions `
 
   
 
 
 ##  怎么把原有硬盘扩充的存储都挂靠到/home（或其他已有目录）
 
-- 1，查看新增硬盘情况，如下，原有硬盘从200G增加到300G
+- ### 1，查看新增硬盘情况，如下，原有硬盘从200G增加到300G
 
   ```
   [root@part-add ~]# lsblk 
@@ -216,7 +219,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 
 
-- 2，把增加的硬盘容量全部分到一个新分区sda3上
+- ### 2，把增加的硬盘容量全部分到一个新分区sda3上
 
   ```
    fdisk  /dev/sda  
@@ -329,7 +332,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 
 
-- 3，新增分区格式化（执行顺序可以和下面第4部互换）
+- ### 3，新增分区格式化（执行顺序可以和下面第4部互换）
 
   ```
   mkfs.xfs   /dev/sda3 
@@ -349,7 +352,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 
 
-- 4，增加物理卷：  pvcreate 刚才创建的分区
+- ### 4，增加物理卷：  pvcreate 刚才创建的分区
 
   ```
   [root@part-add ~]# pvcreate  /dev/sda3  
@@ -390,9 +393,9 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
   
 
-- 5，将物理卷加入到卷组
+- ### 5，将物理卷加入到卷组
 
-  * 1）先看卷组信息
+  * #### 1）先看卷组信息
 
     ```
     [root@part-add ~]# vgdisplay 或者vgs
@@ -421,7 +424,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
     
 
 
-  * 2）把新的分区加入到卷组 vgextend centos（VG Name） /dev/sda3  （新分区）
+  * #### 2）把新的分区加入到卷组 vgextend centos（VG Name） /dev/sda3  （新分区）
 
     * ```
       [root@part-add ~]# vgextend centos /dev/sda3
@@ -454,9 +457,9 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
         此时VG Size 大小已有 298.99 GiB  
 
-- 6，扩充逻辑卷  
+- ### 6，扩充逻辑卷  
 
-  - 1）先通过下面命令查看系统里有哪些逻辑卷。
+  - #### 1）先通过下面命令查看系统里有哪些逻辑卷。
 
     ```
      [root@part-add ~]# lvdisplay  或者lvs
@@ -522,7 +525,8 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 有/dev/centos/swap /dev/centos/home /dev/centos/root这三个逻辑卷,  其中逻辑卷/dev/centos/home （挂载点是home目录下）就是本次要扩充的对象（同理根目录/ 对应的  /dev/centos/root也可以安装此方法)  
 
-- 2)扩充逻辑卷/dev/centos/home
+- #### 2)扩充逻辑卷/dev/centos/home
+
   lvextend -L  +100G  /dev/mapper/centos-home
   或者：lvextend -l  提示数量（可以查看Current LE，如果提示太多，减少到提示的最多数量）   /dev/mapper/centos-home
   lvextend -l  +100%FREE  /dev/mapper/centos-home
@@ -535,8 +539,9 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
   
 
--  3）扩充到文件系统（目录）中，xfs_growfs   /dev/centos/home    
-    如果是ext格式  则用resize2fs /dev/centos/home
+- #### 3）扩充到文件系统（目录）中，xfs_growfs   /dev/centos/home    
+
+  如果是ext格式  则用resize2fs /dev/centos/home
 
   ```
   [root@part-add ~]# xfs_growfs   /dev/centos/home 
