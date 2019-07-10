@@ -10,10 +10,10 @@ do
   docker save "${IMAGES_LIST[$i]}"  -o "${IMAGES_NM_LIST[$i]}".tar.gz 
 done
 ```
-#注意 这个慎用，如果一个镜像有多个版本，容易出现问题，采用下面的批量导入
-
+'#'注意 这个慎用，如果一个镜像有多个版本，容易出现问题，采用下面的批量导入
 
 ## 批量导入到一个压缩包
+
 ```
 #!/bin/bash
 IMAGES_LIST=($(docker  images   | sed  '1d' | awk  '{print $1":"$2}'))
