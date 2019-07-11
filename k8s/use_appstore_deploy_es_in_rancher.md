@@ -183,7 +183,7 @@ config.output.file.enabled=false
 
 <https://www.elastic.co/guide/en/beats/filebeat/版本号/running-on-kubernetes.html>
 
-下载所需yaml后，修改命名空间到自己制定 ，直接在rancher中部署完成后修改输出elasticsearch地址（config maps中）,如果是在环境变量中定义elasticsearch地址，直接就在环境变量中修改，这个视情况而定。
+下载所需yaml后，修改里面命名空间到自己制定的空间 ，直接在rancher中部署完成后修改输出elasticsearch地址（config maps中）,如果是在环境变量中定义elasticsearch地址，直接就在环境变量中修改，这个视情况而定。
 
 #### 部署metricbeat
 
