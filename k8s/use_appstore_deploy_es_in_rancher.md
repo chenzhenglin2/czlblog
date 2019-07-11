@@ -143,15 +143,7 @@ LOGGING_VERBOSE		false
 
 #####   apm-server 配置文件和环境变量的调整
 
-环境变量，增加两个变量
-
-```
-setup.dashboards.enabled=true
-
-config.output.file.enabled=false
-```
-
-配置secrets（有的是config  map） apm-server.yml   按照如下修改，把写入文件的内容改成写入到elasticsearch中。
+   到secrets（有的是config  map）进行配置， 有个名称为apm-server.yml 的key，其value按照如下修改，把数据写入文件的配置改为写入到elasticsearch中。
 
 ![1562769046644](images/1562769046644.png)
 
@@ -199,7 +191,7 @@ config.output.file.enabled=false
 
 <https://www.elastic.co/guide/en/beats/metricbeat/6.6/running-on-kubernetes.html>
 
-把yaml下载下来，然后也修改里面命名空间参数后，用rancher导入到kube-system空间中；
+把官网提供的yaml下载下来后，用rancher导入到kube-system空间中；
 
 他会部署两个metricbeat，一个daemonset  一个deployment，deployment可以暂停；如果没有kube-state-metrics组件，因为设定了依赖关系，他也会自动部署一个；然后修改配置文件config-map ,第一个配置文件metricbeat.yml：设置抓取的信息要输入到正确的elasticsearch和kibana中
 
@@ -207,7 +199,7 @@ config.output.file.enabled=false
 
 
 
-或者  
+或es输入直接设置为  
 
 `output.elasticsearch.hosts: ['${ELASTICSEARCH_HOST}']  `
 
@@ -261,9 +253,9 @@ module: kubernetes
 
 参照<https://www.elastic.co/guide/en/beats/metricbeat/current/running-on-kubernetes.html>红帽的配置方法
 
-然后把/etc/kubernetes/ssl/certs/serverca、/etc/kubernetes/ssl/kube-node.pem和/etc/kubernetes/ssl/kube-node-key.pem 在工作负载界面通过主机映射挂载进去就行了 
+然后把/etc/kubernetes/ssl/certs/serverca、/etc/kubernetes/ssl/kube-node.pem和/etc/kubernetes/ssl/kube-node-key.pem 在工作负载界面通过主机映射挂载进去就行了 （如果没有这些证书文件，是无法从相关接口获取数据，这些文件都是用来鉴权的）。
 
-最后在环境变量中把正确的es信息填写进去就可以了
+最后在环境变量中把正确的es地址信息填写进去就可以了
 
 
 
@@ -271,11 +263,13 @@ module: kubernetes
 
   如上图中用到kube-state-metrics的数据，没有的话，会自动部署一个；但kube-state-metrics没有部署成功，后者提供的镜像有问题怎么解决呢；
 
-  我们可以从https://github.com/kubernetes/kube-state-metrics/blob/master/kubernetes/kube-state-metrics-deployment.yaml  找到正确的镜像文件名称，对照修改镜像名称为：quay.io/coreos/kube-state-metrics:v1.5.0 即可完成部署（现在可能是1.6版本了）。这个地址也有部署需要的各种yaml文件，需要注意不同的版本；我们把 kube-state-metrics-service.yaml、kube-state-metrics-service-account.yaml、kube-state-metrics-deployment.yaml  等所有yaml文件下载下来，然后执行SA(service-account)类的yaml； 由于master版本可能不确定是那个版本，建议采用release中的版本；通过rancher把这些yaml导入到系统空间"kube-system"
+  我们可以从https://github.com/kubernetes/kube-state-metrics/blob/master/kubernetes/kube-state-metrics-deployment.yaml  找到正确的镜像文件名称，对照修改镜像名称为：quay.io/coreos/kube-state-metrics:v1.5.0 即可完成部署（现在可能是1.6版本了）。这个地址也有部署需要的各种yaml文件，需要注意不同的版本；我们把 kube-state-metrics-service.yaml、kube-state-metrics-service-account.yaml、kube-state-metrics-deployment.yaml  等所有yaml文件下载下来，先导入SA(service-account)类的yaml，剩下的yaml再逐个导入； 由于master版本可能不确定是那个版本，建议选用release中的具体版本；通过rancher把这些yaml导入到系统空间"kube-system"
 
-  yaml文件里面多个镜像地址指向谷歌，如果你没有科学上网的方法，就像我一样，换成其他公司同名镜像；如image: k8s.gcr.io/addon-resizer:1.8.3，可以在dockerhub上搜到其他公司提供的;image: siriuszg/addon-resizer:1.8.4，没有搜索到1.8.3 就选更高版本的，一般原则是相同版本，然后dockerhub排名较高的镜像
+  yaml文件里面多个镜像仓库是谷歌的，如果你没有科学上网的方法，就像我一样，换成其他公司同名镜像；如image: k8s.gcr.io/addon-resizer:1.8.3，可以在dockerhub上搜到其他公司提供的;image: siriuszg/addon-resizer:1.8.4，我没有搜索到1.8.3 就选更高版本的1.8.4的了，一般原则是相同版本，然后dockerhub排名较高的镜像
 
-部署完成后，把kube-state-metrics的8080端口映射出来，我们通过浏览器访问验证一下：
+- 部署完成后，把kube-state-metrics的8080端口映射出来，我们通过浏览器访问验证一下：
+
+访问kube-state-metrics页面会显示健康 "/health" 相关指标。
 
 - 最终采集到的数据在kibana呈现验证：
 
