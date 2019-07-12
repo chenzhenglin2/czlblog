@@ -24,8 +24,9 @@
 * Jenkins
   - [Jenkins调用docker编译程序](jenkins/jenkins-slave-for-docker.md)
   - [利用docker 镜像，快速搭建Jenkins环境](jenkins/install-jenkins.md)
-  - [jenkins自由风格构建job]()
-  - [jenkins多种pipeline构建job]()
+  - [jenkins自由风格构建job](jenkins/freestyle_build_in_jenkins.md)
+  - [jenkins多种pipeline构建job](jenkins/variety_pipeline_build.md)
+  - [jenkins config and job的备份](jenkins/thinBackup_jenkins.md)
 * shell
   - [shell 脚本中获取脚本所在路径](shell/get_dir_in_shell.md)
   - [sed不常见用法](shell/sed_use_hard.md)
