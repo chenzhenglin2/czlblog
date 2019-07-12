@@ -6,33 +6,19 @@
 
 ```
 docker run \
-
   --name myjenkins \
-
   --cpus=4 \
-
   --restart=unless-stopped \
-
   -u root \
-
   -d \
-
   -p 88:8080 \
-
   -p 50002:50000 \
-
   -v /home/jenkinsci/jenkins:/var/jenkins_home \
-
   -v /opt/jenkins-bak-file:/opt/jenkins-bak-file \
-
   -v /var/run/docker.sock:/var/run/docker.sock \
-
   -v /etc/localtime:/etc/localtime:ro \
-
   -v /etc/timezone:/etc/timezone:ro \
-
-   -v $HOME/.ssh:/root/.ssh:ro \
-
+  -v $HOME/.ssh:/root/.ssh:ro \
   jenkinsci/blueocean
 ```
 
