@@ -42,6 +42,8 @@
 
 然后可以设置 拉取多个仓库源的代码，并设置检出到一个子路径。  
 
+**特别注意**：如果拉取代码选用ssh协议，宿主机从gitlab或GitHub仓库拉取代码，一定把这个节点机给Jenkins使用的账户家目录下公钥复制到gitlab或github 的"SSH keys"  内。http协议 直接输入git仓库账户和密码就行了。
+
 - 设定正确的触发器；
 
 **Build after other projects are built：**
