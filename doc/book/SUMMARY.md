@@ -65,7 +65,7 @@
   - druid
   - kafka+zookeeper
   - redis
-    - [redis多实例]()
+    - [redis多实例](data/cluster_redis.md)
 - 持续集成项目实战
   - [利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本技术网站]()
   - [采用jenkins+harbor+kubernetes实时部署最新程序]()
