@@ -50,6 +50,7 @@
 * 数据库
   - mongo
     - [mongodb安装](data/install_mongodb.md)
+    - [mongo分片式集群]()
   - MySQL
     - [linux中安装MySQL5.6/5.7](data/install_mysql.md)
   - 不常见数据库的搭建
@@ -66,6 +67,7 @@
   - elasticsearch
   - druid
   - kafka+zookeeper
+    - [kafka常用命令](data/kafka_cmd.md)
   - redis
     - [redis多实例](data/cluster_redis.md)
 - 持续集成项目实战
