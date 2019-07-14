@@ -49,6 +49,7 @@
     - uiautomator 自动化测试
 * 数据库
   - mongo
+    - [mongodb安装](data/install_mongodb.md)
   - MySQL
     - [linux中安装MySQL5.6/5.7](data/install_mysql.md)
   - 不常见数据库的搭建
