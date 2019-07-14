@@ -23,8 +23,8 @@ https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
 ```kubectl get pods  -o wide  --namespace apm```
 
 其中--namespace  与-n 作用等同，后面接命名空间参数
-kubectl get deployment  -n  apm
-kubectl get pods,svc,rc  -n  apm  svc和services是一样的
+`kubectl get deployment  -n  apm`
+kubectl get pods,svc,rc  -n  apm  svc是services简称
 这些命令都可以通过  kubectl get    --help 来查看帮助
 
 ### 删除
@@ -34,7 +34,7 @@ kubectl get pods,svc,rc  -n  apm  svc和services是一样的
 
 - 删除指定空间的deployment/其他资源等
 
-```
+```bash
 kubectl  delete TYPE RESOURCE -n NAMESPACE
 具体如下：
 kubectl  delete deployment shop-app -n test-shop  
@@ -43,6 +43,8 @@ kubectl  delete all -n NAMESPACE
 kubectl  delete all --all
 ```
 
+### 创建、修改、打标签
+
 - 使用yaml文件创建pod
 
 ```kubectl apply -f apptrace-receiver-deployment.yaml```
@@ -50,9 +52,10 @@ apply  和 create 命令都可以后跟yaml，创建所需资源,初次创建pod
 
 - 使用kubectl命令把pod、卷、各种资源导出为yaml格式：
 
-```
+```bash
 kubectl  get pods podA -n NAMEAPSCE-A -o yaml --export> padA.yaml
-pod 可以换成其他申明式资源如卷、services等；如果不带上--export  生成文件会有很多无用的内容
+pod 可以换成其他申明式资源如卷、services等；如果不带上参数--export 目前没有发现有特别大的不同
+kubectl  get all -n ns -o yaml --export> padA.yaml #导出某个命令空间所有资源
 ```
 现在很多产品如rancher openshift，等；UI界面 直接可视化操作导出各种资源，掌握命令很多时候，可以事半功倍。-o更详细用法 下面有单独说明。
 
@@ -127,9 +130,9 @@ shell命令前，要加-- 号，不然shell命令中的参数，不能识别
 kubectl  exec  后面只能是pod,目前还不支持deployment daemonnset等
 ```
 
-### 创建与修改
+### 特别说明
 
-  创建和修改相对复杂，可以直接在rancherUI 进行部署或者修改，修改还可以通过：kubectl edit deploy/xxx -n namespace,也可以把资源导出为yaml后，修改完成后，再次kubectl apply 部署一遍完成修改的目的。本人推荐通过rancherUI来部署和修改，这里就不对创建和修改做详细说明了；参考另一篇博客[rancher 中快速部署应用](deploy_app_in_rancher.md)
+  创建和修改相对复杂些，可以直接在rancherUI 进行部署或者修改，修改还可以通过：kubectl edit deploy/xxx -n namespace,也可以把资源导出为yaml后，修改完成后，再次kubectl apply 部署一遍完成修改的目的。本人推荐通过rancherUI来部署和修改，这里就不对创建和修改做详细说明了；参考另一篇博客[rancher 中快速部署应用](deploy_app_in_rancher.md)
 
 ### "-"在kubectl中  用法说明
 
