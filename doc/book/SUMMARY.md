@@ -50,6 +50,7 @@
 * 数据库
   - mongo
   - MySQL
+    - [linux中安装MySQL5.6/5.7](data/install_mysql.md)
   - 不常见数据库的搭建
     - [db2搭建]()
     - [人大金仓搭建]()
