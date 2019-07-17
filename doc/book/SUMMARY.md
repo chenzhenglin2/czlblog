@@ -32,8 +32,8 @@
 
   - [jenkins config and job的备份](jenkins/thinBackup_jenkins.md)
 - 持续集成项目实战
-  - [利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本文档网站]()
-  - [采用jenkins+harbor+kubernetes自动部署最新程序]()    
+  - [利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本文档网站](other/devops_practices_gitbook_web.md)
+  - [采用jenkins+harbor+kubernetes自动部署最新程序](other/devops_practices_k8s.md)
 * shell
   - [shell 脚本中获取脚本所在路径](shell/get_dir_in_shell.md)
   - [sed不常见用法](shell/sed_use_hard.md)
