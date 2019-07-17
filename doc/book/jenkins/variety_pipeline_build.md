@@ -134,6 +134,48 @@ node {
 
 ![1563021192788](images/1563021192788.png)
 
+#### Jenkinsfile 代码示例
+
+```
+pipeline {
+  agent {
+    node {
+      label 'master'
+    }
+    
+  }
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Build'
+        sh 'sudo chmod  755 deploy/scripts/jenkins/build.sh &&./deploy/scripts/jenkins/build.sh'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Deploy'
+        sh 'rm  -rf  app_receiver*.tar.gz'
+        sh 'tar   -czvf    app_receiver_${BRANCH_NAME}.tar.gz   *   --exclude=.git* '
+      }
+    }
+    stage('archive_file') {
+      steps {
+        echo 'tar app_receiver'
+        archiveArtifacts(artifacts: 'app_receiver*.tar.gz', onlyIfSuccessful: true)
+      }
+    }
+  }
+  tools {
+    nodejs 'nodejsv9'
+  }
+  triggers {
+    pollSCM('H */4 * * 1-5')
+  }
+}
+```
+
+
+
 ### 如何把带有Jenkinsfile的源码纳入到现有Jenkins平台	
 
 - 1，先建一个Multibranch Pipeline 风格的job
@@ -153,9 +195,11 @@ node {
 
 
 
-## 总结和其他
+## 总结以及插件在jenkins中地位
 
-jenkins工作原理：通过向节点机（或本机）注入agent后，然后通过ssh调用节点机，执行指定各种命令，如编译，打包存档等。 再加上各种执行限定条件，如构建时间，构建条件；脚本命令等。
+jenkins工作原理：通过向节点机（或本机）注入agent后，然后通过ssh调用节点机，利用安装的插件执行各种操作及命令，如编译，打包存档等。 再加上各种执行限定条件，如构建时间，构建条件；脚本命令等。
 
-常用编译插件：安卓编译工具gradle，xcode可以从Mac机上调用
+可以说插件是jenkins的灵魂了，如果只安装jenkins没有插件，可能什么也干不了；怎么从上千种插件中快速找到真正所需的插件，这就是积累的过程。这里总结两点，1，所有插件（不管是安装的还是未安装的）点击后，都可以跳转到说明和示例页面；2，要掌握搜索技巧，比如搜索一个copy 存档用的插件，就搜copy；在结果页面，快速浏览一遍后，就基本能锁定大概范围，这个时候逐个点击查看示例页面。
+
+常用编译插件：安卓编译工具gradle，xcode可以从Mac机上调用；
 
