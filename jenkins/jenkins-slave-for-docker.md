@@ -12,16 +12,36 @@
 
 使用这种方式需要额外在Jenkins里面配置，插件里面安装docker插件，然后配置Docker Host URL,来找到可以使用的docker，如果Jenkins和docker在同一台服务器可以直接填写为：unix:///var/run/docker.sock ，如果不在同一台机器要填写docker所在的机器ip：tcp://ip:2375，并且要在docker所在机器的 /etc/docker/daemon.json 里面添加2375端口
 
-```
-    "hosts": [
-
-​        "tcp://0.0.0.0:2375",
-
-​        "unix:///var/run/docker.sock"
-
-​    ]
+```json
+{"hosts": ["unix:///var/run/docker.sock", "tcp://0.0.0.0:2375"]}
+或{"hosts": ["fd://", "tcp://0.0.0.0:2375"]}
 ```
 
+如果添加后，docker无法启动，十有八九是和docker.service  冲突了，查看
+
+/lib/systemd/system/docker.service【centos：/usr/lib/systemd/system/docker.service】
+
+如果有
+
+`ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock`
+
+可以修改为
+
+`ExecStart=/usr/bin/dockerd  --containerd=/run/containerd/containerd.sock`，使用daemon.json的配置；还有一种情况，可能某个系统daemon.json中配置不生效，可以修改docker.service，ExecStart参数中添加
+
+`-H fd:// -H tcp://127.0.0.1:2375 `
+
+(也可以专门在docker.service同级目录下创建 docker.service.d/override.conf，内容如下
+
+```
+[Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375 
+```
+
+甚至sudo systemctl edit docker.service 时，添加上面代码，自动生成override.conf文件)，一定要灵活
+
+- 注：fd:// 等价于 unix:///var/run/docker.sock，可以相互替换
 
 具体怎么调用这里不作为重点，这里重点说明的方案的选择，可以参考
 
