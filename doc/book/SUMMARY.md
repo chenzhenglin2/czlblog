@@ -22,63 +22,57 @@
   *  [利用rancher商店搭建es和beat](k8s/use_appstore_deploy_es_in_rancher.md)
   *  [rancher平台不可用下如何使用kubectl命令](k8s/how_to_use_kubectl_noserver.md)
 * Jenkins
-  - [Jenkins调用docker编译程序](jenkins/jenkins-slave-for-docker.md)
-
-  - [利用docker 镜像，快速搭建Jenkins环境](jenkins/install-jenkins.md)
-
-  - [jenkins自由风格构建job](jenkins/freestyle_build_in_jenkins.md)
-
-  - [jenkins多种pipeline构建job](jenkins/variety_pipeline_build.md)
-
-  - [jenkins config and job的备份](jenkins/thinBackup_jenkins.md)
-- 持续集成项目实战
-  - [利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本文档网站](other/devops_practices_gitbook_web.md)
-  - [采用jenkins+harbor+kubernetes自动部署最新程序](other/devops_practices_k8s.md)
+  * [Jenkins调用docker编译程序](jenkins/jenkins-slave-for-docker.md)
+  * [利用docker 镜像，快速搭建Jenkins环境](jenkins/install-jenkins.md)
+  * [jenkins自由风格构建job](jenkins/freestyle_build_in_jenkins.md)
+  * [jenkins多种pipeline构建job](jenkins/variety_pipeline_build.md)
+  * [jenkins config and job的备份](jenkins/thinBackup_jenkins.md)
+* 持续集成项目实战
+  * [利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本文档网站](other/devops_practices_gitbook_web.md)
+  * [采用jenkins+harbor+kubernetes自动部署最新程序](other/devops_practices_k8s.md)
 * shell
-  - [shell 脚本中获取脚本所在路径](shell/get_dir_in_shell.md)
-  - [sed不常见用法](shell/sed_use_hard.md)
-  - [getopt与getopts用法](shell/getopt_and_getopts_use.md)
-  - [选择项用法](shell/ps3_use.md)
+  * [shell 脚本中获取脚本所在路径](shell/get_dir_in_shell.md)
+  * [sed不常见用法](shell/sed_use_hard.md)
+  * [getopt与getopts用法](shell/getopt_and_getopts_use.md)
+  * [选择项用法](shell/ps3_use.md)
 * jmeter
-
-  - [利用jmeter模拟手机接口测试](jmeter/use_jmeter_test_app.md)
+  * [利用jmeter模拟手机接口测试](jmeter/use_jmeter_test_app.md)
 * 证书申请与制作
-
-  - [私有证书制作](ca/make_key.md)
+  * [私有证书制作](ca/make_key.md)
 * NGINX
-  - [如何利用nginx指向本地静态网页](nginx/direct_static_web.md)
-  - [如何利用nginx实现负载均衡和反向代理](nginx/load_balance.md)
-  - [nginx其他知识](nginx/nginx_other.md)
+  * [如何利用nginx指向本地静态网页](nginx/direct_static_web.md)
+  * [如何利用nginx实现负载均衡和反向代理](nginx/load_balance.md)
+  * [nginx其他知识](nginx/nginx_other.md)
 * git
-  - [git日常使用命令](git/git-use.md)
-  - [gitlab搭建和备份](git/install_and_bak_gitlab.md)
+  * [git日常使用命令](git/git-use.md)
+  * [gitlab搭建和备份](git/install_and_bak_gitlab.md)
 * 自动化测试技术
-  - 手机自动化
-    - [monkey测试](autotech/monkey_android.md)
-    - [adb常用命令](autotech/adb_cmd.md)
-    - uiautomator 自动化测试
+  * 手机自动化
+    * [monkey测试](autotech/monkey_android.md)
+    * [adb常用命令](autotech/adb_cmd.md)
+    * uiautomator 自动化测试
 * 数据库
-  - mongo
-    - [mongodb安装](data/install_mongodb.md)
-    - [mongo分片式集群](data/use_mongo3.6_deploy_shard_cluster.md)
-  - MySQL
-    - [linux中安装MySQL5.6/5.7](data/install_mysql.md)
+  * mongo
+    * [mongodb安装](data/install_mongodb.md)
+    * [mongo分片式集群](data/use_mongo3.6_deploy_shard_cluster.md)
+  * MySQL
+    * [linux中安装MySQL5.6/5.7](data/install_mysql.md)
 * 虚拟化技术
-  - vcenter
-    - [利用模板快速部署centos7服务器](vm/use_tem_deploy_centos7.md)
+  * vcenter
+    * [利用模板快速部署centos7服务器](vm/use_tem_deploy_centos7.md)
 * Java中间件
-  - [websphere8.5安装和使用](middleware/install_websphere8.5.md)
-  - [tomcat、weblogic、was等组件jvm调整](middleware/update_jvm_value.md)
+  * [websphere8.5安装和使用](middleware/install_websphere8.5.md)
+  * [tomcat、weblogic、was等组件jvm调整](middleware/update_jvm_value.md)
 
-- 大数据处理
-  - [druid安装与优化](data/install_druid.md)
-  - kafka+zookeeper
-    - [kafka常用命令](data/kafka_cmd.md)
-    - [zookeeper和kafka参数调整](data/update_jvm_zk.md)
-  - redis
-    - [redis多实例](data/cluster_redis.md)
-- 正确使用工具事半功倍
-  - 搜索引擎的使用
-  - gitbook 的巧用
-  - 有道云笔记
-  - GitHub搭建个人网站
+* 大数据处理
+  * [druid安装与优化](data/install_druid.md)
+  * kafka+zookeeper
+    * [kafka常用命令](data/kafka_cmd.md)
+    * [zookeeper和kafka参数调整](data/update_jvm_zk.md)
+  * redis
+    * [redis多实例](data/cluster_redis.md)
+* 正确使用工具事半功倍
+  * 搜索引擎的使用
+  * gitbook 的巧用
+  * 有道云笔记
+  * GitHub搭建个人网站
