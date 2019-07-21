@@ -80,17 +80,20 @@ docker配置：
 
   ```
   AGENT_DIR="/dockerfile_work_dir/tomcat-no-app"
-  rm -rf  $AGENT_DIR/*.tar.gz
-  cp -r  $WORKSPACE/*.tar.gz  $AGENT_DIR
+  rm -f $AGENT_DIR/*.tar.gz
+  cp -f $WORKSPACE/*.tar.gz  $AGENT_DIR
+  rm -f ${AGENT_DIR}/test-toyota.yaml
   IMAGES_NU="$(docker image ls 172.16.35.31:1180/apm-images/tomcat-agent:${SER_NO} | wc -l)"
   echo $IMAGES_NU
   if [[ $IMAGES_NU -ge 2 ]];then
+     kubectl get deployment/test-toyota-demo -n test-shop --export -o  yaml  > ${AGENT_DIR}/test-toyota.yaml
+     kubectl get deployment/test-toyota-demo -n test-shop --export -o  yaml  > ${AGENT_DIR}/test-toyota-${date +%F%H%M%S}.bak
      kubectl delete deployment test-toyota-demo -n test-shop
      docker rmi 172.16.35.31:1180/apm-images/tomcat-agent:${SER_NO} 
   fi   
   ```
 
-  删除制作镜像路径下的探针压缩包，把最新的copy过去；然后判断是否已有这个tag的镜像，有就删除应用后，再删除镜像；这个场景重点测试的是探针，所以不用关心应用的高可用、滚动更新、灰度发布等问题；如果重点是应用的测试，一定要保证应用的可用性；这一步的execute shell ，就不需要了，直接进入下一步。
+  删除制作镜像路径下的探针压缩包，把最新的copy过去；然后判断是否已有这个tag的镜像，有就删除应用后，再删除镜像（如果不删除deploy 镜像被占用无法删除）；这个场景重点测试的是探针，所以不用关心应用的高可用、滚动更新、灰度发布等问题；如果重点是应用的测试，一定要保证应用的可用性；这一步的execute shell ，就不需要了，直接进入下一步。
 
   6，镜像生成和推送
 
@@ -105,14 +108,16 @@ docker配置：
   ```bash
   AGENT_DIR="/dockerfile_work_dir/tomcat-no-app"
   IMAGE_NAME="172.16.35.31:1180/apm-images/tomcat-agent:${SER_NO}"
-  kubectl get deployment/test-toyota-demo -n test-shop --export -o  yaml  > ${AGENT_DIR}/test-toyota.yaml
-  kubectl get deployment/test-toyota-demo -n test-shop --export -o  yaml  > ${AGENT_DIR}/test-toyota-${date +%F%H%M%S}.bak
+  if [[ ! -e ${AGENT_DIR}/test-toyota.yaml ]];then
+    kubectl get deployment/test-toyota-demo -n test-shop --export -o  yaml  > ${AGENT_DIR}/test-toyota.yaml
+    kubectl get deployment/test-toyota-demo -n test-shop --export -o  yaml  > ${AGENT_DIR}/test-toyota-${date +%F%H%M%S}.bak
+  fi
   kubectl delete deployment test-toyota-demo -n test-shop
   sed -ri "s#image: .*#image: ${IMAGE_NAME}#" $AGENT_DIR/test-toyota.yaml
   kubectl  apply -f  $AGENT_DIR/test-toyota.yaml
   ```
 
-  要测试最新探针，这里强制性把之前被测应用都删除了，如果换成应用的测试，这里脚本可以稍作调整
+  要测试最新探针，首先判断一下是否有yaml文件，这里强制性把之前被测应用deploy给删除了，如果换成应用的测试，这里脚本可以稍作调整
 
   除了第一个execute shell 不需要外，此地execute shell 可以调整为：
 
@@ -123,7 +128,7 @@ docker配置：
   kubectl set image deployment/test-toyota-demo   test-toyota-demo=${IMAGE_NAME}  -n  test-shop
   ```
 
-  就可以了
+  就可以了，在deploy部署应用时设定了滚动更新策略如金丝雀、先更新后停止pod等。这样应用就达到平滑过渡。
 
 - 强调一点，部署应用时，一定要设置镜像拉取规则为总是拉取。
 
