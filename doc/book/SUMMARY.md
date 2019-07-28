@@ -50,7 +50,7 @@
   * 手机自动化
     * [monkey测试](autotech/monkey_android.md)
     * [adb常用命令](autotech/adb_cmd.md)
-    * uiautomator 自动化测试
+    * [uiautomator 自动化测试](autotech/uiautomator_introduce.md)
 * 数据库
   * mongo
     * [mongodb安装](data/install_mongodb.md)
