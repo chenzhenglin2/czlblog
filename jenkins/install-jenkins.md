@@ -27,3 +27,4 @@ docker run \
 * 把.ssh挂载进去，让容器使用宿主机的私钥；
 * 如果使用jenkins:2.60.3镜像的话，宿主机的/home/Jenkins 目录一定要sudo chown -R 1000 处理一下；但不推荐这种镜像，已经不支持blueocean了；
 
+如果容器中使用默认的jenkins账户，需要把宿主机的/home/jenkinsci/jenkins目录做一下`sudo chown 1000  -R`处理，另外宿主机操作docker账户的$HOME/.ssh目录挂载到容器/var/jenkins_home/.ssh下
