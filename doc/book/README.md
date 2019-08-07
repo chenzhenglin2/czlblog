@@ -8,5 +8,4 @@
 * 博主目前处于待业期，如果北京朝阳区这边 有运维、自动化测试相关工作 ，可以给博主发邮件zzti.chenzhenglin@163.com
 
 友情链接：
-
-[Docker中文社区](www.dockerchina.cn)
+[Docker中文社区]: www.dockerchina.cn
