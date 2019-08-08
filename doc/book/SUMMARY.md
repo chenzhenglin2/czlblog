@@ -60,9 +60,12 @@
 * 虚拟化技术
   * vcenter
     * [利用模板快速部署centos7服务器](vm/use_tem_deploy_centos7.md)
-* Java中间件
+* Java与其中间件
   * [websphere8.5安装和使用](middleware/install_websphere8.5.md)
   * [tomcat、weblogic、was等组件jvm调整](middleware/update_jvm_value.md)
+  * java语言
+    * [java 调整数组0左边是正数，右边是负数](middleware/xxx.md)
+    * [java 抽象类与接口](middleware/xxx2.md)
 
 * 大数据处理
   * [druid安装与优化](data/install_druid.md)
