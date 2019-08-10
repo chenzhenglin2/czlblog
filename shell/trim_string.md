@@ -70,7 +70,18 @@ trim_stringw() {
 }
 ```
 
+但是如果换成（无法实现效果）：
 
+```bash
+trim_stringb() {
+    # Usage: trim_string "   example   string    "
+    : "${1#[[:space:]]*}"
+    : "${_%*[[:space:]]}"
+    printf '%s\n' "$_"
+}	
+```
+
+就实现不了这个效果；
 
 ## 去掉所有多余空格，中间的空格只保留一个空格
 
