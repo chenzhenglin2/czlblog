@@ -37,6 +37,7 @@ Hello,  World
 
 -  首先看方法体格式
 
+```
 method(){
 
 : 参数1
@@ -44,6 +45,7 @@ method(){
 : 参数2
 
 }
+```
 
 它里面有注解：`The : built-in is used in place of a temporary variable.`  用内置函数冒号替代临时变量 ；和`${parameter:word}`  这种用法类似，把处理后得到的值存储到冒号中了； 这种格式方法，值得借鉴。
 
