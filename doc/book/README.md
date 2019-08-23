@@ -5,6 +5,7 @@
 * 本人csdn博客地址：https://blog.csdn.net/qq_39919755  会不定期进行同步，毕竟csdn被百度抓取可能性较大，能帮助到更多利用搜索器寻找答案的人；
 * 博客主要分为Linux、shell、Jenkins、docker、kubernetes（rancher）、NGINX、git、jmeter、自动化测试、大数据处理等几大类，绝大部分都是原创，甚至很多是博主亲身踩过的坑，借博客形式展示出来，在运维和测试人员遇到类似问题、场景提供解决思路或者灵感
 * 若要转载博客，请注明出处；若商用，请联系博主
-* 博主目前处于待业期，如果北京朝阳区这边 有运维、自动化测试相关工作 ，可以给博主发邮件zzti.chenzhenglin@163.com
+
+  
 
 友情链接:http://www.dockerchina.cn
