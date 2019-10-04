@@ -1092,7 +1092,7 @@
                 <span>
             
                     
-                    java 调整数组0左边是正数，右边是负数
+                    调整数组0左边是正数，右边是负数
             
                 </a>
             
@@ -1106,6 +1106,19 @@
             
                     
                     java 抽象类与接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3.3" data-path="../middleware/compara-arry.html">
+            
+                <a href="../middleware/compara-arry.html">
+            
+                    
+                    比较两个数组是否相同
             
                 </a>
             
@@ -1356,6 +1369,16 @@
 </ul>
 <h2 id="log&#x6293;&#x53D6;"><a name="log&#x6293;&#x53D6;" class="anchor-navigation-ex-anchor" href="#log&#x6293;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>Log&#x6293;&#x53D6;</h2>
 <p><code>adb logcat &#x2013;v time      &gt; D:\xxx.txt</code>&#xFF08;-v&#x4E3A;&#x53C2;&#x6570;&#x89C4;&#x5B9A;log&#x7684;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#xFF0C;-v time&#x4E3A;&#x6309;&#x65F6;&#x95F4;&#x987A;&#x5E8F;&#x8F93;&#x51FA;log&#x3002;&#x7BAD;&#x5934;&#x540E;&#x9762;D:\&#x4E3A;&#x8F93;&#x51FA;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x8DEF;&#x5F84;&#xFF0C;xxx.txt&#x4E3A;log&#x540D;&#x79F0;&#xFF0C;&#x53EF;&#x6309;&#x81EA;&#x5DF1;&#x9700;&#x6C42;&#x786E;&#x5B9A;&#x540D;&#x79F0;&#xFF09;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60F3;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6;&#x7684;&#x540C;&#x65F6;&#x7EC8;&#x7AEF;&#x4E5F;&#x663E;&#x793A;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x4E0A;&#x9762;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x6539;&#x8FDB;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code>adb logcat  -v time | tee D:\xxx.txt
+</code></pre><p>&#x8FDB;&#x4E00;&#x6B65;&#x6539;&#x8FDB;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5728;logcat&#x4E2D;&#x8FC7;&#x6EE4;&#x67D0;&#x4E2A;&#x5173;&#x952E;&#x5B57; &#x53EF;&#x4EE5;&#x7528;</p>
+<p>adb logcat  -v time | grep vehice</p>
+<p>&#x8F93;&#x51FA;&#x5230;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x4E2D;</p>
+<p>adb logcat  -v time | grep vehice | tee D:\xxx.txt</p>
+<p>&#x4F46;&#x4E0A;&#x9762;&#x547D;&#x4EE4;&#x53EF;&#x80FD;&#x5728;cmd&#x73AF;&#x5883;&#x6267;&#x884C;&#x6709;&#x95EE;&#x9898;&#xFF0C;cmd&#x5BF9;grep&#x3001;tee&#x547D;&#x4EE4;&#x652F;&#x6301;&#x4E0D;&#x53CB;&#x597D;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;gitbash&#x6216;&#x5176;&#x4ED6;bash&#x7EC8;&#x7AEF;&#x6765;&#x6267;&#x884C;&#x4E0A;&#x9762;&#x547D;&#x4EE4;&#xFF0C;&#x6216;&#x8005;&#x6539;&#x8FDB;&#x547D;&#x4EE4;&#x4E3A;&#xFF1A;</p>
+<p>adb shell &quot;logcat  -v time | grep vehice&quot;  </p>
+<p>&#x8FD9;&#x91CC;&#x4E0D;&#x592A;&#x597D;&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x67D0;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E86;&#x3002;&#x5982;&#x679C;&#x60F3;&#x5728;cmd&#x91CC;&#x9762;&#x8FDB;&#x884C;&#x5B57;&#x6BB5;&#x8FC7;&#x6EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;grep&#x66FF;&#x6362;&#x4E3A;Windows&#x652F;&#x6301;&#x7684;find &#x3001; findstr &#x3001;Select-String &#x8FD9;&#x51E0;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF1B;&#x5982;&#xFF1A;</p>
+<p>adb logcat  -v time | Select-String &quot;vehice&quot;</p>
 <ul>
 <li>Bugreport&#xFF1A;</li>
 </ul>
@@ -1386,11 +1409,33 @@ adb remount---&#x91CD;&#x65B0;&#x6302;&#x8F7D;&#x7CFB;&#x7EDF;&#x5206;&#x533A;&#
 adb shell dumpsys package com.android.settings |grep version &#x67E5;&#x770B;&#x5E94;&#x7528;&#x7248;&#x672C;&#xFF0C;&#x6839;&#x636E;&#x9700;&#x8981;&#x6539;&#x53D8;&#x5E94;&#x7528;&#x540D;&#x79F0;
 
 adb shell getprop [ro.build.display.id](http://ro.build.display.id) &#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x7248;&#x672C;
+adb wait-for-device logcat -v time  &#x5F85;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x8F93;&#x51FA;log&#xFF0C;wait-for-device&#x4E00;&#x822C;&#x653E;&#x5728;adb&#x547D;&#x4EE4;&#x540E;&#x9762;&#xFF0C;&#x8868;&#x793A;&#x5148;&#x7B49;&#x5F85;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#xFF0C;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x518D;&#x6267;&#x884C;&#x540E;&#x7EED;&#x547D;&#x4EE4;&#xFF1B;&#x5982;adb wait-for-device root
+&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210;adb wait-for-device 
+adb root
 </code></pre><h2 id="shell&#x7EC8;&#x7AEF;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;"><a name="shell&#x7EC8;&#x7AEF;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#shell&#x7EC8;&#x7AEF;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>shell&#x7EC8;&#x7AEF;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;</h2>
 <pre class="language-"><code>adb shell     
 logcat -v threadtime -n 1000 -r 512000 -f /mnt/sdcard/logcat &amp;  //&#x6BCF;&#x4E2A;logcat&#x5B58;&#x4E3A;512M
 logcat -v threadtime -b events &gt; /mnt/sdcard/events.txt &gt;&amp;1 &amp;
 logcat -v threadtime -b radio &gt; /mnt/sdcard/radio.txt &gt;&amp;1 &amp;
+pm&#x547D;&#x4EE4;
+pm install xxx.apk&#x5B89;&#x88C5;apk&#x5E94;&#x7528;
+pm uninstall app&#x5305;&#x540D;  &#x5378;&#x8F7D;APP&#x5E94;&#x7528;
+pm list packages | grep neolix &#x67E5;&#x770B;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x5305;&#x540D;
+
+shell&#x7EC8;&#x7AEF;&#x91CC;&#x9762;&#x547D;&#x4EE4;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x91CD;&#x5B9A;&#x5411; &#x8FDB;&#x884C;&#x8F93;&#x5165;&#xFF1A;
+adb wait-for-device shell &lt;&lt;EOF
+echo -n &quot;Waiting for device to boot &quot;
+&#x5404;&#x79CD;&#x547D;&#x4EE4;
+&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x662F;shell&#x4EE3;&#x7801;&#x5982;&#xFF1A;
+while cmp /data/local/tmp/zero /data/local/tmp/bootcomplete; do 
+{
+    echo -n &quot;.&quot;
+    sleep 1
+    getprop dev.bootcomplete &gt; /data/local/tmp/bootcomplete
+}; done
+echo &quot;Booted.&quot;
+exit
+EOF
 </code></pre>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
                                 
@@ -1435,7 +1480,7 @@ logcat -v threadtime -b radio &gt; /mnt/sdcard/radio.txt &gt;&amp;1 &amp;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"adb常用命令","level":"1.12.1.2","depth":3,"next":{"title":"uiautomator 自动化测试","level":"1.12.1.3","depth":3,"path":"autotech/uiautomator_introduce.md","ref":"autotech/uiautomator_introduce.md","articles":[]},"previous":{"title":"monkey测试","level":"1.12.1.1","depth":3,"path":"autotech/monkey_android.md","ref":"autotech/monkey_android.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"autotech/adb_cmd.md","mtime":"2019-08-16T01:08:02.626Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-23T07:19:53.494Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"adb常用命令","level":"1.12.1.2","depth":3,"next":{"title":"uiautomator 自动化测试","level":"1.12.1.3","depth":3,"path":"autotech/uiautomator_introduce.md","ref":"autotech/uiautomator_introduce.md","articles":[]},"previous":{"title":"monkey测试","level":"1.12.1.1","depth":3,"path":"autotech/monkey_android.md","ref":"autotech/monkey_android.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"autotech/adb_cmd.md","mtime":"2019-10-04T08:00:12.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-04T08:41:35.697Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
