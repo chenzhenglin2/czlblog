@@ -65,8 +65,9 @@
   * [websphere8.5安装和使用](middleware/install_websphere8.5.md)
   * [tomcat、weblogic、was等组件jvm调整](middleware/update_jvm_value.md)
   * java语言
-    * [java 调整数组0左边是正数，右边是负数](middleware/xxx.md)
+    * [调整数组0左边是正数，右边是负数](middleware/xxx.md)
     * [java 抽象类与接口](middleware/xxx2.md)
+    * [比较两个数组是否相同](middleware/compara-arry.md)
 
 * 大数据处理
   * [druid安装与优化](data/install_druid.md)
