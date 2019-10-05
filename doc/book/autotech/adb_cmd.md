@@ -19,19 +19,29 @@ adb logcat  -v time | tee D:\xxx.txt
 
 进一步改进，如果想在logcat中过滤某个关键字 可以用
 
+```
 adb logcat  -v time | grep vehice
+```
 
 输出到一个指定文件中
 
+```
 adb logcat  -v time | grep vehice | tee D:\xxx.txt
+```
 
 但上面命令可能在cmd环境执行有问题，cmd对grep、tee命令支持不友好，可以用gitbash或其他bash终端来执行上面命令，或者改进命令为：
 
+```
 adb shell "logcat  -v time | grep vehice"  
+```
 
 这里不太好指定输出某一个文件了。如果想在cmd里面进行字段过滤，可以把grep替换为Windows支持的find 、 findstr 、Select-String 这几个关键字进行过滤；如：
 
+```
 adb logcat  -v time | Select-String "vehice"
+```
+
+
 
 - Bugreport：
 
