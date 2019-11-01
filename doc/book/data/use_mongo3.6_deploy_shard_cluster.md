@@ -5,7 +5,7 @@
 
 ![mongodb集群架构图](shard_arch.png)
 
-从图中可以看到有四个集群组件：mongos、config server、shard。
+从图中可以看到有三个集群组件：mongos、config server、shard。
 
 * mongos: 数据库集群请求的入口，所有的请求都通过mongos进行协调，不需要在应用程序添加一个路由选择器，mongos自己就是一个请求分发中心，它负责把对应的数据请求请求转发到对应的shard服务器上。在生产环境通常有多mongos作为请求的入口，防止其中一个挂掉所有的mongodb请求都没有办法操作。
 
