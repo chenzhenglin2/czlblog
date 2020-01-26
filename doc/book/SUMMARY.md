@@ -66,7 +66,7 @@
   * [tomcat、weblogic、was等组件jvm调整](middleware/update_jvm_value.md)
   * java语言
     * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
-    * [java 抽象类与接口](middleware/xxx2.md)
+    * [for循环实践：生成一万内的质数](middleware/prime_number_product .md)
     * [比较两个数组是否相同](middleware/compara-arry.md)
 
 * 大数据处理
