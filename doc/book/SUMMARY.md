@@ -68,7 +68,7 @@
     * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
     * [for循环实践：生成一万内的质数](middleware/prime_number_product .md)
     * [比较两个数组是否相同](middleware/compara-arry.md)
-    * [for和while相互转换](middleware/for-switch-while.md)
+    * [for和while相互转换](middleware/for-while.md)
 
 * 大数据处理
   * [druid安装与优化](data/install_druid.md)
