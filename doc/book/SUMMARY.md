@@ -80,7 +80,7 @@
   * vcenter
     * [利用模板快速部署centos7服务器](vm/use_tem_deploy_centos7.md)
 
-* Java与其中间件
+* Java开发与其中间件安装配置
   * [websphere8.5安装和使用](middleware/install_websphere8.5.md)
   * [tomcat、weblogic、was等组件jvm调整](middleware/update_jvm_value.md)
   * java语言
@@ -89,7 +89,7 @@
     * [比较两个数组是否相同](middleware/compara-arry.md)
     * [for和while异同比较](middleware/for-while.md)
     * [利用单项链表学习递归](middleware/java-recursion.md)
-    * [装饰者模式](middleware/java-decortar.md)
+    * [装饰者模式扩充方法](middleware/java-decortar.md)
     * [接口如lamda表达式](middleware/java-interface-lamda.md)
     * [利用购物车系统学习HashMap与equals方法重写](middleware/java-shopping-map.md)
 
