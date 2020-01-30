@@ -85,7 +85,7 @@
   * [tomcat、weblogic、was等组件jvm调整](middleware/update_jvm_value.md)
   * java语言
     * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
-    * [for循环实践：生成一万内的质数](middleware/prime_number_product .md)
+    * [for循环实践：生成一万内的质数](middleware/prime_number_product.md)
     * [比较两个数组是否相同](middleware/compara-arry.md)
     * [for和while异同比较](middleware/for-while.md)
     * [利用单项链表学习递归](middleware/java-recursion.md)
