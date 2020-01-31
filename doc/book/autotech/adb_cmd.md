@@ -17,13 +17,13 @@ adb 直译是安卓调试桥，就电脑操作安卓设备用的；使用adb命�
 adb logcat  -v time | tee D:\xxx.txt
 ```
 
-进一步改进，如果想在logcat中过滤某个关键字 可以用
+进一步改进，如果想在logcat中过滤某个关键字 可以用(命名默认在shell终端执行)
 
 ```
 adb logcat  -v time | grep vehice
 ```
 
-输出到一个指定文件中(shell类型终端)
+输出到一个指定文件中
 
 ```
 adb logcat  -v time | grep vehice | tee D:\xxx.txt
