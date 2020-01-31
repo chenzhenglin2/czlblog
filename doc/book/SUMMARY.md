@@ -90,6 +90,7 @@
     * [for和while异同比较](middleware/for-while.md)
     * [利用单项链表学习递归](middleware/java-recursion.md)
     * [装饰者模式扩充方法](middleware/java-decortar.md)
+    * [枚举和switch结合使用](middleware/java-enmu-switch.md)
     * [接口与lamda表达式](middleware/java-interface-lamda.md)
     * [利用购物车系统学习HashMap与equals方法重写](middleware/java-shopping-map.md)
     * [死锁案例](middleware/java-dead-lock.md)
