@@ -17,7 +17,7 @@ adb 直译是安卓调试桥，就电脑操作安卓设备用的；使用adb命�
 adb logcat  -v time | tee D:\xxx.txt
 ```
 
-进一步改进，如果想在logcat中过滤某个关键字 可以用
+进一步改进，如果想在logcat中过滤某个关键字 可以用(命名默认在shell终端执行)
 
 ```
 adb logcat  -v time | grep vehice
@@ -54,6 +54,49 @@ adb logcat  -v time | Select-String "vehice"
 - Kernel log：
 
 `adb shell cat /proc/kmsg > name.txt `（此时默认存放在个人文件夹下，可以按个人需要修改存放路径，如>D:\name.txt,抓之前系统需root ---adb root—adb remount）
+
+- 查看某个app的版本号：
+
+```shell
+adb shell pm dump com.neolix_self_checking | findstr “versionName”
+adb shell 后 ，pm dump com.neolix_self_checking | grep “versionName”   如果支持shell命令 可以合并成一个命令
+```
+
+- 如何通过命令启动APP
+
+1，先查到active的名称
+
+手动打开app ，通过日志查到MainActivity
+
+`logcat  -v time  | grep  intent `
+
+2,通过 am start 启动APP
+
+```shell
+adb shell "am start -n 包名/.activity.MainActivity"
+```
+
+MainActivity名称不是固定的，还有package_name.MainActivity 等多种命名方式。
+
+- 如果电脑和安卓设备在同一局域网 ，可以无线连接
+
+`adb  connect  ip:port`  port一般默认是5555
+
+但是用完后  一定要断开，要不然其它电脑无法无线连接了；
+
+`adb  disconnect`
+
+- 进入到 Fastboot 模式：
+  `adb reboot bootloader`
+
+- 录屏和截图（真正应用时 ，可以直接用自己手机拍照和录制视频，灵活应用）
+
+    ```
+    adb shell screenrecord /sdcard/filename.mp4
+    adb shell screencap -p /sdcard/sc.png
+    ```
+
+    
 
 ##   其他相关命令
 
@@ -93,7 +136,7 @@ logcat -v threadtime -b radio > /mnt/sdcard/radio.txt >&1 &
 pm命令
 pm install xxx.apk安装apk应用
 pm uninstall app包名  卸载APP应用
-pm list packages | grep neolix 查看包含某个关键字的包名
+pm list packages | grep nlix 查看包含某个关键字的包名
 
 shell终端里面命令也可以用重定向 进行输入：
 adb wait-for-device shell <<EOF
@@ -111,3 +154,4 @@ exit
 EOF
 ```
 
+用adb 命令结合bat脚本，更方便的实现一些批量化操作。

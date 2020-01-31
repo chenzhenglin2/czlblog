@@ -1110,7 +1110,7 @@
                 <span>
             
                     
-                    java语言
+                    java基础知识大串联
             
                 </span>
             
@@ -1197,12 +1197,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.3.7" data-path="../middleware/java-interface-lamda.md">
+        <li class="chapter " data-level="1.16.3.7" data-path="../middleware/java-enmu-switch.html">
             
-                <span>
+                <a href="../middleware/java-enmu-switch.html">
             
                     
-                    接口如lamda表达式
+                    枚举和switch结合使用
             
                 </a>
             
@@ -1210,12 +1210,64 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.3.8" data-path="../middleware/java-shopping-map.md">
+        <li class="chapter " data-level="1.16.3.8" data-path="../middleware/java-interface-lamda.html">
+            
+                <a href="../middleware/java-interface-lamda.html">
+            
+                    
+                    接口与lamda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.9" data-path="../middleware/java-shopping-map.md">
             
                 <span>
             
                     
                     利用购物车系统学习HashMap与equals方法重写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.10" data-path="../middleware/java-dead-lock.md">
+            
+                <span>
+            
+                    
+                    死锁案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.11" data-path="../middleware/java-multithread.md">
+            
+                <span>
+            
+                    
+                    多线程轮流打印1-100
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.12" data-path="../middleware/java-reflect.md">
+            
+                <span>
+            
+                    
+                    反射机制
             
                 </a>
             
@@ -1468,7 +1520,7 @@
 <p><code>adb logcat &#x2013;v time      &gt; D:\xxx.txt</code>&#xFF08;-v&#x4E3A;&#x53C2;&#x6570;&#x89C4;&#x5B9A;log&#x7684;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#xFF0C;-v time&#x4E3A;&#x6309;&#x65F6;&#x95F4;&#x987A;&#x5E8F;&#x8F93;&#x51FA;log&#x3002;&#x7BAD;&#x5934;&#x540E;&#x9762;D:\&#x4E3A;&#x8F93;&#x51FA;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x8DEF;&#x5F84;&#xFF0C;xxx.txt&#x4E3A;log&#x540D;&#x79F0;&#xFF0C;&#x53EF;&#x6309;&#x81EA;&#x5DF1;&#x9700;&#x6C42;&#x786E;&#x5B9A;&#x540D;&#x79F0;&#xFF09;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x60F3;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6;&#x7684;&#x540C;&#x65F6;&#x7EC8;&#x7AEF;&#x4E5F;&#x663E;&#x793A;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x4E0A;&#x9762;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x6539;&#x8FDB;&#x4E3A;&#xFF1A;</p>
 <pre class="language-"><code>adb logcat  -v time | tee D:\xxx.txt
-</code></pre><p>&#x8FDB;&#x4E00;&#x6B65;&#x6539;&#x8FDB;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5728;logcat&#x4E2D;&#x8FC7;&#x6EE4;&#x67D0;&#x4E2A;&#x5173;&#x952E;&#x5B57; &#x53EF;&#x4EE5;&#x7528;</p>
+</code></pre><p>&#x8FDB;&#x4E00;&#x6B65;&#x6539;&#x8FDB;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5728;logcat&#x4E2D;&#x8FC7;&#x6EE4;&#x67D0;&#x4E2A;&#x5173;&#x952E;&#x5B57; &#x53EF;&#x4EE5;&#x7528;(&#x547D;&#x540D;&#x9ED8;&#x8BA4;&#x5728;shell&#x7EC8;&#x7AEF;&#x6267;&#x884C;)</p>
 <pre class="language-"><code>adb logcat  -v time | grep vehice
 </code></pre><p>&#x8F93;&#x51FA;&#x5230;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x4E2D;</p>
 <pre class="language-"><code>adb logcat  -v time | grep vehice | tee D:\xxx.txt
@@ -1488,6 +1540,37 @@
 <li>Kernel log&#xFF1A;</li>
 </ul>
 <p><code>adb shell cat /proc/kmsg &gt; name.txt</code>&#xFF08;&#x6B64;&#x65F6;&#x9ED8;&#x8BA4;&#x5B58;&#x653E;&#x5728;&#x4E2A;&#x4EBA;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x4E2A;&#x4EBA;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x5B58;&#x653E;&#x8DEF;&#x5F84;&#xFF0C;&#x5982;&gt;D:\name.txt,&#x6293;&#x4E4B;&#x524D;&#x7CFB;&#x7EDF;&#x9700;root ---adb root&#x2014;adb remount&#xFF09;</p>
+<ul>
+<li>&#x67E5;&#x770B;&#x67D0;&#x4E2A;app&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-shell">adb shell pm dump com.neolix_self_checking <span class="token operator">|</span> findstr &#x201C;versionName&#x201D;
+adb shell &#x540E; &#xFF0C;pm dump com.neolix_self_checking <span class="token operator">|</span> <span class="token function">grep</span> &#x201C;versionName&#x201D;   &#x5982;&#x679C;&#x652F;&#x6301;shell&#x547D;&#x4EE4; &#x53EF;&#x4EE5;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;
+</code></pre>
+<ul>
+<li>&#x5982;&#x4F55;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x542F;&#x52A8;APP</li>
+</ul>
+<p>1&#xFF0C;&#x5148;&#x67E5;&#x5230;active&#x7684;&#x540D;&#x79F0;</p>
+<p>&#x624B;&#x52A8;&#x6253;&#x5F00;app &#xFF0C;&#x901A;&#x8FC7;&#x65E5;&#x5FD7;&#x67E5;&#x5230;MainActivity</p>
+<p><code>logcat  -v time  | grep  intent</code></p>
+<p>2,&#x901A;&#x8FC7; am start &#x542F;&#x52A8;APP</p>
+<pre class="language-"><code class="lang-shell">adb shell <span class="token string">&quot;am start -n &#x5305;&#x540D;/.activity.MainActivity&quot;</span>
+</code></pre>
+<p>MainActivity&#x540D;&#x79F0;&#x4E0D;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x8FD8;&#x6709;package_name.MainActivity &#x7B49;&#x591A;&#x79CD;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x3002;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x7535;&#x8111;&#x548C;&#x5B89;&#x5353;&#x8BBE;&#x5907;&#x5728;&#x540C;&#x4E00;&#x5C40;&#x57DF;&#x7F51; &#xFF0C;&#x53EF;&#x4EE5;&#x65E0;&#x7EBF;&#x8FDE;&#x63A5;</li>
+</ul>
+<p><code>adb  connect  ip:port</code>  port&#x4E00;&#x822C;&#x9ED8;&#x8BA4;&#x662F;5555</p>
+<p>&#x4F46;&#x662F;&#x7528;&#x5B8C;&#x540E;  &#x4E00;&#x5B9A;&#x8981;&#x65AD;&#x5F00;&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x5176;&#x5B83;&#x7535;&#x8111;&#x65E0;&#x6CD5;&#x65E0;&#x7EBF;&#x8FDE;&#x63A5;&#x4E86;&#xFF1B;</p>
+<p><code>adb  disconnect</code></p>
+<ul>
+<li><p>&#x8FDB;&#x5165;&#x5230; Fastboot &#x6A21;&#x5F0F;&#xFF1A;
+<code>adb reboot bootloader</code></p>
+</li>
+<li><p>&#x5F55;&#x5C4F;&#x548C;&#x622A;&#x56FE;&#xFF08;&#x771F;&#x6B63;&#x5E94;&#x7528;&#x65F6; &#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x81EA;&#x5DF1;&#x624B;&#x673A;&#x62CD;&#x7167;&#x548C;&#x5F55;&#x5236;&#x89C6;&#x9891;&#xFF0C;&#x7075;&#x6D3B;&#x5E94;&#x7528;&#xFF09;</p>
+<pre class="language-"><code>  adb shell screenrecord /sdcard/filename.mp4
+  adb shell screencap -p /sdcard/sc.png
+</code></pre></li>
+</ul>
 <h2 id="&#x5176;&#x4ED6;&#x76F8;&#x5173;&#x547D;&#x4EE4;"><a name="&#x5176;&#x4ED6;&#x76F8;&#x5173;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x76F8;&#x5173;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x4ED6;&#x76F8;&#x5173;&#x547D;&#x4EE4;</h2>
 <pre class="language-"><code>adb devices-----&#x67E5;&#x770B;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#xFF0C;&#x663E;&#x793A;&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x3002;
 
@@ -1517,7 +1600,7 @@ logcat -v threadtime -b radio &gt; /mnt/sdcard/radio.txt &gt;&amp;1 &amp;
 pm&#x547D;&#x4EE4;
 pm install xxx.apk&#x5B89;&#x88C5;apk&#x5E94;&#x7528;
 pm uninstall app&#x5305;&#x540D;  &#x5378;&#x8F7D;APP&#x5E94;&#x7528;
-pm list packages | grep neolix &#x67E5;&#x770B;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x5305;&#x540D;
+pm list packages | grep nlix &#x67E5;&#x770B;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x5305;&#x540D;
 
 shell&#x7EC8;&#x7AEF;&#x91CC;&#x9762;&#x547D;&#x4EE4;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x91CD;&#x5B9A;&#x5411; &#x8FDB;&#x884C;&#x8F93;&#x5165;&#xFF1A;
 adb wait-for-device shell &lt;&lt;EOF
@@ -1533,7 +1616,8 @@ while cmp /data/local/tmp/zero /data/local/tmp/bootcomplete; do
 echo &quot;Booted.&quot;
 exit
 EOF
-</code></pre>
+</code></pre><p>&#x7528;adb &#x547D;&#x4EE4;&#x7ED3;&#x5408;bat&#x811A;&#x672C;&#xFF0C;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x5B9E;&#x73B0;&#x4E00;&#x4E9B;&#x6279;&#x91CF;&#x5316;&#x64CD;&#x4F5C;&#x3002;</p>
+
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -1577,7 +1661,7 @@ EOF
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"adb常用命令","level":"1.13.1.2","depth":3,"next":{"title":"uiautomator 自动化测试","level":"1.13.1.3","depth":3,"path":"autotech/uiautomator_introduce.md","ref":"autotech/uiautomator_introduce.md","articles":[]},"previous":{"title":"monkey测试","level":"1.13.1.1","depth":3,"path":"autotech/monkey_android.md","ref":"autotech/monkey_android.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"autotech/adb_cmd.md","mtime":"2020-01-30T06:37:33.633Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-30T12:30:40.544Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"adb常用命令","level":"1.13.1.2","depth":3,"next":{"title":"uiautomator 自动化测试","level":"1.13.1.3","depth":3,"path":"autotech/uiautomator_introduce.md","ref":"autotech/uiautomator_introduce.md","articles":[]},"previous":{"title":"monkey测试","level":"1.13.1.1","depth":3,"path":"autotech/monkey_android.md","ref":"autotech/monkey_android.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"autotech/adb_cmd.md","mtime":"2020-01-31T03:59:12.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T13:37:16.227Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
