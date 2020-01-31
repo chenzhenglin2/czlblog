@@ -85,4 +85,4 @@ while (index<=15){
 }
 ```
 
-while 布尔表达式的灵活性还有用变量来表示，如 boolean  flag = true； while(flag){循环体}，在循环体中，出现某种情况让flag值变为false，即可实现中断循环的功能；
+while 布尔表达式的灵活性还有用变量来表示，如 boolean  flag = true； while(flag){循环体}，在循环体中，出现某种情况让flag值变为false，即可实现中断循环的功能；或者更简单，出现符合条件后用break跳出即可。
