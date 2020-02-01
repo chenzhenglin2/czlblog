@@ -104,7 +104,8 @@ if (o instanceof Shopping) {
 
 推荐第一种写法，第一种写法限制对象必须是当前类型及Shopping类型。第二种方法风险在于如果有两个类都继承了Shopping，都有成员变量弄，且都没有重写equals，就会判断失误。
 
-- 为什么要同时重写hashCode方法呢，因为这些类 new出来的对象，存放到HashSet、HashMap等集合、map中；首先比较的是hash值（散列值），如果没有重写hashCode，就很容易出现hash值相同再去执行equals方法，影响效率。hashCode 最简单的一个写法就是：返回用于比较两个对象是否相等的成员变量的hash值 
+- 为什么要同时重写hashCode方法呢，因为这些类 new出来的对象，存放到HashSet、HashMap等集合、map中；首先比较的是hash值（散列值），如果没有重写hashCode，后果很严重。因为判断key是否相同是通过hash值加equals方法实现的，只重写equals方法、造成实际相同两个对象因hash值不同，被标识成两个不同的对象。所以就约定俗成重写equals方法同时重写hashCode方法。
+- hashCode 最简单的一个重写就是：返回用于比较两个对象是否相等的成员变量的hash值 
 
 ```java
 public int hashCode() {
