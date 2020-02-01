@@ -1,0 +1,1806 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>利用购物车系统学习HashMap与equals方法重写 · 志云的博客</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="陈正林">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="java-dead-lock.md" />
+    
+    
+    <link rel="prev" href="java-interface-lamda.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于博客说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    bat脚本
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../bat/bat-use-sedawk.html">
+            
+                <a href="../bat/bat-use-sedawk.html">
+            
+                    
+                    bat脚本中巧用sed grep awk命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../linux/tar-deal.html">
+            
+                <a href="../linux/tar-deal.html">
+            
+                    
+                    "-"在tar命令中的巧用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../linux/limit_ip.html">
+            
+                <a href="../linux/limit_ip.html">
+            
+                    
+                    利用iptables或防火墙指定ip访问服务器某个端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../linux/set_ip.html">
+            
+                <a href="../linux/set_ip.html">
+            
+                    
+                    如何设置centos7.6和Ubuntu19.4的ip4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../linux/extend_disk.html">
+            
+                <a href="../linux/extend_disk.html">
+            
+                    
+                    Linux中磁盘扩展与缩减
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../linux/how_to_made_bin.html">
+            
+                <a href="../linux/how_to_made_bin.html">
+            
+                    
+                    二进制安装包的制作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../linux/use_heredoc.html">
+            
+                <a href="../linux/use_heredoc.html">
+            
+                    
+                    heredocument的巧用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../docker/docker-install.html">
+            
+                <a href="../docker/docker-install.html">
+            
+                    
+                    docker 安装与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../docker/harbor-install.html">
+            
+                <a href="../docker/harbor-install.html">
+            
+                    
+                    harbor的安装和注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../docker/harbor-sync.html">
+            
+                <a href="../docker/harbor-sync.html">
+            
+                    
+                    harbor仓库镜像同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../docker/dockerfile-rule.html">
+            
+                <a href="../docker/dockerfile-rule.html">
+            
+                    
+                    如何制作出合适的镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../docker/save_load_images.html">
+            
+                <a href="../docker/save_load_images.html">
+            
+                    
+                    逐个和批量导出导入docker镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    rancher和kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../k8s/kubectl-user-instruction.html">
+            
+                <a href="../k8s/kubectl-user-instruction.html">
+            
+                    
+                    kubectl常用命令汇总（以及curl注入）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../k8s/docker-run-and-k8s-command.html">
+            
+                <a href="../k8s/docker-run-and-k8s-command.html">
+            
+                    
+                    docker run image -args对应yaml语法/rancher UI操作方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../k8s/rancher_online_installation.html">
+            
+                <a href="../k8s/rancher_online_installation.html">
+            
+                    
+                    在线安装高可用的rancher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../k8s/rancher_offline_installation.html">
+            
+                <a href="../k8s/rancher_offline_installation.html">
+            
+                    
+                    离线helm安装高可用rancher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../k8s/deploy_app_in_rancher.html">
+            
+                <a href="../k8s/deploy_app_in_rancher.html">
+            
+                    
+                    rancher中快速部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../k8s/use_appstore_deploy_es_in_rancher.html">
+            
+                <a href="../k8s/use_appstore_deploy_es_in_rancher.html">
+            
+                    
+                    利用rancher商店搭建es和beat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../k8s/how_to_use_kubectl_noserver.html">
+            
+                <a href="../k8s/how_to_use_kubectl_noserver.html">
+            
+                    
+                    rancher平台不可用下如何使用kubectl命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Jenkins
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../jenkins/jenkins-slave-for-docker.html">
+            
+                <a href="../jenkins/jenkins-slave-for-docker.html">
+            
+                    
+                    Jenkins调用docker编译程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../jenkins/install-jenkins.html">
+            
+                <a href="../jenkins/install-jenkins.html">
+            
+                    
+                    利用docker 镜像，快速搭建Jenkins环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../jenkins/freestyle_build_in_jenkins.html">
+            
+                <a href="../jenkins/freestyle_build_in_jenkins.html">
+            
+                    
+                    jenkins自由风格构建job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../jenkins/variety_pipeline_build.html">
+            
+                <a href="../jenkins/variety_pipeline_build.html">
+            
+                    
+                    jenkins多种pipeline构建job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../jenkins/thinBackup_jenkins.html">
+            
+                <a href="../jenkins/thinBackup_jenkins.html">
+            
+                    
+                    jenkins config and job的备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    持续集成项目实战
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../other/devops_practices_gitbook_web.html">
+            
+                <a href="../other/devops_practices_gitbook_web.html">
+            
+                    
+                    利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本文档网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../other/devops_practices_k8s.html">
+            
+                <a href="../other/devops_practices_k8s.html">
+            
+                    
+                    采用jenkins+harbor+kubernetes自动部署最新程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../shell/get_dir_in_shell.html">
+            
+                <a href="../shell/get_dir_in_shell.html">
+            
+                    
+                    shell 脚本中获取脚本所在路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../shell/sed_use_hard.html">
+            
+                <a href="../shell/sed_use_hard.html">
+            
+                    
+                    sed不常见用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../shell/getopt_and_getopts_use.html">
+            
+                <a href="../shell/getopt_and_getopts_use.html">
+            
+                    
+                    getopt与getopts用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../shell/ps3_use.html">
+            
+                <a href="../shell/ps3_use.html">
+            
+                    
+                    选择项用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../shell/trim_string.html">
+            
+                <a href="../shell/trim_string.html">
+            
+                    
+                    字符串截取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    jmeter
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../jmeter/use_jmeter_test_app.html">
+            
+                <a href="../jmeter/use_jmeter_test_app.html">
+            
+                    
+                    利用jmeter模拟手机接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    证书申请与制作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../ca/make_key.html">
+            
+                <a href="../ca/make_key.html">
+            
+                    
+                    私有证书制作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    NGINX
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../nginx/direct_static_web.html">
+            
+                <a href="../nginx/direct_static_web.html">
+            
+                    
+                    如何利用nginx指向本地静态网页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../nginx/load_balance.html">
+            
+                <a href="../nginx/load_balance.html">
+            
+                    
+                    如何利用nginx实现负载均衡和反向代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../nginx/nginx_other.html">
+            
+                <a href="../nginx/nginx_other.html">
+            
+                    
+                    nginx其他知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../git/git-use.html">
+            
+                <a href="../git/git-use.html">
+            
+                    
+                    git日常使用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../git/install_and_bak_gitlab.html">
+            
+                <a href="../git/install_and_bak_gitlab.html">
+            
+                    
+                    gitlab搭建和备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    自动化测试技术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" >
+            
+                <span>
+            
+                    
+                    手机自动化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1" data-path="../autotech/monkey_android.html">
+            
+                <a href="../autotech/monkey_android.html">
+            
+                    
+                    monkey测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.2" data-path="../autotech/adb_cmd.html">
+            
+                <a href="../autotech/adb_cmd.html">
+            
+                    
+                    adb常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.3" data-path="../autotech/uiautomator_introduce.html">
+            
+                <a href="../autotech/uiautomator_introduce.html">
+            
+                    
+                    uiautomator 自动化测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" >
+            
+                <span>
+            
+                    
+                    mongo
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1.1" data-path="../data/install_mongodb.html">
+            
+                <a href="../data/install_mongodb.html">
+            
+                    
+                    mongodb安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.1.2" data-path="../data/use_mongo3.6_deploy_shard_cluster.html">
+            
+                <a href="../data/use_mongo3.6_deploy_shard_cluster.html">
+            
+                    
+                    mongo分片式集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" >
+            
+                <span>
+            
+                    
+                    MySQL
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.2.1" data-path="../data/install_mysql.html">
+            
+                <a href="../data/install_mysql.html">
+            
+                    
+                    linux中安装MySQL5.6/5.7
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    虚拟化技术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" >
+            
+                <span>
+            
+                    
+                    vcenter
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1.1" data-path="../vm/use_tem_deploy_centos7.html">
+            
+                <a href="../vm/use_tem_deploy_centos7.html">
+            
+                    
+                    利用模板快速部署centos7服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    Java开发与其中间件安装配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="install_websphere8.5.html">
+            
+                <a href="install_websphere8.5.html">
+            
+                    
+                    websphere8.5安装和使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="update_jvm_value.html">
+            
+                <a href="update_jvm_value.html">
+            
+                    
+                    tomcat、weblogic、was等组件jvm调整
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" >
+            
+                <span>
+            
+                    
+                    java基础知识大串联
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.3.1" data-path="java-code.html">
+            
+                <a href="java-code.html">
+            
+                    
+                    关于数组位置调整和元素出现次数统计代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.2" data-path="prime_number_product.html">
+            
+                <a href="prime_number_product.html">
+            
+                    
+                    for循环实践：生成一万内的质数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.3" data-path="compara-arry.html">
+            
+                <a href="compara-arry.html">
+            
+                    
+                    比较两个数组是否相同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.4" data-path="for-while.html">
+            
+                <a href="for-while.html">
+            
+                    
+                    for和while异同比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.5" data-path="java-recursion.html">
+            
+                <a href="java-recursion.html">
+            
+                    
+                    利用单项链表学习递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.6" data-path="java-decortar.html">
+            
+                <a href="java-decortar.html">
+            
+                    
+                    装饰者模式扩充方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.7" data-path="java-enmu-switch.html">
+            
+                <a href="java-enmu-switch.html">
+            
+                    
+                    枚举和switch结合使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.8" data-path="java-interface-lamda.html">
+            
+                <a href="java-interface-lamda.html">
+            
+                    
+                    接口与lamda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16.3.9" data-path="java-shopping-map.html">
+            
+                <a href="java-shopping-map.html">
+            
+                    
+                    利用购物车系统学习HashMap与equals方法重写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.10" data-path="java-dead-lock.md">
+            
+                <span>
+            
+                    
+                    死锁案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.11" data-path="java-multithread.md">
+            
+                <span>
+            
+                    
+                    多线程轮流打印1-100
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.12" data-path="java-reflect.md">
+            
+                <span>
+            
+                    
+                    反射机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    大数据处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../data/install_druid.html">
+            
+                <a href="../data/install_druid.html">
+            
+                    
+                    druid安装与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" >
+            
+                <span>
+            
+                    
+                    kafka+zookeeper
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.2.1" data-path="../data/kafka_cmd.html">
+            
+                <a href="../data/kafka_cmd.html">
+            
+                    
+                    kafka常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.2" data-path="../data/update_jvm_zk.html">
+            
+                <a href="../data/update_jvm_zk.html">
+            
+                    
+                    zookeeper和kafka参数调整
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" >
+            
+                <span>
+            
+                    
+                    redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.3.1" data-path="../data/cluster_redis.html">
+            
+                <a href="../data/cluster_redis.html">
+            
+                    
+                    redis多实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" >
+            
+                <span>
+            
+                    
+                    正确使用工具事半功倍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" >
+            
+                <span>
+            
+                    
+                    搜索引擎的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" >
+            
+                <span>
+            
+                    
+                    gitbook 的巧用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" >
+            
+                <span>
+            
+                    
+                    有道云笔记
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" >
+            
+                <span>
+            
+                    
+                    GitHub搭建个人网站
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >利用购物车系统学习HashMap与equals方法重写</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x8FD0;&#x7528;&#x7B80;&#x5355;&#x7684;&#x8D85;&#x5E02;&#x8D2D;&#x7269;&#x8F66;&#x7CFB;&#x7EDF;&#xFF0C;&#x7406;&#x89E3;&#x91CD;&#x5199;equals&#x3001;hashcode&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x4EE5;&#x53CA;map&#x7684;&#x5B66;&#x4E60;"><b></b>&#x8FD0;&#x7528;&#x7B80;&#x5355;&#x7684;&#x8D85;&#x5E02;&#x8D2D;&#x7269;&#x8F66;&#x7CFB;&#x7EDF;&#xFF0C;&#x7406;&#x89E3;&#x91CD;&#x5199;equals&#x3001;hashcode&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x4EE5;&#x53CA;map&#x7684;&#x5B66;&#x4E60;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5546;&#x54C1;&#x7C7B;&#xFF1A;"><b></b>&#x5546;&#x54C1;&#x7C7B;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x8D2D;&#x7269;&#x8F66;"><b></b>&#x8D2D;&#x7269;&#x8F66;</a></li><li><span class="title-icon "></span><a href="#&#x6700;&#x540E;&#x5199;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;"><b></b>&#x6700;&#x540E;&#x5199;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;</a></li></ul></ul></div><a href="#&#x8FD0;&#x7528;&#x7B80;&#x5355;&#x7684;&#x8D85;&#x5E02;&#x8D2D;&#x7269;&#x8F66;&#x7CFB;&#x7EDF;&#xFF0C;&#x7406;&#x89E3;&#x91CD;&#x5199;equals&#x3001;hashcode&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x4EE5;&#x53CA;map&#x7684;&#x5B66;&#x4E60;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x8FD0;&#x7528;&#x7B80;&#x5355;&#x7684;&#x8D85;&#x5E02;&#x8D2D;&#x7269;&#x8F66;&#x7CFB;&#x7EDF;&#xFF0C;&#x7406;&#x89E3;&#x91CD;&#x5199;equals&#x3001;hashcode&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x4EE5;&#x53CA;map&#x7684;&#x5B66;&#x4E60;"><a name="&#x8FD0;&#x7528;&#x7B80;&#x5355;&#x7684;&#x8D85;&#x5E02;&#x8D2D;&#x7269;&#x8F66;&#x7CFB;&#x7EDF;&#xFF0C;&#x7406;&#x89E3;&#x91CD;&#x5199;equals&#x3001;hashcode&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x4EE5;&#x53CA;map&#x7684;&#x5B66;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x7528;&#x7B80;&#x5355;&#x7684;&#x8D85;&#x5E02;&#x8D2D;&#x7269;&#x8F66;&#x7CFB;&#x7EDF;&#xFF0C;&#x7406;&#x89E3;&#x91CD;&#x5199;equals&#x3001;hashcode&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x4EE5;&#x53CA;map&#x7684;&#x5B66;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x7528;&#x7B80;&#x5355;&#x7684;&#x8D85;&#x5E02;&#x8D2D;&#x7269;&#x8F66;&#x7CFB;&#x7EDF;&#xFF0C;&#x7406;&#x89E3;&#x91CD;&#x5199;equals&#x3001;hashcode&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x4EE5;&#x53CA;map&#x7684;&#x5B66;&#x4E60;</h1>
+<h2 id="&#x5546;&#x54C1;&#x7C7B;&#xFF1A;"><a name="&#x5546;&#x54C1;&#x7C7B;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5546;&#x54C1;&#x7C7B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5546;&#x54C1;&#x7C7B;&#xFF1A;</h2>
+<ul>
+<li>&#x5148;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x5546;&#x54C1;&#x7C7B;&#xFF0C;&#x8981;&#x6709;&#x7F16;&#x53F7;&#x3001;&#x540D;&#x79F0;&#x3001;&#x4EF7;&#x683C;&#x4E09;&#x4E2A;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x628A;getter&#x3001;setter&#x90FD;&#x5199;&#x597D;&#xFF08;&#x53EF;&#x4EE5;&#x7528;ide&#x751F;&#x6210;&#xFF09;</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>zhengling<span class="token punctuation">.</span>work</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">HashMap</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Map</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Shopping</span> <span class="token punctuation">{</span>
+    <span class="token class-name">String</span> no<span class="token punctuation">;</span>
+    <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">double</span> price<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Shopping</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Shopping</span><span class="token punctuation">(</span><span class="token class-name">String</span> no<span class="token punctuation">,</span><span class="token class-name">String</span> name<span class="token punctuation">,</span><span class="token keyword">double</span> price<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>no <span class="token operator">=</span> no<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token keyword">public</span>  <span class="token keyword">void</span> <span class="token function">setNo</span><span class="token punctuation">(</span><span class="token class-name">String</span> no<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>no<span class="token operator">=</span>no<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token keyword">double</span> price<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getNo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span>  no<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> price<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Shopping{&quot;</span> <span class="token operator">+</span>
+                <span class="token string">&quot;&#x7F16;&#x53F7;&#xFF1A;&apos;&quot;</span> <span class="token operator">+</span> no <span class="token operator">+</span> <span class="token string">&apos;\&apos;&apos;</span> <span class="token operator">+</span>
+                <span class="token string">&quot;, &#x540D;&#x79F0;&#x662F;&#xFF1A;&apos;&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">&apos;\&apos;&apos;</span> <span class="token operator">+</span>
+                <span class="token string">&quot;, &#x5355;&#x4EF7;&#x662F;&#xFF1A;&quot;</span> <span class="token operator">+</span> price <span class="token operator">+</span>
+                <span class="token string">&apos;}&apos;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Object</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">==</span> o<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>o <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> o<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Shopping</span> shopping <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Shopping</span><span class="token punctuation">)</span> o<span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> no<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>shopping<span class="token punctuation">.</span>no<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> no<span class="token punctuation">.</span><span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5546;&#x54C1;&#x7C7B;&#xFF0C;&#x91CC;&#x9762;&#x91CD;&#x5199;&#x4E86;toString&#x65B9;&#x6CD5;&#xFF0C;&#x65B9;&#x4FBF;&#x6253;&#x5370;&#xFF0C;&#x6784;&#x9020;&#x5668;&#x5FC5;&#x987B;&#x6709;&#x7F16;&#x53F7;&#x3001;&#x540D;&#x79F0;&#x3001;&#x4EF7;&#x683C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x91CD;&#x5199;equals&#x65B9;&#x6CD5;&#x5462;&#xFF0C;&#x6240;&#x6709;&#x7C7B;&#x9ED8;&#x8BA4;&#x90FD;&#x662F;&#x7EE7;&#x627F;Object&#x7C7B;&#x7684;&#xFF0C;Object&#x7684;equals&#x65B9;&#x6CD5;&#x662F;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C;&#x76F8;&#x540C;&#x5219;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x5546;&#x54C1;&#x7F16;&#x53F7;&#x76F8;&#x540C; &#x5C31;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#xFF1B;</p>
+<p>Object&#x91CC;&#x9762;&#x5224;&#x65AD;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p><code>if (this == o) return true</code></p>
+<ul>
+<li><p>&#x91CD;&#x5199;equals&#x53EA;&#x9700;&#x5728;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x57FA;&#x7840;&#x4E0A;&#x7EE7;&#x7EED;&#x4E30;&#x5BCC;&#x5C31;&#x884C;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>o <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> o<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+      <span class="token class-name">Shopping</span> shopping <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Shopping</span><span class="token punctuation">)</span> o<span class="token punctuation">;</span>
+
+      <span class="token keyword">return</span> no<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>shopping<span class="token punctuation">.</span>no<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x5199;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>o <span class="token keyword">instanceof</span> <span class="token class-name">Shopping</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Shopping</span> shopping <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Shopping</span><span class="token punctuation">)</span> o<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> no<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>shopping<span class="token punctuation">.</span>no<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x63A8;&#x8350;&#x7B2C;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#x9650;&#x5236;&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x662F;&#x5F53;&#x524D;&#x7C7B;&#x578B;&#x53CA;Shopping&#x7C7B;&#x578B;&#x3002;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x98CE;&#x9669;&#x5728;&#x4E8E;&#x5982;&#x679C;&#x6709;&#x4E24;&#x4E2A;&#x7C7B;&#x90FD;&#x7EE7;&#x627F;&#x4E86;Shopping&#xFF0C;&#x90FD;&#x6709;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x5F04;&#xFF0C;&#x4E14;&#x90FD;&#x6CA1;&#x6709;&#x91CD;&#x5199;equals&#xFF0C;&#x5C31;&#x4F1A;&#x5224;&#x65AD;&#x5931;&#x8BEF;&#x3002;</p>
+<ul>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x540C;&#x65F6;&#x91CD;&#x5199;hashCode&#x65B9;&#x6CD5;&#x5462;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x7C7B; new&#x51FA;&#x6765;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5B58;&#x653E;&#x5230;HashSet&#x3001;HashMap&#x7B49;&#x96C6;&#x5408;&#x3001;map&#x4E2D;&#xFF1B;&#x9996;&#x5148;&#x6BD4;&#x8F83;&#x7684;&#x662F;hash&#x503C;&#xFF08;&#x6563;&#x5217;&#x503C;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x91CD;&#x5199;hashCode&#xFF0C;&#x5C31;&#x5F88;&#x5BB9;&#x6613;&#x51FA;&#x73B0;hash&#x503C;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x88AB;&#x8986;&#x76D6;&#x6389;&#x7684;&#x60C5;&#x51B5;&#x3002;hashCode &#x6700;&#x7B80;&#x5355;&#x7684;&#x4E00;&#x4E2A;&#x5199;&#x6CD5;&#x5C31;&#x662F;&#xFF1A;&#x8FD4;&#x56DE;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7684;hash&#x503C; </li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> no<span class="token punctuation">.</span><span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x53C2;&#x7167;String Integer&#x6E90;&#x7801; &#x91CC;&#x9762;hashCode&#x7684;&#x5199;&#x6CD5;&#x3002;</p>
+<h2 id="&#x8D2D;&#x7269;&#x8F66;"><a name="&#x8D2D;&#x7269;&#x8F66;" class="anchor-navigation-ex-anchor" href="#&#x8D2D;&#x7269;&#x8F66;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D2D;&#x7269;&#x8F66;</h2>
+<p>&#x8D2D;&#x7269;&#x8F66;&#x7528;HashMap&#x8868;&#x793A;&#xFF0C;key&#x8868;&#x793A;&#x5B58;&#x653E;&#x5546;&#x54C1;&#xFF0C;value&#x8868;&#x793A;&#x6570;&#x91CF;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">HashMap</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Iterator</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Map</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Set</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ShoppingCart</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Shopping</span><span class="token punctuation">,</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">Shopping</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">add</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span>  <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">Shopping</span> s<span class="token punctuation">,</span><span class="token class-name">Integer</span> num<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span>  <span class="token keyword">void</span> <span class="token function">deleteShopping</span><span class="token punctuation">(</span><span class="token class-name">Shopping</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">deleteShopping</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span>  <span class="token keyword">void</span> <span class="token function">deleteAllShopping</span><span class="token punctuation">(</span><span class="token class-name">Shopping</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        map<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span>  <span class="token keyword">void</span> <span class="token function">deleteShopping</span><span class="token punctuation">(</span><span class="token class-name">Shopping</span> s<span class="token punctuation">,</span><span class="token class-name">Integer</span> num<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&lt;</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token operator">-</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            map<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        map<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printTotalItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Shopping</span><span class="token punctuation">&gt;</span></span> set  <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>set<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;&#x8D2D;&#x7269;&#x8F66;&#x4E3A;&#x7A7A;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Shopping</span><span class="token punctuation">&gt;</span></span> it <span class="token operator">=</span> set<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Shopping</span> sp<span class="token punctuation">;</span>
+        <span class="token keyword">double</span> total<span class="token operator">=</span><span class="token number">0.0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>it<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            sp<span class="token operator">=</span>it<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sp<span class="token punctuation">.</span>no<span class="token operator">+</span><span class="token string">&quot;\t&quot;</span><span class="token operator">+</span>sp<span class="token punctuation">.</span>name<span class="token operator">+</span><span class="token string">&quot; &#x5355;&#x4EF7;&#xFF1A;&quot;</span><span class="token operator">+</span>sp<span class="token punctuation">.</span>price<span class="token operator">+</span><span class="token string">&quot;\t&#x6570;&#x91CF;&#xFF1A;&quot;</span><span class="token operator">+</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>sp<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">&quot;\t &#x5C0F;&#x8BA1;&#xFF1A;&quot;</span>
+                    <span class="token operator">+</span><span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span><span class="token punctuation">(</span>sp<span class="token punctuation">.</span>price<span class="token operator">*</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>sp<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">intValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            total <span class="token operator">+=</span> <span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span><span class="token punctuation">(</span>sp<span class="token punctuation">.</span>price<span class="token operator">*</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>sp<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">intValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;\t\t\t\t\t\t\t\t&#x5408;&#x8BA1;&#xFF1A;&quot;</span><span class="token operator">+</span>total<span class="token operator">+</span><span class="token string">&quot;&#x5143;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printShopping</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Map</span><span class="token punctuation">.</span><span class="token class-name">Entry</span><span class="token punctuation">&lt;</span><span class="token class-name">Shopping</span><span class="token punctuation">,</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> myset <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>myset<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;&#x8D2D;&#x7269;&#x8F66;&#x4E3A;&#x7A7A;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Shopping</span> p<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> number<span class="token punctuation">;</span>
+        <span class="token keyword">double</span> total<span class="token operator">=</span><span class="token number">0.0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Map</span><span class="token punctuation">.</span><span class="token class-name">Entry</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Shopping</span><span class="token punctuation">,</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> ent<span class="token operator">:</span> myset<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           p<span class="token operator">=</span> ent<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           number<span class="token operator">=</span>ent<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">intValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>name<span class="token operator">+</span><span class="token string">&quot;&#x7684;&#x5355;&#x4EF7;&#x662F;&#xFF1A;&quot;</span><span class="token operator">+</span>p<span class="token punctuation">.</span>price<span class="token operator">+</span><span class="token string">&quot;\t &#x6570;&#x91CF;&#x662F; &quot;</span><span class="token operator">+</span>number<span class="token operator">+</span><span class="token string">&quot;\t &#x5C0F;&#x8BA1;&#xFF1A;&quot;</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>price<span class="token operator">*</span>number<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            total <span class="token operator">+=</span> <span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>price<span class="token operator">*</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;\t\t\t\t\t\t &#x5546;&#x54C1;&#x603B;&#x4EF7;&#x662F;&#xFF1A;&quot;</span><span class="token operator">+</span>total<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x91CC;&#x9762;&#x6709;&#x589E;&#x52A0;&#x5546;&#x54C1;&#x3001;&#x6E05;&#x9664;&#x5546;&#x54C1;&#x3001;&#x6E05;&#x7A7A;&#x8D2D;&#x7269;&#x8F66;&#x3001;&#x6253;&#x5370;&#x6E05;&#x5355;&#x7B49;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x6700;&#x540E;&#x5199;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;"><a name="&#x6700;&#x540E;&#x5199;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x6700;&#x540E;&#x5199;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6700;&#x540E;&#x5199;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;</h2>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>zhengling<span class="token punctuation">.</span>work</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ShoppingCartTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Shopping</span> sp1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Shopping</span><span class="token punctuation">(</span><span class="token string">&quot;1001&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x897F;&#x74DC;&quot;</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Shopping</span> sp2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Shopping</span><span class="token punctuation">(</span><span class="token string">&quot;1002&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x9EC4;&#x74DC;&quot;</span><span class="token punctuation">,</span><span class="token number">12.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Shopping</span> sp3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Shopping</span><span class="token punctuation">(</span><span class="token string">&quot;2001&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x82F9;&#x679C;&quot;</span><span class="token punctuation">,</span><span class="token number">2.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Shopping</span> sp4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Shopping</span><span class="token punctuation">(</span><span class="token string">&quot;3001&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x83E0;&#x841D;&quot;</span><span class="token punctuation">,</span><span class="token number">12.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sp1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;-----&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ShoppingCart</span> spc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ShoppingCart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        spc<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>sp1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        spc<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>sp2<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        spc<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>sp3<span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        spc<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>sp4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//spc.printShopping();</span>
+       spc<span class="token punctuation">.</span><span class="token function">printTotalItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        spc<span class="token punctuation">.</span><span class="token function">printShopping</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x8FD0;&#x884C;&#xFF0C;&#x5E76;&#x9A8C;&#x8BC1;&#x901A;&#x8FC7;&#x3002;</p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="java-interface-lamda.html" class="navigation navigation-prev " aria-label="Previous page: 接口与lamda表达式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="java-dead-lock.md" class="navigation navigation-next " aria-label="Next page: 死锁案例">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"利用购物车系统学习HashMap与equals方法重写","level":"1.16.3.9","depth":3,"next":{"title":"死锁案例","level":"1.16.3.10","depth":3,"path":"middleware/java-dead-lock.md","ref":"middleware/java-dead-lock.md","articles":[]},"previous":{"title":"接口与lamda表达式","level":"1.16.3.8","depth":3,"path":"middleware/java-interface-lamda.md","ref":"middleware/java-interface-lamda.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"middleware/java-shopping-map.md","mtime":"2020-02-01T08:02:52.593Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-01T08:06:34.357Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
