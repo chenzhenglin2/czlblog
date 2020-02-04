@@ -94,7 +94,7 @@
     * [接口与lamda表达式](middleware/java-interface-lamda.md)
     * [利用购物车系统学习HashMap与equals方法重写](middleware/java-shopping-map.md)
     * [死锁案例](middleware/java-dead-lock.md)
-    * [多线程轮流打印1-100](middleware/java-multithread.md)
+    * [如何利用多线程交替输出奇偶数](middleware/java-multithread.md)
     * [反射机制](middleware/java-reflect.md)
 
 * 大数据处理
