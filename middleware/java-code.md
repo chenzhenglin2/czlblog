@@ -1,4 +1,8 @@
-**调整数组，正数放在左边 负数放在右边，0在中间相对位置不变**
+# 关于数组位置调整和元素出现次数统计代码
+
+## 数组位置调整
+
+**需求：调整数组，正数放在左边 负数放在右边，0在中间相对位置不变**
 
 ```java
 public static int[] tzsx(int[] myarr) throws ArrayIndexOutOfBoundsException {
@@ -34,7 +38,9 @@ public static int[] tzsx(int[] myarr) throws ArrayIndexOutOfBoundsException {
 	  return newarr;
 	}
 ```
-**打印出数组中元素出现次数大于2的元素和次数**
+## 打印数组中多次出现的元素
+
+**需求：打印出数组中元素出现次数大于2的元素和次数**
 
 ```java
 public static void countStr(String[] arr) {

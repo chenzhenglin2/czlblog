@@ -1,4 +1,6 @@
-**比较两个数组是否相同（忽略元素位置） java语言实现**
+# 数组比较
+
+**需求：比较两个数组是否相同（忽略元素位置），值都相同即可**
 
 	public static boolean comparaarry(int[] arr1,int[] arr2) {
 		if(arr1.length != arr2.length) {
