@@ -83,8 +83,7 @@
 * Java开发与其中间件安装配置
   * [websphere8.5安装和使用](middleware/install_websphere8.5.md)
   * [tomcat、weblogic、was等组件jvm调整](middleware/update_jvm_value.md)
-  * java基础知识大串联
-    * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
+  * java基础知识大串联    
     * [for循环实践：生成一万内的质数](middleware/prime_number_product.md)
     * [比较两个数组是否相同](middleware/compara-arry.md)
     * [for和while异同比较](middleware/for-while.md)
@@ -96,6 +95,7 @@
     * [死锁案例](middleware/java-dead-lock.md)
     * [如何利用多线程交替输出奇偶数](middleware/java-multithread.md)
     * [反射机制](middleware/java-reflect.md)
+    * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
 
 * 大数据处理
   * [druid安装与优化](data/install_druid.md)
