@@ -88,7 +88,7 @@
     * [for循环实践：生成一万内的质数](middleware/prime_number_product.md)
     * [比较两个数组是否相同](middleware/compara-arry.md)
     * [for和while异同比较](middleware/for-while.md)
-    * [利用单项链表学习递归](middleware/java-recursion.md)
+    * [利用单向链表学习递归](middleware/java-recursion.md)
     * [装饰者模式扩充方法](middleware/java-decortar.md)
     * [枚举和switch结合使用](middleware/java-enmu-switch.md)
     * [接口与lamda表达式](middleware/java-interface-lamda.md)
