@@ -92,7 +92,7 @@
     * [枚举和switch结合使用](middleware/java-enmu-switch.md)
     * [接口与lamda表达式](middleware/java-interface-lamda.md)
     * [利用购物车系统学习HashMap与equals方法重写](middleware/java-shopping-map.md)
-    * [死锁案例](middleware/java-dead-lock.md)
+    * [利用synchronize关键字了解死锁](middleware/java-dead-lock.md)
     * [如何利用多线程交替输出奇偶数](middleware/java-multithread.md)
     * [反射机制](middleware/java-reflect.md)
     * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
