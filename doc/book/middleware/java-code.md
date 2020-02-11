@@ -38,6 +38,23 @@ public static int[] tzsx(int[] myarr) throws ArrayIndexOutOfBoundsException {
 	  return newarr;
 	}
 ```
+这是之前写的代码，发现繁琐且低效，用java8中的Stream流处理，就几行代码就能搞定。
+
+```java
+public static int[] sztz(int[] myarr) throws ArrayIndexOutOfBoundsException {
+    int[] positive = IntStream.of(myarr).filter(x->x>0).toArray();
+    int[] zero = IntStream.of(myarr).filter(x->x==0).toArray();
+    int[] negative = IntStream.of(myarr).filter(x->x<0).toArray();
+    int[] arrays = new int[positive.length+zero.length+negative.length];
+    System.arraycopy(positive,0,arrays,0,positive.length);
+    System.arraycopy(zero,0,arrays,positive.length,zero.length);
+    System.arraycopy(negative,0,arrays,positive.length+zero.length,negative.length);
+    return arrays;
+}
+```
+
+用IntStream操作，过滤掉不合适的 形成的数组，在进行数组copy；经验证效果是一直的。唯一需要注意的，这个流最好不要多线程并行，避免顺序打乱。
+
 ## 打印数组中多次出现的元素
 
 **需求：打印出数组中元素出现次数大于2的元素和次数**
