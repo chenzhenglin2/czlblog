@@ -38,7 +38,7 @@ public static int[] tzsx(int[] myarr) throws ArrayIndexOutOfBoundsException {
 	  return newarr;
 	}
 ```
-这是之前写的代码，发现繁琐且低效，用java8中的Stream流处理，就几行代码就能搞定。
+这是之前写的代码（开发总会觉得之前代码写的像屎），发现繁琐且低效，用java8中的Stream流处理，就几行代码就能搞定。
 
 ```java
 public static int[] sztz(int[] myarr) throws ArrayIndexOutOfBoundsException {
@@ -53,7 +53,7 @@ public static int[] sztz(int[] myarr) throws ArrayIndexOutOfBoundsException {
 }
 ```
 
-用IntStream操作，过滤掉不合适的 形成的数组，在进行数组copy；经验证效果是一直的。唯一需要注意的，这个流最好不要多线程并行，避免顺序打乱。
+改用IntStream操作，按规则形成的数组，再逐一合并到一个新数组；经验证效率提升明显，效果也一样。唯一需要注意的，这个流最好不要多线程并行，避免元素位置顺序打乱。
 
 ## 打印数组中多次出现的元素
 
@@ -76,4 +76,4 @@ public static void countStr(String[] arr) {
 	}
 } 
 ```
-实现方式：把数组元素插入到hashmap中，元素作为key，出现次数作为value，最后遍历出来，判断一下，大于2次，就打印。
+实现方式：把数组元素插入到hashmap中，元素作为key，出现次数作为value，最后遍历出来，判断一下，大于2次，就打印。或者在遍历时直接把map转换成Set<Map.Entry<K,V>>,  然后逐一取出Map.Entry  中K和V 就行了。
