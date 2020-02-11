@@ -1,0 +1,1794 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>利用反射机制遍历String的字段和方法 · 志云的博客</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="陈正林">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="use-NIO-read-write.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于博客说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    bat脚本
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../bat/bat-use-sedawk.html">
+            
+                <a href="../bat/bat-use-sedawk.html">
+            
+                    
+                    bat脚本中巧用sed grep awk命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../linux/tar-deal.html">
+            
+                <a href="../linux/tar-deal.html">
+            
+                    
+                    "-"在tar命令中的巧用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../linux/limit_ip.html">
+            
+                <a href="../linux/limit_ip.html">
+            
+                    
+                    利用iptables或防火墙指定ip访问服务器某个端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../linux/set_ip.html">
+            
+                <a href="../linux/set_ip.html">
+            
+                    
+                    如何设置centos7.6和Ubuntu19.4的ip4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../linux/extend_disk.html">
+            
+                <a href="../linux/extend_disk.html">
+            
+                    
+                    Linux中磁盘扩展与缩减
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../linux/how_to_made_bin.html">
+            
+                <a href="../linux/how_to_made_bin.html">
+            
+                    
+                    二进制安装包的制作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../linux/use_heredoc.html">
+            
+                <a href="../linux/use_heredoc.html">
+            
+                    
+                    heredocument的巧用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../docker/docker-install.html">
+            
+                <a href="../docker/docker-install.html">
+            
+                    
+                    docker 安装与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../docker/harbor-install.html">
+            
+                <a href="../docker/harbor-install.html">
+            
+                    
+                    harbor的安装和注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../docker/harbor-sync.html">
+            
+                <a href="../docker/harbor-sync.html">
+            
+                    
+                    harbor仓库镜像同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../docker/dockerfile-rule.html">
+            
+                <a href="../docker/dockerfile-rule.html">
+            
+                    
+                    如何制作出合适的镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../docker/save_load_images.html">
+            
+                <a href="../docker/save_load_images.html">
+            
+                    
+                    逐个和批量导出导入docker镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    rancher和kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../k8s/kubectl-user-instruction.html">
+            
+                <a href="../k8s/kubectl-user-instruction.html">
+            
+                    
+                    kubectl常用命令汇总（以及curl注入）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../k8s/docker-run-and-k8s-command.html">
+            
+                <a href="../k8s/docker-run-and-k8s-command.html">
+            
+                    
+                    docker run image -args对应yaml语法/rancher UI操作方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../k8s/rancher_online_installation.html">
+            
+                <a href="../k8s/rancher_online_installation.html">
+            
+                    
+                    在线安装高可用的rancher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../k8s/rancher_offline_installation.html">
+            
+                <a href="../k8s/rancher_offline_installation.html">
+            
+                    
+                    离线helm安装高可用rancher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../k8s/deploy_app_in_rancher.html">
+            
+                <a href="../k8s/deploy_app_in_rancher.html">
+            
+                    
+                    rancher中快速部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../k8s/use_appstore_deploy_es_in_rancher.html">
+            
+                <a href="../k8s/use_appstore_deploy_es_in_rancher.html">
+            
+                    
+                    利用rancher商店搭建es和beat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../k8s/how_to_use_kubectl_noserver.html">
+            
+                <a href="../k8s/how_to_use_kubectl_noserver.html">
+            
+                    
+                    rancher平台不可用下如何使用kubectl命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Jenkins
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../jenkins/jenkins-slave-for-docker.html">
+            
+                <a href="../jenkins/jenkins-slave-for-docker.html">
+            
+                    
+                    Jenkins调用docker编译程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../jenkins/install-jenkins.html">
+            
+                <a href="../jenkins/install-jenkins.html">
+            
+                    
+                    利用docker 镜像，快速搭建Jenkins环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../jenkins/freestyle_build_in_jenkins.html">
+            
+                <a href="../jenkins/freestyle_build_in_jenkins.html">
+            
+                    
+                    jenkins自由风格构建job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../jenkins/variety_pipeline_build.html">
+            
+                <a href="../jenkins/variety_pipeline_build.html">
+            
+                    
+                    jenkins多种pipeline构建job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../jenkins/thinBackup_jenkins.html">
+            
+                <a href="../jenkins/thinBackup_jenkins.html">
+            
+                    
+                    jenkins config and job的备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    持续集成项目实战
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../other/devops_practices_gitbook_web.html">
+            
+                <a href="../other/devops_practices_gitbook_web.html">
+            
+                    
+                    利用Jenkins+gitbook+git+node-ejs搭建一套实时更新多版本文档网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../other/devops_practices_k8s.html">
+            
+                <a href="../other/devops_practices_k8s.html">
+            
+                    
+                    采用jenkins+harbor+kubernetes自动部署最新程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../shell/get_dir_in_shell.html">
+            
+                <a href="../shell/get_dir_in_shell.html">
+            
+                    
+                    shell 脚本中获取脚本所在路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../shell/sed_use_hard.html">
+            
+                <a href="../shell/sed_use_hard.html">
+            
+                    
+                    sed不常见用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../shell/getopt_and_getopts_use.html">
+            
+                <a href="../shell/getopt_and_getopts_use.html">
+            
+                    
+                    getopt与getopts用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../shell/ps3_use.html">
+            
+                <a href="../shell/ps3_use.html">
+            
+                    
+                    选择项用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../shell/trim_string.html">
+            
+                <a href="../shell/trim_string.html">
+            
+                    
+                    字符串截取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    jmeter
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../jmeter/use_jmeter_test_app.html">
+            
+                <a href="../jmeter/use_jmeter_test_app.html">
+            
+                    
+                    利用jmeter模拟手机接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    证书申请与制作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../ca/make_key.html">
+            
+                <a href="../ca/make_key.html">
+            
+                    
+                    私有证书制作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    NGINX
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../nginx/direct_static_web.html">
+            
+                <a href="../nginx/direct_static_web.html">
+            
+                    
+                    如何利用nginx指向本地静态网页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../nginx/load_balance.html">
+            
+                <a href="../nginx/load_balance.html">
+            
+                    
+                    如何利用nginx实现负载均衡和反向代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../nginx/nginx_other.html">
+            
+                <a href="../nginx/nginx_other.html">
+            
+                    
+                    nginx其他知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../git/git-use.html">
+            
+                <a href="../git/git-use.html">
+            
+                    
+                    git日常使用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../git/install_and_bak_gitlab.html">
+            
+                <a href="../git/install_and_bak_gitlab.html">
+            
+                    
+                    gitlab搭建和备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    自动化测试技术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" >
+            
+                <span>
+            
+                    
+                    手机自动化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1" data-path="../autotech/monkey_android.html">
+            
+                <a href="../autotech/monkey_android.html">
+            
+                    
+                    monkey测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.2" data-path="../autotech/adb_cmd.html">
+            
+                <a href="../autotech/adb_cmd.html">
+            
+                    
+                    adb常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.3" data-path="../autotech/uiautomator_introduce.html">
+            
+                <a href="../autotech/uiautomator_introduce.html">
+            
+                    
+                    uiautomator 自动化测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" >
+            
+                <span>
+            
+                    
+                    mongo
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1.1" data-path="../data/install_mongodb.html">
+            
+                <a href="../data/install_mongodb.html">
+            
+                    
+                    mongodb安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.1.2" data-path="../data/use_mongo3.6_deploy_shard_cluster.html">
+            
+                <a href="../data/use_mongo3.6_deploy_shard_cluster.html">
+            
+                    
+                    mongo分片式集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" >
+            
+                <span>
+            
+                    
+                    MySQL
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.2.1" data-path="../data/install_mysql.html">
+            
+                <a href="../data/install_mysql.html">
+            
+                    
+                    linux中安装MySQL5.6/5.7
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    虚拟化技术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" >
+            
+                <span>
+            
+                    
+                    vcenter
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1.1" data-path="../vm/use_tem_deploy_centos7.html">
+            
+                <a href="../vm/use_tem_deploy_centos7.html">
+            
+                    
+                    利用模板快速部署centos7服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    Java开发与其中间件安装配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="install_websphere8.5.html">
+            
+                <a href="install_websphere8.5.html">
+            
+                    
+                    websphere8.5安装和使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="update_jvm_value.html">
+            
+                <a href="update_jvm_value.html">
+            
+                    
+                    tomcat、weblogic、was等组件jvm调整
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" >
+            
+                <span>
+            
+                    
+                    java基础知识大串联
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.3.1" data-path="prime_number_product.html">
+            
+                <a href="prime_number_product.html">
+            
+                    
+                    for循环实践：生成一万内的质数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.2" data-path="compara-arry.html">
+            
+                <a href="compara-arry.html">
+            
+                    
+                    比较两个数组是否相同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.3" data-path="java-code.html">
+            
+                <a href="java-code.html">
+            
+                    
+                    关于数组位置调整和元素出现次数统计代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.4" data-path="for-while.html">
+            
+                <a href="for-while.html">
+            
+                    
+                    for和while异同比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.5" data-path="java-recursion.html">
+            
+                <a href="java-recursion.html">
+            
+                    
+                    利用单向链表学习递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.6" data-path="java-decortar.html">
+            
+                <a href="java-decortar.html">
+            
+                    
+                    装饰者模式扩充方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.7" data-path="java-enmu-switch.html">
+            
+                <a href="java-enmu-switch.html">
+            
+                    
+                    枚举和switch结合使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.8" data-path="java-interface-lamda.html">
+            
+                <a href="java-interface-lamda.html">
+            
+                    
+                    接口与lamda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.9" data-path="java-shopping-map.html">
+            
+                <a href="java-shopping-map.html">
+            
+                    
+                    利用购物车系统学习HashMap与equals方法重写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.10" data-path="java-dead-lock.html">
+            
+                <a href="java-dead-lock.html">
+            
+                    
+                    利用synchronize关键字了解死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.11" data-path="java-multithread.html">
+            
+                <a href="java-multithread.html">
+            
+                    
+                    如何利用多线程交替输出奇偶数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.12" data-path="java8-practice.md">
+            
+                <span>
+            
+                    
+                    JDK8新特性Stream实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.13" data-path="NIO-IO-diff.html">
+            
+                <a href="NIO-IO-diff.html">
+            
+                    
+                    NIO和IO遍历指定目录效果对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.14" data-path="use-NIO-read-write.html">
+            
+                <a href="use-NIO-read-write.html">
+            
+                    
+                    利用NIO读写文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16.3.15" data-path="java-reflect.html">
+            
+                <a href="java-reflect.html">
+            
+                    
+                    利用反射机制遍历String的字段和方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    大数据处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../data/install_druid.html">
+            
+                <a href="../data/install_druid.html">
+            
+                    
+                    druid安装与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" >
+            
+                <span>
+            
+                    
+                    kafka+zookeeper
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.2.1" data-path="../data/kafka_cmd.html">
+            
+                <a href="../data/kafka_cmd.html">
+            
+                    
+                    kafka常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.2" data-path="../data/update_jvm_zk.html">
+            
+                <a href="../data/update_jvm_zk.html">
+            
+                    
+                    zookeeper和kafka参数调整
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" >
+            
+                <span>
+            
+                    
+                    redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.3.1" data-path="../data/cluster_redis.html">
+            
+                <a href="../data/cluster_redis.html">
+            
+                    
+                    redis多实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" >
+            
+                <span>
+            
+                    
+                    正确使用工具事半功倍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" >
+            
+                <span>
+            
+                    
+                    搜索引擎的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" >
+            
+                <span>
+            
+                    
+                    gitbook 的巧用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" >
+            
+                <span>
+            
+                    
+                    有道云笔记
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" >
+            
+                <span>
+            
+                    
+                    GitHub搭建个人网站
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >利用反射机制遍历String的字段和方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5229;&#x7528;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x904D;&#x5386;string&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x5668;"><b></b>&#x5229;&#x7528;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x904D;&#x5386;String&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x5668;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7C7B;&#x540D;&#x7684;&#x83B7;&#x53D6;"><b></b>&#x7C7B;&#x540D;&#x7684;&#x83B7;&#x53D6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;class&#x5E38;&#x89C1;&#x7684;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><b></b>&#x83B7;&#x53D6;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;Class&#x5E38;&#x89C1;&#x7684;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</a></li></ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;&#x7684;&#x83B7;&#x53D6;"><b></b>&#x65B9;&#x6CD5;&#x7684;&#x83B7;&#x53D6;</a></li><li><span class="title-icon "></span><a href="#&#x53D8;&#x91CF;&#xFF08;filed&#xFF09;&#x3001;&#x6784;&#x9020;&#x5668;&#x4EE5;&#x53CA;&#x6CE8;&#x89E3;&#x7684;&#x83B7;&#x53D6;"><b></b>&#x53D8;&#x91CF;&#xFF08;filed&#xFF09;&#x3001;&#x6784;&#x9020;&#x5668;&#x4EE5;&#x53CA;&#x6CE8;&#x89E3;&#x7684;&#x83B7;&#x53D6;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><b></b>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</a></li></ul></ul></div><a href="#&#x5229;&#x7528;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x904D;&#x5386;string&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x5668;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5229;&#x7528;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x904D;&#x5386;string&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x5668;"><a name="&#x5229;&#x7528;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x904D;&#x5386;string&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x5229;&#x7528;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x904D;&#x5386;string&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5229;&#x7528;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x904D;&#x5386;String&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x5668;</h1>
+<p>&#x5229;&#x7528;java&#x53CD;&#x5C04;&#x673A;&#x5236;&#x80FD;&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x7C7B;&#x6216;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x5C5E;&#x7C7B;&#x3001;&#x62E5;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#x3001;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7B49;&#x4FE1;&#x606F;&#x3002;&#x5F88;&#x591A;java&#x53CD;&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x5C31;&#x662F;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x673A;&#x5236;&#x3002;</p>
+<h2 id="&#x7C7B;&#x540D;&#x7684;&#x83B7;&#x53D6;"><a name="&#x7C7B;&#x540D;&#x7684;&#x83B7;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x540D;&#x7684;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x540D;&#x7684;&#x83B7;&#x53D6;</h2>
+<p>java&#x6240;&#x6709;&#x7684;&#x7C7B;&#xFF0C;&#x90FD;&#x5C5E;&#x4E8E;Class &#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x4E2A;Class&#x548C;class&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;class&#x5C5E;&#x4E8E;java&#x5173;&#x952E;&#x5B57;&#x3001;Class&#x662F;&#x7C7B;&#x540D;&#xFF0C;&#x5982;&#x540C;String&#x4E00;&#x6837;&#xFF0C;&#x4E14;Class&#x662F;&#x4E2A;&#x6CDB;&#x578B;&#x7C7B;&#x3002;</p>
+<h3 id="&#x83B7;&#x53D6;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;class&#x5E38;&#x89C1;&#x7684;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><a name="&#x83B7;&#x53D6;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;class&#x5E38;&#x89C1;&#x7684;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;class&#x5E38;&#x89C1;&#x7684;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;Class&#x5E38;&#x89C1;&#x7684;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</h3>
+<ul>
+<li><p>&#x5728;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x4E2D; &#x76F4;&#x63A5;getClass&#xFF0C;&#x5C31;&#x80FD;&#x83B7;&#x53D6;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;Class&#x7C7B;&#x578B;</p>
+<p>&#x77E5;&#x9053;&#x7C7B;&#x540D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;Class</p>
+<ul>
+<li><p>Class.forName(&quot;&#x5177;&#x4F53;&#x7C7B;&#x540D;&#xFF0C;&#x5305;&#x542B;&#x5305;&#x540D;&#x5982;&#xFF1A;java.lang.Object&quot;)</p>
+</li>
+<li><p>&#x76F4;&#x63A5;&#x7528;.class&#x6587;&#x4EF6;&#x540D;&#x79F0;&#xFF0C;&#x5982; Class<string> cls = String.class</string></p>
+<h2 id="&#x65B9;&#x6CD5;&#x7684;&#x83B7;&#x53D6;"><a name="&#x65B9;&#x6CD5;&#x7684;&#x83B7;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x7684;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x7684;&#x83B7;&#x53D6;</h2>
+<p>&#x901A;&#x8FC7;Class&#x7C7B;&#x578B;&#x5BF9;&#x8C61;.getMethods&#x83B7;&#x53D6;&#x6240;&#x6709;&#x516C;&#x5F00;&#x65B9;&#x6CD5;&#x3001;getDeclaredMethods&#x83B7;&#x53D6;&#x6240;&#x6709;&#x65B9;&#x6CD5; (&#x4E0D;&#x7BA1;&#x662F;private&#x8FD8;&#x662F;public&#x4FEE;&#x9970;&#x7684;&#x65B9;&#x6CD5;)<br>getMethod(String name, Class&lt;?&gt;... parameterTypes)  &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x65B9;&#x6CD5;&#xFF08;&#x5FC5;&#x987B;&#x662F;public&#x7C7B;&#x578B;&#x65B9;&#x6CD5;&#xFF09;&#x3001;parameterTypes&#x8868;&#x793A;&#x8BE5;&#x65B9;&#x6CD5;&#x6709;&#x54EA;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;parameterTypes&#x957F;&#x5EA6;&#x53EF;&#x53D8;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x7A7A;&#xFF0C;&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x540C;&#x6837;getDeclaredMethod(String name, Class&lt;?&gt;... parameterTypes) &#x5C31;&#x662F;&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#xFF08;&#x4E0D;&#x7BA1;&#x662F;public&#x8FD8;&#x662F;private&#x4FEE;&#x9970;&#x7684;&#x65B9;&#x6CD5;&#xFF09;&#xFF0C;parameterTypes&#x53C2;&#x6570;&#x5C31;&#x4E0D;&#x4F5C;&#x89E3;&#x91CA;&#x8BF4;&#x660E;&#x4E86;&#x3002;</p>
+<p>&#x5B83;&#x4EEC;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x90FD;&#x662F;Method&#xFF0C;Method &#x6709;&#x54EA;&#x4E9B;&#x8BE6;&#x7EC6;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x770B;&#x6E90;&#x7801;&#x6216;&#x8005;jdk-api&#xFF1B; &#x5F97;&#x5230;Method&#x540E;&#x8FD8;&#x53EF;&#x4EE5;&#x540E;&#x7EED;&#x5F97;&#x5230;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x7684;&#x53C2;&#x6570;&#x3001;&#x6CE8;&#x89E3;&#xFF0C;&#x4E00;&#x76F4;&#x5EF6;&#x4F38;&#x4E0B;&#x53BB;&#xFF0C;&#x76F4;&#x81F3;&#x5F97;&#x5230;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<h2 id="&#x53D8;&#x91CF;&#xFF08;filed&#xFF09;&#x3001;&#x6784;&#x9020;&#x5668;&#x4EE5;&#x53CA;&#x6CE8;&#x89E3;&#x7684;&#x83B7;&#x53D6;"><a name="&#x53D8;&#x91CF;&#xFF08;filed&#xFF09;&#x3001;&#x6784;&#x9020;&#x5668;&#x4EE5;&#x53CA;&#x6CE8;&#x89E3;&#x7684;&#x83B7;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x53D8;&#x91CF;&#xFF08;filed&#xFF09;&#x3001;&#x6784;&#x9020;&#x5668;&#x4EE5;&#x53CA;&#x6CE8;&#x89E3;&#x7684;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D8;&#x91CF;&#xFF08;filed&#xFF09;&#x3001;&#x6784;&#x9020;&#x5668;&#x4EE5;&#x53CA;&#x6CE8;&#x89E3;&#x7684;&#x83B7;&#x53D6;</h2>
+<p>&#x5B83;&#x4EEC;&#x83B7;&#x53D6;&#x65B9;&#x5F0F;&#x548C;&#x65B9;&#x6CD5;&#x975E;&#x5E38;&#x96F7;&#x540C;&#xFF0C;&#x5982;getFileds&#x3001;getDeclaredFields &#x7B49;&#x3001;&#x5C31;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+<ul>
+<li>&#x8BF4;&#x4E86;&#x8FD9;&#x4E48;&#x591A;&#x4E0D;&#x5982;&#x5B9E;&#x6218;</li>
+</ul>
+<h2 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre class="language-"><code class="lang-java"> <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">showFiledsAndMethods</span><span class="token punctuation">(</span><span class="token class-name">String</span> classname<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> cls <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            cls <span class="token operator">=</span> <span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span>classname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">ClassNotFoundException</span> e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;---------------&#x6210;&#x5458;&#x53D8;&#x91CF;------------------&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>cls<span class="token punctuation">.</span><span class="token function">getDeclaredFields</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">:</span><span class="token operator">:</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;---------------&#x65B9;&#x6CD5;------------------&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>cls<span class="token punctuation">.</span><span class="token function">getDeclaredMethods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">:</span><span class="token operator">:</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;---------------&#x6784;&#x9020;&#x5668;------------------&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>cls<span class="token punctuation">.</span><span class="token function">getDeclaredConstructors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">:</span><span class="token operator">:</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">showFiledsAndMethods</span><span class="token punctuation">(</span><span class="token string">&quot;java.lang.String&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;&#x7684;Stream&#x6D41;&#x64CD;&#x4F5C;&#xFF0C;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;<a href="middleware/java8-practice.md">JDK8&#x65B0;&#x7279;&#x6027;Stream&#x5B9E;&#x6218;</a></p>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>&#x6210;&#x5458;&#x53D8;&#x91CF;<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+<span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span>value
+<span class="token keyword">private</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span>hash
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">long</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span>serialVersionUID
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span><span class="token class-name">ObjectStreamField</span><span class="token punctuation">[</span><span class="token punctuation">]</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span>serialPersistentFields
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span><span class="token class-name">Comparator</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span>CASE_INSENSITIVE_ORDER
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>&#x65B9;&#x6CD5;<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">Object</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">Object</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">static</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">static</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token keyword">boolean</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">Object</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">char</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">checkBounds</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">codePointAt</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">codePointBefore</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">codePointCount</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">compareToIgnoreCase</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">CharSequence</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">contentEquals</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">CharSequence</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">contentEquals</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">StringBuffer</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">copyValueOf</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">copyValueOf</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">equalsIgnoreCase</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>util<span class="token punctuation">.</span><span class="token class-name">Locale</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>nio<span class="token punctuation">.</span>charset<span class="token punctuation">.</span><span class="token class-name">Charset</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span><span class="token class-name">UnsupportedEncodingException</span>
+<span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">getChars</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">void</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">getChars</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">indexOfSupplementary</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">native</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">intern</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">CharSequence</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">CharSequence</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">CharSequence</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">Iterable</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">static</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">static</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">lastIndexOfSupplementary</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">nonSyncContentEquals</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">AbstractStringBuilder</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">offsetByCodePoints</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">regionMatches</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">regionMatches</span><span class="token punctuation">(</span><span class="token keyword">boolean</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">,</span><span class="token keyword">char</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">CharSequence</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">CharSequence</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">replaceFirst</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">CharSequence</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">subSequence</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>util<span class="token punctuation">.</span><span class="token class-name">Locale</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>util<span class="token punctuation">.</span><span class="token class-name">Locale</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>&#x6784;&#x9020;&#x5668;<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>nio<span class="token punctuation">.</span>charset<span class="token punctuation">.</span><span class="token class-name">Charset</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span><span class="token class-name">UnsupportedEncodingException</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>nio<span class="token punctuation">.</span>charset<span class="token punctuation">.</span><span class="token class-name">Charset</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span><span class="token class-name">UnsupportedEncodingException</span>
+java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">boolean</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">StringBuilder</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">StringBuffer</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span>java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="use-NIO-read-write.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 利用NIO读写文件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"利用反射机制遍历String的字段和方法","level":"1.16.3.15","depth":3,"next":{"title":"大数据处理","level":"1.17","depth":1,"ref":"","articles":[{"title":"druid安装与优化","level":"1.17.1","depth":2,"path":"data/install_druid.md","ref":"data/install_druid.md","articles":[]},{"title":"kafka+zookeeper","level":"1.17.2","depth":2,"ref":"","articles":[{"title":"kafka常用命令","level":"1.17.2.1","depth":3,"path":"data/kafka_cmd.md","ref":"data/kafka_cmd.md","articles":[]},{"title":"zookeeper和kafka参数调整","level":"1.17.2.2","depth":3,"path":"data/update_jvm_zk.md","ref":"data/update_jvm_zk.md","articles":[]}]},{"title":"redis","level":"1.17.3","depth":2,"ref":"","articles":[{"title":"redis多实例","level":"1.17.3.1","depth":3,"path":"data/cluster_redis.md","ref":"data/cluster_redis.md","articles":[]}]}]},"previous":{"title":"利用NIO读写文件","level":"1.16.3.14","depth":3,"path":"middleware/use-NIO-read-write.md","ref":"middleware/use-NIO-read-write.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"middleware/java-reflect.md","mtime":"2020-02-11T13:28:52.083Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-11T14:08:55.675Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
