@@ -86,6 +86,7 @@
   * java基础知识大串联    
     * [for循环实践：生成一万内的质数](middleware/prime_number_product.md)
     * [比较两个数组是否相同](middleware/compara-arry.md)
+    * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
     * [for和while异同比较](middleware/for-while.md)
     * [利用单向链表学习递归](middleware/java-recursion.md)
     * [装饰者模式扩充方法](middleware/java-decortar.md)
@@ -94,8 +95,8 @@
     * [利用购物车系统学习HashMap与equals方法重写](middleware/java-shopping-map.md)
     * [利用synchronize关键字了解死锁](middleware/java-dead-lock.md)
     * [如何利用多线程交替输出奇偶数](middleware/java-multithread.md)
-    * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
-    * [JDK8新特性实战](middleware/java8-practice.md)
+    * [JDK8新特性Stream实战](middleware/java8-practice.md)
+    * [NIO和IO遍历指定目录效果对比](middleware/NIO-IO-diff.md)
     * [利用反射机制遍历String的字段和方法](middleware/java-reflect.md)
 
 * 大数据处理
