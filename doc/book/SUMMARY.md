@@ -95,7 +95,7 @@
     * [利用购物车系统学习HashMap与equals方法重写](middleware/java-shopping-map.md)
     * [利用synchronize关键字了解死锁](middleware/java-dead-lock.md)
     * [如何利用多线程交替输出奇偶数](middleware/java-multithread.md)
-    * [JDK8新特性Stream实战](middleware/java8-practice.md)
+    * [JDK8新特性-Stream详解](middleware/java8-practice.md)
     * [NIO和IO遍历指定目录效果对比](middleware/NIO-IO-diff.md)
     * [利用NIO读写文件](middleware/use-NIO-read-write.md)
     * [利用反射机制遍历String的字段和方法](middleware/java-reflect.md)
