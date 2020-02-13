@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>利用NIO读写文件 · 志云的博客</title>
+        <title>利用NIO复制文件 · 志云的博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -1293,7 +1293,7 @@
                 <a href="use-NIO-read-write.html">
             
                     
-                    利用NIO读写文件
+                    利用NIO复制文件
             
                 </a>
             
@@ -1534,7 +1534,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >利用NIO读写文件</a>
+        <a href=".." >利用NIO复制文件</a>
     </h1>
 </div>
 
@@ -1549,7 +1549,134 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5229;&#x7528;nio&#x590D;&#x5236;&#x6587;&#x4EF6;"><b></b>&#x5229;&#x7528;NIO&#x590D;&#x5236;&#x6587;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#nio&#x5BF9;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x6982;&#x8FF0;"><b></b>NIO&#x5BF9;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x6982;&#x8FF0;</a></li></ul></ul></div><a href="#&#x5229;&#x7528;nio&#x590D;&#x5236;&#x6587;&#x4EF6;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5229;&#x7528;nio&#x590D;&#x5236;&#x6587;&#x4EF6;"><a name="&#x5229;&#x7528;nio&#x590D;&#x5236;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5229;&#x7528;nio&#x590D;&#x5236;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5229;&#x7528;NIO&#x590D;&#x5236;&#x6587;&#x4EF6;</h1>
+<p>  &#x672C;&#x6587;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x5229;&#x7528;NIO&#x6280;&#x672F;&#x590D;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x8BF4;&#x660E;NIO&#x6BD4;IO&#x64CD;&#x4F5C;&#x5148;&#x8FDB;&#x6027;&#xFF0C;&#x5BF9;&#x8F93;&#x51FA;&#x8F93;&#x5165;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x4ECE;jdk1.7&#x7248;&#x672C;&#x4EE5;&#x524D;&#x7684;IO&#x65B9;&#x5F0F;&#x8F6C;&#x6362;&#x5230;NIO&#x4E0A;&#x6765;&#x3002;</p>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x7AE0;<a href="middleware/NIO-IO-diff.md">NIO&#x548C;IO&#x904D;&#x5386;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x6548;&#x679C;&#x5BF9;&#x6BD4;</a>&#x5DF2;&#x7ECF;&#x8BF4;&#x660E;&#x4E86;NIO &#x4E2D;&#x7684;Path&#x3001;Paths&#x3001;Files&#x7B49; &#x7528;&#x4ED6;&#x4EEC;&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x4FBF;&#x6377;&#x6027;&#x3002;&#x8FD9;&#x4E00;&#x7AE0;&#x4E3B;&#x8981;&#x8BB2;NIO&#x5BF9;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="nio&#x5BF9;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x6982;&#x8FF0;"><a name="nio&#x5BF9;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#nio&#x5BF9;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>NIO&#x5BF9;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x6982;&#x8FF0;</h2>
+<p>NIO&#x5DE5;&#x5177;&#x662F;jdk1.7&#x5F15;&#x5165;&#x7684;&#xFF0C;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x66FF;&#x6362;IO&#x5DE5;&#x5177;&#x4F7F;&#x7528;&#xFF0C;&#x662F;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x4E14;&#x66F4;&#x9AD8;&#x6548;&#x3002;</p>
+<p>NIO&#x5BF9;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4E3B;&#x8981;&#x5F15;&#x5165;&#x4E86; Buffer&#x3001;Channel&#x3001;Selector,&#x4E09;&#x5927;&#x529F;&#x80FD;&#x7EC4;&#x4EF6;&#x3002;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x8BF4;&#x660E;Buffer&#x548C;Channel&#xFF1B;</p>
+<ul>
+<li><p>Buffer&#x62BD;&#x8C61;&#x7C7B;&#x6709;&#x8BB8;&#x591A;&#x5B50;&#x7C7B;&#xFF0C;ByteBuffer&#x3001;CharBuffer&#x3001;DoubleBuffer&#x3001;FloatBuffer&#x3001;IntBuffer&#x3001;LongBuffer&#x548C;ShortBuffer&#x7C7B;&#x90FD;&#x662F;Buffer&#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5B50;&#x7C7B;&#x5C31;&#x662F;ByteBuffer</p>
+</li>
+<li><p>Channel&#x63A5;&#x53E3;&#x4E3B;&#x8981;&#x5B9E;&#x73B0;&#x7C7B;&#x4E3B;&#x8981;&#x6709;&#xFF1A;FileChannel&#x3001;DatagramChannel&#x3001;SocketChannel&#x3001;ServerSocketChannel &#x7B49;&#xFF0C;&#x8FD9;&#x4E2A;&#x76F8;&#x5F53;&#x4E8E;&#x6D41;&#x7684;&#x7BA1;&#x9053;&#x3002;</p>
+<p><a href="images/1581577521677.png" data-lightbox="697fc4d4-213b-4313-b371-99d8d8c053b8" data-title="1581577521677"><img src="images/1581577521677.png" alt="1581577521677"></a></p>
+</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x5C31;&#x6765;&#x7528;FileChannel&#x548C;ByteBuffer&#x6765;&#x5B9E;&#x73B0;&#x590D;&#x5236;&#x4E00;&#x4E2A;9.21M&#x7684;&#x6587;&#x4EF6;&#xFF1B;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">copyTestSecond</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">long</span> start <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">FileInputStream</span> fis <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token class-name">FileOutputStream</span> fos <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token class-name">FileChannel</span> src <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token class-name">FileChannel</span> dest <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token comment">//&#x5B9E;&#x4F8B;&#x5316;&#x8F93;&#x5165;&#x3001;&#x8F93;&#x51FA;&#x6D41;</span>
+        fis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">&quot;d:\\adbdriver.zip&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x6587;&#x4EF6;9.21M</span>
+        fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token string">&quot;d:\\adbdriver2.zip&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x83B7;&#x53D6;&#x8F93;&#x51FA;&#x3001;&#x8F93;&#x5165;&#x6D41;&#x7684;Channel&#xFF08;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x7BA1;&#x9053;&#xFF09;</span>
+        src <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">getChannel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dest <span class="token operator">=</span> fos<span class="token punctuation">.</span><span class="token function">getChannel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x5B9A;&#x4E49;buffer&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x7F13;&#x51B2;&#x6C60;&#xFF0C;Bytebuffer &#x662F;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x4E0D;&#x53EF;&#x7528;new &#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;</span>
+        <span class="token comment">//&#x53EF;&#x4EE5;&#x7528;ByteBuffer&#x7684;&#x7C7B;&#x65B9;&#x6CD5; &#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</span>
+        <span class="token class-name">ByteBuffer</span> buffer <span class="token operator">=</span> <span class="token class-name">ByteBuffer</span><span class="token punctuation">.</span><span class="token function">allocate</span><span class="token punctuation">(</span><span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>src<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">//&#x76EE;&#x524D;buffer&#x662F;&#x7A7A;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x8BFB;&#x53D6;&#x6A21;&#x5F0F;,&#x7136;&#x540E;&#x5F00;&#x59CB;&#x8BFB;&#x53D6;</span>
+            buffer<span class="token punctuation">.</span><span class="token function">flip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//&#x5F85;buffer&#x628A;src&#x4E2D;&#x7684;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x5B8C;&#x540E; &#x518D;&#x5199;&#x5165;&#x5230;dest Channel&#x4E2D;</span>
+            <span class="token comment">//&#x76F8;&#x5F53;&#x4E8E;&#x628A;&#x6C34;&#x5148;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x53EB;src&#x7684;channel&#x4E2D;&#x6D41;&#x5230;&#x7F13;&#x51B2;&#x6C60;&#x4E2D;buffer&#x4E2D;&#xFF0C;</span>
+            <span class="token comment">//&#x7136;&#x540E;&#x4ECE;buffer&#x4E2D;&#x653E;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x53EB;dest&#x7684;channel&#x91CC;</span>
+            dest<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//&#x628A;&#x7F13;&#x51B2;&#x6C60;buffer&#x6E05;&#x7A7A;</span>
+            buffer<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">FileNotFoundException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">finally</span> <span class="token punctuation">{</span>
+        <span class="token comment">//&#x5173;&#x95ED;&#x5404;&#x79CD;&#x6D41;&#x548C;channel&#x901A;&#x9053;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>src <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                src<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>dest <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                dest<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>fis <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                fis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>fos <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">long</span> end <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;total time is: &quot;</span><span class="token operator">+</span><span class="token punctuation">(</span>end<span class="token operator">-</span>start<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//195</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8017;&#x65F6;195&#x6BEB;&#x79D2;&#xFF1B;</p>
+<p>Channel&#x8FD8;&#x6709;&#x66F4;&#x9A9A;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x9700;&#x8981;Buffer&#xFF0C;&#x6D41;&#x4ECE;&#x4E00;&#x7AEF;&#x6D41;&#x5411;&#x53E6;&#x4E00;&#x7AEF;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;</p>
+<p><a href="images/1581578045374.png" data-lightbox="a9866a7f-68eb-44d6-a034-90986556a1ba" data-title="1581578045374"><img src="images/1581578045374.png" alt="1581578045374"></a></p>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">copyTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">long</span> start <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">FileChannel</span> src <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token class-name">FileChannel</span> dest <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token comment">//&#x8981;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5BF9;&#x6587;&#x4EF6;&#x6709;&#x8BFB;&#x64CD;&#x4F5C;</span>
+        src <span class="token operator">=</span> <span class="token class-name">FileChannel</span><span class="token punctuation">.</span><span class="token keyword">open</span><span class="token punctuation">(</span><span class="token class-name">Paths</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;d:\\adbdriver.zip&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token class-name">StandardOpenOption</span><span class="token punctuation">.</span>READ<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x8981;&#x5199;&#x5165;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8981;&#x6709;&#x8BFB;&#x3001;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;&#x3001;&#x521B;&#x5EFA;&#x7684;&#x6743;&#x9650;</span>
+        dest <span class="token operator">=</span> <span class="token class-name">FileChannel</span><span class="token punctuation">.</span><span class="token keyword">open</span><span class="token punctuation">(</span><span class="token class-name">Paths</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;d:/adbdriver3.zip&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token class-name">StandardOpenOption</span><span class="token punctuation">.</span>READ<span class="token punctuation">,</span><span class="token class-name">StandardOpenOption</span><span class="token punctuation">.</span>WRITE<span class="token punctuation">,</span><span class="token class-name">StandardOpenOption</span><span class="token punctuation">.</span>CREATE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x8BFB;&#x53D6;&#x5230;&#x6587;&#x4EF6; &#x5199;&#x5165;&#x5230;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E2D;</span>
+        src<span class="token punctuation">.</span><span class="token function">transferTo</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>src<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x540C;&#x6837; &#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x4F5C;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4ECE;&#x4EC0;&#x4E48;&#x6587;&#x4EF6;&#x8F6C;&#x5165;&#x8FDB;&#x6765;</span>
+        <span class="token comment">//dest.transferFrom(src,0,src.size());</span>
+
+
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">finally</span> <span class="token punctuation">{</span>
+       <span class="token keyword">if</span><span class="token punctuation">(</span>src <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+           <span class="token keyword">try</span> <span class="token punctuation">{</span>
+               src<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>dest <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                dest<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">long</span> end <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;total time is: &quot;</span><span class="token operator">+</span><span class="token punctuation">(</span>end<span class="token operator">-</span>start<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//28</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x8017;&#x65F6;&#x53EA;&#x6709;28&#x6BEB;&#x79D2;</p>
+<p>NIO&#x5BF9;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4E30;&#x5BCC;&#x591A;&#x6837;&#xFF1B;&#x800C;&#x4E14;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8FB9;&#x5199;&#x8FB9;&#x8BFB;&#xFF1B;&#x800C;&#x4F20;&#x7EDF;&#x7684;IO&#x5219;&#x6BD4;&#x8F83;&#x8D39;&#x52B2;&#xFF0C;&#x53EA;&#x80FD;&#x5148;&#x628A;&#x6587;&#x4EF6;&#x8BFB;&#x5165;&#x5230;&#x6D41;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5199;&#x5165;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x6D41;&#x4E2D;&#x3002;</p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -1592,7 +1719,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"利用NIO读写文件","level":"1.16.3.14","depth":3,"next":{"title":"利用反射机制遍历String的字段和方法","level":"1.16.3.15","depth":3,"path":"middleware/java-reflect.md","ref":"middleware/java-reflect.md","articles":[]},"previous":{"title":"NIO和IO遍历指定目录效果对比","level":"1.16.3.13","depth":3,"path":"middleware/NIO-IO-diff.md","ref":"middleware/NIO-IO-diff.md","articles":[]},"dir":"neutral"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"middleware/use-NIO-read-write.md","mtime":"2020-02-11T14:23:16.482Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-12T14:31:49.280Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"利用NIO复制文件","level":"1.16.3.14","depth":3,"next":{"title":"利用反射机制遍历String的字段和方法","level":"1.16.3.15","depth":3,"path":"middleware/java-reflect.md","ref":"middleware/java-reflect.md","articles":[]},"previous":{"title":"NIO和IO遍历指定目录效果对比","level":"1.16.3.13","depth":3,"path":"middleware/NIO-IO-diff.md","ref":"middleware/NIO-IO-diff.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"middleware/use-NIO-read-write.md","mtime":"2020-02-13T07:19:02.697Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-13T07:21:48.748Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
