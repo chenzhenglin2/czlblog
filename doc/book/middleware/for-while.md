@@ -64,24 +64,43 @@ while (k < 10){
 
 - 这种漏斗形式的数据，先总结规律，再来代码实现；上面形式数据特点是：每一行的元素个数和行号一样多；  那就说明当前行和当前列是一样多的，换句话说：当前行 最后一列位置和下一行 行号是一样的，让当前行 最后一列位置用换行符占着。
 
-- 思路有了，代码就好实现；需要三个变量来实现上面功能，一个供输出的变量index，一个行变量line，一个列变量coumn；当前行最后一列 和下一行行号相等的话，此列输出换号符；并让列重1开始，行号+1；继续打印i，然后列号+1；循环判断行号列的关系，一旦相等  就在此列位置输出换行符； 但要排除一种情况，就是行和列 都是1时，如果此时也输出换号的话，相等于第一行 第一列是个换行符 ；而1打印到第二行了。
+- 思路有了，代码就好实现；需要三个变量来实现上面功能，一个供输出的变量index，一个行变量line，一个列变量column；当前行最后一列 和下一行行号相等的话，此列输出换号符；并让列重1开始，行号+1；继续打印i，然后列号+1；循环判断行号列的关系，一旦相等  就在此列位置输出换行符； 但要排除一种情况，就是行和列 都是1时，如果此时也输出换号的话，相等于第一行 第一列是个换行符 ；而1打印到第二行了。
 - 代码实现：
 
 ```java
 int line = 1;
-int coumn = 1;
+int column = 1;
 int index = 1;
 while (index<=15){
-    if (line == coumn) {
+    if (line == column) {
         if (index != 1) {
             System.out.println();
         }
-        coumn=1;
+        column=1;
         line++;
     }
     System.out.print(index+"\t");
     index++;
-    coumn++;
+    column++;
+}
+```
+
+如果打印一个倒三角，更简单因为line和column起始值不同，不用做index != xx,这种判断；这里面是避免第一行是打印的是一个空行。
+
+```java
+@Test
+public void showNum(){
+    int line = 11, column = 1,index=55;
+    while (index>0){
+        if(line == column){
+            System.out.println();
+            line--;
+            column = 1;
+        }
+        System.out.print(index+" ");
+        index--;
+        column++;
+    }
 }
 ```
 
