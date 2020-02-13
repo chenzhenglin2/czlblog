@@ -97,7 +97,7 @@
     * [如何利用多线程交替输出奇偶数](middleware/java-multithread.md)
     * [JDK8新特性-Stream详解](middleware/java8-practice.md)
     * [NIO和IO遍历指定目录效果对比](middleware/NIO-IO-diff.md)
-    * [利用NIO读写文件](middleware/use-NIO-read-write.md)
+    * [利用NIO复制文件](middleware/use-NIO-read-write.md)
     * [利用反射机制遍历String的字段和方法](middleware/java-reflect.md)
 
 * 大数据处理
