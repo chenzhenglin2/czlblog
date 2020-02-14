@@ -102,9 +102,9 @@ if (o instanceof Shopping) {
 }
 ```
 
-推荐第一种写法，第一种写法限制对象必须是当前类型及Shopping类型。第二种方法风险在于如果有两个类都继承了Shopping，都有成员变量弄，且都没有重写equals，就会判断失误。
+推荐第一种写法，第一种写法限制对象必须是当前类型及Shopping类型。第二种方法风险在于如果有两个类都继承了Shopping，都有成员变量no，且都没有重写equals，就会判断失误。
 
-- 为什么要同时重写hashCode方法呢，因为这些类 new出来的对象，存放到HashSet、HashMap等集合、map中；首先比较的是hash值（散列值），如果没有重写hashCode，后果很严重。因为判断key是否相同是通过hash值加equals方法实现的，只重写equals方法、造成实际相同两个对象因hash值不同，被标识成两个不同的对象。所以就约定俗成重写equals方法同时重写hashCode方法。
+- 为什么要同时重写hashCode方法呢，两方面原因1：如果子类重写的equals方法中判断两个对象是否相等既包括了父类的equals方法，又进行了扩展，hashCode又没有重写，很容易误判为同一个对象（如果用getClass来判断对象类型可以避免这个问题  instanceof来判断类型是避免不了的，上面例子有说明）；原因2： 创造出来的对象实例，存放到HashSet、HashMap等集合、map中；首先比较的是hash值（散列值），如果没有重写hashCode，影响效率，并且map中的key是否相同是通过hash值+equals方法来判断的，只重写equals方法、造成未知异常。所以就约定俗成重写equals方法同时重写hashCode方法。
 - hashCode 最简单的一个重写就是：返回用于比较两个对象是否相等的成员变量的hash值 
 
 ```java
