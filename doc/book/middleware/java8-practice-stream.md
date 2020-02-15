@@ -35,7 +35,7 @@ public class DateDemoForJdk8 {
 
 直接就能获取当前时间且不需格式化处理，具体用法可以官方文档或百度、这里简单说明一下，以后遇到时间处理可以考虑到这几个新增的类。
 
-### lamda表达式
+### 新增功能2-lamda表达式
 
 - lamda表达式已经在博客 [接口与lamda表达式](middleware/java-interface-lamda.md)一章中介绍过，这里做一些补充。
 
@@ -67,9 +67,9 @@ public class DateDemoForJdk8 {
 
      之所以补充这么多lamda知识是为先Stream做知识储备的。因为Stream里面很多操作，里面参数都是接口类型的、而且接口的抽象方法都没有实现；这样在处理流时，根据实际情况来灵活操作。这就是函数式（注解为@FunctionalInterface)接口优点, 方法在用的时候用lamda实现，比较灵活，怎么操作由使用情况来决定。正因为jdk8中引入了lamda表达式，Stream才变得容易，要不然操作方法里面接口 都要用匿名内部类来实现，代码就非常臃肿。所以Stream操作前提是lamda要学好；
 
-     ## Stream详解
+## Stream详解
 
-     ### 概述
+### 概述
 
   如何更生动形象的理解Stream呢？Stream可以看做一个管道中的流，比如说一个自来水厂，它从河流边铺了很多管道连接到厂里。第一节管道是过滤，把杂质过滤掉；第二节管道是添加氯气之类的净化试剂，第三节最终汇总到水池中。这一节节的管道就可以看做成Stream处理方法，Stream中转换流是惰性的，就像这些管道一样它们平时不工作，只有池子需要抽满水时，这几节管子（stream处理方法）才会有水流过。而且源头可能是无限的，也可能是有限的，但最终给池子中的水是有限的。
 
@@ -79,7 +79,7 @@ public class DateDemoForJdk8 {
 
   除Stream外还有IntStream、DoubleStream、LongStream，之所以不用Stream<Integer> 这种形式，是这种类型的stream 在开/装箱时会增加额外的内存消耗。
 
-  ### Stream的生成
+### Stream的生成
 
   Stream流的生成有很多种方式，这里就说下使用频率较高的几种做一下说明。
 
@@ -165,6 +165,26 @@ public class DateDemoForJdk8 {
       - 还有各种xxxMatch和findXxx的方法，前面是进行元素匹配，具体怎么匹配，用lamda写一个布尔表达式就行了，findXxx返回的是一个Optional类型的数据，这个类型是jdk8增加，具体用法可以看官方文档，这个类用法今后也会越来越多。
 
         **这些方法都属于Terminal操作，用它们处理后，流就停止了，不会有流往下输出了。**
+
+### Stream方法中接口知识补充
+
+- Stream中很多方法中都是接口参数，主要是Predicate、Supplier 、Consumer 、Function这四个以及它们更多的变种，一般名称规则是xxxPredicate、xxxSupplier、xxxConsumer 、xxxFunction(Operator和它的变种xxxOperator也属于Function变种）、如果是Bixxxx+前面四个基本接口参数，表示此抽象方法需要两个参数；
+
+它们作用如下表格：
+
+| 函数式接口    | 函数描述   | 作用                      |
+| :------------ | ---------- | ------------------------- |
+| Predicate<T>  | T->boolean | 输入泛型T,返回Boolean类型 |
+| Consumer<T>   | T->void    | 输入泛型T，没有返回值     |
+| Supplier<T>   | ()->T      | 什么都不输入，返回T       |
+| Function<T,R> | T->R       | 输入T，返回不同类型的R    |
+|               |            |                           |
+
+-   从表格结合单词意义就很容易理解这些函数式接口了，Consumer 消费者，让T消耗掉后，然后返回void（就是没有返回值）、Function就是数学中常用的函数：y=f(x)，输入x，返回y。Supplier提供者，什么参数都不需要 返回一个T ,Predicate意为谓语、阐明、断言等，就是返回boolean类型的抽象方法。
+
+![1581744443069](images/1581744443069.png)
+
+- 这种思维和方式，可以供开发借鉴到以后的代码中，比如定义一个借口，里面的各种抽象方法、其参数类型是这些函数式接口，并形成一种规范，编程人员在代码实现时，只需要根据生产情况，用lamda把这些抽象实现了即可。做到简洁高效的开发。
 
   
 
