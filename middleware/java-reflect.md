@@ -4,7 +4,7 @@
 
 ## 类名的获取
 
-java所有的类，都属于Class 类型，这个Class和class是不一样的，class属于java关键字、Class是类名，如同String一样，且Class是个泛型类。
+java所有的类/枚举/接口/注解，都属于Class 类型，这个Class和class是不一样的，class属于java关键字、Class是类名，如同String一样，且Class是个泛型类。
 
 ### 获取具体的某个类的Class常见的有三种方式：
 
