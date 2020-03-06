@@ -197,3 +197,72 @@ public class AlternatePrintNumAndLetter {
 从代码可以看出juc中的Lock 、Condition  ，也能实现锁与唤醒功能。与传统的synchronize比较，就像手动挡的车与自动挡的车；juc虽然像手动车，但效率和安全以及逻辑明显提升。 
 
 代码中synchronize中wait()和notifyAll() 与之对应的是 await() 和 signalAll() ，但后面这两个必须包含在lock与unlock代码中间。
+
+## 唤醒指定线程实现交替打印 数字、小写字母、大写字母
+
+继续拓展，利用signal() 方法 指定唤醒某个线程，如实现交替打印 数字、小写字母、大小字母
+
+```java
+package com.zhengling.work;
+
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class MyLockDemo {
+    public static void main(String[] args) {
+        Lock  lock  = new ReentrantLock();
+        Condition condition1 = lock.newCondition();
+        Condition condition2 = lock.newCondition();
+        Condition condition3 = lock.newCondition();
+        new Thread(()->{
+            for (int i = 0; i <26 ; i++) {
+                lock.lock();
+                System.out.println(Thread.currentThread().getName()+"--->"+i);
+                condition2.signal();
+                try {
+                    condition1.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
+                }
+            }
+        },"t1").start();
+
+        new Thread(()->{
+            for (char i = 'a'; i <='z' ; i++) {
+                lock.lock();
+                System.out.println(Thread.currentThread().getName()+"--->"+i);
+                condition3.signal();
+                try {
+                    condition2.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
+                }
+            }
+        },"t2").start();
+
+
+        new Thread(()->{
+            for (char i = 'A'; i <='Z' ; i++) {
+                lock.lock();
+                System.out.println(Thread.currentThread().getName()+"--->"+i);
+                condition1.signal();
+                try {
+                    condition3.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
+                }
+            }
+        },"t3").start();
+
+    }
+}
+```
+
+需要注意的是 ：signal() 唤醒特定线程 一定要在要执行的操作后面； 一般固定格式： 判断 ->加锁->执行->唤醒某个线程->置为等待状态 ->释放锁
