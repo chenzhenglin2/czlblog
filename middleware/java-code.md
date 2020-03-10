@@ -77,3 +77,14 @@ public static void countStr(String[] arr) {
 } 
 ```
 实现方式：把数组元素插入到hashmap中，元素作为key，出现次数作为value，最后遍历出来，判断一下，大于2次，就打印。或者在遍历时直接把map转换成Set<Map.Entry<K,V>>,  然后逐一取出Map.Entry  中K和V 就行了。
+
+利用lamda表达式 
+
+```java
+myMap.forEach((k,v)->{
+   if (2 <= v.intValue()) {
+      System.out.println(k+"\t total view "+v+" times ");
+   }
+});
+```
+
