@@ -101,7 +101,7 @@ sudo apt-get -y update
 
 ### ubuntu在线安装
 ```
-sudo apt install docker.io
+sudo apt install docker.io(已过时)
 或sudo  apt  install  docker-ce
 ```
 
