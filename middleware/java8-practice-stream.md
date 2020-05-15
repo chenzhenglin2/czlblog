@@ -129,7 +129,9 @@ public class DateDemoForJdk8 {
   filter(word -> word.length() > 0)其他后续操作
   ```
 
-  flatMap是一对多的关系，上面代码是把每行文字再转换成流，最终形成新的流，里面都是字符了。如果一个二维数组转成流，然后再把流中每个元素再转换成流，这样最终会形成 一个流、流中的每一个元素都不在是数组了，是一个单一的对象（值）。flatMapToInt等映射和flatMap类似，就像上面的mapToInt映射出来的元素是int类型。
+  flatMap是一对多的关系，上面代码是把每行文字再转换成流，最终形成新的流，里面都是字符了。如果一个二维数组转成流，然后再把流中每个元素再转换成流，这样最终会形成 一个流、流中的每一个元素都不在是数组了，是一个单一的对象（值）。特别注意flatMap里面的参数如果是List、Set这样的集合，千万不能写成`flatMap(collect -> Stream.of(collect))`这样后果：最小元素是集合，并不是单个元素； 修改为`flatMap(collect -> collect.stream())` 就行了。
+
+- flatMapToInt等映射和flatMap类似，就像上面的mapToInt映射出来的元素是int类型。
 
   - concat是把两个流拼接成一个流
 
