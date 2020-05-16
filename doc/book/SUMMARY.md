@@ -12,7 +12,9 @@
   * [接口与lamda表达式](middleware/java-interface-lamda.md)
   * [利用购物车系统学习HashMap与equals方法重写](middleware/java-shopping-map.md)
   * [利用synchronize关键字了解死锁](middleware/java-dead-lock.md)
+  * [***ReentrantLock 和 Condition实现死锁](java/xxxxx.md)
   * [如何利用多线程交替输出奇偶数](middleware/java-multithread.md)
+  * [***线程池的创建](java/xxx.md)
   * [JDK8新特性-Stream详解](middleware/java8-practice-stream.md)
   * [NIO和IO遍历指定目录效果对比](middleware/NIO-IO-diff.md)
   * [利用NIO复制文件](middleware/use-NIO-read-write.md)
@@ -21,8 +23,33 @@
 
 * Spring Boot + VUE 快速网站开发（待更新）
   * VUE    
+  	* [异步请求万金油Promise对象用法说明](devWeb/xxxx.md)
+  	* [VUE和所需核心插件功能概述](devWeb/xxxx.md)
+  	* [VUE插槽在项目中用法](devWeb/xxxx.md)
+  	* [VUE组件中常用的方法](devWeb/xxxx.md)
+  	* [vue-router和router-view使用和注意事项](devWeb/xxxx.md)
+  	* [结合开源的 vue-element-admin实现自己项目状态存取---包括多状态隐射mapGetter mapState等](devWeb/xxxx.md)
+  	* [结合开源的 vue-element-admin实现自己项目后端api交互](devWeb/xxxx.md)
+  	* [结合开源的 vue-element-admin实现自己项目的动态路由](devWeb/xxxx.md)
+  	* [参照element-ui官网快速掌握vue-element-admin中的组件功能实现](devWeb/xxxx.md)
+  	* [跨域问题几种解决思路（分为：前端代理、nginx转发、后端处理来写 ](devWeb/xxxx.md)
   * Spring Boot
-  
+  	* [spring boot层次和分拆为多模块](devWeb/xxxx.md)
+  	* [dto与实体类的验证](devWeb/xxxx.md)
+  	* [封装类编写原则](devWeb/xxxx.md)
+  	* [统一异常、响应处理](devWeb/xxxx.md)
+  	* 代码的批量生成：easycode和mybatis plus 结合
+  	* 切面应用： controller层中的日志插入
+  	* 缓存 cacheable 和Redis
+  	* service 层中事务的实现
+  	* 拦截器与过滤器 重点说明HandlerInterceptor实现类 中的拦截器和spring security中拦截器
+  	* cookie与session的一些用法 如果前后端分离，这块可以不用了解
+  * [前后端认证和授权功能的实现](devWeb/xxxx.md)
+		token 实现 和认证
+		后端权限
+		前端权限
+
+
 * linux
   * ["-"在tar命令中的巧用](linux/tar-deal.md)
   * [利用iptables或防火墙指定ip访问服务器某个端口](linux/limit_ip.md)
@@ -67,7 +94,7 @@
 
 * bat脚本
   * [bat脚本中巧用sed grep awk命令](bat/bat-use-sedawk.md)
-  
+
 * jmeter
   * [利用jmeter模拟手机接口测试](jmeter/use_jmeter_test_app.md)
 
