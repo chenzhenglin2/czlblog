@@ -1,8 +1,31 @@
 # Summary
 * [关于博客说明](README.md)
 
+* java基础知识串联
+  * [for循环实践：生成一万内的质数](middleware/prime_number_product.md)
+  * [比较两个数组是否相同](middleware/compara-arry.md)
+  * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
+  * [for和while异同比较](middleware/for-while.md)
+  * [利用单向链表学习递归](middleware/java-recursion.md)
+  * [装饰者模式扩充方法](middleware/java-decortar.md)
+  * [枚举和switch结合使用](middleware/java-enmu-switch.md)
+  * [接口与lamda表达式](middleware/java-interface-lamda.md)
+  * [利用购物车系统学习HashMap与equals方法重写](middleware/java-shopping-map.md)
+  * [利用synchronize关键字了解死锁](middleware/java-dead-lock.md)
+  * [如何利用多线程交替输出奇偶数](middleware/java-multithread.md)
+  * [JDK8新特性-Stream详解](middleware/java8-practice-stream.md)
+  * [NIO和IO遍历指定目录效果对比](middleware/NIO-IO-diff.md)
+  * [利用NIO复制文件](middleware/use-NIO-read-write.md)
+  * [利用反射机制遍历String的字段和方法](middleware/java-reflect.md)
+
 * bat脚本
   * [bat脚本中巧用sed grep awk命令](bat/bat-use-sedawk.md)
+
+* Spring Boot + VUE 快速网站开发
+  * VUE
+     
+  * Spring Boot
+ 
 
 * linux
   * ["-"在tar命令中的巧用](linux/tar-deal.md)
@@ -47,11 +70,9 @@
   * [字符串截取](shell/trim_string.md)
 
 * jmeter
-
   * [利用jmeter模拟手机接口测试](jmeter/use_jmeter_test_app.md)
 
 * 证书申请与制作
-
   * [私有证书制作](ca/make_key.md)
 
 * NGINX
@@ -69,46 +90,31 @@
     * [adb常用命令](autotech/adb_cmd.md)
     * [uiautomator 自动化测试](autotech/uiautomator_introduce.md)
 
-* 数据库
+* 数据库配置
   * mongo
     * [mongodb安装](data/install_mongodb.md)
     * [mongo分片式集群](data/use_mongo3.6_deploy_shard_cluster.md)
   * MySQL
     * [linux中安装MySQL5.6/5.7](data/install_mysql.md)
+    * [MySQL高频使用语句和Windows下注意事项](data/use_mysql.md)
 
 * 虚拟化技术
   * vcenter
     * [利用模板快速部署centos7服务器](vm/use_tem_deploy_centos7.md)
 
-* Java开发与其中间件安装配置
+* Java中间件安装配置
   * [websphere8.5安装和使用](middleware/install_websphere8.5.md)
   * [tomcat、weblogic、was等组件jvm调整](middleware/update_jvm_value.md)
-  * java基础知识大串联    
-    * [for循环实践：生成一万内的质数](middleware/prime_number_product.md)
-    * [比较两个数组是否相同](middleware/compara-arry.md)
-    * [关于数组位置调整和元素出现次数统计代码](middleware/java-code.md)
-    * [for和while异同比较](middleware/for-while.md)
-    * [利用单向链表学习递归](middleware/java-recursion.md)
-    * [装饰者模式扩充方法](middleware/java-decortar.md)
-    * [枚举和switch结合使用](middleware/java-enmu-switch.md)
-    * [接口与lamda表达式](middleware/java-interface-lamda.md)
-    * [利用购物车系统学习HashMap与equals方法重写](middleware/java-shopping-map.md)
-    * [利用synchronize关键字了解死锁](middleware/java-dead-lock.md)
-    * [如何利用多线程交替输出奇偶数](middleware/java-multithread.md)
-    * [JDK8新特性-Stream详解](middleware/java8-practice-stream.md)
-    * [NIO和IO遍历指定目录效果对比](middleware/NIO-IO-diff.md)
-    * [利用NIO复制文件](middleware/use-NIO-read-write.md)
-    * [利用反射机制遍历String的字段和方法](middleware/java-reflect.md)
 
 * 大数据处理
-  * [druid安装与优化](data/install_druid.md)
+  * [linux中druid安装与优化](data/install_druid.md)
   * kafka+zookeeper
     * [kafka常用命令](data/kafka_cmd.md)
     * [zookeeper和kafka参数调整](data/update_jvm_zk.md)
   * redis
     * [redis多实例](data/cluster_redis.md)
 
-* 正确使用工具事半功倍
+* 正确使用工具事半功倍（待完善）
   * 搜索引擎的使用
   * gitbook 的巧用
   * 有道云笔记
