@@ -17,17 +17,12 @@
   * [NIO和IO遍历指定目录效果对比](middleware/NIO-IO-diff.md)
   * [利用NIO复制文件](middleware/use-NIO-read-write.md)
   * [利用反射机制遍历String的字段和方法](middleware/java-reflect.md)
-  * [java常用的工具、方法汇总](middleware/xxxx.md)
+  * [java常用的工具、方法总结（推荐）](middleware/java_tools_usager.md)
 
-* bat脚本
-  * [bat脚本中巧用sed grep awk命令](bat/bat-use-sedawk.md)
-
-* Spring Boot + VUE 快速网站开发
-  * VUE
-    
+* Spring Boot + VUE 快速网站开发（待更新）
+  * VUE    
   * Spring Boot
-
-
+  
 * linux
   * ["-"在tar命令中的巧用](linux/tar-deal.md)
   * [利用iptables或防火墙指定ip访问服务器某个端口](linux/limit_ip.md)
@@ -70,6 +65,9 @@
   * [选择项用法](shell/ps3_use.md)
   * [字符串截取](shell/trim_string.md)
 
+* bat脚本
+  * [bat脚本中巧用sed grep awk命令](bat/bat-use-sedawk.md)
+  
 * jmeter
   * [利用jmeter模拟手机接口测试](jmeter/use_jmeter_test_app.md)
 
