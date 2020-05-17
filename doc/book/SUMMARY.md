@@ -24,7 +24,7 @@
 * Spring Boot + VUE 快速网站开发（待更新）
   * VUE    
   	* [异步请求万金油Promise对象用法说明](devWeb/promise_usage.md)
-  	* [VUE和所需核心插件功能概述](devWeb/xxxx.md)
+  	* [VUE和所需核心插件功能概述](devWeb/vue_and_plugin_introduce.md)
   	* [VUE插槽在项目中用法](devWeb/xxxx.md)
   	* [VUE组件中常用的方法](devWeb/xxxx.md)
   	* [vue-router和router-view使用和注意事项](devWeb/xxxx.md)
