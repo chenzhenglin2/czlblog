@@ -23,12 +23,11 @@
   * VUE    
     * [异步请求万金油Promise对象用法说明](devWeb/promise_usage.md)
     * [VUE和所需核心插件功能概述](devWeb/vue_and_plugin_introduce.md)      
-    * ……
+    * ……未完待续
   * Spring Boot   
-    ……
+    ……未完待续
   * [前后端认证和授权功能的实现](devWeb/xxxx.md) 
-    ……
-    补充中
+    ……未完待续
 
 
 * linux
