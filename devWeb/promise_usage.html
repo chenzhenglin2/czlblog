@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>利用docker 镜像，快速搭建Jenkins环境 · 志云的博客</title>
+        <title>异步请求万金油Promise对象用法说明 · 志云的博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -93,10 +93,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="freestyle_build_in_jenkins.html" />
+    <link rel="next" href="vue_and_plugin_introduce.html" />
     
-    
-    <link rel="prev" href="jenkins-slave-for-docker.html" />
     
 
     </head>
@@ -393,9 +391,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1.1" data-path="../devWeb/promise_usage.html">
+        <li class="chapter active" data-level="1.3.1.1" data-path="promise_usage.html">
             
-                <a href="../devWeb/promise_usage.html">
+                <a href="promise_usage.html">
             
                     
                     异步请求万金油Promise对象用法说明
@@ -406,9 +404,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.2" data-path="../devWeb/vue_and_plugin_introduce.html">
+        <li class="chapter " data-level="1.3.1.2" data-path="vue_and_plugin_introduce.html">
             
-                <a href="../devWeb/vue_and_plugin_introduce.html">
+                <a href="vue_and_plugin_introduce.html">
             
                     
                     VUE和所需核心插件功能概述
@@ -450,7 +448,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../devWeb/xxxx.md">
+        <li class="chapter " data-level="1.3.3" data-path="xxxx.md">
             
                 <span>
             
@@ -780,9 +778,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.4.1" data-path="jenkins-slave-for-docker.html">
+        <li class="chapter " data-level="2.4.1" data-path="../jenkins/jenkins-slave-for-docker.html">
             
-                <a href="jenkins-slave-for-docker.html">
+                <a href="../jenkins/jenkins-slave-for-docker.html">
             
                     
                     Jenkins调用docker编译程序
@@ -793,9 +791,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4.2" data-path="install-jenkins.html">
+        <li class="chapter " data-level="2.4.2" data-path="../jenkins/install-jenkins.html">
             
-                <a href="install-jenkins.html">
+                <a href="../jenkins/install-jenkins.html">
             
                     
                     利用docker 镜像，快速搭建Jenkins环境
@@ -806,9 +804,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="freestyle_build_in_jenkins.html">
+        <li class="chapter " data-level="2.4.3" data-path="../jenkins/freestyle_build_in_jenkins.html">
             
-                <a href="freestyle_build_in_jenkins.html">
+                <a href="../jenkins/freestyle_build_in_jenkins.html">
             
                     
                     jenkins自由风格构建job
@@ -819,9 +817,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.4" data-path="variety_pipeline_build.html">
+        <li class="chapter " data-level="2.4.4" data-path="../jenkins/variety_pipeline_build.html">
             
-                <a href="variety_pipeline_build.html">
+                <a href="../jenkins/variety_pipeline_build.html">
             
                     
                     jenkins多种pipeline构建job
@@ -832,9 +830,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.5" data-path="thinBackup_jenkins.html">
+        <li class="chapter " data-level="2.4.5" data-path="../jenkins/thinBackup_jenkins.html">
             
-                <a href="thinBackup_jenkins.html">
+                <a href="../jenkins/thinBackup_jenkins.html">
             
                     
                     jenkins config and job的备份
@@ -1670,7 +1668,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >利用docker 镜像，快速搭建Jenkins环境</a>
+        <a href=".." >异步请求万金油Promise对象用法说明</a>
     </h1>
 </div>
 
@@ -1685,31 +1683,74 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5229;&#x7528;docker-image&#x5FEB;&#x901F;&#x642D;&#x5EFA;jenkins&#x73AF;&#x5883;"><b></b>&#x5229;&#x7528;docker image&#x5FEB;&#x901F;&#x642D;&#x5EFA;Jenkins&#x73AF;&#x5883;</a></li></ul></div><a href="#&#x5229;&#x7528;docker-image&#x5FEB;&#x901F;&#x642D;&#x5EFA;jenkins&#x73AF;&#x5883;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5229;&#x7528;docker-image&#x5FEB;&#x901F;&#x642D;&#x5EFA;jenkins&#x73AF;&#x5883;"><a name="&#x5229;&#x7528;docker-image&#x5FEB;&#x901F;&#x642D;&#x5EFA;jenkins&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#&#x5229;&#x7528;docker-image&#x5FEB;&#x901F;&#x642D;&#x5EFA;jenkins&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5229;&#x7528;docker image&#x5FEB;&#x901F;&#x642D;&#x5EFA;Jenkins&#x73AF;&#x5883;</h1>
-<p>&#x5173;&#x4E8E;&#x5B89;&#x88C5;&#x90E8;&#x7F72;Jenkins&#xFF0C;&#x7F51;&#x4E0A;&#x4E00;&#x5927;&#x5806;&#x8D44;&#x6599;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x505A;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x4E86;&#xFF1B;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;Jenkins&#x7684;war&#x5305;&#x76F4;&#x63A5;&#x653E;&#x5230;tomcat&#xFF08;&#x5176;&#x4ED6;Java&#x5BB9;&#x5668;&#x4E5F;&#x884C;&#xFF09;&#x901A;&#x8FC7;ip:8080/jenkins&#x5373;&#x53EF;&#x8BBF;&#x95EE;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x901A;&#x8FC7; java &#x2013;jar Jenkins.war&#x6765;&#x5B89;&#x88C5;&#x6216;&#x8005;&#x5E26;&#x4E0A;--ajp13Port=-1 --httpPort=8081&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x5C31;&#x884C;&#xFF1B;</p>
-<p>&#x8FD9;&#x91CC;&#x91CD;&#x70B9;&#x8BF4;&#x7684;&#x662F;&#x91C7;&#x7528;docker&#x5316;&#x90E8;&#x7F72;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x6848;&#x66F4;&#x5FEB;&#x6377;&#x548C;&#x7075;&#x6D3B;&#xFF1A;</p>
-<pre class="language-"><code>docker run \
-  --name myjenkins \
-  --cpus=4 \
-  --restart=unless-stopped \
-  -u root \
-  -d \
-  -p 88:8080 \
-  -p 50002:50000 \
-  -v /home/jenkinsci/jenkins:/var/jenkins_home \
-  -v /opt/jenkins-bak-file:/opt/jenkins-bak-file \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -v /etc/localtime:/etc/localtime:ro \
-  -v /etc/timezone:/etc/timezone:ro \
-  -v $HOME/.ssh:/root/.ssh:ro \
-  jenkinsci/blueocean
-</code></pre><ul>
-<li>/etc/timezone  &#x5982;&#x679C;&#x6CA1;&#x6709;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;:echo Asia/Shanghai &gt;/etc/timezone &#x8FD9;&#x4E2A; &#x4E00;&#x5B9A;&#x8981;&#x8BBE;&#x7F6E;&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x5C31;&#x662F;GMT&#x65F6;&#x533A;&#x4E86;&#xFF1B;</li>
-<li>/opt/jenkins-bak-file&#x76EE;&#x5F55;&#x662F;&#x4E3A;&#x4EE5;&#x540E;Jenkins&#x81EA;&#x8EAB;&#x5907;&#x4EFD;&#x9884;&#x7559;&#x7684;&#x76EE;&#x5F55;&#xFF1B;</li>
-<li>&#x628A;.ssh&#x6302;&#x8F7D;&#x8FDB;&#x53BB;&#xFF0C;&#x8BA9;&#x5BB9;&#x5668;&#x4F7F;&#x7528;&#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x79C1;&#x94A5;&#xFF1B;</li>
-<li>&#x5982;&#x679C;&#x4F7F;&#x7528;jenkins:2.60.3&#x955C;&#x50CF;&#x7684;&#x8BDD;&#xFF0C;&#x5BBF;&#x4E3B;&#x673A;&#x7684;/home/Jenkins &#x76EE;&#x5F55;&#x4E00;&#x5B9A;&#x8981;sudo chown -R 1000 &#x5904;&#x7406;&#x4E00;&#x4E0B;&#xFF1B;&#x4F46;&#x4E0D;&#x63A8;&#x8350;&#x8FD9;&#x79CD;&#x955C;&#x50CF;&#xFF0C;&#x5DF2;&#x7ECF;&#x4E0D;&#x652F;&#x6301;blueocean&#x4E86;&#xFF1B;</li>
-</ul>
-<p>&#x5982;&#x679C;&#x5BB9;&#x5668;&#x4E2D;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;jenkins&#x8D26;&#x6237;&#xFF0C;&#x9700;&#x8981;&#x628A;&#x5BBF;&#x4E3B;&#x673A;&#x7684;/home/jenkinsci/jenkins&#x76EE;&#x5F55;&#x505A;&#x4E00;&#x4E0B;<code>sudo chown 1000  -R</code>&#x5904;&#x7406;&#xFF0C;&#x53E6;&#x5916;&#x5BBF;&#x4E3B;&#x673A;&#x64CD;&#x4F5C;docker&#x8D26;&#x6237;&#x7684;$HOME/.ssh&#x76EE;&#x5F55;&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;/var/jenkins_home/.ssh&#x4E0B;&#xFF0C;&#x8FD9;&#x6837;&#x5BB9;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x516C;&#x79C1;&#x94A5;&#xFF1B;&#x66F4;&#x4FDD;&#x9669;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x76F4;&#x63A5;&#x8FDB;&#x5165;jenkins&#x5BB9;&#x5668;&#xFF0C;&#x751F;&#x6210;&#x516C;&#x79C1;&#x94A5;&#xFF0C;&#x56E0;&#x4E3A;&#x516C;&#x79C1;&#x94A5;&#x6240;&#x5728;&#x76EE;&#x5F55;/var/jenkins_home&#x6302;&#x8F7D;&#x5230;&#x5BBF;&#x4E3B;&#x673A;&#xFF0C;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x91CD;&#x542F;&#x540E;&#x627E;&#x4E0D;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#promise&#x7528;&#x6CD5;"><b></b>Promise&#x7528;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x4ECB;"><b></b>&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x7533;&#x660E;"><b></b>&#x5982;&#x4F55;&#x7533;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x72B6;&#x6001;&#x53D8;&#x5316;"><b></b>&#x72B6;&#x6001;&#x53D8;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x94FE;&#x5F0F;&#x5904;&#x7406;"><b></b>&#x94FE;&#x5F0F;&#x5904;&#x7406;</a></li><li><span class="title-icon "></span><a href="#&#x7ED3;&#x5408;&#x9879;&#x76EE;&#x7684;&#x767B;&#x5F55;&#x548C;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;"><b></b>&#x7ED3;&#x5408;&#x9879;&#x76EE;&#x7684;&#x767B;&#x5F55;&#x548C;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><b></b>&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></li></ul></ul></div><a href="#promise&#x7528;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="promise&#x7528;&#x6CD5;"><a name="promise&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#promise&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Promise&#x7528;&#x6CD5;</h1>
+<h2 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h2>
+<p>promise&#x548C;ajax&#x529F;&#x80FD;&#x7C7B;&#x4F3C;&#xFF0C;&#x90FD;&#x662F;&#x7528;&#x6765;&#x505A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x3002;promise&#x7684;&#x4F18;&#x52BF;&#x5728;&#x4E8E;&#x53EF;&#x4EE5;&#x94FE;&#x5F0F;&#x7F16;&#x7A0B;&#xFF0C;&#x5728;response&#x8FD8;&#x6CA1;&#x56DE;&#x5E94;&#x65F6;&#xFF0C;then&#x64CD;&#x4F5C;&#x4E2D;&#x53EF;&#x4EE5;&#x628A;&#x6B63;&#x5E38;&#x6D41;&#x7A0B;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF0C;catch&#x6355;&#x83B7;&#x5F02;&#x5E38;&#xFF08;&#x800C;&#x4E14;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x6700;&#x540E;&#x8FDB;&#x884C;&#x7EDF;&#x4E00;&#x6355;&#x83B7;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x65AD;then &#x4E0B;&#x53BB;&#xFF1B;  &#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x5927;&#x80CC;&#x666F;&#x4E0B;&#xFF0C;ajax&#x662F;&#x57FA;&#x4E8E;&#x539F;&#x751F;&#x7684;xhr&#xFF0C;&#x5DF2;&#x7ECF;&#x4E0D;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x9002;&#x5E94;mvvm&#x8FD9;&#x79CD;&#x524D;&#x7AEF;&#x6A21;&#x578B;&#x4E86;&#x3002;</p>
+<h2 id="&#x5982;&#x4F55;&#x7533;&#x660E;"><a name="&#x5982;&#x4F55;&#x7533;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x7533;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x7533;&#x660E;</h2>
+<p>  &#x672C;&#x7AE0;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x6765;&#x63CF;&#x8FF0;vue&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x7684;&#xFF0C;&#x4E3A;&#x4F55;&#x5148;&#x4ECB;&#x7ECD;promise&#x5462;&#xFF1F;&#x56E0;&#x4E3A;vue&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;&#x59CB;&#x7EC8;&#x662F;&#x56F4;&#x7ED5;&#x7740;Promise&#x5C55;&#x5F00;&#x7684;&#xFF1B;&#x5982;vuex.store&#x7684;  actions &#x4E2D;&#x65B9;&#x6CD5; &#x90FD;&#x662F;&#x7528;Promise&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF1B;&#x540E;&#x7AEF;api&#x4EA4;&#x4E92;&#x7528;&#x7684;axios&#xFF0C;&#x4E5F;&#x662F;promise&#x5C01;&#x88C5;&#x7684;&#x3002;  </p>
+<p>&#x5148;&#x7B80;&#x5355;&#x7533;&#x660E;&#x4E00;&#x4E2A;Promise&#x5BF9;&#x8C61;&#xFF1B;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span>   <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+&#x200B;    <span class="token comment">// &#x4E00;&#x6BB5;&#x8017;&#x65F6;&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;</span>
+
+&#x200B;     <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token comment">// &#x6570;&#x636E;&#x5904;&#x7406;&#x5B8C;&#x6210; </span>
+
+&#x200B;    <span class="token comment">// reject(&apos;&#x5931;&#x8D25;&apos;) // &#x6570;&#x636E;&#x5904;&#x7406;&#x51FA;&#x9519;   </span>
+
+<span class="token punctuation">}</span> <span class="token punctuation">)</span>
+</code></pre>
+<p>&#x7F51;&#x4E0A;&#x6709;&#x8BF4;&#x6784;&#x9020;Promise&#x65F6; &#x5C31;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x7684;&#x8BF4;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x90FD;&#x6CA1;&#x9519;&#xFF1B; &#x5982;&#x679C;&#x8BF4;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x8BF4;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<h2 id="&#x72B6;&#x6001;&#x53D8;&#x5316;"><a name="&#x72B6;&#x6001;&#x53D8;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x72B6;&#x6001;&#x53D8;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x72B6;&#x6001;&#x53D8;&#x5316;</h2>
+<p>promise&#x72B6;&#x6001;&#x8BF4;&#x660E;&#xFF0C;&#x4ECE;&#x521D;&#x59CB;&#x5316;&#x65F6;pending&#x2014;&#x2014;&#x300B;&#x5230;resolved&#x6216;rejected&#xFF08;&#x53EA;&#x80FD;&#x662F;&#x4E8C;&#x8005;&#x4E2D;&#x67D0;&#x4E00;&#x79CD;&#x72B6;&#x6001;&#xFF09;&#xFF0C;&#x5728;&#x672A;&#x8C03;&#x7528;resolve&#x6216;reject&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;promise&#x90FD;&#x662F;pending&#x72B6;&#x6001;&#xFF0C;&#x4E00;&#x65E6;&#x8C03;&#x7528;&#x4E86;resolve&#x6216;reject&#x65B9;&#x6CD5; promise&#x5C31;&#x7ED3;&#x675F;&#x4E86;&#xFF0C;promise&#x72B6;&#x6001;&#x4E3A;resolved&#x6216;rejected&#xFF1B;&#x5176;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#x4E86;&#xFF0C;&#x53EA;&#x80FD;&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x7684;then&#x6216;catch&#x64CD;&#x4F5C;&#x4E86;&#xFF08;then &#x3001;catch&#x4E5F;&#x662F;promise&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#xFF09;&#x3002;</p>
+<p>&#x6240;&#x4EE5;Promise &#x751F;&#x547D;&#x6D41;&#x7A0B; &#x53EA;&#x6709;&#x4E24;&#x79CD;&#x72B6;&#x6001; &#xFF1B;  </p>
+<p>&#x6B63;&#x5E38;&#x7684;&#xFF1A; pending&#x72B6;&#x6001;&#xFF08;&#x672A;&#x8C03;&#x7528;resolve&#x65B9;&#x6CD5;&#x524D;&#xFF09;----&gt;resolved&#x72B6;&#x6001;&#xFF1B;</p>
+<p>&#x6216;&#x8005;&#x5931;&#x8D25;&#x7684; &#xFF1A; pending&#x72B6;&#x6001;&#xFF08;&#x672A;&#x8C03;&#x7528;rejecte&#x65B9;&#x6CD5;&#x524D;&#xFF09;-------&gt; rejected&#x72B6;&#x6001;</p>
+<h2 id="&#x94FE;&#x5F0F;&#x5904;&#x7406;"><a name="&#x94FE;&#x5F0F;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x94FE;&#x5F0F;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x94FE;&#x5F0F;&#x5904;&#x7406;</h2>
+<p>resolved&#x72B6;&#x6001;promise&#x80FD;&#x4F7F;&#x7528;then&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x5904;&#x7406;&#xFF0C;rejected&#x72B6;&#x6001;promise&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x7528;catch&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF1B;&#x5728;&#x8C03;&#x7528;&#x65B9;&#x6CD5;resolve()&#x6539;&#x53D8;promise&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x5982;resolve(data)&#xFF08;&#x53EA;&#x80FD;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#x60F3;&#x529E;&#x6CD5;&#x5408;&#x5E76;&#x6210;&#x6570;&#x7EC4;&#xFF09;&#xFF0C;&#x540E;&#x7EED;&#x63A5;&#x7740;&#x7528;then&#x5904;&#x7406;&#xFF1B;then&#x7684;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;data&#xFF1B;&#x8FD9;&#x6837;&#x65E0;&#x9650;&#x7684;then&#x641E;&#x4E0B;&#x53BB;&#xFF0C;&#x53C2;&#x6570;&#x5C31;&#x901A;&#x8FC7;resolve&#x65B9;&#x6CD5;&#x6765;&#x4F20;&#x9012;&#x3002;&#x5982;&#x679C;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x4E0D;&#x7B26;&#x5408;&#x8981;&#x6C42;&#xFF0C;&#x5224;&#x65AD;&#x540E;&#xFF0C;rejecte&#x65B9;&#x6CD5;&#x6765;&#x6539;&#x53D8;promise&#x72B6;&#x6001; &#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B83;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x6700;&#x7EC8;&#x53D8;&#x6210;rejected&#x72B6;&#x6001;&#x7684;promise&#xFF0C;&#x8FD9;&#x79CD;&#x72B6;&#x6001;promise&#x80FD;&#x8C03;&#x7528;catch&#xFF0C;&#x5728;&#x5176;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x5F02;&#x5E38;&#x6355;&#x83B7;&#x6216;&#x629B;&#x51FA;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x7ED3;&#x5408;&#x9879;&#x76EE;&#x7684;&#x767B;&#x5F55;&#x548C;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;"><a name="&#x7ED3;&#x5408;&#x9879;&#x76EE;&#x7684;&#x767B;&#x5F55;&#x548C;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x5408;&#x9879;&#x76EE;&#x7684;&#x767B;&#x5F55;&#x548C;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ED3;&#x5408;&#x9879;&#x76EE;&#x7684;&#x767B;&#x5F55;&#x548C;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</h2>
+<p>&#x767B;&#x5F55;&#x8FC7;&#x7A0B;</p>
+<pre class="language-"><code class="lang-javascript"> <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">&apos;Login&apos;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>loginForm<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token comment">//dispatch&#x65B9;&#x6CD5;&#x524D;&#x9762;&#x662F;&#x6307;&#x5411;store&#x4E2D;actions&#x4E2D;&#x65B9;&#x6CD5;&#xFF0C;&#x540E;&#x9762;&#x662F;&#x8981;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#xFF1B;</span>
+ <span class="token comment">//&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E; &#x9875;&#x9762;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>redirect <span class="token operator">||</span> <span class="token string">&apos;/&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">false</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">false</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>actions&#x4E2D;Login&#x65B9;&#x6CD5; &#x63A5;&#x6536;&#x5230;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x53C2;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;Promise&#x5BF9;&#x8C61;&#x91CC;&#x9762; &#x6709;&#x6267;&#x884C;axios&#x7684;login&#x65B9;&#x6CD5;&#xFF0C;axios &#x7684;login  &#x5982;&#x679C;&#x6210;&#x529F;&#xFF0C;&#x5C31;&#x4F20;&#x9012;resolve&#x643A;&#x5E26;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x5931;&#x8D25;&#x5C31;&#x4F20;&#x9012;reject&#x643A;&#x5E26;&#x7684;&#x503C;&#x3002;</p>
+<pre class="language-"><code class="lang-javascript"> <span class="token function">Login</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> commit <span class="token punctuation">}</span><span class="token punctuation">,</span> userInfo</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">const</span> <span class="token punctuation">{</span> username<span class="token punctuation">,</span> password <span class="token punctuation">}</span> <span class="token operator">=</span> userInfo
+ <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">{</span> username<span class="token punctuation">:</span> username<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> password <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token keyword">const</span> <span class="token punctuation">{</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> response
+ <span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">&apos;SET_TOKEN&apos;</span><span class="token punctuation">,</span> data<span class="token punctuation">.</span>token<span class="token punctuation">)</span>
+ <span class="token function">setToken</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>token<span class="token punctuation">)</span>
+ <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+<p>resolved&#x72B6;&#x6001;Promise&#x4F1A;&#x88AB;then&#x6355;&#x6349;&#xFF0C;&#x6240;&#x4EE5;&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#x6267;&#x884C;then&#xFF0C;then&#x6784;&#x9020;&#x5668;&#x91CC;&#x9762;&#x6709;&#x767B;&#x5F55;&#x540E;&#x9875;&#x9762;&#x91CD;&#x5B9A;&#x5411;&#x64CD;&#x4F5C;&#x7B49;&#xFF1B; rejected&#x72B6;&#x6001;&#x53EF;&#x4EE5;&#x88AB;catch&#x6355;&#x6349;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x4EE3;&#x7801; &#xFF0C;&#x53EF;&#x4EE5;&#x603B;&#x7ED3;&#x51FA;&#x5229;&#x7528;Promise &#x6784;&#x9020;&#x767B;&#x5F55;&#x7684;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;</p>
+<pre class="language-"><code>new  Promise((resovle,reject)=&gt;{
+login(username,password).then(
+resp=&gt;{state.aa = resp.data; resovle(param)})
+.catch(err=&gt; {&#x5404;&#x79CD;&#x64CD;&#x4F5C;&#xFF0C;reject(param)})
+})
+</code></pre><p>login&#x8BF7;&#x6C42;&#x8C03;&#x7528;axios&#x63D0;&#x4F9B;&#x7684;api&#xFF0C;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x672C;&#x8D28;&#x662F;promise&#xFF1B;  &#x5982;&#x679C;&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#x53D8;&#x6210;resolved&#x72B6;&#x6001;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;then&#x6355;&#x83B7;&#xFF0C;then&#x4E2D;&#x53EF;&#x4EE5;&#x628A;login&#x6210;&#x529F;&#x540E;&#x7684;&#x6570;&#x636E;response&#xFF08;&#x5C31;&#x662F;&#x8FD4;&#x56DE;&#x4F53;&#xFF09; &#x62FF;&#x6765;&#x7528;&#xFF0C;&#x7528;&#x5B8C;&#x540E;resolve&#x65B9;&#x6CD5;&#x6539;&#x53D8;&#x72B6;&#x6001;&#xFF08;&#x53EF;&#x4EE5;&#x4F20;&#x53C2;&#x6570;&#xFF09;&#xFF1B; &#x5982;&#x679C;login&#x5931;&#x8D25;&#xFF0C;&#x5224;&#x65AD;&#x540E;&#x7F6E;&#x4E3A;rejected&#x72B6;&#x6001; &#x5E76;&#x4E14;&#x4F20;&#x9012;&#x76F8;&#x5E94;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;catch&#x6765;&#x5904;&#x7406;&#x3002;</p>
+<p>rejected&#x72B6;&#x6001;promise&#x4E0E;catch&#x94FE;&#x5F0F;&#x5904;&#x7406;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-javascript">promise&#x5BF9;&#x8C61;&#xFF08;&#x6709;&#x8C03;&#x7528;reject&#x65B9;&#x6CD5;&#x7684;&#xFF09;<span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+<span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;&#x8BF7;&#x6838;&#x5BF9;&#x8D26;&#x53F7;&#x6216;&#x5BC6;&#x7801;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span><span class="token comment">//loading&#x72B6;&#x6001;&#x505C;&#x6B62;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><a name="&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h2>
+<p>axios &#x8C03;&#x7528;&#x63A5;&#x53E3;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;response.data &#x624D;&#x662F;&#x62A5;&#x6587;&#x4F53;&#xFF08;&#x540E;&#x7AEF;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x53C2;&#x6570;&#xFF09;response&#x662F;&#x5305;&#x542B;&#x4E86;&#x62A5;&#x6587;&#x3001;&#x62A5;&#x6587;&#x5934;&#x3001;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#x7B49;&#x3002;&#x5982;&#x679C;&#x540E;&#x7AEF;&#x5C01;&#x88C5;&#x7684;&#x62A5;&#x6587;&#x4F53;&#x7531;code&#x3001;msg &#x3001;data &#x7EC4;&#x6210;&#xFF0C;&#x9700;&#x8981;&#x7528;response.data.data &#x624D;&#x80FD;&#x53D6;&#x5230;&#x60F3;&#x8981;&#x7684;&#x6570;&#x636E;&#x3002;</p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -1738,12 +1779,8 @@
 
             
                 
-                <a href="jenkins-slave-for-docker.html" class="navigation navigation-prev " aria-label="Previous page: Jenkins调用docker编译程序">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="freestyle_build_in_jenkins.html" class="navigation navigation-next " aria-label="Next page: jenkins自由风格构建job">
+                <a href="vue_and_plugin_introduce.html" class="navigation navigation-next navigation-unique" aria-label="Next page: VUE和所需核心插件功能概述">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1754,7 +1791,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"利用docker 镜像，快速搭建Jenkins环境","level":"2.4.2","depth":2,"next":{"title":"jenkins自由风格构建job","level":"2.4.3","depth":2,"path":"jenkins/freestyle_build_in_jenkins.md","ref":"jenkins/freestyle_build_in_jenkins.md","articles":[]},"previous":{"title":"Jenkins调用docker编译程序","level":"2.4.1","depth":2,"path":"jenkins/jenkins-slave-for-docker.md","ref":"jenkins/jenkins-slave-for-docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"jenkins/install-jenkins.md","mtime":"2020-05-16T09:00:22.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-17T09:30:07.724Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"异步请求万金油Promise对象用法说明","level":"1.3.1.1","depth":3,"next":{"title":"VUE和所需核心插件功能概述","level":"1.3.1.2","depth":3,"path":"devWeb/vue_and_plugin_introduce.md","ref":"devWeb/vue_and_plugin_introduce.md","articles":[]},"previous":{"title":"VUE","level":"1.3.1","depth":2,"ref":"","articles":[{"title":"异步请求万金油Promise对象用法说明","level":"1.3.1.1","depth":3,"path":"devWeb/promise_usage.md","ref":"devWeb/promise_usage.md","articles":[]},{"title":"VUE和所需核心插件功能概述","level":"1.3.1.2","depth":3,"path":"devWeb/vue_and_plugin_introduce.md","ref":"devWeb/vue_and_plugin_introduce.md","articles":[]},{"title":"……","level":"1.3.1.3","depth":3,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","ancre-navigation","popup","expandable-chapters","code","splitter","prism","pageview-count","back-to-top-button","lightbox","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"陈正林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"志云的博客","gitbook":"*","description":"日常工作总结知识"},"file":{"path":"devWeb/promise_usage.md","mtime":"2020-05-17T03:06:12.104Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-17T09:30:07.724Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
