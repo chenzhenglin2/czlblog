@@ -19,15 +19,18 @@
   * [利用反射机制遍历String的字段和方法](middleware/java-reflect.md)
   * [java常用的工具、方法总结（推荐）](middleware/java_tools_usager.md)
 
-* Spring Boot + VUE 快速网站开发（更新ing）
+* Spring Boot + VUE （更新ing）
   * VUE    
     * [异步请求万金油Promise对象用法说明](devWeb/promise_usage.md)
     * [VUE和所需核心插件功能概述](devWeb/vue_and_plugin_introduce.md)      
-    * ……未完待续
+    * ……
+
   * Spring Boot   
-    ……未完待续
+
+    
+
   * [前后端认证和授权功能的实现](devWeb/xxxx.md) 
-    ……未完待续
+
 
 
 * linux
